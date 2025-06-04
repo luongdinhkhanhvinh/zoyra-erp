@@ -323,136 +323,19 @@ class ReceivablePayableReport:
 				row.paid_in_account_currency -= amount_in_account_currency
 
 	def init_and_run_sql_procedures(self):
-		# create in-memory temporary table for performance
-		frappe.db.sql("drop table if exists voucher_balance;")
-		# Memory storage engine doesn't support remarks - BLOB, TEXT types.
-		# Alternative?
-		frappe.db.sql(
-			"""
-			create temporary table voucher_balance(
-			name varchar(224),
-			voucher_type varchar(140),
-			voucher_no varchar(140),
-			party varchar(140),
-			party_account varchar(140),
-			posting_date date,
-			account_currency varchar(140),
-			invoiced decimal(21,9),
-			paid decimal(21,9),
-			credit_note decimal(21,9),
-			outstanding decimal(21,9),
-			invoiced_in_account_currency decimal(21,9),
-			paid_in_account_currency decimal(21,9),
-			credit_note_in_account_currency decimal(21,9),
-			outstanding_in_account_currency decimal(21,9)) engine=memory;
-			"""
-		)
+		self.proc = InitSQLProceduresForAR()
 
-		# Only used for passing definitions to 'row type of'
-		frappe.db.sql("drop table if exists ple_row;")
-		frappe.db.sql(
-			"""
-			create temporary table ple_row(
-			name varchar(224),
-			account varchar(140),
-			voucher_type varchar(140),
-			voucher_no varchar(140),
-			against_voucher_type varchar(140),
-			against_voucher_no varchar(140),
-			party_type varchar(140),
-			cost_center varchar(140),
-			party varchar(140),
-			posting_date date,
-			due_date date,
-			account_currency varchar(140),
-			amount decimal(21,9),
-			amount_in_account_currency decimal(21,9)) engine=memory;
-			"""
-		)
-
-		# Generate hash from key
-		frappe.db.sql("drop function if exists genkey;")
-		frappe.db.sql(
-			"""
-		create function genkey(rec row type of ple_row, allocate bool) returns char(224)
-		begin
-			if allocate then
-				return sha2(concat_ws(',', rec.account, rec.against_voucher_type, rec.against_voucher_no, rec.party), 224);
-			else
-				return sha2(concat_ws(',', rec.account, rec.voucher_type, rec.voucher_no, rec.party), 224);
-			end if;
-		end
-		"""
-		)
-
-		# Init
-		frappe.db.sql("drop procedure if exists init;")
-		init_procedure = """
-		create procedure init(in ple row type of `ple_row`)
-		begin
-			if not exists (select name from `voucher_balance` where name = genkey(ple, false))
-			then
-				insert into `voucher_balance` values (genkey(ple, false), ple.voucher_type, ple.voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, 0, 0, 0, 0, 0, 0, 0, 0);
-			end if;
-		end;
-		"""
-		frappe.db.sql(init_procedure)
-
-		# Allocate
-		frappe.db.sql("drop procedure if exists allocate;")
-		allocate_procedure = """
-		create procedure allocate(in ple row type of `ple_row`)
-		begin
-		declare invoiced decimal(21,9) default 0;
-		declare invoiced_in_account_currency decimal(21,9) default 0;
-		declare paid decimal(21,9) default 0;
-		declare paid_in_account_currency decimal(21,9) default 0;
-		declare credit_note decimal(21,9) default 0;
-		declare credit_note_in_account_currency decimal(21,9) default 0;
-
-
-		if ple.amount > 0 then
-			if (ple.voucher_type in ("Journal Entry", "Payment Entry") and (ple.voucher_no != ple.against_voucher_no)) then
-				set paid = -1 * ple.amount;
-				set paid_in_account_currency = -1 * ple.amount_in_account_currency;
-			else
-				set invoiced = ple.amount;
-				set invoiced_in_account_currency = ple.amount_in_account_currency;
-			end if;
-		else
-
-		if ple.voucher_type in ("Sales Invoice", "Purchase Invoice") then
-			if (ple.voucher_no = ple.against_voucher_no) then
-				set paid = -1 * ple.amount;
-				set paid_in_account_currency = -1 * ple.amount_in_account_currency;
-			else
-				set credit_note = -1 * ple.amount;
-				set credit_note_in_account_currency = -1 * ple.amount_in_account_currency;
-		end if;
-		else
-			set paid = -1 * ple.amount;
-			set paid_in_account_currency = -1 * ple.amount_in_account_currency;
-		end if;
-
-		end if;
-
-		insert into `voucher_balance` values (genkey(ple, true), ple.against_voucher_type, ple.against_voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, invoiced, paid, 0, 0, invoiced_in_account_currency, paid_in_account_currency, 0, 0);
-		end;
-		"""
-		frappe.db.sql(allocate_procedure)
-
-		frappe.db.sql("drop procedure if exists build;")
 		build_balance = f"""
 		begin not atomic
 		declare done boolean default false;
-		declare rec1 row type of ple_row;
+		declare rec1 row type of `{self.proc._row_def_table_name}`;
 		declare ple cursor for {self.ple_query.get_sql()};
 		declare continue handler for not found set done = true;
 
 		open ple;
 		fetch ple into rec1;
 		while not done do
-			call init(rec1);
+			call {self.proc.init_procedure_name}(rec1);
 			fetch ple into rec1;
 		end while;
 		close ple;
@@ -461,7 +344,7 @@ class ReceivablePayableReport:
 		open ple;
 		fetch ple into rec1;
 		while not done do
-			call allocate(rec1);
+			call {self.proc.allocate_procedure_name}(rec1);
 			fetch ple into rec1;
 		end while;
 		close ple;
@@ -470,7 +353,7 @@ class ReceivablePayableReport:
 		frappe.db.sql(build_balance)
 
 		res = frappe.db.sql(
-			"""select
+			f"""select
 			name,
 			voucher_type,
 			voucher_no,
@@ -486,13 +369,12 @@ class ReceivablePayableReport:
 			sum(paid_in_account_currency),
 			sum(credit_note_in_account_currency),
 			sum(invoiced_in_account_currency) - sum(paid_in_account_currency) - sum(credit_note_in_account_currency)
-			from `voucher_balance` group by name;"""
+			from `{self.proc._voucher_balance_name}` group by name;"""
 		)
 		self.printv(res)
 
 	def printv(self, res):
 		for x in res:
-			# if x[3] == "ACC-SINV-2025-00035":
 			print(x)
 
 	def update_sub_total_row(self, row, party):
@@ -1430,3 +1312,137 @@ def get_customer_group_with_children(customer_groups):
 			frappe.throw(_("Customer Group: {0} does not exist").format(d))
 
 	return list(set(all_customer_groups))
+
+
+class InitSQLProceduresForAR:
+	"""
+	Initialize SQL Procedures, Functions and Temporary tables to build Receivable / Payable report
+	"""
+
+	# Temporary Tables
+	_voucher_balance_name = "_voucher_balance"
+	_voucher_balance_definition = f"""
+		create temporary table `{_voucher_balance_name}`(
+		name varchar(224),
+		voucher_type varchar(140),
+		voucher_no varchar(140),
+		party varchar(140),
+		party_account varchar(140),
+		posting_date date,
+		account_currency varchar(140),
+		invoiced decimal(21,9),
+		paid decimal(21,9),
+		credit_note decimal(21,9),
+		outstanding decimal(21,9),
+		invoiced_in_account_currency decimal(21,9),
+		paid_in_account_currency decimal(21,9),
+		credit_note_in_account_currency decimal(21,9),
+		outstanding_in_account_currency decimal(21,9)) engine=memory;
+	"""
+	_row_def_table_name = "_ple_row"
+	_row_def_table_definition = f"""
+		create temporary table `{_row_def_table_name}`(
+		name varchar(224),
+		account varchar(140),
+		voucher_type varchar(140),
+		voucher_no varchar(140),
+		against_voucher_type varchar(140),
+		against_voucher_no varchar(140),
+		party_type varchar(140),
+		cost_center varchar(140),
+		party varchar(140),
+		posting_date date,
+		due_date date,
+		account_currency varchar(140),
+		amount decimal(21,9),
+		amount_in_account_currency decimal(21,9)) engine=memory;
+	"""
+
+	# Function
+	genkey_function_name = "genkey"
+	genkey_function_sql = f"""
+	create function `{genkey_function_name}`(rec row type of `{_row_def_table_name}`, allocate bool) returns char(224)
+	begin
+		if allocate then
+			return sha2(concat_ws(',', rec.account, rec.against_voucher_type, rec.against_voucher_no, rec.party), 224);
+		else
+			return sha2(concat_ws(',', rec.account, rec.voucher_type, rec.voucher_no, rec.party), 224);
+		end if;
+	end
+	"""
+
+	# Procedures
+	init_procedure_name = "ar_init_tmp_table"
+	init_procedure_sql = f"""
+	create procedure ar_init_tmp_table(in ple row type of `{_row_def_table_name}`)
+	begin
+		if not exists (select name from `{_voucher_balance_name}` where name = genkey(ple, false))
+		then
+			insert into `{_voucher_balance_name}` values (genkey(ple, false), ple.voucher_type, ple.voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, 0, 0, 0, 0, 0, 0, 0, 0);
+		end if;
+	end;
+	"""
+
+	allocate_procedure_name = "ar_allocate_to_tmp_table"
+	allocate_procedure_sql = f"""
+	create procedure ar_allocate_to_tmp_table(in ple row type of `{_row_def_table_name}`)
+	begin
+		declare invoiced decimal(21,9) default 0;
+		declare invoiced_in_account_currency decimal(21,9) default 0;
+		declare paid decimal(21,9) default 0;
+		declare paid_in_account_currency decimal(21,9) default 0;
+		declare credit_note decimal(21,9) default 0;
+		declare credit_note_in_account_currency decimal(21,9) default 0;
+
+
+		if ple.amount > 0 then
+			if (ple.voucher_type in ("Journal Entry", "Payment Entry") and (ple.voucher_no != ple.against_voucher_no)) then
+				set paid = -1 * ple.amount;
+				set paid_in_account_currency = -1 * ple.amount_in_account_currency;
+			else
+				set invoiced = ple.amount;
+				set invoiced_in_account_currency = ple.amount_in_account_currency;
+			end if;
+		else
+
+		if ple.voucher_type in ("Sales Invoice", "Purchase Invoice") then
+			if (ple.voucher_no = ple.against_voucher_no) then
+				set paid = -1 * ple.amount;
+				set paid_in_account_currency = -1 * ple.amount_in_account_currency;
+			else
+				set credit_note = -1 * ple.amount;
+				set credit_note_in_account_currency = -1 * ple.amount_in_account_currency;
+		end if;
+		else
+			set paid = -1 * ple.amount;
+			set paid_in_account_currency = -1 * ple.amount_in_account_currency;
+		end if;
+
+		end if;
+
+		insert into `{_voucher_balance_name}` values (`{genkey_function_name}`(ple, true), ple.against_voucher_type, ple.against_voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, invoiced, paid, 0, 0, invoiced_in_account_currency, paid_in_account_currency, 0, 0);
+	end;
+	"""
+
+	def __init__(self):
+		existing_procedures = frappe.db.sql(
+			f"select routine_name from information_schema.routines where routine_type in ('FUNCTION','PROCEDURE') and routine_schema='{frappe.conf.db_name}';"
+		)
+		if existing_procedures:
+			# normalize
+			existing_procedures = [x[0] for x in existing_procedures]
+
+		if self.genkey_function_name not in existing_procedures:
+			frappe.db.sql(self.genkey_function_sql)
+
+		if self.init_procedure_name not in existing_procedures:
+			frappe.db.sql(self.init_procedure_sql)
+
+		if self.allocate_procedure_name not in existing_procedures:
+			frappe.db.sql(self.allocate_procedure_sql)
+
+		frappe.db.sql(f"drop table if exists `{self._voucher_balance_name}`")
+		frappe.db.sql(self._voucher_balance_definition)
+
+		frappe.db.sql(f"drop table if exists `{self._row_def_table_name}`")
+		frappe.db.sql(self._row_def_table_definition)
