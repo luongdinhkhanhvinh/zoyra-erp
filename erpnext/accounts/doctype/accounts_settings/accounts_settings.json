@@ -556,7 +556,7 @@
    "fieldname": "receivable_payable_fetch_method",
    "fieldtype": "Select",
    "label": "Data Fetch Method",
-   "options": "Buffered Cursor\nUnBuffered Cursor"
+   "options": "Buffered Cursor\nUnBuffered Cursor\nRaw SQL"
   },
   {
    "fieldname": "accounts_receivable_payable_tuning_section",
