@@ -369,7 +369,7 @@ class ReceivablePayableReport:
 			sum(paid_in_account_currency) `paid_in_account_currency`,
 			sum(credit_note_in_account_currency) `credit_note_in_account_currency`,
 			sum(invoiced_in_account_currency) - sum(paid_in_account_currency) - sum(credit_note_in_account_currency) `outstanding_in_account_currency`
-			from `{self.proc._voucher_balance_name}` group by name;""",
+			from `{self.proc._voucher_balance_name}` group by name order by posting_date;""",
 			as_dict=True,
 		)
 		for x in res:
