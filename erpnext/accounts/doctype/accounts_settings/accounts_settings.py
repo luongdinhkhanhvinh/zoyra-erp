@@ -154,3 +154,11 @@ class AccountsSettings(Document):
 				),
 				title=_("Auto Tax Settings Error"),
 			)
+
+	@frappe.whitelist()
+	def drop_ar_sql_procedures(self):
+		from erpnext.accounts.report.accounts_receivable.accounts_receivable import InitSQLProceduresForAR
+
+		frappe.db.sql(f"drop function if exists {InitSQLProceduresForAR.genkey_function_name}")
+		frappe.db.sql(f"drop procedure if exists {InitSQLProceduresForAR.init_procedure_name}")
+		frappe.db.sql(f"drop procedure if exists {InitSQLProceduresForAR.allocate_procedure_name}")

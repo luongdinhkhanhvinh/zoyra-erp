@@ -361,6 +361,7 @@ class ReceivablePayableReport:
 			party_account `account`,
 			posting_date,
 			account_currency,
+			cost_center,
 			sum(invoiced) `invoiced`,
 			sum(paid) `paid`,
 			sum(credit_note) `credit_note`,
@@ -388,6 +389,7 @@ class ReceivablePayableReport:
 				"paid_in_account_currency",
 				"credit_note_in_account_currency",
 				"outstanding_in_account_currency",
+				"cost_center",
 			]:
 				_d[field] = x.get(field)
 
@@ -1346,14 +1348,13 @@ class InitSQLProceduresForAR:
 		party_account varchar(140),
 		posting_date date,
 		account_currency varchar(140),
+		cost_center varchar(140),
 		invoiced decimal(21,9),
 		paid decimal(21,9),
 		credit_note decimal(21,9),
-		outstanding decimal(21,9),
 		invoiced_in_account_currency decimal(21,9),
 		paid_in_account_currency decimal(21,9),
-		credit_note_in_account_currency decimal(21,9),
-		outstanding_in_account_currency decimal(21,9)) engine=memory;
+		credit_note_in_account_currency decimal(21,9)) engine=memory;
 	"""
 	_row_def_table_name = "_ple_row"
 	_row_def_table_definition = f"""
@@ -1394,7 +1395,7 @@ class InitSQLProceduresForAR:
 	begin
 		if not exists (select name from `{_voucher_balance_name}` where name = genkey(ple, false))
 		then
-			insert into `{_voucher_balance_name}` values (genkey(ple, false), ple.voucher_type, ple.voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, 0, 0, 0, 0, 0, 0, 0, 0);
+			insert into `{_voucher_balance_name}` values (genkey(ple, false), ple.voucher_type, ple.voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, ple.cost_center, 0, 0, 0, 0, 0, 0);
 		end if;
 	end;
 	"""
@@ -1436,17 +1437,21 @@ class InitSQLProceduresForAR:
 
 		end if;
 
-		insert into `{_voucher_balance_name}` values (`{genkey_function_name}`(ple, true), ple.against_voucher_type, ple.against_voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, invoiced, paid, 0, 0, invoiced_in_account_currency, paid_in_account_currency, 0, 0);
+		insert into `{_voucher_balance_name}` values (`{genkey_function_name}`(ple, true), ple.against_voucher_type, ple.against_voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency,'', invoiced, paid, 0, invoiced_in_account_currency, paid_in_account_currency, 0);
 	end;
 	"""
 
-	def __init__(self):
-		existing_procedures = frappe.db.sql(
+	def get_existing_procedures(self):
+		procedures = frappe.db.sql(
 			f"select routine_name from information_schema.routines where routine_type in ('FUNCTION','PROCEDURE') and routine_schema='{frappe.conf.db_name}';"
 		)
-		if existing_procedures:
+		if procedures:
 			# normalize
-			existing_procedures = [x[0] for x in existing_procedures]
+			procedures = [x[0] for x in procedures]
+		return procedures
+
+	def __init__(self):
+		existing_procedures = self.get_existing_procedures()
 
 		if self.genkey_function_name not in existing_procedures:
 			frappe.db.sql(self.genkey_function_sql)
