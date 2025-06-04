@@ -129,8 +129,8 @@ class ReceivablePayableReport:
 			self.fetch_ple_in_buffered_cursor()
 		elif self.ple_fetch_method == "UnBuffered Cursor":
 			self.fetch_ple_in_unbuffered_cursor()
-
-		self.init_and_run_sql_procedures()
+		elif self.ple_fetch_method == "Raw SQL":
+			self.init_and_run_sql_procedures()
 
 		# Build delivery note map against all sales invoices
 		self.build_delivery_note_map()
@@ -358,24 +358,40 @@ class ReceivablePayableReport:
 			voucher_type,
 			voucher_no,
 			party,
-			party_account,
+			party_account `account`,
 			posting_date,
 			account_currency,
-			sum(invoiced),
-			sum(paid),
-			sum(credit_note),
-			sum(invoiced) - sum(paid) - sum(credit_note),
-			sum(invoiced_in_account_currency),
-			sum(paid_in_account_currency),
-			sum(credit_note_in_account_currency),
-			sum(invoiced_in_account_currency) - sum(paid_in_account_currency) - sum(credit_note_in_account_currency)
-			from `{self.proc._voucher_balance_name}` group by name;"""
+			sum(invoiced) `invoiced`,
+			sum(paid) `paid`,
+			sum(credit_note) `credit_note`,
+			sum(invoiced) - sum(paid) - sum(credit_note) `outstanding`,
+			sum(invoiced_in_account_currency) `invoiced_in_account_currency`,
+			sum(paid_in_account_currency) `paid_in_account_currency`,
+			sum(credit_note_in_account_currency) `credit_note_in_account_currency`,
+			sum(invoiced_in_account_currency) - sum(paid_in_account_currency) - sum(credit_note_in_account_currency) `outstanding_in_account_currency`
+			from `{self.proc._voucher_balance_name}` group by name;""",
+			as_dict=True,
 		)
-		self.printv(res)
-
-	def printv(self, res):
 		for x in res:
-			print(x)
+			if self.filters.get("ignore_accounts"):
+				key = (x.voucher_type, x.voucher_no, x.party)
+			else:
+				key = (x.account, x.voucher_type, x.voucher_no, x.party)
+
+			_d = self.build_voucher_dict(x)
+			for field in [
+				"invoiced",
+				"paid",
+				"credit_note",
+				"outstanding",
+				"invoiced_in_account_currency",
+				"paid_in_account_currency",
+				"credit_note_in_account_currency",
+				"outstanding_in_account_currency",
+			]:
+				_d[field] = x.get(field)
+
+			self.voucher_balance[key] = _d
 
 	def update_sub_total_row(self, row, party):
 		total_row = self.total_row_map.get(party)
