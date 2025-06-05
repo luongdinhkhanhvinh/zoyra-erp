@@ -1338,7 +1338,7 @@ class InitSQLProceduresForAR:
 	"""
 
 	# Temporary Tables
-	_voucher_balance_name = "_voucher_balance"
+	_voucher_balance_name = "_ar_voucher_balance"
 	_voucher_balance_definition = f"""
 		create temporary table `{_voucher_balance_name}`(
 		name varchar(224),
@@ -1356,7 +1356,7 @@ class InitSQLProceduresForAR:
 		paid_in_account_currency decimal(21,9),
 		credit_note_in_account_currency decimal(21,9)) engine=memory;
 	"""
-	_row_def_table_name = "_ple_row"
+	_row_def_table_name = "_ar_ple_row"
 	_row_def_table_definition = f"""
 		create temporary table `{_row_def_table_name}`(
 		name varchar(224),
@@ -1376,7 +1376,7 @@ class InitSQLProceduresForAR:
 	"""
 
 	# Function
-	genkey_function_name = "genkey"
+	genkey_function_name = "ar_genkey"
 	genkey_function_sql = f"""
 	create function `{genkey_function_name}`(rec row type of `{_row_def_table_name}`, allocate bool) returns char(224)
 	begin
@@ -1393,9 +1393,9 @@ class InitSQLProceduresForAR:
 	init_procedure_sql = f"""
 	create procedure ar_init_tmp_table(in ple row type of `{_row_def_table_name}`)
 	begin
-		if not exists (select name from `{_voucher_balance_name}` where name = genkey(ple, false))
+		if not exists (select name from `{_voucher_balance_name}` where name = `{genkey_function_name}`(ple, false))
 		then
-			insert into `{_voucher_balance_name}` values (genkey(ple, false), ple.voucher_type, ple.voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, ple.cost_center, 0, 0, 0, 0, 0, 0);
+			insert into `{_voucher_balance_name}` values (`{genkey_function_name}`(ple, false), ple.voucher_type, ple.voucher_no, ple.party, ple.account, ple.posting_date, ple.account_currency, ple.cost_center, 0, 0, 0, 0, 0, 0);
 		end if;
 	end;
 	"""
