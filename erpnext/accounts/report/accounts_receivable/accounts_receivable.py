@@ -6,6 +6,7 @@ from collections import OrderedDict
 
 import frappe
 from frappe import _, qb, query_builder, scrub
+from frappe.database.schema import get_definition
 from frappe.desk.reportview import build_match_conditions
 from frappe.query_builder import Criterion
 from frappe.query_builder.functions import Date, Substring, Sum
@@ -1337,53 +1338,56 @@ class InitSQLProceduresForAR:
 	Initialize SQL Procedures, Functions and Temporary tables to build Receivable / Payable report
 	"""
 
+	_varchar_type = get_definition("Data")
+	_currency_type = get_definition("Currency")
 	# Temporary Tables
 	_voucher_balance_name = "_ar_voucher_balance"
 	_voucher_balance_definition = f"""
 		create temporary table `{_voucher_balance_name}`(
-		name varchar(224),
-		voucher_type varchar(140),
-		voucher_no varchar(140),
-		party varchar(140),
-		party_account varchar(140),
+		name {_varchar_type},
+		voucher_type {_varchar_type},
+		voucher_no {_varchar_type},
+		party {_varchar_type},
+		party_account {_varchar_type},
 		posting_date date,
-		account_currency varchar(140),
-		cost_center varchar(140),
-		invoiced decimal(21,9),
-		paid decimal(21,9),
-		credit_note decimal(21,9),
-		invoiced_in_account_currency decimal(21,9),
-		paid_in_account_currency decimal(21,9),
-		credit_note_in_account_currency decimal(21,9)) engine=memory;
+		account_currency {_varchar_type},
+		cost_center {_varchar_type},
+		invoiced {_currency_type},
+		paid {_currency_type},
+		credit_note {_currency_type},
+		invoiced_in_account_currency {_currency_type},
+		paid_in_account_currency {_currency_type},
+		credit_note_in_account_currency {_currency_type}) engine=memory;
 	"""
+
 	_row_def_table_name = "_ar_ple_row"
 	_row_def_table_definition = f"""
 		create temporary table `{_row_def_table_name}`(
-		name varchar(224),
-		account varchar(140),
-		voucher_type varchar(140),
-		voucher_no varchar(140),
-		against_voucher_type varchar(140),
-		against_voucher_no varchar(140),
-		party_type varchar(140),
-		cost_center varchar(140),
-		party varchar(140),
+		name {_varchar_type},
+		account {_varchar_type},
+		voucher_type {_varchar_type},
+		voucher_no {_varchar_type},
+		against_voucher_type {_varchar_type},
+		against_voucher_no {_varchar_type},
+		party_type {_varchar_type},
+		cost_center {_varchar_type},
+		party {_varchar_type},
 		posting_date date,
 		due_date date,
-		account_currency varchar(140),
-		amount decimal(21,9),
-		amount_in_account_currency decimal(21,9)) engine=memory;
+		account_currency {_varchar_type},
+		amount {_currency_type},
+		amount_in_account_currency {_currency_type}) engine=memory;
 	"""
 
 	# Function
 	genkey_function_name = "ar_genkey"
 	genkey_function_sql = f"""
-	create function `{genkey_function_name}`(rec row type of `{_row_def_table_name}`, allocate bool) returns char(224)
+	create function `{genkey_function_name}`(rec row type of `{_row_def_table_name}`, allocate bool) returns char(40)
 	begin
 		if allocate then
-			return sha2(concat_ws(',', rec.account, rec.against_voucher_type, rec.against_voucher_no, rec.party), 224);
+			return sha1(concat_ws(',', rec.account, rec.against_voucher_type, rec.against_voucher_no, rec.party));
 		else
-			return sha2(concat_ws(',', rec.account, rec.voucher_type, rec.voucher_no, rec.party), 224);
+			return sha1(concat_ws(',', rec.account, rec.voucher_type, rec.voucher_no, rec.party));
 		end if;
 	end
 	"""
@@ -1404,12 +1408,12 @@ class InitSQLProceduresForAR:
 	allocate_procedure_sql = f"""
 	create procedure ar_allocate_to_tmp_table(in ple row type of `{_row_def_table_name}`)
 	begin
-		declare invoiced decimal(21,9) default 0;
-		declare invoiced_in_account_currency decimal(21,9) default 0;
-		declare paid decimal(21,9) default 0;
-		declare paid_in_account_currency decimal(21,9) default 0;
-		declare credit_note decimal(21,9) default 0;
-		declare credit_note_in_account_currency decimal(21,9) default 0;
+		declare invoiced {_currency_type} default 0;
+		declare invoiced_in_account_currency {_currency_type} default 0;
+		declare paid {_currency_type} default 0;
+		declare paid_in_account_currency {_currency_type} default 0;
+		declare credit_note {_currency_type} default 0;
+		declare credit_note_in_account_currency {_currency_type} default 0;
 
 
 		if ple.amount > 0 then
