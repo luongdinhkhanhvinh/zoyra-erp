@@ -899,6 +899,7 @@ class ProductionPlan(Document):
 		try:
 			wo.flags.ignore_mandatory = True
 			wo.flags.ignore_validate = True
+			wo.company = self.company
 			wo.insert()
 			return wo.name
 		except OverProductionError:
@@ -1839,13 +1840,14 @@ def get_sub_assembly_items(
 				bin_details.setdefault(d.item_code, get_bin_details(d, company, for_warehouse=warehouse))
 
 				for _bin_dict in bin_details[d.item_code]:
-					if _bin_dict.projected_qty > 0:
-						if _bin_dict.projected_qty >= stock_qty:
-							_bin_dict.projected_qty -= stock_qty
+					_bin_dict.original_projected_qty = _bin_dict.projected_qty
+					if _bin_dict.original_projected_qty > 0:
+						if _bin_dict.original_projected_qty >= stock_qty:
+							_bin_dict.original_projected_qty -= stock_qty
 							stock_qty = 0
 							continue
 						else:
-							stock_qty = stock_qty - _bin_dict.projected_qty
+							stock_qty = stock_qty - _bin_dict.original_projected_qty
 							sub_assembly_items.append(d.item_code)
 			elif warehouse:
 				bin_details.setdefault(d.item_code, get_bin_details(d, company, for_warehouse=warehouse))
