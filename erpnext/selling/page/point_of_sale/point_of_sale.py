@@ -348,6 +348,14 @@ def get_past_order_list(search_term, status, limit=20):
 			fields=fields,
 			page_length=limit,
 		)
+
+		pos_invoices_by_customer_name = frappe.db.get_list(
+			"POS Invoice",
+			filters=get_invoice_filters("POS Invoice", status, customer_name=search_term),
+			fields=fields,
+			page_length=limit,
+		)
+
 		pos_invoices_by_name = frappe.db.get_list(
 			"POS Invoice",
 			filters=get_invoice_filters("POS Invoice", status, name=search_term),
@@ -356,12 +364,18 @@ def get_past_order_list(search_term, status, limit=20):
 		)
 
 		pos_invoice_list = add_doctype_to_results(
-			"POS Invoice", pos_invoices_by_customer + pos_invoices_by_name
+			"POS Invoice", pos_invoices_by_customer + pos_invoices_by_name + pos_invoices_by_customer_name
 		)
 
 		sales_invoices_by_customer = frappe.db.get_list(
 			"Sales Invoice",
 			filters=get_invoice_filters("Sales Invoice", status, customer=search_term),
+			fields=fields,
+			page_length=limit,
+		)
+		sales_invoices_by_customer_name = frappe.db.get_list(
+			"Sales Invoice",
+			filters=get_invoice_filters("Sales Invoice", status, customer_name=search_term),
 			fields=fields,
 			page_length=limit,
 		)
@@ -373,7 +387,8 @@ def get_past_order_list(search_term, status, limit=20):
 		)
 
 		sales_invoice_list = add_doctype_to_results(
-			"Sales Invoice", sales_invoices_by_customer + sales_invoices_by_name
+			"Sales Invoice",
+			sales_invoices_by_customer + sales_invoices_by_name + sales_invoices_by_customer_name,
 		)
 
 	elif status:
@@ -467,14 +482,15 @@ def order_results_by_posting_date(results):
 	)
 
 
-def get_invoice_filters(doctype, status, name=None, customer=None):
+def get_invoice_filters(doctype, status, name=None, customer=None, customer_name=None):
 	filters = {}
 
 	if name:
 		filters["name"] = ["like", f"%{name}%"]
 	if customer:
 		filters["customer"] = ["like", f"%{customer}%"]
-
+	if customer_name:
+		filters["customer_name"] = ["like", f"%{customer_name}%"]
 	if doctype == "POS Invoice":
 		filters["status"] = status
 		if status == "Partly Paid":
