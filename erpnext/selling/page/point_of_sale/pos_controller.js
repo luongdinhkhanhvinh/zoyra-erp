@@ -155,6 +155,7 @@ erpnext.PointOfSale.Controller = class {
 
 		this.fetch_invoice_fields();
 		this.setup_listener_for_pos_closing();
+		this.check_outdated_pos_opening_entry();
 	}
 
 	async fetch_invoice_fields() {
@@ -174,16 +175,22 @@ erpnext.PointOfSale.Controller = class {
 	}
 
 	setup_listener_for_pos_closing() {
-		frappe.realtime.on(`poe_${this.pos_opening}_closed`, (data) => {
+		frappe.realtime.on(`poe_${this.pos_opening}`, (data) => {
 			const route = frappe.get_route_str();
 			if (data && route == "point-of-sale") {
 				frappe.dom.freeze();
+				const title =
+					data.operation === "Closed" ? __("POS Closed") : __("POS Opening Entry Cancelled");
+				const msg =
+					data.operation === "Closed"
+						? __("POS has been closed at {0}. Please refresh the page.", [
+								frappe.datetime.str_to_user(data.doc?.creation).bold(),
+						  ])
+						: __("POS Opening Entry has been cancelled. Please refresh the page.");
 				frappe.msgprint({
-					title: __("POS Closed"),
+					title: title,
 					indicator: "orange",
-					message: __("POS has been closed at {0}. Please refresh the page.", [
-						frappe.datetime.str_to_user(data.creation).bold(),
-					]),
+					message: msg,
 					primary_action_label: __("Refresh"),
 					primary_action: {
 						action() {
@@ -193,6 +200,18 @@ erpnext.PointOfSale.Controller = class {
 				});
 			}
 		});
+	}
+
+	check_outdated_pos_opening_entry() {
+		if (frappe.datetime.get_day_diff(frappe.datetime.get_today(), this.pos_opening_time.slice(0, 10))) {
+			frappe.msgprint({
+				title: __("Outdated POS Opening Entry"),
+				message: __(
+					"The current POS opening entry is outdated. Please close it and create a new one."
+				),
+				indicator: "yellow",
+			});
+		}
 	}
 
 	set_opening_entry_status() {

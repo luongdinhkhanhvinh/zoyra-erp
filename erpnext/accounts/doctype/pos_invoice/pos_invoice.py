@@ -373,18 +373,6 @@ class POSInvoice(SalesInvoice):
 						_("Payment related to {0} is not completed").format(pay.mode_of_payment)
 					)
 
-	def validate_pos_opening_entry(self):
-		opening_entries = frappe.get_list(
-			"POS Opening Entry", filters={"pos_profile": self.pos_profile, "status": "Open", "docstatus": 1}
-		)
-		if len(opening_entries) == 0:
-			frappe.throw(
-				title=_("POS Opening Entry Missing"),
-				msg=_("No open POS Opening Entry found for POS Profile {0}.").format(
-					frappe.bold(self.pos_profile)
-				),
-			)
-
 	def validate_stock_availablility(self):
 		if self.is_return:
 			return
