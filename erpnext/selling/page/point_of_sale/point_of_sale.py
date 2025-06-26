@@ -501,7 +501,13 @@ def get_invoice_filters(doctype, status, name=None, customer=None):
 def get_customer_recent_transactions(customer):
 	sales_invoices = frappe.db.get_list(
 		"Sales Invoice",
-		filters={"customer": customer, "docstatus": 1, "is_pos": 1, "is_consolidated": 0},
+		filters={
+			"customer": customer,
+			"docstatus": 1,
+			"is_pos": 1,
+			"is_consolidated": 0,
+			"is_created_using_pos": 1,
+		},
 		fields=["name", "grand_total", "status", "posting_date", "posting_time", "currency"],
 		page_length=20,
 	)
