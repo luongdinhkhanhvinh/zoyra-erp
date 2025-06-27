@@ -561,6 +561,13 @@ erpnext.PointOfSale.Controller = class {
 						() => frappe.dom.unfreeze(),
 					]);
 				},
+				open_in_form_view: (doctype, name) => {
+					frappe.run_serially([
+						() => frappe.dom.freeze(),
+						() => frappe.set_route("Form", doctype, name),
+						() => frappe.dom.unfreeze(),
+					]);
+				},
 			},
 		});
 	}

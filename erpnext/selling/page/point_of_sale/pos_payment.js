@@ -5,6 +5,7 @@ erpnext.PointOfSale.Payment = class {
 		this.events = events;
 		this.set_gt_to_default_mop = settings.set_grand_total_to_default_mop;
 		this.invoice_fields = settings.invoice_fields;
+		this.allow_partial_payment = settings.allow_partial_payment;
 
 		this.init_component();
 	}
@@ -224,7 +225,12 @@ erpnext.PointOfSale.Payment = class {
 			const paid_amount = doc.paid_amount;
 			const items = doc.items;
 
-			if (!items.length || (paid_amount == 0 && doc.additional_discount_percentage != 100)) {
+			if (
+				!items.length ||
+				(paid_amount == 0 &&
+					doc.additional_discount_percentage != 100 &&
+					this.allow_partial_payment === 0)
+			) {
 				const message = items.length
 					? __("You cannot submit the order without payment.")
 					: __("You cannot submit empty order.");

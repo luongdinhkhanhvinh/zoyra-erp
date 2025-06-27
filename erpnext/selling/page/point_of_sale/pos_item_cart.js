@@ -1042,6 +1042,7 @@ erpnext.PointOfSale.ItemCart = class {
 						"Credit Note Issued": "gray",
 						"Partly Paid": "yellow",
 						Overdue: "yellow",
+						Unpaid: "red",
 					};
 
 					transaction_container.append(

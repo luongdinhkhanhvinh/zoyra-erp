@@ -1104,20 +1104,19 @@ class SalesInvoice(SellingController):
 		self.validate_pos_opening_entry()
 
 	def validate_full_payment(self):
+		allow_partial_payment = frappe.db.get_value("POS Profile", self.pos_profile, "allow_partial_payment")
 		invoice_total = flt(self.rounded_total) or flt(self.grand_total)
 
-		if self.docstatus == 1:
-			if self.is_return and self.paid_amount != invoice_total:
-				frappe.throw(
-					msg=_("Partial Payment in POS Transactions are not allowed."),
-					exc=PartialPaymentValidationError,
-				)
-
-			if self.paid_amount < invoice_total:
-				frappe.throw(
-					msg=_("Partial Payment in POS Transactions are not allowed."),
-					exc=PartialPaymentValidationError,
-				)
+		if (
+			self.docstatus == 1
+			and not self.is_return
+			and not allow_partial_payment
+			and self.paid_amount < invoice_total
+		):
+			frappe.throw(
+				msg=_("Partial Payment in POS Transactions are not allowed."),
+				exc=PartialPaymentValidationError,
+			)
 
 	def validate_pos_opening_entry(self):
 		opening_entries = frappe.get_all(

@@ -477,22 +477,28 @@ def get_invoice_filters(doctype, status, name=None, customer=None):
 
 	if doctype == "POS Invoice":
 		filters["status"] = status
+		if status == "Partly Paid":
+			filters["status"] = ["in", ["Partly Paid", "Overdue", "Unpaid"]]
 		return filters
 
 	if doctype == "Sales Invoice":
 		filters["is_created_using_pos"] = 1
 		filters["is_consolidated"] = 0
 
-		if status == "Draft":
-			filters["docstatus"] = 0
+		if status == "Consolidated":
+			filters["pos_closing_entry"] = ["is", "set"]
 		else:
-			filters["docstatus"] = 1
-			if status == "Paid":
-				filters["is_return"] = 0
-			if status == "Return":
-				filters["is_return"] = 1
-
-			filters["pos_closing_entry"] = ["is", "set"] if status == "Consolidated" else ["is", "not set"]
+			filters["pos_closing_entry"] = ["is", "not set"]
+			if status == "Draft":
+				filters["docstatus"] = 0
+			elif status == "Partly Paid":
+				filters["status"] = ["in", ["Partly Paid", "Overdue", "Unpaid"]]
+			else:
+				filters["docstatus"] = 1
+				if status == "Paid":
+					filters["is_return"] = 0
+				if status == "Return":
+					filters["is_return"] = 1
 
 	return filters
 

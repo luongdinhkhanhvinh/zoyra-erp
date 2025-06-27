@@ -75,8 +75,9 @@ erpnext.PointOfSale.PastOrderSummary = class {
 		let indicator_color = "";
 
 		["Paid", "Consolidated"].includes(status) && (indicator_color = "green");
-		status === "Draft" && (indicator_color = "red");
-		status === "Return" && (indicator_color = "grey");
+		["Partly Paid", "Overdue"].includes(status) && (indicator_color = "yellow");
+		["Draft", "Unpaid"].includes(status) && (indicator_color = "red");
+		["Credit Note Issued", "Return"].includes(status) && (indicator_color = "grey");
 
 		return `<div class="left-section">
 					<div class="customer-name">${doc.customer}</div>
@@ -243,6 +244,10 @@ erpnext.PointOfSale.PastOrderSummary = class {
 		this.$summary_container.on("click", ".print-btn", () => {
 			this.print_receipt();
 		});
+
+		this.$summary_container.on("click", ".open-btn", () => {
+			this.events.open_in_form_view(this.doc.doctype, this.doc.name);
+		});
 	}
 
 	print_receipt() {
@@ -361,7 +366,14 @@ erpnext.PointOfSale.PastOrderSummary = class {
 		return [
 			{ condition: this.doc.docstatus === 0, visible_btns: ["Edit Order", "Delete Order"] },
 			{
-				condition: !this.doc.is_return && this.doc.docstatus === 1,
+				condition: ["Partly Paid", "Overdue", "Unpaid"].includes(this.doc.status),
+				visible_btns: ["Print Receipt", "Email Receipt", "Open in Form View"],
+			},
+			{
+				condition:
+					!this.doc.is_return &&
+					this.doc.docstatus === 1 &&
+					!["Partly Paid", "Overdue", "Unpaid"].includes(this.doc.status),
 				visible_btns: ["Print Receipt", "Email Receipt", "Return"],
 			},
 			{
