@@ -142,7 +142,7 @@ class BankClearance(Document):
 				)
 			else:
 				# using db_set to trigger notification
-				payment_entry = frappe.get_doc(d.payment_document, d.payment_entry)
+				payment_entry = frappe.get_lazy_doc(d.payment_document, d.payment_entry)
 				payment_entry.db_set("clearance_date", d.clearance_date)
 
 		self.get_payment_entries()
