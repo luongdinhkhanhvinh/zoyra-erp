@@ -1138,6 +1138,10 @@ class AccountsController(TransactionBase):
 			return True
 
 	def set_taxes_and_charges(self):
+		if self.doctype == "Material Request":
+			# Material Request does not have taxes
+			return
+
 		if self.get("taxes") or self.get("is_pos"):
 			return
 
