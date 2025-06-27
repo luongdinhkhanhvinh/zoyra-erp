@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-06-22 09:36+0000\n"
-"PO-Revision-Date: 2025-06-23 03:29\n"
+"PO-Revision-Date: 2025-06-26 03:43\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -246,7 +246,7 @@ msgstr "«حساب پیش‌فرض {0}» در شرکت {1}"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1274
 msgid "'Entries' cannot be empty"
-msgstr "ورودی ها نمی‌توانند خالی باشند"
+msgstr "«ثبت‌ها» نمی‌توانند خالی باشند"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:24
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:120
@@ -4546,7 +4546,7 @@ msgstr "همچنین می‌توانید الگو را دانلود کرده و 
 #. Profile'
 #: erpnext/accounts/doctype/pos_profile/pos_profile.json
 msgid "Always Ask"
-msgstr ""
+msgstr "همیشه بپرس"
 
 #. Label of the amended_from (Link) field in DocType 'Bank Guarantee'
 #. Label of the amended_from (Link) field in DocType 'Bank Transaction'
@@ -5794,7 +5794,7 @@ msgstr "جزئیات دارایی"
 #. Option for the 'Entry Type' (Select) field in DocType 'Journal Entry'
 #: erpnext/accounts/doctype/journal_entry/journal_entry.json
 msgid "Asset Disposal"
-msgstr ""
+msgstr "واگذاری دارایی"
 
 #. Name of a DocType
 #: erpnext/assets/doctype/asset_finance_book/asset_finance_book.json
@@ -13257,7 +13257,7 @@ msgstr "ایجاد لیست گیرنده"
 #: erpnext/stock/report/stock_and_account_value_comparison/stock_and_account_value_comparison.js:44
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.js:92
 msgid "Create Reposting Entries"
-msgstr "ورودی های ارسال مجدد ایجاد کنید"
+msgstr "ایجاد ثبت‌های ارسال مجدد"
 
 #: erpnext/stock/report/stock_ledger_invariant_check/stock_ledger_invariant_check.js:58
 msgid "Create Reposting Entry"
@@ -19422,7 +19422,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/depreciation.py:313
 msgid "Error while posting depreciation entries"
-msgstr "خطا هنگام ارسال ورودی های استهلاک"
+msgstr "خطا هنگام ارسال ثبت‌های استهلاک"
 
 #: erpnext/accounts/deferred_revenue.py:539
 msgid "Error while processing deferred accounting for {0}"
@@ -20138,7 +20138,7 @@ msgstr "ناموفق"
 
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log/bulk_transaction_log.js:17
 msgid "Failed Entries"
-msgstr "ورودی های ناموفق"
+msgstr "ثبت‌های ناموفق"
 
 #: erpnext/utilities/doctype/video_settings/video_settings.py:33
 msgid "Failed to Authenticate the API key."
@@ -20304,7 +20304,7 @@ msgstr "فقط {0} شماره سریال در دسترس واکشی شد."
 
 #: erpnext/edi/doctype/code_list/code_list_import.py:27
 msgid "Fetching Error"
-msgstr ""
+msgstr "خطای واکشی"
 
 #: erpnext/accounts/doctype/dunning/dunning.js:135
 #: erpnext/public/js/controllers/transaction.js:1303
@@ -20915,7 +20915,7 @@ msgstr "روی فیلتر گروه آیتم تمرکز کنید"
 
 #: erpnext/selling/page/point_of_sale/pos_item_selector.js:299
 msgid "Focus on search input"
-msgstr "روی ورودی جستجو تمرکز کنید"
+msgstr "تمرکز روی ورودی جستجو"
 
 #. Label of the folio_no (Data) field in DocType 'Shareholder'
 #: erpnext/accounts/doctype/shareholder/shareholder.json
@@ -22067,7 +22067,7 @@ msgstr "ایجاد برنامه"
 
 #: erpnext/stock/doctype/stock_closing_entry/stock_closing_entry.js:12
 msgid "Generate Stock Closing Entry"
-msgstr ""
+msgstr "ایجاد ثبت اختتامیه موجودی"
 
 #. Description of a DocType
 #: erpnext/stock/doctype/packing_slip/packing_slip.json
@@ -22122,7 +22122,7 @@ msgstr "دریافت جزئیات گروه مشتری"
 #. Revaluation'
 #: erpnext/accounts/doctype/exchange_rate_revaluation/exchange_rate_revaluation.json
 msgid "Get Entries"
-msgstr "دریافت ورودی ها"
+msgstr "دریافت ثبت‌ها"
 
 #. Label of the get_items (Button) field in DocType 'Production Plan'
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
@@ -22911,7 +22911,7 @@ msgstr "دارای فرمت چاپی"
 #. Label of the has_priority (Check) field in DocType 'Pricing Rule'
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.json
 msgid "Has Priority"
-msgstr ""
+msgstr "اولویت دارد"
 
 #. Label of the has_serial_no (Check) field in DocType 'Work Order'
 #. Label of the has_serial_no (Check) field in DocType 'Item'
@@ -23049,7 +23049,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/depreciation.py:343
 msgid "Here are the error logs for the aforementioned failed depreciation entries: {0}"
-msgstr "در اینجا گزارش های خطا برای ورودی های استهلاک ناموفق فوق الذکر آمده است: {0}"
+msgstr "در اینجا گزارش های خطا برای ثبت‌های استهلاک ناموفق فوق الذکر آمده است: {0}"
 
 #: erpnext/stock/stock_ledger.py:1877
 msgid "Here are the options to proceed:"
@@ -23639,7 +23639,7 @@ msgstr "اگر این علامت را بردارید، ثبت‌های دفتر 
 #. in DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "If this is unchecked, direct GL entries will be created to book deferred revenue or expense"
-msgstr "اگر این علامت را بردارید، ورودی‌های مستقیم GL برای رزرو درآمد یا هزینه معوق ایجاد می‌شوند"
+msgstr "اگر این علامت را بردارید، ثبت‌های دفتر کل مستقیم برای رزرو درآمد یا هزینه معوق ایجاد می‌شوند"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:742
 msgid "If this is undesirable please cancel the corresponding Payment Entry."
@@ -28878,7 +28878,7 @@ msgstr "قفل شده است"
 #. Label of the log_entries (Int) field in DocType 'Bulk Transaction Log'
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log/bulk_transaction_log.json
 msgid "Log Entries"
-msgstr "ورودی های لاگ"
+msgstr "ثبت‌های لاگ"
 
 #. Description of a DocType
 #: erpnext/stock/doctype/item_price/item_price.json
@@ -49561,7 +49561,7 @@ msgstr "فقط عبارت فوری آینده را نشان دهید"
 
 #: erpnext/stock/utils.py:577
 msgid "Show pending entries"
-msgstr "نمایش ثبت های در انتظار"
+msgstr "نمایش ثبت‌های در انتظار"
 
 #: erpnext/accounts/report/trial_balance/trial_balance.js:99
 msgid "Show unclosed fiscal year's P&L balances"
@@ -51863,7 +51863,7 @@ msgstr "موفق شد"
 
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log/bulk_transaction_log.js:7
 msgid "Succeeded Entries"
-msgstr "ورودی های موفق"
+msgstr "ثبت‌های موفق"
 
 #. Option for the 'Status' (Select) field in DocType 'Bank Statement Import'
 #. Option for the 'Status' (Select) field in DocType 'Ledger Merge'
@@ -54133,7 +54133,7 @@ msgstr "موارد زیر که دارای قوانین Putaway هستند، قا
 
 #: erpnext/assets/doctype/asset/depreciation.py:338
 msgid "The following assets have failed to automatically post depreciation entries: {0}"
-msgstr "دارایی های زیر به طور خودکار ورودی های استهلاک را پست نکرده اند: {0}"
+msgstr "دارایی های زیر به طور خودکار ثبت‌های استهلاک را پست نکرده اند: {0}"
 
 #: erpnext/stock/doctype/pick_list/pick_list.py:250
 msgid "The following batches are expired, please restock them: <br> {0}"

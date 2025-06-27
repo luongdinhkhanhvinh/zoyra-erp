@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-06-22 09:36+0000\n"
-"PO-Revision-Date: 2025-06-23 03:29\n"
+"PO-Revision-Date: 2025-06-27 03:57\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -21713,7 +21713,7 @@ msgstr "Ab Referenzdatum"
 #. Label of the from_shareholder (Link) field in DocType 'Share Transfer'
 #: erpnext/accounts/doctype/share_transfer/share_transfer.json
 msgid "From Shareholder"
-msgstr "Vom Aktionär"
+msgstr "Vom Anteilseigner"
 
 #. Label of the from_template (Link) field in DocType 'Journal Entry'
 #. Label of the project_template (Link) field in DocType 'Project'
@@ -23184,7 +23184,7 @@ msgstr "Hallo,"
 #. Description of the 'Contact List' (Code) field in DocType 'Shareholder'
 #: erpnext/accounts/doctype/shareholder/shareholder.json
 msgid "Hidden list maintaining the list of contacts linked to Shareholder"
-msgstr "Versteckte Liste, die die Liste der mit dem Aktionär verknüpften Kontakte enthält"
+msgstr "Versteckte Liste, die die Liste der mit dem Anteilseigner verknüpften Kontakte enthält"
 
 #. Label of the hide_currency_symbol (Select) field in DocType 'Global
 #. Defaults'
@@ -32461,7 +32461,7 @@ msgstr "Anzahl der Monate (Einnahmen)"
 #: erpnext/accounts/report/share_balance/share_balance.py:59
 #: erpnext/accounts/report/share_ledger/share_ledger.py:55
 msgid "No of Shares"
-msgstr "Anzahl der Aktien"
+msgstr "Anzahl der Anteile"
 
 #. Label of the no_of_visits (Int) field in DocType 'Maintenance Schedule Item'
 #: erpnext/maintenance/doctype/maintenance_schedule_item/maintenance_schedule_item.json
@@ -48964,7 +48964,7 @@ msgstr "Menge des Prozessverlustartikels festlegen:"
 #. DocType 'BOM'
 #: erpnext/manufacturing/doctype/bom/bom.json
 msgid "Set rate of sub-assembly item based on BOM"
-msgstr "Setzen Sie die Menge der Unterbaugruppe auf der Grundlage der Stückliste"
+msgstr "Einzelpreis für Artikel der Unterbaugruppe auf Basis deren Stückliste festlegen"
 
 #. Description of the 'Sales Person Targets' (Section Break) field in DocType
 #. 'Sales Person'
@@ -49131,12 +49131,12 @@ msgstr "Anteilsbestand"
 #: erpnext/accounts/report/share_ledger/share_ledger.json
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Share Ledger"
-msgstr "Aktienbuch"
+msgstr "Verzeichnis der Anteilseigner"
 
 #. Label of a Card Break in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Share Management"
-msgstr "Aktienverwaltung"
+msgstr "Anteilsverwaltung"
 
 #. Name of a DocType
 #. Label of a Link in the Accounting Workspace
@@ -49144,7 +49144,7 @@ msgstr "Aktienverwaltung"
 #: erpnext/accounts/report/share_ledger/share_ledger.py:59
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Share Transfer"
-msgstr "Weitergabe übertragen"
+msgstr "Anteilsübertragung"
 
 #. Label of the share_type (Link) field in DocType 'Share Balance'
 #. Label of the share_type (Link) field in DocType 'Share Transfer'
@@ -49155,7 +49155,7 @@ msgstr "Weitergabe übertragen"
 #: erpnext/accounts/report/share_balance/share_balance.py:58
 #: erpnext/accounts/report/share_ledger/share_ledger.py:54
 msgid "Share Type"
-msgstr "Art der Freigabe"
+msgstr "Art des Anteils"
 
 #. Name of a DocType
 #. Label of a Link in the Accounting Workspace
@@ -49166,7 +49166,7 @@ msgstr "Art der Freigabe"
 #: erpnext/accounts/report/share_ledger/share_ledger.py:51
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Shareholder"
-msgstr "Aktionär"
+msgstr "Anteilseigner"
 
 #. Label of the shelf_life_in_days (Int) field in DocType 'Item'
 #: erpnext/stock/doctype/item/item.json
@@ -54213,11 +54213,11 @@ msgstr "Das Feld Eigenkapitalkonto darf nicht leer sein"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:173
 msgid "The field From Shareholder cannot be blank"
-msgstr "Das Feld Von Aktionär darf nicht leer sein"
+msgstr "Das Feld Von Anteilseigner darf nicht leer sein"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:181
 msgid "The field To Shareholder cannot be blank"
-msgstr "Das Feld An Aktionär darf nicht leer sein"
+msgstr "Das Feld An Anteilseigner darf nicht leer sein"
 
 #: erpnext/stock/doctype/delivery_note/delivery_note.py:397
 msgid "The field {0} in row {1} is not set"
@@ -54225,7 +54225,7 @@ msgstr "Das Feld {0} in der Zeile {1} ist nicht gesetzt"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:188
 msgid "The fields From Shareholder and To Shareholder cannot be blank"
-msgstr "Die Felder Von Aktionär und An Anteilinhaber dürfen nicht leer sein"
+msgstr "Die Felder Von Anteilseigner und An Anteilseigner dürfen nicht leer sein"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:240
 msgid "The folio numbers are not matching"
@@ -54304,7 +54304,7 @@ msgstr "Die neue Stückliste nach dem Austausch"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:196
 msgid "The number of shares and the share numbers are inconsistent"
-msgstr "Die Anzahl der Aktien und die Aktienanzahl sind inkonsistent"
+msgstr "Die Anzahl der Anteile und die Anteilsanzahl sind inkonsistent"
 
 #: erpnext/manufacturing/doctype/operation/operation.py:43
 msgid "The operation {0} can not add multiple times"
@@ -54389,15 +54389,15 @@ msgstr "Die Seriennummer {0} gehört nicht zu Artikel {1}"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:230
 msgid "The shareholder does not belong to this company"
-msgstr "Der Aktionär gehört nicht zu diesem Unternehmen"
+msgstr "Der Anteilseigner gehört nicht zu diesem Unternehmen"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:160
 msgid "The shares already exist"
-msgstr "Die Aktien sind bereits vorhanden"
+msgstr "Die Anteile sind bereits vorhanden"
 
 #: erpnext/accounts/doctype/share_transfer/share_transfer.py:166
 msgid "The shares don't exist with the {0}"
-msgstr "Die Freigaben existieren nicht mit der {0}"
+msgstr "Die Anteile existieren nicht mit der {0}"
 
 #: erpnext/stock/stock_ledger.py:790
 msgid "The stock for the item {0} in the {1} warehouse was negative on the {2}. You should create a positive entry {3} before the date {4} and time {5} to post the correct valuation rate. For more details, please read the <a href='https://docs.erpnext.com/docs/user/manual/en/stock-adjustment-cogs-with-negative-stock'>documentation<a>."
@@ -55414,7 +55414,7 @@ msgstr "Umbenennen"
 #. Label of the to_shareholder (Link) field in DocType 'Share Transfer'
 #: erpnext/accounts/doctype/share_transfer/share_transfer.json
 msgid "To Shareholder"
-msgstr "An den Aktionär"
+msgstr "An Anteilseigner"
 
 #. Label of the time (Time) field in DocType 'Cashier Closing'
 #. Label of the to_time (Datetime) field in DocType 'Sales Invoice Timesheet'
