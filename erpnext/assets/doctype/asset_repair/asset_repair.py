@@ -156,6 +156,13 @@ class AssetRepair(AccountsController):
 
 			self.make_gl_entries()
 
+	def cancel_sabb(self):
+		for row in self.stock_items:
+			if sabb := row.serial_and_batch_bundle:
+				row.db_set("serial_and_batch_bundle", None)
+				doc = frappe.get_doc("Serial and Batch Bundle", sabb)
+				doc.cancel()
+
 	def on_cancel(self):
 		self.asset_doc = frappe.get_doc("Asset", self.asset)
 		if self.get("capitalize_repair_cost"):
@@ -166,6 +173,8 @@ class AssetRepair(AccountsController):
 			depreciation_note = self.get_depreciation_note()
 			reschedule_depreciation(self.asset_doc, depreciation_note)
 			self.add_asset_activity()
+
+		self.cancel_sabb()
 
 	def after_delete(self):
 		frappe.get_doc("Asset", self.asset).set_status()
