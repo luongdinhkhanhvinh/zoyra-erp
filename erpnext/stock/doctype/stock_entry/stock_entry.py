@@ -270,6 +270,7 @@ class StockEntry(StockController):
 			self.set_material_request_transfer_status("Completed")
 
 	def on_cancel(self):
+		self.delink_asset_repair_sabb()
 		self.validate_closed_subcontracting_order()
 		self.update_subcontract_order_supplied_items()
 		self.update_subcontracting_order_status()
@@ -379,6 +380,27 @@ class StockEntry(StockController):
 				},
 			):
 				frappe.delete_doc("Stock Entry", d.name)
+
+	def delink_asset_repair_sabb(self):
+		if not self.asset_repair:
+			return
+
+		for row in self.items:
+			if row.serial_and_batch_bundle:
+				voucher_detail_no = frappe.db.get_value(
+					"Asset Repair Consumed Item",
+					{"parent": self.asset_repair, "serial_and_batch_bundle": row.serial_and_batch_bundle},
+					"name",
+				)
+
+				doc = frappe.get_doc("Serial and Batch Bundle", row.serial_and_batch_bundle)
+				doc.db_set(
+					{
+						"voucher_type": "Asset Repair",
+						"voucher_no": self.asset_repair,
+						"voucher_detail_no": voucher_detail_no,
+					}
+				)
 
 	def set_transfer_qty(self):
 		self.validate_qty_is_not_zero()
