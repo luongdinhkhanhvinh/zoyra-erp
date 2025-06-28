@@ -47,7 +47,7 @@ def get_columns(filters, trans):
 def validate_filters(filters):
 	for f in ["Fiscal Year", "Based On", "Period", "Company"]:
 		if not filters.get(f.lower().replace(" ", "_")):
-			frappe.throw(_("{0} is mandatory").format(f))
+			frappe.throw(_("{0} is mandatory").format(_(f)))
 
 	if not frappe.db.exists("Fiscal Year", filters.get("fiscal_year")):
 		frappe.throw(_("Fiscal Year {0} Does Not Exist").format(filters.get("fiscal_year")))
