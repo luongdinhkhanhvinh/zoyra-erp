@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-06-22 09:36+0000\n"
-"PO-Revision-Date: 2025-06-23 03:29\n"
+"PO-Revision-Date: 2025-06-28 04:05\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -48023,7 +48023,7 @@ msgstr "Gönderiliyor"
 
 #: erpnext/templates/includes/footer/footer_extension.html:20
 msgid "Sending..."
-msgstr "Gönderiyor..."
+msgstr ""
 
 #. Label of the sent (Check) field in DocType 'Project Update'
 #: erpnext/projects/doctype/project_update/project_update.json
