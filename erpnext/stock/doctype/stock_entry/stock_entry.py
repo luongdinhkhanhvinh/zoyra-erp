@@ -28,6 +28,7 @@ from erpnext.buying.utils import check_on_hold_or_closed_status
 from erpnext.controllers.taxes_and_totals import init_landed_taxes_and_totals
 from erpnext.manufacturing.doctype.bom.bom import (
 	add_additional_cost,
+	get_bom_items_as_dict,
 	get_op_cost_from_sub_assemblies,
 	get_scrap_items_from_sub_assemblies,
 	validate_bom_no,
@@ -249,6 +250,7 @@ class StockEntry(StockController):
 		self.validate_closed_subcontracting_order()
 		self.make_bundle_using_old_serial_batch_fields()
 		self.update_work_order()
+		self.update_disassembled_order()
 		self.update_stock_ledger()
 		self.make_stock_reserve_for_wip_and_fg()
 
@@ -280,6 +282,7 @@ class StockEntry(StockController):
 			self.validate_work_order_status()
 
 		self.update_work_order()
+		self.update_disassembled_order(is_cancel=True)
 		self.update_stock_ledger()
 
 		self.ignore_linked_doctypes = (
@@ -1743,6 +1746,13 @@ class StockEntry(StockController):
 			if not pro_doc.operations:
 				pro_doc.set_actual_dates()
 
+	def update_disassembled_order(self, is_cancel=False):
+		if not self.work_order:
+			return
+		if self.purpose == "Disassemble" and self.fg_completed_qty:
+			pro_doc = frappe.get_doc("Work Order", self.work_order)
+			pro_doc.run_method("update_disassembled_qty", self.fg_completed_qty, is_cancel)
+
 	def make_stock_reserve_for_wip_and_fg(self):
 		if self.is_stock_reserve_for_work_order():
 			pro_doc = frappe.get_doc("Work Order", self.work_order)
@@ -1919,7 +1929,7 @@ class StockEntry(StockController):
 					},
 				)
 
-	def get_items_for_disassembly(self):
+	def get_items_for_disassembly(self, disassemble_qty, production_item):
 		"""Get items for Disassembly Order"""
 
 		if not self.work_order:
@@ -1927,15 +1937,24 @@ class StockEntry(StockController):
 
 		items = self.get_items_from_manufacture_entry()
 
-		s_warehouse = ""
-		if self.work_order:
-			s_warehouse = frappe.db.get_value("Work Order", self.work_order, "fg_warehouse")
+		s_warehouse = frappe.db.get_value("Work Order", self.work_order, "fg_warehouse")
+
+		items_dict = get_bom_items_as_dict(self.bom_no, self.company, disassemble_qty)
 
 		for row in items:
 			child_row = self.append("items", {})
 			for field, value in row.items():
 				if value is not None:
 					child_row.set(field, value)
+
+			# update qty and amount from BOM items
+			bom_items = items_dict.get(row.item_code)
+			if bom_items:
+				child_row.qty = bom_items.get("qty", child_row.qty)
+				child_row.amount = bom_items.get("amount", child_row.amount)
+
+			if row.item_code == production_item:
+				child_row.qty = disassemble_qty
 
 			child_row.s_warehouse = (self.from_warehouse or s_warehouse) if row.is_finished_item else ""
 			child_row.t_warehouse = self.to_warehouse if not row.is_finished_item else ""
@@ -1969,12 +1988,12 @@ class StockEntry(StockController):
 		)
 
 	@frappe.whitelist()
-	def get_items(self):
+	def get_items(self, qty=None, production_item=None):
 		self.set("items", [])
 		self.validate_work_order()
 
-		if self.purpose == "Disassemble":
-			return self.get_items_for_disassembly()
+		if self.purpose == "Disassemble" and qty is not None:
+			return self.get_items_for_disassembly(qty, production_item)
 
 		if not self.posting_date or not self.posting_time:
 			frappe.throw(_("Posting date and posting time is mandatory"))
