@@ -1019,58 +1019,79 @@ def remove_ref_doc_link_from_pe(
 	per = qb.DocType("Payment Entry Reference")
 	pay = qb.DocType("Payment Entry")
 
-	linked_pe = (
+	query = (
 		qb.from_(per)
-		.select(per.parent)
-		.where((per.reference_doctype == ref_type) & (per.reference_name == ref_no) & (per.docstatus.lt(2)))
-		.run(as_list=1)
-	)
-	linked_pe = convert_to_list(linked_pe)
-	# remove reference only from specified payment
-	linked_pe = [x for x in linked_pe if x == payment_name] if payment_name else linked_pe
-
-	if linked_pe:
-		update_query = (
-			qb.update(per)
-			.set(per.allocated_amount, 0)
-			.set(per.modified, now())
-			.set(per.modified_by, frappe.session.user)
-			.where(per.docstatus.lt(2) & (per.reference_doctype == ref_type) & (per.reference_name == ref_no))
+		.select("*")
+		.where(
+			(per.reference_doctype == ref_type)
+			& (per.reference_name == ref_no)
+			& (per.docstatus.lt(2))
+			& (per.parenttype == "Payment Entry")
 		)
+	)
 
-		if payment_name:
-			update_query = update_query.where(per.parent == payment_name)
+	# update reference only from specified payment
+	if payment_name:
+		query = query.where(per.parent == payment_name)
 
-		update_query.run()
+	reference_rows = query.run(as_dict=True)
 
-		for pe in linked_pe:
-			try:
-				pe_doc = frappe.get_doc("Payment Entry", pe)
-				pe_doc.set_amounts()
+	if not reference_rows:
+		return
 
-				# Call cancel on only removed reference
-				references = [
-					x
-					for x in pe_doc.references
-					if x.reference_doctype == ref_type and x.reference_name == ref_no
-				]
-				[pe_doc.make_advance_gl_entries(x, cancel=1) for x in references]
+	linked_pe = set()
+	row_names = set()
 
-				pe_doc.clear_unallocated_reference_document_rows()
-				pe_doc.validate_payment_type_with_outstanding()
-			except Exception:
-				msg = _("There were issues unlinking payment entry {0}.").format(pe_doc.name)
-				msg += "<br>"
-				msg += _("Please cancel payment entry manually first")
-				frappe.throw(msg, exc=PaymentEntryUnlinkError, title=_("Payment Unlink Error"))
+	for row in reference_rows:
+		linked_pe.add(row.parent)
+		row_names.add(row.name)
 
-			qb.update(pay).set(pay.total_allocated_amount, pe_doc.total_allocated_amount).set(
-				pay.base_total_allocated_amount, pe_doc.base_total_allocated_amount
-			).set(pay.unallocated_amount, pe_doc.unallocated_amount).set(pay.modified, now()).set(
-				pay.modified_by, frappe.session.user
-			).where(pay.name == pe).run()
+	from erpnext.accounts.doctype.payment_request.payment_request import (
+		update_payment_requests_as_per_pe_references,
+	)
 
-		frappe.msgprint(_("Payment Entries {0} are un-linked").format("\n".join(linked_pe)))
+	# Update payment request amount
+	update_payment_requests_as_per_pe_references(reference_rows, cancel=True)
+
+	# Update allocated amounts and modified fields in one go
+	(
+		qb.update(per)
+		.set(per.allocated_amount, 0)
+		.set(per.modified, now())
+		.set(per.modified_by, frappe.session.user)
+		.where(per.name.isin(row_names))
+		.where(per.parenttype == "Payment Entry")
+		.run()
+	)
+
+	for pe in linked_pe:
+		try:
+			pe_doc = frappe.get_doc("Payment Entry", pe)
+			pe_doc.set_amounts()
+
+			# Call cancel on only removed reference
+			references = [x for x in pe_doc.references if x.name in row_names]
+			[pe_doc.make_advance_gl_entries(x, cancel=1) for x in references]
+
+			pe_doc.clear_unallocated_reference_document_rows()
+			pe_doc.validate_payment_type_with_outstanding()
+		except Exception:
+			msg = _("There were issues unlinking payment entry {0}.").format(pe_doc.name)
+			msg += "<br>"
+			msg += _("Please cancel payment entry manually first")
+			frappe.throw(msg, exc=PaymentEntryUnlinkError, title=_("Payment Unlink Error"))
+
+		(
+			qb.update(pay)
+			.set(pay.total_allocated_amount, pe_doc.total_allocated_amount)
+			.set(pay.base_total_allocated_amount, pe_doc.base_total_allocated_amount)
+			.set(pay.unallocated_amount, pe_doc.unallocated_amount)
+			.set(pay.modified, now())
+			.set(pay.modified_by, frappe.session.user)
+			.where(pay.name == pe)
+			.run()
+		)
+	frappe.msgprint(_("Payment Entries {0} are un-linked").format("\n".join(linked_pe)))
 
 
 @frappe.whitelist()
