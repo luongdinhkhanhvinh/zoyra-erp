@@ -7,7 +7,7 @@ import json
 import frappe
 from frappe import ValidationError, _, msgprint
 from frappe.contacts.doctype.address.address import render_address
-from frappe.utils import cint, flt, getdate
+from frappe.utils import cint, flt, format_date, get_link_to_form, getdate
 from frappe.utils.data import nowtime
 
 import erpnext
@@ -81,19 +81,38 @@ class BuyingController(SubcontractingController):
 			)
 
 	def validate_posting_date_with_po(self):
-		po_list = []
-		for item in self.items:
-			if item.purchase_order and item.purchase_order not in po_list:
-				po_list.append(item.purchase_order)
+		po_list = {x.purchase_order for x in self.items if x.purchase_order}
+
+		if not po_list:
+			return
+
+		invalid_po = []
+		po_dates = frappe._dict(
+			frappe.get_all(
+				"Purchase Order",
+				filters={"name": ["in", po_list]},
+				fields=["name", "transaction_date"],
+				as_list=True,
+			)
+		)
 
 		for po in po_list:
-			po_posting_date = frappe.get_value("Purchase Order", po, "transaction_date")
-			if getdate(po_posting_date) > getdate(self.posting_date):
-				frappe.throw(
-					_("Posting Date {0} cannot be before Purchase Order Posting Date {1}").format(
-						frappe.bold(self.posting_date), frappe.bold(po_posting_date)
-					)
-				)
+			po_date = po_dates[po]
+			if getdate(po_date) > getdate(self.posting_date):
+				invalid_po.append((get_link_to_form("Purchase Order", po), format_date(po_date)))
+
+		if not invalid_po:
+			return
+
+		msg = _("<p>Posting Date {0} cannot be before Purchase Order date for the following:</p><ul>").format(
+			frappe.bold(format_date(self.posting_date))
+		)
+
+		for po, date in invalid_po:
+			msg += f"<li>{po} ({date})</li>"
+		msg += "</ul>"
+
+		frappe.throw(_(msg))
 
 	def create_package_for_transfer(self) -> None:
 		"""Create serial and batch package for Sourece Warehouse in case of inter transfer."""
