@@ -344,10 +344,15 @@ def get_past_order_list(search_term, status, limit=20):
 	if search_term and status:
 		pos_invoices_by_customer = frappe.db.get_list(
 			"POS Invoice",
-			filters=get_invoice_filters("POS Invoice", status, customer=search_term),
+			filters=get_invoice_filters("POS Invoice", status),
+			or_filters={
+				"customer_name": ["like", f"%{search_term}%"],
+				"customer": ["like", f"%{search_term}%"],
+			},
 			fields=fields,
 			page_length=limit,
 		)
+
 		pos_invoices_by_name = frappe.db.get_list(
 			"POS Invoice",
 			filters=get_invoice_filters("POS Invoice", status, name=search_term),
@@ -361,7 +366,11 @@ def get_past_order_list(search_term, status, limit=20):
 
 		sales_invoices_by_customer = frappe.db.get_list(
 			"Sales Invoice",
-			filters=get_invoice_filters("Sales Invoice", status, customer=search_term),
+			filters=get_invoice_filters("Sales Invoice", status),
+			or_filters={
+				"customer_name": ["like", f"%{search_term}%"],
+				"customer": ["like", f"%{search_term}%"],
+			},
 			fields=fields,
 			page_length=limit,
 		)
@@ -467,14 +476,11 @@ def order_results_by_posting_date(results):
 	)
 
 
-def get_invoice_filters(doctype, status, name=None, customer=None):
+def get_invoice_filters(doctype, status, name=None):
 	filters = {}
 
 	if name:
 		filters["name"] = ["like", f"%{name}%"]
-	if customer:
-		filters["customer"] = ["like", f"%{customer}%"]
-
 	if doctype == "POS Invoice":
 		filters["status"] = status
 		if status == "Partly Paid":
