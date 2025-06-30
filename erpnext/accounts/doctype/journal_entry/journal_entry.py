@@ -24,6 +24,7 @@ from erpnext.accounts.party import get_party_account
 from erpnext.accounts.utils import (
 	cancel_exchange_gain_loss_journal,
 	get_account_currency,
+	get_advance_payment_doctypes,
 	get_balance_on,
 	get_stock_accounts,
 	get_stock_and_account_balance,
@@ -311,9 +312,7 @@ class JournalEntry(AccountsController):
 
 	def update_advance_paid(self):
 		advance_paid = frappe._dict()
-		advance_payment_doctypes = frappe.get_hooks("advance_payment_receivable_doctypes") + frappe.get_hooks(
-			"advance_payment_payable_doctypes"
-		)
+		advance_payment_doctypes = get_advance_payment_doctypes()
 		for d in self.get("accounts"):
 			if d.is_advance:
 				if d.reference_type in advance_payment_doctypes:
