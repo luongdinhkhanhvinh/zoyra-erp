@@ -62,6 +62,9 @@ class ReceivablePayableReport:
 			frappe.get_single_value("Accounts Settings", "receivable_payable_fetch_method")
 			or "Buffered Cursor"
 		)  # Fail Safe
+		self.advance_payment_doctypes = frappe.get_hooks(
+			"advance_payment_receivable_doctypes"
+		) + frappe.get_hooks("advance_payment_payable_doctypes")
 
 	def run(self, args):
 		self.filters.update(args)
@@ -181,7 +184,10 @@ class ReceivablePayableReport:
 		if key not in self.voucher_balance:
 			self.voucher_balance[key] = self.build_voucher_dict(ple)
 
-		if ple.voucher_type == ple.against_voucher_type and ple.voucher_no == ple.against_voucher_no:
+		if (ple.voucher_type == ple.against_voucher_type and ple.voucher_no == ple.against_voucher_no) or (
+			ple.voucher_type in ("Payment Entry", "Journal Entry")
+			and ple.against_voucher_type in self.advance_payment_doctypes
+		):
 			self.voucher_balance[key].cost_center = ple.cost_center
 
 		self.get_invoices(ple)
