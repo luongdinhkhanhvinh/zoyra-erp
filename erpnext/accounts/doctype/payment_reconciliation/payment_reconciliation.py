@@ -826,7 +826,7 @@ def reconcile_dr_cr_note(dr_cr_notes, company, active_dimensions=None):
 
 			create_gain_loss_journal(
 				company,
-				today(),
+				inv.difference_posting_date,
 				inv.party_type,
 				inv.party,
 				inv.account,
