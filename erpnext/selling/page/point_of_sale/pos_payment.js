@@ -130,7 +130,7 @@ erpnext.PointOfSale.Payment = class {
 				[1, 2, 3],
 				[4, 5, 6],
 				[7, 8, 9],
-				[".", 0, "Delete"],
+				["+/-", 0, "Delete"],
 			],
 		});
 
@@ -141,13 +141,33 @@ erpnext.PointOfSale.Payment = class {
 		const button_value = $btn.attr("data-button-value");
 
 		highlight_numpad_btn($btn);
-		this.numpad_value =
-			button_value === "delete" ? this.numpad_value.slice(0, -1) : this.numpad_value + button_value;
-		this.selected_mode.$input.get(0).focus();
-		this.selected_mode.set_value(this.numpad_value);
+		if (!this.selected_mode) {
+			frappe.show_alert({
+				message: __("Select a Payment Method."),
+				indicator: "yellow",
+			});
+			return;
+		}
+
+		const precision = 10 ** frappe.sys_defaults.currency_precision;
+		this.numpad_value = "0";
+		if (this.selected_mode.get_value()) {
+			this.numpad_value = (this.selected_mode.get_value() * precision).toFixed(0).toString();
+		}
+
+		if (button_value === "delete") {
+			this.numpad_value = this.numpad_value.slice(0, -1);
+		} else if (button_value === "+/-") {
+			this.numpad_value = `${this.numpad_value * -1}`;
+		} else {
+			this.numpad_value = this.numpad_value + button_value;
+		}
+
+		this.selected_mode.set_value(this.numpad_value / precision);
 
 		function highlight_numpad_btn($btn) {
 			$btn.addClass("shadow-base-inner bg-selected");
+			frappe.utils.play_sound("numpad-touch", true);
 			setTimeout(() => {
 				$btn.removeClass("shadow-base-inner bg-selected");
 			}, 100);
@@ -162,22 +182,17 @@ erpnext.PointOfSale.Payment = class {
 			// if clicked element doesn't have .mode-of-payment class then return
 			if (!$(e.target).is(mode_clicked)) return;
 
-			const scrollLeft =
-				mode_clicked.offset().left - me.$payment_modes.offset().left + me.$payment_modes.scrollLeft();
-			me.$payment_modes.animate({ scrollLeft });
-
 			const mode = mode_clicked.attr("data-mode");
 
 			// hide all control fields and shortcuts
 			$(`.mode-of-payment-control`).css("display", "none");
-			$(`.cash-shortcuts`).css("display", "none");
 			me.$payment_modes.find(`.pay-amount`).css("display", "inline");
 			me.$payment_modes.find(`.loyalty-amount-name`).css("display", "none");
 
 			// remove highlight from all mode-of-payments
 			$(".mode-of-payment").removeClass("border-primary");
 
-			if (mode_clicked.hasClass("border-primary")) {
+			if (me.selected_mode?._label === me[`${mode}_control`]?._label) {
 				// clicked one is selected then unselect it
 				mode_clicked.removeClass("border-primary");
 				me.selected_mode = "";
@@ -185,12 +200,10 @@ erpnext.PointOfSale.Payment = class {
 				// clicked one is not selected then select it
 				mode_clicked.addClass("border-primary");
 				mode_clicked.find(".mode-of-payment-control").css("display", "flex");
-				mode_clicked.find(".cash-shortcuts").css("display", "grid");
 				me.$payment_modes.find(`.${mode}-amount`).css("display", "none");
 				me.$payment_modes.find(`.${mode}-name`).css("display", "inline");
 
 				me.selected_mode = me[`${mode}_control`];
-				me.selected_mode && me.selected_mode.$input.get(0).focus();
 				me.auto_set_remaining_amount();
 			}
 		});
@@ -296,11 +309,6 @@ erpnext.PointOfSale.Payment = class {
 
 	bind_paid_amount_event(frm) {
 		this.update_totals_section(frm.doc);
-
-		// need to re calculate cash shortcuts after discount is applied
-		const is_cash_shortcuts_invisible = !this.$payment_modes.find(".cash-shortcuts").is(":visible");
-		this.attach_cash_shortcuts(frm.doc);
-		!is_cash_shortcuts_invisible && this.$payment_modes.find(".cash-shortcuts").css("display", "grid");
 		this.render_payment_mode_dom();
 	}
 
@@ -457,8 +465,7 @@ erpnext.PointOfSale.Payment = class {
 				.map((p, i) => {
 					const mode = this.sanitize_mode_of_payment(p.mode_of_payment);
 					const payment_type = p.type;
-					const margin = i % 2 === 0 ? "pr-2" : "pl-2";
-					const amount = p.amount > 0 ? format_currency(p.amount, currency) : "";
+					const amount = p.amount !== 0 ? format_currency(p.amount, currency) : "";
 
 					return `
 					<div class="payment-mode-wrapper">
@@ -498,11 +505,11 @@ erpnext.PointOfSale.Payment = class {
 			});
 			this[`${mode}_control`].toggle_label(false);
 			this[`${mode}_control`].set_value(p.amount);
+
+			this.selected_mode_input_display();
 		});
 
 		this.render_loyalty_points_payment_mode();
-
-		this.attach_cash_shortcuts(doc);
 	}
 
 	focus_on_default_mop() {
@@ -516,45 +523,6 @@ erpnext.PointOfSale.Payment = class {
 				}, 500);
 			}
 		});
-	}
-
-	attach_cash_shortcuts(doc) {
-		const grand_total = cint(frappe.sys_defaults.disable_rounded_total)
-			? doc.grand_total
-			: doc.rounded_total;
-		const currency = doc.currency;
-
-		const shortcuts = this.get_cash_shortcuts(flt(grand_total));
-
-		this.$payment_modes.find(".cash-shortcuts").remove();
-		let shortcuts_html = shortcuts
-			.map((s) => {
-				return `<div class="shortcut" data-value="${s}">${format_currency(s, currency)}</div>`;
-			})
-			.join("");
-
-		this.$payment_modes
-			.find('[data-payment-type="Cash"]')
-			.find(".mode-of-payment-control")
-			.after(`<div class="cash-shortcuts">${shortcuts_html}</div>`);
-	}
-
-	get_cash_shortcuts(grand_total) {
-		let steps = [1, 5, 10];
-		const digits = String(Math.round(grand_total)).length;
-
-		steps = steps.map((x) => x * 10 ** (digits - 2));
-
-		const get_nearest = (amount, x) => {
-			let nearest_x = Math.ceil(amount / x) * x;
-			return nearest_x === amount ? nearest_x + x : nearest_x;
-		};
-
-		return steps.reduce((finalArr, x) => {
-			let nearest_x = get_nearest(grand_total, x);
-			nearest_x = finalArr.indexOf(nearest_x) != -1 ? nearest_x + x : nearest_x;
-			return [...finalArr, nearest_x];
-		}, []);
 	}
 
 	render_loyalty_points_payment_mode() {
@@ -671,7 +639,10 @@ erpnext.PointOfSale.Payment = class {
 			<div class="seperator-y"></div>
 			<div class="col">
 				<div class="total-label">${label}</div>
-				<div class="value">${format_currency(change || remaining, currency)}</div>
+				<div class="value ${doc.paid_amount < grand_total ? "text-danger" : "text-success"}">${format_currency(
+				change || remaining,
+				currency
+			)}</div>
 			</div>`
 		);
 	}
@@ -707,5 +678,15 @@ erpnext.PointOfSale.Payment = class {
 			}
 		}
 		return true;
+	}
+
+	selected_mode_input_display() {
+		if (this.selected_mode) {
+			const mode = this.sanitize_mode_of_payment(this.selected_mode.df.label);
+			this.$payment_modes.find(`.mode-of-payment[data-mode="${mode}"]`).addClass("border-primary");
+			this.$payment_modes.find(`.${mode}.mode-of-payment-control`).css("display", "flex");
+			this.$payment_modes.find(`.${mode}-amount`).css("display", "none");
+			this.$payment_modes.find(`.${mode}-name`).css("display", "inline");
+		}
 	}
 };

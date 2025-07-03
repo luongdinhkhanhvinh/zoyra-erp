@@ -882,27 +882,6 @@
 								overflow: hidden;
 								text-overflow: ellipsis;
 							}
-
-							> .cash-shortcuts {
-								display: none;
-								grid-template-columns: repeat(3, minmax(0, 1fr));
-								gap: var(--margin-sm);
-								font-size: var(--text-sm);
-								text-align: center;
-
-								> .shortcut {
-									@extend .pointer-no-select;
-									border-radius: var(--border-radius-sm);
-									background-color: var(--control-bg);
-									font-weight: 500;
-									padding: var(--padding-xs) var(--padding-sm);
-									transition: all 0.15s ease-in-out;
-
-									&:hover {
-										background-color: var(--control-bg);
-									}
-								}
-							}
 						}
 
 						> .loyalty-card {
