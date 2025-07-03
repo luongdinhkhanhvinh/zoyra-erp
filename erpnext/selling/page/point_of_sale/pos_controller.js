@@ -526,9 +526,7 @@ erpnext.PointOfSale.Controller = class {
 							() => this.make_invoice_frm(doc.doctype),
 							() => this.make_return_invoice(doc),
 							() => this.cart.load_invoice(),
-							() => this.item_selector.toggle_component(true),
-							() => this.item_selector.resize_selector(false),
-							() => this.item_details.toggle_component(false),
+							() => this.toggle_components(true),
 							() => frappe.dom.unfreeze(),
 						]);
 					});
@@ -541,9 +539,7 @@ erpnext.PointOfSale.Controller = class {
 						() => this.frm.refresh(name),
 						() => this.frm.call("reset_mode_of_payments"),
 						() => this.cart.load_invoice(),
-						() => this.item_selector.toggle_component(true),
-						() => this.item_selector.resize_selector(false),
-						() => this.item_details.toggle_component(false),
+						() => this.toggle_components(true),
 					]);
 				},
 				delete_order: (doctype, name) => {

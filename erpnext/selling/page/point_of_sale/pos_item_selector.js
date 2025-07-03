@@ -367,28 +367,6 @@ erpnext.PointOfSale.ItemSelector = class {
 		this.set_search_value("");
 	}
 
-	resize_selector(minimize) {
-		minimize
-			? this.$component
-					.find(".filter-section")
-					.css("grid-template-columns", "repeat(1, minmax(0, 1fr))")
-			: this.$component
-					.find(".filter-section")
-					.css("grid-template-columns", "repeat(12, minmax(0, 1fr))");
-
-		minimize
-			? this.$component.find(".search-field").css("margin", "var(--margin-sm) 0px")
-			: this.$component.find(".search-field").css("margin", "0px var(--margin-sm)");
-
-		minimize
-			? this.$component.css("grid-column", "span 2 / span 2")
-			: this.$component.css("grid-column", "span 6 / span 6");
-
-		minimize
-			? this.$items_container.css("grid-template-columns", "repeat(1, minmax(0, 1fr))")
-			: this.$items_container.css("grid-template-columns", "repeat(4, minmax(0, 1fr))");
-	}
-
 	toggle_component(show) {
 		this.set_search_value("");
 		this.$component.css("display", show ? "flex" : "none");
