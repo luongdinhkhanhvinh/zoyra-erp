@@ -343,7 +343,7 @@ def get_columns(additional_table_columns, filters):
 	return columns
 
 
-def apply_conditions(query, si, sii, filters, additional_conditions=None):
+def apply_conditions(query, si, sii, sip, filters, additional_conditions=None):
 	for opts in ("company", "customer"):
 		if filters.get(opts):
 			query = query.where(si[opts] == filters[opts])
@@ -355,10 +355,7 @@ def apply_conditions(query, si, sii, filters, additional_conditions=None):
 		query = query.where(si.posting_date <= filters.get("to_date"))
 
 	if filters.get("mode_of_payment"):
-		sales_invoice = frappe.db.get_all(
-			"Sales Invoice Payment", {"mode_of_payment": filters.get("mode_of_payment")}, pluck="parent"
-		)
-		query = query.where(si.name.isin(sales_invoice))
+		query = query.where(sip.mode_of_payment == filters.get("mode_of_payment"))
 
 	if filters.get("warehouse"):
 		if frappe.db.get_value("Warehouse", filters.get("warehouse"), "is_group"):
@@ -416,6 +413,7 @@ def apply_order_by_conditions(query, si, ii, filters):
 def get_items(filters, additional_query_columns, additional_conditions=None):
 	doctype = "Sales Invoice"
 	si = frappe.qb.DocType(doctype)
+	sip = frappe.qb.DocType(f"{doctype} Payment")
 	sii = frappe.qb.DocType(f"{doctype} Item")
 	item = frappe.qb.DocType("Item")
 
@@ -423,6 +421,8 @@ def get_items(filters, additional_query_columns, additional_conditions=None):
 		frappe.qb.from_(si)
 		.join(sii)
 		.on(si.name == sii.parent)
+		.left_join(sip)
+		.on(sip.parent == si.name)
 		.left_join(item)
 		.on(sii.item_code == item.name)
 		.select(
@@ -462,6 +462,7 @@ def get_items(filters, additional_query_columns, additional_conditions=None):
 			si.update_stock,
 			sii.uom,
 			sii.qty,
+			sip.mode_of_payment,
 		)
 		.where(si.docstatus == 1)
 		.where(sii.parenttype == doctype)
@@ -481,7 +482,7 @@ def get_items(filters, additional_query_columns, additional_conditions=None):
 	if filters.get("customer_group"):
 		query = query.where(si.customer_group == filters["customer_group"])
 
-	query = apply_conditions(query, si, sii, filters, additional_conditions)
+	query = apply_conditions(query, si, sii, sip, filters, additional_conditions)
 
 	from frappe.desk.reportview import build_match_conditions
 
