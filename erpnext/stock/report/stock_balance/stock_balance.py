@@ -360,28 +360,8 @@ class StockBalanceReport:
 	def apply_warehouse_filters(self, query, sle) -> str:
 		warehouse_table = frappe.qb.DocType("Warehouse")
 
-		if warehouses := self.filters.get("warehouse"):
-			warehouse_range = frappe.get_all(
-				"Warehouse",
-				filters={
-					"name": ("in", warehouses),
-				},
-				fields=["lft", "rgt"],
-				as_list=True,
-			)
-
-			child_query = frappe.qb.from_(warehouse_table).select(warehouse_table.name)
-
-			range_conditions = [
-				(warehouse_table.lft >= lft) & (warehouse_table.rgt <= rgt) for lft, rgt in warehouse_range
-			]
-
-			combined_condition = range_conditions[0]
-			for condition in range_conditions[1:]:
-				combined_condition = combined_condition | condition
-
-			child_query = child_query.where(combined_condition & (warehouse_table.name == sle.warehouse))
-			query = query.where(ExistsCriterion(child_query))
+		if self.filters.get("warehouse"):
+			apply_warehouse_filter(query, sle, self.filters)
 
 		elif warehouse_type := self.filters.get("warehouse_type"):
 			query = (
