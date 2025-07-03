@@ -27,25 +27,24 @@ frappe.query_reports["Stock Ledger"] = {
 		},
 		{
 			fieldname: "warehouse",
-			label: __("Warehouse"),
-			fieldtype: "Link",
+			label: __("Warehouses"),
+			fieldtype: "MultiSelectList",
 			options: "Warehouse",
-			get_query: function () {
+			get_data: function (txt) {
 				const company = frappe.query_report.get_filter_value("company");
-				return {
-					filters: { company: company },
-				};
+
+				return frappe.db.get_link_options("Warehouse", txt, {
+					company: company,
+				});
 			},
 		},
 		{
 			fieldname: "item_code",
-			label: __("Item"),
-			fieldtype: "Link",
+			label: __("Items"),
+			fieldtype: "MultiSelectList",
 			options: "Item",
-			get_query: function () {
-				return {
-					query: "erpnext.controllers.queries.item_query",
-				};
+			get_data: function (txt) {
+				return frappe.db.get_link_options("Item", txt, {});
 			},
 		},
 		{

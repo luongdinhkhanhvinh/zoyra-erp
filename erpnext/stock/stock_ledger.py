@@ -57,12 +57,12 @@ def make_sl_entries(sl_entries, allow_negative_stock=False, via_landed_cost_vouc
 	"""Create SL entries from SL entry dicts
 
 	args:
-	        - allow_negative_stock: disable negative stock valiations if true
-	        - via_landed_cost_voucher: landed cost voucher cancels and reposts
-	        entries of purchase document. This flag is used to identify if
-	        cancellation and repost is happening via landed cost voucher, in
-	        such cases certain validations need to be ignored (like negative
-	                        stock)
+	                - allow_negative_stock: disable negative stock valiations if true
+	                - via_landed_cost_voucher: landed cost voucher cancels and reposts
+	                entries of purchase document. This flag is used to identify if
+	                cancellation and repost is happening via landed cost voucher, in
+	                such cases certain validations need to be ignored (like negative
+	                                                stock)
 	"""
 	from erpnext.controllers.stock_controller import future_sle_exists
 
@@ -527,12 +527,12 @@ class update_entries_after:
 
 	:param args: args as dict
 
-	        args = {
-	                "item_code": "ABC",
-	                "warehouse": "XYZ",
-	                "posting_date": "2012-12-12",
-	                "posting_time": "12:00"
-	        }
+	                args = {
+	                                "item_code": "ABC",
+	                                "warehouse": "XYZ",
+	                                "posting_date": "2012-12-12",
+	                                "posting_time": "12:00"
+	                }
 	"""
 
 	def __init__(
@@ -603,15 +603,15 @@ class update_entries_after:
 		:Data Structure:
 
 		self.data = {
-		        warehouse1: {
-		                'previus_sle': {},
-		                'qty_after_transaction': 10,
-		                'valuation_rate': 100,
-		                'stock_value': 1000,
-		                'prev_stock_value': 1000,
-		                'stock_queue': '[[10, 100]]',
-		                'stock_value_difference': 1000
-		        }
+		                warehouse1: {
+		                                'previus_sle': {},
+		                                'qty_after_transaction': 10,
+		                                'valuation_rate': 100,
+		                                'stock_value': 1000,
+		                                'prev_stock_value': 1000,
+		                                'stock_queue': '[[10, 100]]',
+		                                'stock_value_difference': 1000
+		                }
 		}
 
 		"""
@@ -1656,11 +1656,11 @@ def get_previous_sle(args, for_update=False, extra_cond=None):
 	is called from various transaction like stock entry, reco etc
 
 	args = {
-	        "item_code": "ABC",
-	        "warehouse": "XYZ",
-	        "posting_date": "2012-12-12",
-	        "posting_time": "12:00",
-	        "sle": "name of reference Stock Ledger Entry"
+	                "item_code": "ABC" or ["ABC", "XYZ"],
+	                "warehouse": "XYZ" or ["XYZ", "ABC"],
+	                "posting_date": "2012-12-12",
+	                "posting_time": "12:00",
+	                "sle": "name of reference Stock Ledger Entry"
 	}
 	"""
 	args["name"] = args.get("sle", None) or ""
@@ -1682,8 +1682,20 @@ def get_stock_ledger_entries(
 ):
 	"""get stock ledger entries filtered by specific posting datetime conditions"""
 	conditions = f" and posting_datetime {operator} %(posting_datetime)s"
-	if previous_sle.get("warehouse"):
-		conditions += " and warehouse = %(warehouse)s"
+
+	if item_code := previous_sle.get("item_code"):
+		if isinstance(item_code, list | tuple):
+			conditions += " and item_code in %(item_code)s"
+		else:
+			conditions += " and item_code = %(item_code)s"
+
+	if warehouse := previous_sle.get("warehouse"):
+		if isinstance(warehouse, list | tuple):
+			conditions += " and warehouse in %(warehouse)s"
+
+		else:
+			conditions += " and warehouse = %(warehouse)s"
+
 	elif previous_sle.get("warehouse_condition"):
 		conditions += " and " + previous_sle.get("warehouse_condition")
 
@@ -1726,8 +1738,7 @@ def get_stock_ledger_entries(
 		"""
 		select *, posting_datetime as "timestamp"
 		from `tabStock Ledger Entry`
-		where item_code = %(item_code)s
-		and is_cancelled = 0
+		where is_cancelled = 0
 		{conditions}
 		order by posting_datetime {order}, creation {order}
 		{limit} {for_update}""".format(
