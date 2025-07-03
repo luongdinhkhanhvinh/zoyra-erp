@@ -73,6 +73,7 @@ erpnext.PointOfSale.PastOrderSummary = class {
 	get_upper_section_html(doc) {
 		const { status } = doc;
 		let indicator_color = "";
+		const is_customer_naming_by_customer_name = frappe.sys_defaults.cust_master_name !== "Customer Name";
 
 		["Paid", "Consolidated"].includes(status) && (indicator_color = "green");
 		["Partly Paid", "Overdue"].includes(status) && (indicator_color = "yellow");
@@ -80,8 +81,11 @@ erpnext.PointOfSale.PastOrderSummary = class {
 		["Credit Note Issued", "Return"].includes(status) && (indicator_color = "grey");
 
 		return `<div class="left-section">
-					<div class="customer-name">${doc.customer}</div>
-					<div class="customer-email">${this.customer_email}</div>
+					<div class="customer-section">
+						<div class="customer-name">${doc.customer_name}</div>
+						${is_customer_naming_by_customer_name ? `<div class="customer-code">${doc.customer}</div>` : ""}
+						<div class="customer-email">${this.customer_email}</div>
+					</div>
 					<div class="cashier">${__("Sold by")}: ${doc.owner}</div>
 				</div>
 				<div class="right-section">
