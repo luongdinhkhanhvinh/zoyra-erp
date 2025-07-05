@@ -583,6 +583,7 @@ def create_merge_logs(invoice_by_customer, closing_entry=None):
 					merge_log.posting_time = (
 						get_time(closing_entry.get("posting_time")) if closing_entry else nowtime()
 					)
+					merge_log.company = closing_entry.get("company") if closing_entry else None
 					merge_log.customer = customer
 					merge_log.pos_closing_entry = closing_entry.get("name") if closing_entry else None
 					merge_log.set("pos_invoices", _invoices)
