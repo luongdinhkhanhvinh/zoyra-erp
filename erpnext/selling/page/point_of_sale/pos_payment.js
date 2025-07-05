@@ -149,10 +149,11 @@ erpnext.PointOfSale.Payment = class {
 			return;
 		}
 
-		const precision = 10 ** frappe.sys_defaults.currency_precision;
+		const number_format_details = get_number_format_info(frappe.sys_defaults.number_format);
+		const precision = frappe.sys_defaults.currency_precision || number_format_details.precision;
 		this.numpad_value = "0";
 		if (this.selected_mode.get_value()) {
-			this.numpad_value = (this.selected_mode.get_value() * precision).toFixed(0).toString();
+			this.numpad_value = (this.selected_mode.get_value() * 10 ** precision).toFixed(0).toString();
 		}
 
 		if (button_value === "delete") {
@@ -163,7 +164,7 @@ erpnext.PointOfSale.Payment = class {
 			this.numpad_value = this.numpad_value + button_value;
 		}
 
-		this.selected_mode.set_value(this.numpad_value / precision);
+		this.selected_mode.set_value(this.numpad_value / 10 ** precision);
 
 		function highlight_numpad_btn($btn) {
 			$btn.addClass("shadow-base-inner bg-selected");
