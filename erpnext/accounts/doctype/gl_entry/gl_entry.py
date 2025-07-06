@@ -224,26 +224,23 @@ class GLEntry(Document):
 	def validate_account_details(self, adv_adj):
 		"""Account must be ledger, active and not freezed"""
 
-		ret = frappe.db.sql(
-			"""select is_group, docstatus, company
-			from tabAccount where name=%s""",
-			self.account,
-			as_dict=1,
-		)[0]
+		account = frappe.get_cached_value(
+			"Account", self.account, fieldname=["is_group", "docstatus", "company"], as_dict=True
+		)
 
-		if ret.is_group == 1:
+		if account.is_group == 1:
 			frappe.throw(
 				_(
 					"""{0} {1}: Account {2} is a Group Account and group accounts cannot be used in transactions"""
 				).format(self.voucher_type, self.voucher_no, self.account)
 			)
 
-		if ret.docstatus == 2:
+		if account.docstatus == 2:
 			frappe.throw(
 				_("{0} {1}: Account {2} is inactive").format(self.voucher_type, self.voucher_no, self.account)
 			)
 
-		if ret.company != self.company:
+		if account.company != self.company:
 			frappe.throw(
 				_("{0} {1}: Account {2} does not belong to Company {3}").format(
 					self.voucher_type, self.voucher_no, self.account, self.company
