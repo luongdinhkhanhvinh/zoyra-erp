@@ -16,7 +16,7 @@ from erpnext.accounts.doctype.gl_entry.gl_entry import (
 	validate_balance_type,
 	validate_frozen_account,
 )
-from erpnext.accounts.utils import update_voucher_outstanding
+from erpnext.accounts.utils import OUTSTANDING_DOCTYPES, update_voucher_outstanding
 from erpnext.exceptions import InvalidAccountDimensionError, MandatoryAccountDimensionError
 
 
@@ -168,7 +168,7 @@ class PaymentLedgerEntry(Document):
 
 		# update outstanding amount
 		if (
-			self.against_voucher_type in ["Journal Entry", "Sales Invoice", "Purchase Invoice", "Fees"]
+			self.against_voucher_type in OUTSTANDING_DOCTYPES
 			and self.flags.update_outstanding == "Yes"
 			and not frappe.flags.is_reverse_depr_entry
 		):

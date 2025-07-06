@@ -49,6 +49,7 @@ class PaymentEntryUnlinkError(frappe.ValidationError):
 
 
 GL_REPOSTING_CHUNK = 100
+OUTSTANDING_DOCTYPES = frozenset(["Sales Invoice", "Purchase Invoice", "Fees"])
 
 
 @frappe.whitelist()
@@ -1884,12 +1885,7 @@ def update_voucher_outstanding(voucher_type, voucher_no, account, party_type, pa
 
 	# on cancellation outstanding can be an empty list
 	voucher_outstanding = ple_query.get_voucher_outstandings(vouchers, common_filter=common_filter)
-	if (
-		voucher_type in ["Sales Invoice", "Purchase Invoice", "Fees"]
-		and party_type
-		and party
-		and voucher_outstanding
-	):
+	if voucher_type in OUTSTANDING_DOCTYPES and party_type and party and voucher_outstanding:
 		outstanding = voucher_outstanding[0]
 		ref_doc = frappe.get_lazy_doc(voucher_type, voucher_no)
 		outstanding_amount = flt(

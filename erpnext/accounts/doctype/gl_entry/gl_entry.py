@@ -18,7 +18,7 @@ from erpnext.accounts.party import (
 	validate_party_frozen_disabled,
 	validate_party_gle_currency,
 )
-from erpnext.accounts.utils import get_account_currency, get_fiscal_year
+from erpnext.accounts.utils import OUTSTANDING_DOCTYPES, get_account_currency, get_fiscal_year
 from erpnext.exceptions import InvalidAccountCurrency
 
 exclude_from_linked_with = True
@@ -382,7 +382,7 @@ def update_outstanding_amt(
 				)
 			)
 
-	if against_voucher_type in ["Sales Invoice", "Purchase Invoice", "Fees"]:
+	if against_voucher_type in OUTSTANDING_DOCTYPES:
 		ref_doc = frappe.get_doc(against_voucher_type, against_voucher)
 
 		# Didn't use db_set for optimization purpose
