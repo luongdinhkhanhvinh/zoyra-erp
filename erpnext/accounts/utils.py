@@ -1856,14 +1856,18 @@ def create_payment_ledger_entry(
 
 		for entry in ple_map:
 			ple = frappe.get_doc(entry)
-
-			if cancel:
-				delink_original_entry(ple, partial_cancel=partial_cancel)
-
 			ple.flags.ignore_permissions = 1
 			ple.flags.adv_adj = adv_adj
 			ple.flags.from_repost = from_repost
 			ple.flags.update_outstanding = update_outstanding
+
+			if cancel:
+				delink_original_entry(ple, partial_cancel=partial_cancel)
+				ple._action = "submit"
+				ple.run_before_save_methods()
+				ple.run_post_save_methods()
+				continue
+
 			ple.submit()
 
 
