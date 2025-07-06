@@ -47,6 +47,7 @@ from erpnext.accounts.utils import (
 	cancel_exchange_gain_loss_journal,
 	get_account_currency,
 	get_outstanding_invoices,
+	get_reconciliation_effect_date,
 )
 from erpnext.controllers.accounts_controller import (
 	AccountsController,
@@ -1570,23 +1571,7 @@ class PaymentEntry(AccountsController):
 		else:
 			# For backwards compatibility
 			# Supporting reposting on payment entries reconciled before select field introduction
-			reconciliation_takes_effect_on = frappe.get_cached_value(
-				"Company", self.company, "reconciliation_takes_effect_on"
-			)
-			if reconciliation_takes_effect_on == "Advance Payment Date":
-				posting_date = self.posting_date
-			elif reconciliation_takes_effect_on == "Oldest Of Invoice Or Advance":
-				date_field = "posting_date"
-				if invoice.reference_doctype in ["Sales Order", "Purchase Order"]:
-					date_field = "transaction_date"
-				posting_date = frappe.db.get_value(
-					invoice.reference_doctype, invoice.reference_name, date_field
-				)
-
-				if getdate(posting_date) < getdate(self.posting_date):
-					posting_date = self.posting_date
-			elif reconciliation_takes_effect_on == "Reconciliation Date":
-				posting_date = nowdate()
+			posting_date = get_reconciliation_effect_date(invoice, self.company, self.posting_date)
 			frappe.db.set_value("Payment Entry Reference", invoice.name, "reconcile_effect_on", posting_date)
 
 		dr_or_cr, account = self.get_dr_and_account_for_advances(invoice)
