@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
-"POT-Creation-Date: 2025-06-29 09:36+0000\n"
-"PO-Revision-Date: 2025-07-04 05:34\n"
+"POT-Creation-Date: 2025-07-06 09:36+0000\n"
+"PO-Revision-Date: 2025-07-07 05:54\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -714,9 +714,17 @@ msgstr "<label class=\"control-label\" style=\"margin-bottom: 0px;\">Belopp i Or
 msgid "<label class=\"control-label\" style=\"margin-bottom: 0px;\">Date Settings</label>"
 msgstr "<label class=\"control-label\" style=\"margin-bottom: 0px;\">Datum Inställningar</label>"
 
+#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:123
+msgid "<li>Clearance date must be after cheque date for row(s): {0}</li>"
+msgstr "<li>Avstämning datum måste vara efter check datum för rad(ar): {0}</li>"
+
 #: erpnext/controllers/accounts_controller.py:2176
 msgid "<li>Item {0} in row(s) {1} billed more than {2}</li>"
 msgstr "<li>Artikel {0} på rad(er) {1} fakturerad mer än {2}</li>"
+
+#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:118
+msgid "<li>Payment document required for row(s): {0}</li>"
+msgstr "<li>Verifikat erfordras för rad(ar): {0}</li>"
 
 #: erpnext/controllers/accounts_controller.py:2173
 msgid "<p>Cannot overbill for the following Items:</p>"
@@ -766,6 +774,14 @@ msgstr "<p>I <b>E-post Mall</b> kan följande specialvariabler användas:\n"
 "<p>\n"
 "</p>\n"
 "<p>Förutom dessa kan man komma åt alla värden i offert begäran, som <code>{{ message_for_supplier }}</code> eller <code>{{ terms }}</code>.</p>"
+
+#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:116
+msgid "<p>Please correct the following row(s):</p><ul>"
+msgstr "<p>Korrigera följande rad(er):</p><ul>"
+
+#: erpnext/controllers/buying_controller.py:107
+msgid "<p>Posting Date {0} cannot be before Purchase Order date for the following:</p><ul>"
+msgstr "<p>Registrering datum {0} kan inte vara före Inköp Order datum för följande:</p><ul>"
 
 #: erpnext/stock/doctype/stock_settings/stock_settings.js:69
 msgid "<p>Price List Rate has not been set as editable in Selling Settings. In this scenario, setting <strong>Update Price List Based On</strong> to <strong>Price List Rate</strong> will prevent auto-updation of Item Price.</p>Are you sure you want to continue?"
@@ -1231,7 +1247,7 @@ msgstr "Åtkomst Nyckel erfordras för Tjänsteleverantör: {0}"
 msgid "According to CEFACT/ICG/2010/IC013 or CEFACT/ICG/2010/IC010"
 msgstr "Enligt CEFACT/ICG/2010/IC013 eller CEFACT/ICG/2010/IC010"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:812
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:815
 msgid "According to the BOM {0}, the Item '{1}' is missing in the stock entry."
 msgstr "Enligt stycklista {0} saknas artikel '{1}' i lager post."
 
@@ -1886,8 +1902,8 @@ msgstr "Bokföring Poster"
 msgid "Accounting Entry for Asset"
 msgstr "Bokföring Post för Tillgång"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1676
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1696
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1679
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1699
 msgid "Accounting Entry for LCV in Stock Entry {0}"
 msgstr "Bokföring Post för Landad Kostnad Verifikat i Lager Post {0}"
 
@@ -1906,13 +1922,13 @@ msgstr "Bokföring Post för Service"
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1079
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1103
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1210
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1446
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1468
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1441
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1463
 #: erpnext/controllers/stock_controller.py:579
 #: erpnext/controllers/stock_controller.py:596
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.py:899
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1622
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1636
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1625
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1639
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.py:613
 msgid "Accounting Entry for Stock"
 msgstr "Bokföring Post för Lager"
@@ -2617,7 +2633,7 @@ msgstr "Faktisk Slut Datum"
 msgid "Actual End Date (via Timesheet)"
 msgstr "Faktisk Slut Datum (via Tidrapport)"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:205
+#: erpnext/manufacturing/doctype/work_order/work_order.py:206
 msgid "Actual End Date cannot be before Actual Start Date"
 msgstr "Faktiskt Slutdatum kan inte vara före Faktiskt Startdatum"
 
@@ -2645,7 +2661,7 @@ msgstr "Faktisk Drift Kostnad"
 msgid "Actual Operation Time"
 msgstr "Faktisk Åtgärd Tid"
 
-#: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:401
+#: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:430
 msgid "Actual Posting"
 msgstr "Faktisk Registrering"
 
@@ -2798,7 +2814,7 @@ msgstr "Lägg till Personal"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:234
 #: erpnext/selling/doctype/sales_order/sales_order.js:254
-#: erpnext/stock/dashboard/item_dashboard.js:213
+#: erpnext/stock/dashboard/item_dashboard.js:216
 msgid "Add Item"
 msgstr "Lägg till Artikel"
 
@@ -4046,7 +4062,7 @@ msgstr "Alla Artiklar är redan Fakturerade / Återlämnade"
 msgid "All items have already been received"
 msgstr "Alla Artiklar är redan mottagna"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:2647
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:2666
 msgid "All items have already been transferred for this Work Order."
 msgstr "Alla Artikel har redan överförts för denna Arbetsorder."
 
@@ -4060,7 +4076,7 @@ msgstr "Alla Artiklar i detta dokument har redan länkad Kvalitet Kontroll."
 msgid "All the Comments and Emails will be copied from one document to another newly created document(Lead -> Opportunity -> Quotation) throughout the CRM documents."
 msgstr "Alla Kommentar och E-post meddelande kommer att kopieras från ett dokument till ett annat nyskapad dokument (Potentiell Kund -> Möjlighet -> Försäljning Offert) genom hela Säljstöd process."
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:202
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:200
 msgid "All the items have been already returned."
 msgstr "Alla artiklar är redan returnerade."
 
@@ -4635,7 +4651,7 @@ msgstr "Alternativ Artikel Kod"
 msgid "Alternative Item Name"
 msgstr "Alternativ Artikel Namn"
 
-#: erpnext/selling/doctype/quotation/quotation.js:360
+#: erpnext/selling/doctype/quotation/quotation.js:361
 msgid "Alternative Items"
 msgstr "Alternativa Artiklar"
 
@@ -4974,7 +4990,7 @@ msgstr "Ändrad Från"
 #: erpnext/manufacturing/doctype/bom_item/bom_item.json
 #: erpnext/manufacturing/doctype/bom_scrap_item/bom_scrap_item.json
 #: erpnext/manufacturing/doctype/work_order_item/work_order_item.json
-#: erpnext/selling/doctype/quotation/quotation.js:298
+#: erpnext/selling/doctype/quotation/quotation.js:299
 #: erpnext/selling/doctype/quotation_item/quotation_item.json
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:46
@@ -6124,7 +6140,7 @@ msgstr "Tillgång Borttagen"
 msgid "Asset issued to Employee {0}"
 msgstr "Tillgång utfärdad till Personal {0}"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:126
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:135
 msgid "Asset out of order due to Asset Repair {0}"
 msgstr "Tillgång ur funktion på grund av reparation av Tillgång {0}"
 
@@ -6169,7 +6185,7 @@ msgstr "Tillgång överförd till Plats {0}"
 msgid "Asset updated after being split into Asset {0}"
 msgstr "Tillgång uppdaterad efter att ha delats upp i Tillgång {0}"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:380
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:389
 msgid "Asset updated due to Asset Repair {0} {1}."
 msgstr "Tillgång uppdaterad på grund av Tillgång Reparation {0} {1}."
 
@@ -6202,11 +6218,15 @@ msgstr "Tillgång {0} finns inte"
 msgid "Asset {0} has been updated. Please set the depreciation details if any and submit it."
 msgstr "Tillgång {0} uppdaterad. Ange avskrivning detaljer och godkänn den."
 
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:72
+msgid "Asset {0} is in {1} status and cannot be repaired."
+msgstr "Tillgång {0} har {1} status och kan inte repareras."
+
 #: erpnext/assets/doctype/asset/depreciation.py:367
 msgid "Asset {0} must be submitted"
 msgstr "Tillgång {0} måste godkännas"
 
-#: erpnext/controllers/buying_controller.py:916
+#: erpnext/controllers/buying_controller.py:935
 msgid "Asset {assets_link} created for {item_code}"
 msgstr "Tillgång {assets_link} skapad för {item_code}"
 
@@ -6236,15 +6256,15 @@ msgstr "Tillgångens Värde Justerat efter godkänade av Tillgång Värde Juster
 msgid "Assets"
 msgstr "Tillgångar"
 
-#: erpnext/controllers/buying_controller.py:934
+#: erpnext/controllers/buying_controller.py:953
 msgid "Assets not created for {item_code}. You will have to create asset manually."
 msgstr "Tillgångar har inte skapats för {item_code}. Skapa Tillgång manuellt."
 
-#: erpnext/controllers/buying_controller.py:921
+#: erpnext/controllers/buying_controller.py:940
 msgid "Assets {assets_link} created for {item_code}"
 msgstr "Tillgångar {assets_link} skapade för {item_code}"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:152
+#: erpnext/manufacturing/doctype/job_card/job_card.js:160
 msgid "Assign Job to Employee"
 msgstr "Tilldela jobb till Personal"
 
@@ -6319,11 +6339,11 @@ msgstr "Åtminstone en av Tillämpliga Moduler ska väljas"
 msgid "At least one of the Selling or Buying must be selected"
 msgstr "Minst en av Försäljning eller Inköp måste väljas"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:646
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:649
 msgid "At least one warehouse is mandatory"
 msgstr "Minst ett Lager erfordras"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:566
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:569
 msgid "At row #{0}: the Difference Account must not be a Stock type account, please change the Account Type for the account {1} or select a different account"
 msgstr "På rad #{0}: Differens Konto får inte vara ett Lager Konto. Ändra Konto Typ för konto {1} eller välj ett annat konto"
 
@@ -6331,7 +6351,7 @@ msgstr "På rad #{0}: Differens Konto får inte vara ett Lager Konto. Ändra Kon
 msgid "At row #{0}: the sequence id {1} cannot be less than previous row sequence id {2}"
 msgstr "Rad # {0}: sekvens nummer {1} får inte vara lägre än föregående rad sekvens nummer {2}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:574
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:577
 msgid "At row #{0}: you have selected the Difference Account {1}, which is a Cost of Goods Sold type account. Please select a different account"
 msgstr "På rad #{0}: har du valt Differens Konto {1}, som är konto av typ Kostnad för Sålda Artiklar. Välj ett annat konto"
 
@@ -6860,11 +6880,11 @@ msgstr "Tillgängligt Lager för Artikel Paket"
 msgid "Available for use date is required"
 msgstr "Tillgängligt för Användning Datum erfordras"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:779
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:782
 msgid "Available quantity is {0}, you need {1}"
 msgstr "Tillgänglig Kvantitet är {0}, behövs {1}"
 
-#: erpnext/stock/dashboard/item_dashboard.js:248
+#: erpnext/stock/dashboard/item_dashboard.js:251
 msgid "Available {0}"
 msgstr "Tillgänglig {0}"
 
@@ -7124,7 +7144,7 @@ msgstr "Stycklista Åtgärd"
 msgid "BOM Operations Time"
 msgstr "Stycklista Åtgärd Tid"
 
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:28
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:25
 msgid "BOM Qty"
 msgstr "Stycklista Kvantitet"
 
@@ -7163,7 +7183,7 @@ msgstr "Stycklista Lager Rapport"
 msgid "BOM Tree"
 msgstr "Stycklista Trädstruktur"
 
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:29
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:26
 msgid "BOM UoM"
 msgstr "Stycklista Enhet"
 
@@ -8084,7 +8104,7 @@ msgstr "Parti Enhet"
 msgid "Batch and Serial No"
 msgstr "Parti och Serie Nummer"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:605
+#: erpnext/manufacturing/doctype/work_order/work_order.py:618
 msgid "Batch not created for item {} since it does not have a batch series."
 msgstr "Parti är inte skapad för Artikel {} eftersom den inte har Parti Nummer."
 
@@ -8096,12 +8116,12 @@ msgstr "Parti {0} och Lager"
 msgid "Batch {0} is not available in warehouse {1}"
 msgstr "Parti {0} är inte tillgängligt i lager {1}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:2810
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:2829
 #: erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.py:286
 msgid "Batch {0} of Item {1} has expired."
 msgstr "Parti {0} av Artikel {1} är förfallen."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:2816
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:2835
 msgid "Batch {0} of Item {1} is disabled."
 msgstr "Parti {0} av Artikel {1} är Inaktiverad."
 
@@ -8595,7 +8615,7 @@ msgstr "Bokförd Fast Tillgång"
 msgid "Booking stock value across multiple accounts will make it harder to track stock and account value."
 msgstr "Bokföring av Lager Värde på flera Konto gör det svårare att spåra lager och konto värde."
 
-#: erpnext/accounts/general_ledger.py:773
+#: erpnext/accounts/general_ledger.py:784
 msgid "Books have been closed till the period ending on {0}"
 msgstr "Bokföring är låst till {0}"
 
@@ -9339,7 +9359,7 @@ msgstr "Kampanj Schema"
 msgid "Can be approved by {0}"
 msgstr "Kan godkännas av {0}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2092
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2105
 msgid "Can not close Work Order. Since {0} Job Cards are in Work In Progress state."
 msgstr "Kan inte stänga Arbetsorder, eftersom {0} Jobbkort har Pågående Arbete status."
 
@@ -9577,7 +9597,7 @@ msgstr "Kan inte annullera Kassa Stängning Post"
 msgid "Cannot cancel as processing of cancelled documents is pending."
 msgstr "Kan inte avbryta eftersom behandling av annullerade dokument väntar."
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:801
+#: erpnext/manufacturing/doctype/work_order/work_order.py:814
 msgid "Cannot cancel because submitted Stock Entry {0} exists"
 msgstr "Kan inte annullera eftersom godkänd Lager Post {0} finns redan"
 
@@ -9585,11 +9605,11 @@ msgstr "Kan inte annullera eftersom godkänd Lager Post {0} finns redan"
 msgid "Cannot cancel the transaction. Reposting of item valuation on submission is not completed yet."
 msgstr "Kan inte annullera transaktion. Omregistrering av artikel värdering vid godkännande är inte klar ännu."
 
-#: erpnext/controllers/buying_controller.py:1024
+#: erpnext/controllers/buying_controller.py:1043
 msgid "Cannot cancel this document as it is linked with the submitted asset {asset_link}. Please cancel the asset to continue."
 msgstr "Kan inte annullera detta dokument eftersom det är länkad med godkänd tillgång {asset_link}. Annullera att fortsätta."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:354
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:357
 msgid "Cannot cancel transaction for Completed Work Order."
 msgstr "Kan inte annullera transaktion för Klar Arbetsorder."
 
@@ -9675,6 +9695,10 @@ msgstr "Kan inte ta bort Valutaväxling Resultat rad"
 msgid "Cannot delete Serial No {0}, as it is used in stock transactions"
 msgstr "Kan inte ta bort Serie Nummer {0}, eftersom det används i Lager Transaktioner"
 
+#: erpnext/manufacturing/doctype/work_order/work_order.py:489
+msgid "Cannot disassemble more than produced quantity."
+msgstr "Kan inte demontera mer än producerad kvantitet."
+
 #: erpnext/setup/doctype/transaction_deletion_record/transaction_deletion_record.py:109
 msgid "Cannot enqueue multi docs for one company. {0} is already queued/running for company: {1}"
 msgstr "Kan inte ställa flera dokument i kö för ett bolag. {0} är redan i kö/körs för bolag: {1}"
@@ -9696,15 +9720,15 @@ msgstr "Kan inte hitta standardlager för artikel {0}. Ange det i Artikelinstäl
 msgid "Cannot make any transactions until the deletion job is completed"
 msgstr "Kan inte skapa transaktioner förrän borttagning jobb är slutfört"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:380
+#: erpnext/manufacturing/doctype/work_order/work_order.py:381
 msgid "Cannot produce more Item {0} than Sales Order quantity {1}"
 msgstr "Kan inte producera mer Artiklar {0} än Försäljning Order Kvantitet {1}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1151
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1164
 msgid "Cannot produce more item for {0}"
 msgstr "Kan inte producera fler artiklar för {0}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1155
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1168
 msgid "Cannot produce more than {0} items for {1}"
 msgstr "Kan inte producera mer än {0} artiklar för {1}"
 
@@ -9783,7 +9807,7 @@ msgstr "Kapacitet (Lager Enhet)"
 msgid "Capacity Planning"
 msgstr "Kapacitet Planering"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:787
+#: erpnext/manufacturing/doctype/work_order/work_order.py:800
 msgid "Capacity Planning Error, planned start time can not be same as end time"
 msgstr "Kapacitet Planering Fel, planerad start tid kan inte vara samma som slut tid"
 
@@ -10113,7 +10137,7 @@ msgstr "Chain"
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.js:306
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.json
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.json
-#: erpnext/selling/page/point_of_sale/pos_payment.js:659
+#: erpnext/selling/page/point_of_sale/pos_payment.js:628
 msgid "Change Amount"
 msgstr "Växel Belopp"
 
@@ -10486,15 +10510,15 @@ msgstr "Rensa Tabell"
 #: erpnext/accounts/report/cheques_and_deposits_incorrectly_cleared/cheques_and_deposits_incorrectly_cleared.py:152
 #: erpnext/templates/form_grid/bank_reconciliation_grid.html:7
 msgid "Clearance Date"
-msgstr "Bokföring Datum"
+msgstr "Avstämning Datum"
 
-#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:131
+#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:132
 msgid "Clearance Date not mentioned"
-msgstr "Bokföring Datum ej angiven"
+msgstr "Avstämning Datum ej angiven"
 
-#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:129
+#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:149
 msgid "Clearance Date updated"
-msgstr "Bokföring Datum uppdaterad"
+msgstr "Avstämning Datum uppdaterad"
 
 #: erpnext/public/js/utils/demo.js:24
 msgid "Clearing Demo Data..."
@@ -10623,7 +10647,7 @@ msgstr "Stängd Dokument"
 msgid "Closed Documents"
 msgstr "Stängda Dokument"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2015
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2028
 msgid "Closed Work Order can not be stopped or Re-opened"
 msgstr "Stängd Arbetsorder kan inte stoppas eller öppnas igen"
 
@@ -10937,6 +10961,7 @@ msgstr "Bolag"
 #. Label of the company (Link) field in DocType 'Period Closing Voucher'
 #. Label of the company (Link) field in DocType 'POS Closing Entry'
 #. Label of the company (Link) field in DocType 'POS Invoice'
+#. Label of the company (Link) field in DocType 'POS Invoice Merge Log'
 #. Label of the company (Link) field in DocType 'POS Opening Entry'
 #. Label of the company (Link) field in DocType 'POS Profile'
 #. Label of the company (Link) field in DocType 'Pricing Rule'
@@ -11083,6 +11108,7 @@ msgstr "Bolag"
 #: erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher.json
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.json
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.json
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.json
 #: erpnext/accounts/doctype/pos_opening_entry/pos_opening_entry.json
 #: erpnext/accounts/doctype/pos_profile/pos_profile.json
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.json
@@ -11581,7 +11607,7 @@ msgstr "Konkurrenter"
 msgid "Complete"
 msgstr "Klar"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:189
+#: erpnext/manufacturing/doctype/job_card/job_card.js:197
 #: erpnext/manufacturing/doctype/workstation/workstation.js:151
 msgid "Complete Job"
 msgstr "Slutför Jobb"
@@ -11710,12 +11736,12 @@ msgstr "Klar Åtgärd"
 msgid "Completed Qty"
 msgstr "Klar Kvantitet"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1065
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1078
 msgid "Completed Qty cannot be greater than 'Qty to Manufacture'"
 msgstr "Klar Kvantitet får inte vara högre än 'Kvantitet att Producera'"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:237
-#: erpnext/manufacturing/doctype/job_card/job_card.js:332
+#: erpnext/manufacturing/doctype/job_card/job_card.js:245
+#: erpnext/manufacturing/doctype/job_card/job_card.js:340
 #: erpnext/manufacturing/doctype/workstation/workstation.js:296
 msgid "Completed Quantity"
 msgstr "Klar Kvantitet"
@@ -11753,7 +11779,7 @@ msgstr "Klar Av"
 msgid "Completion Date"
 msgstr "Klar Datum"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:71
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:80
 msgid "Completion Date can not be before Failure Date. Please adjust the dates accordingly."
 msgstr "Slutförande datum kan inte vara före fel datum. Justera datum därefter."
 
@@ -12050,7 +12076,7 @@ msgstr "Förbrukade Artiklar Kostnad"
 msgid "Consumed Qty"
 msgstr "Förbrukad Kvantitet"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1420
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1433
 msgid "Consumed Qty cannot be greater than Reserved Qty for item {0}"
 msgstr "Förbrukad Kvantitet kan inte vara högre än Reserverad Kvantitet för artikel {0}"
 
@@ -12156,7 +12182,7 @@ msgstr "Kontakt"
 msgid "Contact Desc"
 msgstr "Kontakt Beskrivning"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:897
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:891
 msgid "Contact Details"
 msgstr "Kontakt Detaljer"
 
@@ -12352,7 +12378,7 @@ msgstr "Innehåll Typ"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.js:162
 #: erpnext/public/js/controllers/transaction.js:2364
-#: erpnext/selling/doctype/quotation/quotation.js:356
+#: erpnext/selling/doctype/quotation/quotation.js:357
 msgid "Continue"
 msgstr "Fortsätt"
 
@@ -12603,13 +12629,13 @@ msgstr "Korrigerande"
 msgid "Corrective Action"
 msgstr "Korrigerande Åtgärd"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:389
+#: erpnext/manufacturing/doctype/job_card/job_card.js:397
 msgid "Corrective Job Card"
 msgstr "Korrigerande Jobbkort"
 
 #. Label of the corrective_operation_section (Tab Break) field in DocType 'Job
 #. Card'
-#: erpnext/manufacturing/doctype/job_card/job_card.js:396
+#: erpnext/manufacturing/doctype/job_card/job_card.js:404
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid "Corrective Operation"
 msgstr "Korrigerande Åtgärd"
@@ -12840,7 +12866,7 @@ msgstr "Resultat Enhet för artikel rader är uppdaterad till {0}"
 msgid "Cost Center is a part of Cost Center Allocation, hence cannot be converted to a group"
 msgstr "Resultat Enhet är del av Resultat Enhet Tilldelning och kan därför inte konverteras till grupp"
 
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1411
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1406
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.py:865
 msgid "Cost Center is required in row {0} in Taxes table for type {1}"
 msgstr "Resultat Enhet erfodras på rad {0} i Moms Tabell för typ {1}"
@@ -12904,7 +12930,7 @@ msgstr "Kostnad för Levererade Artiklar"
 msgid "Cost of Goods Sold"
 msgstr "Kostnad för Sålda Artiklar"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:577
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:580
 msgid "Cost of Goods Sold Account in Items Table"
 msgstr "Kostnad för Sålda Artiklar i Artikel Inställningar"
 
@@ -13158,6 +13184,8 @@ msgstr "Cr"
 #: erpnext/manufacturing/doctype/bom/bom.js:194
 #: erpnext/manufacturing/doctype/bom/bom.js:438
 #: erpnext/manufacturing/doctype/bom_creator/bom_creator.js:99
+#: erpnext/manufacturing/doctype/job_card/job_card.js:104
+#: erpnext/manufacturing/doctype/job_card/job_card.js:118
 #: erpnext/manufacturing/doctype/plant_floor/plant_floor.js:268
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:137
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:151
@@ -13172,8 +13200,8 @@ msgstr "Cr"
 #: erpnext/public/js/controllers/transaction.js:361
 #: erpnext/public/js/controllers/transaction.js:2487
 #: erpnext/selling/doctype/customer/customer.js:181
-#: erpnext/selling/doctype/quotation/quotation.js:124
-#: erpnext/selling/doctype/quotation/quotation.js:133
+#: erpnext/selling/doctype/quotation/quotation.js:125
+#: erpnext/selling/doctype/quotation/quotation.js:134
 #: erpnext/selling/doctype/sales_order/sales_order.js:639
 #: erpnext/selling/doctype/sales_order/sales_order.js:659
 #: erpnext/selling/doctype/sales_order/sales_order.js:667
@@ -13417,7 +13445,7 @@ msgstr "Skapa Försäljning Order för att hjälpa dig planera ditt arbete och l
 msgid "Create Sample Retention Stock Entry"
 msgstr "Skapa Prov Lager Post"
 
-#: erpnext/stock/dashboard/item_dashboard.js:280
+#: erpnext/stock/dashboard/item_dashboard.js:283
 #: erpnext/stock/doctype/material_request/material_request.js:467
 #: erpnext/stock/doctype/pick_list/pick_list.js:117
 msgid "Create Stock Entry"
@@ -13468,7 +13496,7 @@ msgstr "Skapa Arbetsplats"
 msgid "Create a variant with the template image."
 msgstr "Skapa variant med Mall Bild."
 
-#: erpnext/stock/stock_ledger.py:1892
+#: erpnext/stock/stock_ledger.py:1899
 msgid "Create an incoming stock transaction for the Item."
 msgstr "Skapa inkommande Lager Transaktion för Artikel."
 
@@ -14809,7 +14837,7 @@ msgstr "Kund Typ"
 msgid "Customer Warehouse (Optional)"
 msgstr "Kund Lager (valfritt)"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:1000
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:994
 msgid "Customer contact updated successfully."
 msgstr "Kund kontakt uppdaterad!"
 
@@ -14965,7 +14993,7 @@ msgstr "DFS"
 msgid "Daily"
 msgstr "Dagsvis"
 
-#: erpnext/projects/doctype/project/project.py:674
+#: erpnext/projects/doctype/project/project.py:673
 msgid "Daily Project Summary for {0}"
 msgstr "Daglig Projekt Översikt för {0}"
 
@@ -15550,7 +15578,7 @@ msgstr "Standard Stycklista"
 msgid "Default BOM ({0}) must be active for this item or its template"
 msgstr "Standard Stycklista ({0}) måste vara aktiv för denna artikel eller dess mall"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1830
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1843
 msgid "Default BOM for {0} not found"
 msgstr "Standard Stycklista för {0} hittades inte"
 
@@ -15558,7 +15586,7 @@ msgstr "Standard Stycklista för {0} hittades inte"
 msgid "Default BOM not found for FG Item {0}"
 msgstr "Standard Stycklista hittades inte för Färdig Artikel {0}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1827
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1840
 msgid "Default BOM not found for Item {0} and Project {1}"
 msgstr "Standard Stycklista hittades inte för Artikel {0} och Projekt {1}"
 
@@ -16886,7 +16914,7 @@ msgstr "Avskrivning eliminerad via återföring"
 #: erpnext/manufacturing/report/bom_stock_calculated/bom_stock_calculated.py:56
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:10
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:20
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:27
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:24
 #: erpnext/manufacturing/report/work_order_stock_report/work_order_stock_report.py:112
 #: erpnext/projects/doctype/project_type/project_type.json
 #: erpnext/projects/doctype/task_type/task_type.json
@@ -16896,7 +16924,7 @@ msgstr "Avskrivning eliminerad via återföring"
 #: erpnext/selling/doctype/installation_note_item/installation_note_item.json
 #: erpnext/selling/doctype/product_bundle/product_bundle.json
 #: erpnext/selling/doctype/product_bundle_item/product_bundle_item.json
-#: erpnext/selling/doctype/quotation/quotation.js:291
+#: erpnext/selling/doctype/quotation/quotation.js:292
 #: erpnext/selling/doctype/quotation_item/quotation_item.json
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
 #: erpnext/selling/report/item_wise_sales_history/item_wise_sales_history.py:41
@@ -17070,11 +17098,11 @@ msgstr "Differens (Dr - Cr)"
 msgid "Difference Account"
 msgstr "Differens Konto"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:569
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:572
 msgid "Difference Account in Items Table"
 msgstr "Differens Konto i Artikel Inställningar"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:558
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:561
 msgid "Difference Account must be a Asset/Liability type account (Temporary Opening), since this Stock Entry is an Opening Entry"
 msgstr "Differens konto måste vara konto av typ Tillgång/Skuld (Tillfällig Öppning), eftersom denna Lager Post är Öppning Post."
 
@@ -17373,6 +17401,11 @@ msgstr "Demontera"
 msgid "Disassemble Order"
 msgstr "Demontering Order"
 
+#. Label of the disassembled_qty (Float) field in DocType 'Work Order'
+#: erpnext/manufacturing/doctype/work_order/work_order.json
+msgid "Disassembled Qty"
+msgstr "Demonterad Kvantitet"
+
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.js:64
 msgid "Disburse Loan"
 msgstr "Utbetala Lån"
@@ -17397,7 +17430,7 @@ msgstr "Ignorera Ändringar och Ladda Ny Faktura"
 #: erpnext/accounts/doctype/payment_term/payment_term.json
 #: erpnext/accounts/doctype/payment_terms_template_detail/payment_terms_template_detail.json
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:406
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:142
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:146
 #: erpnext/templates/form_grid/item_grid.html:71
 msgid "Discount"
 msgstr "Rabatt"
@@ -17558,7 +17591,7 @@ msgstr "Rabatt Giltighet Baserad På"
 msgid "Discount and Margin"
 msgstr "Rabatt och Marginal"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:830
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:824
 msgid "Discount cannot be greater than 100%"
 msgstr "Rabatt kan inte vara högre än 100%"
 
@@ -17998,7 +18031,7 @@ msgstr "Dokument "
 #. 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Documents Processed on each trigger. Queue Size should be between 5 and 100"
-msgstr "Dokument Behandlade vid varje utlösare. Kö Storlek ska vara mellan 5 och 100"
+msgstr "Dokument Behandlade vid varje körning. Kö Storlek ska vara mellan 5 och 100"
 
 #: erpnext/accounts/doctype/repost_accounting_ledger/repost_accounting_ledger.py:233
 msgid "Documents: {0} have deferred revenue/expense enabled for them. Cannot repost."
@@ -18409,7 +18442,7 @@ msgid "Duplicate POS Fields"
 msgstr "Duplicera Kassa Fällt"
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:104
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:66
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:65
 msgid "Duplicate POS Invoices found"
 msgstr "Kopia av Kassa Fakturor hittad"
 
@@ -18598,11 +18631,11 @@ msgstr "Redigera Anteckning"
 msgid "Edit Posting Date and Time"
 msgstr "Ändra Registrering Datum och Tid"
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:288
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:286
 msgid "Edit Receipt"
 msgstr "Redigera Faktura"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:783
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:777
 msgid "Editing {0} is not allowed as per POS Profile settings"
 msgstr "Ej Tillåtet att Redigera {0} pga Kassa Profil Inställningar"
 
@@ -18697,7 +18730,7 @@ msgstr "Ells (UK)"
 #: erpnext/crm/doctype/prospect_lead/prospect_lead.json
 #: erpnext/crm/report/lead_details/lead_details.py:41
 #: erpnext/projects/doctype/project_user/project_user.json
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:945
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:939
 #: erpnext/setup/doctype/company/company.json
 msgid "Email"
 msgstr "E-post"
@@ -18820,7 +18853,7 @@ msgstr "E-post Inställningar"
 msgid "Email Template"
 msgstr "E-post Mall"
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:319
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:317
 msgid "Email not sent to {0} (unsubscribed / disabled)"
 msgstr "E-post inte skickad till {0} (avregistrerad / inaktiverad)"
 
@@ -18828,7 +18861,7 @@ msgstr "E-post inte skickad till {0} (avregistrerad / inaktiverad)"
 msgid "Email or Phone/Mobile of the Contact are mandatory to continue."
 msgstr "E-post eller Telefon / Mobil för Kontakt erfordras för att fortsätta."
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:324
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:322
 msgid "Email sent successfully."
 msgstr "E-post skickad"
 
@@ -19259,8 +19292,8 @@ msgstr "Slut datum kan inte vara tidigare än Start datum."
 #. Label of the end_time (Time) field in DocType 'Stock Reposting Settings'
 #. Label of the end_time (Time) field in DocType 'Service Day'
 #. Label of the end_time (Datetime) field in DocType 'Call Log'
-#: erpnext/manufacturing/doctype/job_card/job_card.js:270
-#: erpnext/manufacturing/doctype/job_card/job_card.js:339
+#: erpnext/manufacturing/doctype/job_card/job_card.js:278
+#: erpnext/manufacturing/doctype/job_card/job_card.js:347
 #: erpnext/manufacturing/doctype/workstation_working_hour/workstation_working_hour.json
 #: erpnext/stock/doctype/stock_reposting_settings/stock_reposting_settings.json
 #: erpnext/support/doctype/service_day/service_day.json
@@ -19321,7 +19354,7 @@ msgstr "Ingenjör"
 
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:13
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:23
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:32
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:29
 msgid "Enough Parts to Build"
 msgstr "Tillräckligt med Delar att Bygga"
 
@@ -19351,8 +19384,8 @@ msgstr "Ange Serie Nummer"
 msgid "Enter Supplier"
 msgstr "Ange Leverantör"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:296
-#: erpnext/manufacturing/doctype/job_card/job_card.js:365
+#: erpnext/manufacturing/doctype/job_card/job_card.js:304
+#: erpnext/manufacturing/doctype/job_card/job_card.js:373
 #: erpnext/manufacturing/doctype/workstation/workstation.js:312
 msgid "Enter Value"
 msgstr "Ange Värde"
@@ -19373,7 +19406,7 @@ msgstr "Ange namn för Åtgärd, till exempel Skärning."
 msgid "Enter a name for this Holiday List."
 msgstr "Ange namn för denna Helg Lista."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:599
+#: erpnext/selling/page/point_of_sale/pos_payment.js:568
 msgid "Enter amount to be redeemed."
 msgstr "Ange belopp som ska lösas in."
 
@@ -19381,11 +19414,11 @@ msgstr "Ange belopp som ska lösas in."
 msgid "Enter an Item Code, the name will be auto-filled the same as Item Code on clicking inside the Item Name field."
 msgstr "Ange Artikel Kod, namn kommer att automatiskt hämtas på samma sätt som Artikel Kod när man klickar i Artikel Namn fält ."
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:948
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:942
 msgid "Enter customer's email"
 msgstr "Ange Kund E-post"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:954
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:948
 msgid "Enter customer's phone number"
 msgstr "Ange Kund Telefon Nummer"
 
@@ -19435,7 +19468,7 @@ msgstr "Ange kvantitet för Artikel som ska produceras från denna Stycklista."
 msgid "Enter the quantity to manufacture. Raw material Items will be fetched only when this is set."
 msgstr "Ange kvantitet som ska produceras. Råmaterial Artiklar hämtas endast när detta är angivet."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:483
+#: erpnext/selling/page/point_of_sale/pos_payment.js:491
 msgid "Enter {0} amount."
 msgstr "Ange {0} belopp."
 
@@ -19638,7 +19671,7 @@ msgstr "Exempel:. ABCD ##### Om serie är angiven och Serie Nummer inte anges i 
 msgid "Example: ABCD.#####. If series is set and Batch No is not mentioned in transactions, then automatic batch number will be created based on this series. If you always want to explicitly mention Batch No for this item, leave this blank. Note: this setting will take priority over the Naming Series Prefix in Stock Settings."
 msgstr "Exempel: ABCD.#####. Om serie är angiven och Parti Nummer inte anges i transaktioner kommer Parti Nummer automatiskt att skapas baserat på denna serie. Om man alltid vill ange Parti Nummer för denna artikel, lämna detta tomt. Obs: denna inställning kommer att ha prioritet över Nummer Serie i Lager Inställningar."
 
-#: erpnext/stock/stock_ledger.py:2158
+#: erpnext/stock/stock_ledger.py:2165
 msgid "Example: Serial No {0} reserved in {1}."
 msgstr "Exempel: Serie Nummer {0} reserverad i {1}."
 
@@ -19854,7 +19887,7 @@ msgstr "Avgång Intervju Datum"
 msgid "Expand All"
 msgstr "Fäll Ut"
 
-#: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:415
+#: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:444
 msgid "Expected"
 msgstr "Förväntad"
 
@@ -20042,7 +20075,7 @@ msgstr "Kostnad Konto Ändrad"
 msgid "Expense account is mandatory for item {0}"
 msgstr "Kostnad Konto erfordras för Artikel {0}"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:108
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:117
 msgid "Expense account {0} not present in Purchase Invoice {1}"
 msgstr "Kostnad Konto {0} saknas i Inköp Faktura {1}"
 
@@ -20833,7 +20866,7 @@ msgstr "Färdig Artikel Lager"
 msgid "Finished Goods based Operating Cost"
 msgstr "Färdiga Artiklar baserad Driftskostnad"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1382
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1385
 msgid "Finished Item {0} does not match with Work Order {1}"
 msgstr "Färdig Artikel {0} stämmer inte med Arbetsorder {1}"
 
@@ -21134,7 +21167,7 @@ msgid "For Job Card"
 msgstr "För Jobbkort"
 
 #. Label of the for_operation (Link) field in DocType 'Job Card'
-#: erpnext/manufacturing/doctype/job_card/job_card.js:409
+#: erpnext/manufacturing/doctype/job_card/job_card.js:417
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid "For Operation"
 msgstr "För Åtgärd"
@@ -21155,7 +21188,7 @@ msgstr "För Prislista"
 msgid "For Production"
 msgstr "För Produktion"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:663
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:666
 msgid "For Quantity (Manufactured Qty) is mandatory"
 msgstr "För Kvantitet (Producerad Kvantitet) erfordras"
 
@@ -21231,11 +21264,15 @@ msgstr "För artikel <b>{0}</b>endast <b>{1}</b> tillgång har skapats eller lä
 msgid "For item {0}, rate must be a positive number. To Allow negative rates, enable {1} in {2}"
 msgstr "För Artikel {0} pris måste vara positiv tal. Att tillåta negativa priser, aktivera {1} i {2}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2162
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2175
 msgid "For operation {0}: Quantity ({1}) can not be greater than pending quantity({2})"
 msgstr "För Åtgärd {0}: Kvantitet ({1}) kan inte vara högre än pågående kvantitet ({2})"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1420
+#: erpnext/projects/doctype/project/project.js:208
+msgid "For project {0}, update your status"
+msgstr "För projekt {0}, uppdatera din status"
+
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1423
 msgid "For quantity {0} should not be greater than allowed quantity {1}"
 msgstr "För Kvantitet {0} ska inte vara högre än tillåten kvantitet {1}"
 
@@ -21262,7 +21299,7 @@ msgstr "För 'Tillämpa Regel på' villkor erfordras fält {0}"
 msgid "For the convenience of customers, these codes can be used in print formats like Invoices and Delivery Notes"
 msgstr "För kundernas bekvämlighet kan dessa koder användas i utskriftsformat som Fakturor och Följesedlar"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:803
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:806
 msgid "For the item {0}, the quantity should be {1} according to the BOM {2}."
 msgstr "För artikel {0} ska kvantitet vara {1} enligt stycklista {2}."
 
@@ -22312,7 +22349,7 @@ msgstr "Hämta Artiklar"
 #: erpnext/maintenance/doctype/maintenance_visit/maintenance_visit.js:142
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
 #: erpnext/public/js/controllers/buying.js:295
-#: erpnext/selling/doctype/quotation/quotation.js:166
+#: erpnext/selling/doctype/quotation/quotation.js:167
 #: erpnext/selling/doctype/sales_order/sales_order.js:174
 #: erpnext/selling/doctype/sales_order/sales_order.js:798
 #: erpnext/stock/doctype/delivery_note/delivery_note.js:187
@@ -22532,7 +22569,7 @@ msgstr "I Transit"
 msgid "Goods Transferred"
 msgstr "Överförd"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1905
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1915
 msgid "Goods are already received against the outward entry {0}"
 msgstr "Artiklarna redan mottagna mot utleverans post {0}"
 
@@ -22662,8 +22699,8 @@ msgstr "Gram/Liter"
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:92
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:548
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:552
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:182
-#: erpnext/selling/page/point_of_sale/pos_payment.js:662
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:180
+#: erpnext/selling/page/point_of_sale/pos_payment.js:631
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.json
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/stock/doctype/delivery_stop/delivery_stop.json
@@ -23179,7 +23216,7 @@ msgstr "Hjälper vid fördelning av Budget/ Mål över månader om bolag har sä
 msgid "Here are the error logs for the aforementioned failed depreciation entries: {0}"
 msgstr "Här är felloggar för ovannämnda misslyckade avskrivning poster: {0}"
 
-#: erpnext/stock/stock_ledger.py:1877
+#: erpnext/stock/stock_ledger.py:1884
 msgid "Here are the options to proceed:"
 msgstr "Här är alternativ för att fortsätta:"
 
@@ -23711,7 +23748,7 @@ msgstr "Om mer än en förpackning av samma typ (för utskrift)"
 msgid "If no taxes are set, and Taxes and Charges Template is selected, the system will automatically apply the taxes from the chosen template."
 msgstr "Om ingen Moms är angiven och Moms och Avgifter Mall är vald, kommer system automatiskt att tillämpa Moms från vald mall."
 
-#: erpnext/stock/stock_ledger.py:1887
+#: erpnext/stock/stock_ledger.py:1894
 msgid "If not, you can Cancel / Submit this entry"
 msgstr "Om inte kan man Annullera/Godkänna denna post"
 
@@ -23736,7 +23773,7 @@ msgstr "Om Stycklista har Rest Material måste Rest Lager väljas."
 msgid "If the account is frozen, entries are allowed to restricted users."
 msgstr "Om konto är låst, tillåts poster för Behöriga Användare."
 
-#: erpnext/stock/stock_ledger.py:1880
+#: erpnext/stock/stock_ledger.py:1887
 msgid "If the item is transacting as a Zero Valuation Rate item in this entry, please enable 'Allow Zero Valuation Rate' in the {0} Item table."
 msgstr "Om artikel handlas som Noll Värderingssats i denna post, aktivera 'Tillåt Noll Värderingssats' i {0} Artikel Tabell."
 
@@ -23941,7 +23978,7 @@ msgstr "Ignorera Öppning Kontroll för rapportering"
 msgid "Ignore Pricing Rule"
 msgstr "Ignorera Pris Regel"
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:290
+#: erpnext/selling/page/point_of_sale/pos_payment.js:304
 msgid "Ignore Pricing Rule is enabled. Cannot apply coupon code."
 msgstr "Ignorera att Prissättning Regel är aktiverad. Det går inte att använda kupong kod."
 
@@ -24306,7 +24343,7 @@ msgstr "I Lager"
 
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:12
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:22
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:31
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:28
 msgid "In Stock Qty"
 msgstr "I Lager Kvantitet"
 
@@ -24745,7 +24782,7 @@ msgstr "Felaktig Parti Förbrukad"
 msgid "Incorrect Check in (group) Warehouse for Reorder"
 msgstr "Felaktig vald (grupp) Lager för Ombeställning"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:808
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:811
 msgid "Incorrect Component Quantity"
 msgstr "Felaktig Komponent Kvantitet"
 
@@ -25062,13 +25099,13 @@ msgstr "Otillräckliga Behörigheter"
 #: erpnext/stock/doctype/pick_list/pick_list.py:114
 #: erpnext/stock/doctype/pick_list/pick_list.py:132
 #: erpnext/stock/doctype/pick_list/pick_list.py:1003
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:783
-#: erpnext/stock/serial_batch_bundle.py:1072 erpnext/stock/stock_ledger.py:1574
-#: erpnext/stock/stock_ledger.py:2049
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:786
+#: erpnext/stock/serial_batch_bundle.py:1072 erpnext/stock/stock_ledger.py:1581
+#: erpnext/stock/stock_ledger.py:2056
 msgid "Insufficient Stock"
 msgstr "Otillräcklig Lager"
 
-#: erpnext/stock/stock_ledger.py:2064
+#: erpnext/stock/stock_ledger.py:2071
 msgid "Insufficient Stock for Batch"
 msgstr "Otillräcklig Lager för Parti"
 
@@ -25376,7 +25413,7 @@ msgid "Invalid Ledger Entries"
 msgstr "Ogiltiga Register Poster"
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:77
-#: erpnext/accounts/general_ledger.py:765
+#: erpnext/accounts/general_ledger.py:776
 msgid "Invalid Opening Entry"
 msgstr "Ogiltig Öppning Post"
 
@@ -25420,7 +25457,7 @@ msgstr "Ogiltig Kvantitet"
 msgid "Invalid Quantity"
 msgstr "Ogiltig Kvantitet"
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:200
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:198
 msgid "Invalid Return"
 msgstr "Ogiltig Retur"
 
@@ -25437,7 +25474,7 @@ msgstr "Ogiltig Schema"
 msgid "Invalid Selling Price"
 msgstr "Ogiltig Försäljning Pris"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1463
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1466
 msgid "Invalid Serial and Batch Bundle"
 msgstr "Felaktig Serie och Parti Paket"
 
@@ -25480,8 +25517,8 @@ msgstr "Ogiltig resultat nyckel. Svar:"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:110
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:120
-#: erpnext/accounts/general_ledger.py:808
-#: erpnext/accounts/general_ledger.py:818
+#: erpnext/accounts/general_ledger.py:819
+#: erpnext/accounts/general_ledger.py:829
 msgid "Invalid value {0} for {1} against account {2}"
 msgstr "Ogiltigt värde {0} för {1} mot konto {2}"
 
@@ -25780,7 +25817,7 @@ msgid "Is Advance"
 msgstr "Är Förskott"
 
 #. Label of the is_alternative (Check) field in DocType 'Quotation Item'
-#: erpnext/selling/doctype/quotation/quotation.js:306
+#: erpnext/selling/doctype/quotation/quotation.js:307
 #: erpnext/selling/doctype/quotation_item/quotation_item.json
 msgid "Is Alternative"
 msgstr "Är Alternativ"
@@ -26431,7 +26468,7 @@ msgstr "Det är inte möjligt att fördela avgifter lika när det totala beloppe
 #: erpnext/manufacturing/report/bom_stock_calculated/bom_stock_calculated.py:49
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:9
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:19
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:25
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:22
 #: erpnext/manufacturing/report/cost_of_poor_quality_report/cost_of_poor_quality_report.js:68
 #: erpnext/manufacturing/report/process_loss_report/process_loss_report.js:15
 #: erpnext/manufacturing/report/process_loss_report/process_loss_report.py:74
@@ -26453,7 +26490,7 @@ msgstr "Det är inte möjligt att fördela avgifter lika när det totala beloppe
 #: erpnext/selling/workspace/selling/selling.json
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.json
 #: erpnext/setup/workspace/home/home.json
-#: erpnext/stock/dashboard/item_dashboard.js:217
+#: erpnext/stock/dashboard/item_dashboard.js:220
 #: erpnext/stock/doctype/batch/batch.json erpnext/stock/doctype/item/item.json
 #: erpnext/stock/doctype/pick_list_item/pick_list_item.json
 #: erpnext/stock/doctype/putaway_rule/putaway_rule.json
@@ -26706,7 +26743,7 @@ msgstr "Artikel Kundkorg"
 #: erpnext/public/js/utils.js:656
 #: erpnext/regional/doctype/import_supplier_invoice/import_supplier_invoice.json
 #: erpnext/selling/doctype/installation_note_item/installation_note_item.json
-#: erpnext/selling/doctype/quotation/quotation.js:280
+#: erpnext/selling/doctype/quotation/quotation.js:281
 #: erpnext/selling/doctype/quotation_item/quotation_item.json
 #: erpnext/selling/doctype/sales_order/sales_order.js:345
 #: erpnext/selling/doctype/sales_order/sales_order.js:453
@@ -26779,7 +26816,7 @@ msgstr "Artikel Kod kan inte ändras för Serie Nummer"
 msgid "Item Code required at Row No {0}"
 msgstr "Artikel Kod erfordras vid Rad Nummer {0}"
 
-#: erpnext/selling/page/point_of_sale/pos_controller.js:848
+#: erpnext/selling/page/point_of_sale/pos_controller.js:844
 #: erpnext/selling/page/point_of_sale/pos_item_details.js:275
 msgid "Item Code: {0} is not available under warehouse {1}."
 msgstr "Artikel Kod: {0} finns inte på Lager {1}."
@@ -27131,7 +27168,7 @@ msgstr "Artikel Producent"
 #: erpnext/manufacturing/notification/material_request_receipt_notification/material_request_receipt_notification.html:8
 #: erpnext/manufacturing/report/bom_explorer/bom_explorer.py:56
 #: erpnext/manufacturing/report/bom_operations_time/bom_operations_time.py:109
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:26
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:23
 #: erpnext/manufacturing/report/cost_of_poor_quality_report/cost_of_poor_quality_report.py:106
 #: erpnext/manufacturing/report/job_card_summary/job_card_summary.py:158
 #: erpnext/manufacturing/report/production_plan_summary/production_plan_summary.py:153
@@ -27475,7 +27512,7 @@ msgstr "Artikel och Lager"
 msgid "Item and Warranty Details"
 msgstr "Artikel och Garanti Information"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:2789
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:2808
 msgid "Item for row {0} does not match Material Request"
 msgstr "Artikel för rad {0} matchar inte Material Begäran"
 
@@ -27509,7 +27546,7 @@ msgstr "Artikel Åtgärd"
 msgid "Item qty can not be updated as raw materials are already processed."
 msgstr "Artikel kvantitet kan inte uppdateras eftersom råmaterial redan är bearbetad."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:899
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:902
 msgid "Item rate has been updated to zero as Allow Zero Valuation Rate is checked for item {0}"
 msgstr "Artikel pris har ändrats till noll eftersom Tillåt Noll Värderingssats är vald för artikel {0}"
 
@@ -27604,7 +27641,7 @@ msgstr "Artikel {0} är inte Lager Artikel"
 msgid "Item {0} is not a subcontracted item"
 msgstr "Artikel {0} är inte underleverantör artikel"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1817
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1827
 msgid "Item {0} is not active or end of life has been reached"
 msgstr "Artikel {0} är inte aktiv eller livslängd har uppnåtts"
 
@@ -27624,7 +27661,7 @@ msgstr "Artikel {0} måste vara Underleverantör Artikel"
 msgid "Item {0} must be a non-stock item"
 msgstr "Artikel {0} får inte vara Lager Artikel"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1199
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1202
 msgid "Item {0} not found in 'Raw Materials Supplied' table in {1} {2}"
 msgstr "Artikel {0} hittades inte i  \"Råmaterial Levererad\" tabell i {1} {2}"
 
@@ -27792,7 +27829,7 @@ msgstr "Artiklar kan inte uppdateras eftersom underleverantör order är skapad 
 msgid "Items for Raw Material Request"
 msgstr "Artiklar för Råmaterial Begäran"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:895
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:898
 msgid "Items rate has been updated to zero as Allow Zero Valuation Rate is checked for the following items: {0}"
 msgstr "Artikel Pris har ändrats till noll eftersom Tillåt Noll Värderingssats är vald för följande artiklar: {0}"
 
@@ -27994,7 +28031,7 @@ msgstr "Jobb Ansvarig Namn"
 msgid "Job Worker Warehouse"
 msgstr "Jobb Ansvarig Lager"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2213
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2226
 msgid "Job card {0} created"
 msgstr "Jobbkort {0} skapad"
 
@@ -28400,7 +28437,7 @@ msgstr "Senaste Lager Transaktion för Artikel {0} på Lager {1} var den {2}."
 msgid "Last carbon check date cannot be a future date"
 msgstr "Senaste CO2 Kontroll Datum kan inte vara framtida datum"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:1031
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:1025
 msgid "Last transacted"
 msgstr "Senast genomförd:"
 
@@ -29169,7 +29206,7 @@ msgstr "Lojalitet Poäng Inlösen Post"
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.json
 #: erpnext/selling/doctype/customer/customer.json
 #: erpnext/selling/doctype/sales_order/sales_order.json
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:965
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:959
 msgid "Loyalty Points"
 msgstr "Lojalitet Poäng"
 
@@ -29202,7 +29239,7 @@ msgstr "Lojalitet Poäng: {0}"
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.js:1121
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.json
 #: erpnext/selling/doctype/customer/customer.json
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:958
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:952
 #: erpnext/selling/workspace/selling/selling.json
 msgid "Loyalty Program"
 msgstr "Lojalitet Program"
@@ -29522,7 +29559,7 @@ msgstr "Valfri Ämne"
 
 #. Label of the make (Data) field in DocType 'Vehicle'
 #: erpnext/accounts/doctype/journal_entry/journal_entry.js:109
-#: erpnext/manufacturing/doctype/job_card/job_card.js:430
+#: erpnext/manufacturing/doctype/job_card/job_card.js:438
 #: erpnext/setup/doctype/vehicle/vehicle.json
 msgid "Make"
 msgstr "Märke"
@@ -29580,7 +29617,7 @@ msgstr "Skapa Serie / Parti Nummer från Arbetsorder"
 msgid "Make Stock Entry"
 msgstr "Skapa Lager Post"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:304
+#: erpnext/manufacturing/doctype/job_card/job_card.js:312
 msgid "Make Subcontracting PO"
 msgstr "Skapa Underleverantör Inköp Order"
 
@@ -29769,8 +29806,8 @@ msgstr "Manuell post kan inte skapas! Inaktivera automatisk post för uppskjuten
 #: erpnext/stock/doctype/material_request_item/material_request_item.json
 #: erpnext/stock/doctype/purchase_receipt_item/purchase_receipt_item.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:976
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:992
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:979
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:995
 #: erpnext/stock/doctype/stock_entry_type/stock_entry_type.json
 #: erpnext/subcontracting/doctype/subcontracting_order_item/subcontracting_order_item.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
@@ -29906,7 +29943,7 @@ msgstr "Produktion Datum"
 msgid "Manufacturing Manager"
 msgstr "Produktion Ansvarig"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:2032
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:2051
 msgid "Manufacturing Quantity is mandatory"
 msgstr "Produktion Kvantitet erfordras"
 
@@ -30119,7 +30156,7 @@ msgstr "Material Förbrukning"
 #. Option for the 'Purpose' (Select) field in DocType 'Stock Entry Type'
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:121
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:977
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:980
 #: erpnext/stock/doctype/stock_entry_type/stock_entry_type.json
 msgid "Material Consumption for Manufacture"
 msgstr "Material Förbrukning för Produktion"
@@ -30195,7 +30232,7 @@ msgstr "Material Kvitto"
 #: erpnext/buying/report/requested_items_to_order_and_receive/requested_items_to_order_and_receive.js:33
 #: erpnext/buying/report/requested_items_to_order_and_receive/requested_items_to_order_and_receive.py:184
 #: erpnext/buying/workspace/buying/buying.json
-#: erpnext/manufacturing/doctype/job_card/job_card.js:99
+#: erpnext/manufacturing/doctype/job_card/job_card.js:100
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:147
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
 #: erpnext/manufacturing/doctype/production_plan_item/production_plan_item.json
@@ -30345,7 +30382,7 @@ msgstr "Material Retur från Bearbetning"
 #. Option for the 'Purpose' (Select) field in DocType 'Pick List'
 #. Option for the 'Purpose' (Select) field in DocType 'Stock Entry'
 #. Option for the 'Purpose' (Select) field in DocType 'Stock Entry Type'
-#: erpnext/manufacturing/doctype/job_card/job_card.js:109
+#: erpnext/manufacturing/doctype/job_card/job_card.js:114
 #: erpnext/manufacturing/doctype/material_request_plan_item/material_request_plan_item.json
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:90
 #: erpnext/stock/doctype/item/item.json
@@ -30491,11 +30528,11 @@ msgstr "Maximum Netto Pris"
 msgid "Maximum Payment Amount"
 msgstr "Maximum Betalning Belopp"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:3327
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:3346
 msgid "Maximum Samples - {0} can be retained for Batch {1} and Item {2}."
 msgstr "Maximum Prov - {0} kan behållas för Parti {1} och Artikel {2}."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:3318
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:3337
 msgid "Maximum Samples - {0} have already been retained for Batch {1} and Item {2} in Batch {3}."
 msgstr "Maximum Prov - {0} har redan behållits för Parti {1} och Artikel {2} i Parti {3}."
 
@@ -30582,7 +30619,7 @@ msgstr "Megajoule"
 msgid "Megawatt"
 msgstr "Megawatt"
 
-#: erpnext/stock/stock_ledger.py:1893
+#: erpnext/stock/stock_ledger.py:1900
 msgid "Mention Valuation Rate in the Item master."
 msgstr "Ange Grund Pris i Artikel Inställningar."
 
@@ -30977,7 +31014,7 @@ msgstr "Minuter"
 msgid "Miscellaneous Expenses"
 msgstr "Diverse Kostnader"
 
-#: erpnext/controllers/buying_controller.py:605
+#: erpnext/controllers/buying_controller.py:624
 msgid "Mismatch"
 msgstr "Felavstämd"
 
@@ -31011,7 +31048,7 @@ msgstr "Standard Inställningar i Bolag saknas"
 msgid "Missing Finance Book"
 msgstr "Finans Register Saknas"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1398
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1401
 msgid "Missing Finished Good"
 msgstr "Färdig Artikel Saknas"
 
@@ -31019,7 +31056,7 @@ msgstr "Färdig Artikel Saknas"
 msgid "Missing Formula"
 msgstr "Formel Saknas"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:815
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:818
 msgid "Missing Item"
 msgstr "Saknad Artikel"
 
@@ -31027,7 +31064,7 @@ msgstr "Saknad Artikel"
 msgid "Missing Payments App"
 msgstr "Betalning App Saknas"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:239
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:248
 msgid "Missing Serial No Bundle"
 msgstr "Serie Nummer Paket Saknas"
 
@@ -31040,7 +31077,7 @@ msgid "Missing email template for dispatch. Please set one in Delivery Settings.
 msgstr "E-post Mall saknas för Leverans. Ange Mall i Leverans Inställningar."
 
 #: erpnext/manufacturing/doctype/bom/bom.py:1041
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1168
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1181
 msgid "Missing value"
 msgstr "Värde Saknas"
 
@@ -31445,7 +31482,7 @@ msgstr "Film & Video"
 msgid "Move"
 msgstr "Flytta"
 
-#: erpnext/stock/dashboard/item_dashboard.js:213
+#: erpnext/stock/dashboard/item_dashboard.js:216
 msgid "Move Item"
 msgstr "Flytta Artikel"
 
@@ -31517,7 +31554,7 @@ msgstr "Flera Lager Konton"
 msgid "Multiple fiscal years exist for the date {0}. Please set company in Fiscal Year"
 msgstr "Flera Bokföringsår finns för datum {0}. Ange Bolag under Bokföringsår"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1405
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1408
 msgid "Multiple items cannot be marked as finished item"
 msgstr "Flera artiklar kan inte väljas som färdiga artiklar"
 
@@ -31526,7 +31563,7 @@ msgid "Music"
 msgstr "Musik"
 
 #. Label of the must_be_whole_number (Check) field in DocType 'UOM'
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1124
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1137
 #: erpnext/setup/doctype/uom/uom.json
 #: erpnext/stock/doctype/stock_reservation_entry/stock_reservation_entry.py:232
 #: erpnext/utilities/transaction_base.py:560
@@ -31562,14 +31599,14 @@ msgstr "N/A"
 #: erpnext/accounts/doctype/finance_book/finance_book.json
 #: erpnext/accounts/doctype/payment_entry_reference/payment_entry_reference.json
 #: erpnext/accounts/doctype/payment_order_reference/payment_order_reference.json
-#: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:359
+#: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:388
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log_detail/bulk_transaction_log_detail.json
 #: erpnext/crm/doctype/appointment/appointment.json
 #: erpnext/crm/report/prospects_engaged_but_not_converted/prospects_engaged_but_not_converted.py:29
 #: erpnext/manufacturing/doctype/bom_creator/bom_creator.js:44
 #: erpnext/public/js/utils/serial_no_batch_selector.js:496
 #: erpnext/selling/doctype/installation_note/installation_note.json
-#: erpnext/selling/doctype/quotation/quotation.js:273
+#: erpnext/selling/doctype/quotation/quotation.js:274
 #: erpnext/setup/doctype/employee_group/employee_group.json
 msgid "Name"
 msgstr "Namn"
@@ -31950,7 +31987,7 @@ msgstr "Netto Pris (Bolag Valuta)"
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:92
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:522
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:526
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:152
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:156
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 #: erpnext/templates/includes/order/order_taxes.html:5
@@ -32362,7 +32399,7 @@ msgstr "Inget valt"
 msgid "No Serial / Batches are available for return"
 msgstr "Inga Serie Nummer/Partier är tillgängliga för retur"
 
-#: erpnext/stock/dashboard/item_dashboard.js:151
+#: erpnext/stock/dashboard/item_dashboard.js:154
 msgid "No Stock Available Currently"
 msgstr "Ingen Lager Tillgänglig för närvarande"
 
@@ -32561,7 +32598,7 @@ msgstr "Ingen primär e-post adress hittades för kund: {0}"
 msgid "No products found."
 msgstr "Inga artiklar hittade."
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:1023
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:1017
 msgid "No recent transactions found"
 msgstr "Inga nya transaktioner hittades"
 
@@ -32671,7 +32708,7 @@ msgstr "St"
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:567
 #: erpnext/assets/doctype/asset/asset.js:618
 #: erpnext/assets/doctype/asset/asset.js:633
-#: erpnext/controllers/buying_controller.py:250
+#: erpnext/controllers/buying_controller.py:269
 #: erpnext/selling/doctype/product_bundle/product_bundle.py:72
 #: erpnext/setup/doctype/transaction_deletion_record/transaction_deletion_record.py:80
 msgid "Not Allowed"
@@ -32684,8 +32721,8 @@ msgstr "Ej Tillåtet"
 msgid "Not Applicable"
 msgstr "Ej Tillämpningbar"
 
-#: erpnext/selling/page/point_of_sale/pos_controller.js:847
-#: erpnext/selling/page/point_of_sale/pos_controller.js:876
+#: erpnext/selling/page/point_of_sale/pos_controller.js:843
+#: erpnext/selling/page/point_of_sale/pos_controller.js:872
 msgid "Not Available"
 msgstr "Ej Tillgänglig"
 
@@ -32773,9 +32810,9 @@ msgid "Not in stock"
 msgstr "Ej på Lager"
 
 #: erpnext/buying/doctype/purchase_order/purchase_order.py:724
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1852
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2010
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2079
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1865
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2023
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2092
 #: erpnext/selling/doctype/sales_order/sales_order.py:824
 #: erpnext/selling/doctype/sales_order/sales_order.py:1660
 msgid "Not permitted"
@@ -32796,7 +32833,7 @@ msgstr "Ej Tillåtet"
 #: erpnext/stock/doctype/item/item.js:526
 #: erpnext/stock/doctype/item/item.py:571
 #: erpnext/stock/doctype/item_price/item_price.json
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1406
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1409
 #: erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.py:984
 #: erpnext/templates/pages/timelog_info.html:43
 msgid "Note"
@@ -33283,7 +33320,7 @@ msgstr "Endast Befintliga Tillgångar"
 msgid "Only leaf nodes are allowed in transaction"
 msgstr "Endast ej Grupp Noder är Tillåtna i Transaktioner"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:991
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:994
 msgid "Only one {0} entry can be created against the Work Order {1}"
 msgstr "Endast en {0} post kan skapas mot Arbetsorder {1}"
 
@@ -33532,7 +33569,7 @@ msgstr "Öppning Datum"
 msgid "Opening Entry"
 msgstr "Öppning Post"
 
-#: erpnext/accounts/general_ledger.py:764
+#: erpnext/accounts/general_ledger.py:775
 msgid "Opening Entry can not be created after Period Closing Voucher is created."
 msgstr "Öppning Post kan inte skapas efter att Period Stängning Verifikat är skapad."
 
@@ -33559,7 +33596,7 @@ msgstr "Öppning Faktura Skapande Post"
 msgid "Opening Invoice Item"
 msgstr "Öppning Faktura Post"
 
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1625
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1620
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:1836
 msgid "Opening Invoice has rounding adjustment of {0}.<br><br> '{1}' account is required to post these values. Please set it in Company: {2}.<br><br> Or, '{3}' can be enabled to not post any rounding adjustment."
 msgstr "Öppning Fakturan har avrundning justering på {0}.<br><br> '{1}' konto erfordras för att bokföra dessa värden. Ange det i Bolag: {2}.<br><br> Eller så kan '{3}' aktiveras för att inte bokföra någon avrundning justering."
@@ -33741,7 +33778,7 @@ msgstr "Åtgärd Rad Nummer"
 msgid "Operation Time"
 msgstr "Åtgärd Tid"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1174
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1187
 msgid "Operation Time must be greater than 0 for Operation {0}"
 msgstr "Åtgärd Tid måste vara högre än 0 för Åtgärd {0}"
 
@@ -33756,7 +33793,7 @@ msgstr "Åtgärd Klar för hur många färdiga artiklar?"
 msgid "Operation time does not depend on quantity to produce"
 msgstr "Åtgärd Tid beror inte på kvantitet som ska produceras"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:472
+#: erpnext/manufacturing/doctype/job_card/job_card.js:480
 msgid "Operation {0} added multiple times in the work order {1}"
 msgstr "Åtgärd {0} har lagts till flera gånger i Arbetsorder {1}"
 
@@ -33850,7 +33887,7 @@ msgstr "Möjligheter per Källa"
 #: erpnext/crm/report/lead_details/lead_details.js:36
 #: erpnext/crm/report/lost_opportunity/lost_opportunity.py:17
 #: erpnext/crm/workspace/crm/crm.json erpnext/public/js/communication.js:35
-#: erpnext/selling/doctype/quotation/quotation.js:138
+#: erpnext/selling/doctype/quotation/quotation.js:139
 #: erpnext/selling/doctype/quotation/quotation.json
 msgid "Opportunity"
 msgstr "Möjlighet"
@@ -34955,7 +34992,7 @@ msgstr "Betald"
 #: erpnext/accounts/report/accounts_receivable_summary/accounts_receivable_summary.py:165
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:172
 #: erpnext/accounts/report/pos_register/pos_register.py:209
-#: erpnext/selling/page/point_of_sale/pos_payment.js:662
+#: erpnext/selling/page/point_of_sale/pos_payment.js:631
 #: erpnext/selling/report/payment_terms_status_for_sales_order/payment_terms_status_for_sales_order.py:56
 #: erpnext/selling/report/payment_terms_status_for_sales_order/payment_terms_status_for_sales_order.py:277
 msgid "Paid Amount"
@@ -35682,7 +35719,7 @@ msgstr "Sökväg"
 msgid "Pause"
 msgstr "Paus"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:175
+#: erpnext/manufacturing/doctype/job_card/job_card.js:183
 msgid "Pause Job"
 msgstr "Pausa Jobb"
 
@@ -35898,7 +35935,7 @@ msgstr "Betalning Post är redan skapad"
 msgid "Payment Entry {0} is linked against Order {1}, check if it should be pulled as advance in this invoice."
 msgstr "Betalning Post {0} är länkad till Order {1}, kontrollera om den ska hämtas som förskott på denna faktura."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:338
+#: erpnext/selling/page/point_of_sale/pos_payment.js:347
 msgid "Payment Failed"
 msgstr "Betalning Misslyckades"
 
@@ -36030,7 +36067,7 @@ msgstr "Betalning Plan"
 msgid "Payment Receipt Note"
 msgstr "Betalning Påminnelse"
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:319
+#: erpnext/selling/page/point_of_sale/pos_payment.js:328
 msgid "Payment Received"
 msgstr "Betalning Mottagen"
 
@@ -36299,11 +36336,11 @@ msgid "Payment methods are mandatory. Please add at least one payment method."
 msgstr "Betalning Sätt erfordras. Lägg till minst ett Betalning Sätt."
 
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.js:454
-#: erpnext/selling/page/point_of_sale/pos_payment.js:326
+#: erpnext/selling/page/point_of_sale/pos_payment.js:335
 msgid "Payment of {0} received successfully."
 msgstr "Betalning på {0} mottagen."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:333
+#: erpnext/selling/page/point_of_sale/pos_payment.js:342
 msgid "Payment of {0} received successfully. Waiting for other requests to complete..."
 msgstr "Betalning på {0} mottagen. Väntar på att andra begäran ska slutföras..."
 
@@ -36606,7 +36643,7 @@ msgstr "Period"
 msgid "Period Based On"
 msgstr "Period Baserat på"
 
-#: erpnext/accounts/general_ledger.py:776
+#: erpnext/accounts/general_ledger.py:787
 msgid "Period Closed"
 msgstr "Period Stängd"
 
@@ -36818,7 +36855,7 @@ msgstr "Telefon Nummer"
 #. Label of the customer_phone_number (Data) field in DocType 'Appointment'
 #: erpnext/accounts/doctype/payment_request/payment_request.json
 #: erpnext/crm/doctype/appointment/appointment.json
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:952
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:946
 msgid "Phone Number"
 msgstr "Telefon Nummer"
 
@@ -37365,7 +37402,7 @@ msgstr "Kontrollera att {} konto är Balans Rapport konto."
 msgid "Please ensure {} account {} is a Receivable account."
 msgstr "Kontrollera att {} konto {} är fordring konto."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:544
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:547
 msgid "Please enter <b>Difference Account</b> or set default <b>Stock Adjustment Account</b> for company {0}"
 msgstr "Ange <b>Differens Konto</b> eller standard konto för <b>Lager Justering Konto</b> för bolag {0}"
 
@@ -37500,7 +37537,7 @@ msgstr "Ange Bolag Namn att bekräfta"
 msgid "Please enter the phone number first"
 msgstr "Ange Telefon Nummer"
 
-#: erpnext/controllers/buying_controller.py:1072
+#: erpnext/controllers/buying_controller.py:1091
 msgid "Please enter the {schedule_date}."
 msgstr "Ange {schedule_date}."
 
@@ -37607,7 +37644,7 @@ msgstr "Välj Stycklista mot Artikel {0}"
 msgid "Please select BOM for Item in Row {0}"
 msgstr "Välj Stycklista för Artikel på rad {0}"
 
-#: erpnext/controllers/buying_controller.py:532
+#: erpnext/controllers/buying_controller.py:551
 msgid "Please select BOM in BOM field for Item {item_code}."
 msgstr "Välj Stycklista i Stycklista Fält för Artikel{item_code}."
 
@@ -37709,7 +37746,7 @@ msgstr "Välj Startdatum och Slutdatum för Artikel {0}"
 msgid "Please select Stock Asset Account"
 msgstr "Välj Lager Tillgång Konto"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1320
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1323
 msgid "Please select Subcontracting Order instead of Purchase Order {0}"
 msgstr "Välj Underleverantör Order istället för Inköp Order {0}"
 
@@ -37778,7 +37815,7 @@ msgstr "Välj Tid och Datum"
 msgid "Please select a default mode of payment"
 msgstr "Välj Standard Betalning Sätt"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:822
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:816
 msgid "Please select a field to edit from numpad"
 msgstr "Välj Fält att redigera från Numeriska Tangenter"
 
@@ -37799,7 +37836,7 @@ msgstr "Välj giltig Inköp Order med Service Artiklar."
 msgid "Please select a valid Purchase Order that is configured for Subcontracting."
 msgstr "Välj giltig Inköp Order som är konfigurerad för Underleverantör."
 
-#: erpnext/selling/doctype/quotation/quotation.js:229
+#: erpnext/selling/doctype/quotation/quotation.js:230
 msgid "Please select a value for {0} quotation_to {1}"
 msgstr "Välj värde för {0} Försäljning Offert {1}"
 
@@ -37916,7 +37953,7 @@ msgstr "Ange Växel Belopp Konto "
 msgid "Please set Account in Warehouse {0} or Default Inventory Account in Company {1}"
 msgstr "Ange Konto i Lager {0} eller Standard Lager Konto i Bolag {1}"
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:322
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:321
 msgid "Please set Accounting Dimension {} in {}"
 msgstr "Ange Bokföring Dimension {} i {}"
 
@@ -37995,7 +38032,7 @@ msgstr "Ange Resultat Enhet för Tillgång eller ange Resultat Enhet för Tillg�
 msgid "Please set a Supplier against the Items to be considered in the Purchase Order."
 msgstr "Ange Leverantör mot Artiklar som ska inkluderas i Inköp Order."
 
-#: erpnext/projects/doctype/project/project.py:730
+#: erpnext/projects/doctype/project/project.py:729
 msgid "Please set a default Holiday List for Company {0}"
 msgstr "Ange standard Helg Lista för Bolag {0}"
 
@@ -38048,7 +38085,7 @@ msgstr "Ange Standard Kassa eller Bank Konto i Betalning Sätt {}"
 msgid "Please set default Exchange Gain/Loss Account in Company {}"
 msgstr "Ange Standard Valutaväxling Resultat Konto för Bolag {}"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:324
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:333
 msgid "Please set default Expense Account in Company {0}"
 msgstr "Ange Standard Konstnad Konto för Bolag {0}"
 
@@ -38196,7 +38233,7 @@ msgstr "Leverera angivna artiklar till bästa möjliga pris"
 msgid "Please try again in an hour."
 msgstr "Försök igen om en timme."
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:184
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:193
 msgid "Please update Repair Status."
 msgstr "Uppdatera Reparation Status."
 
@@ -38423,10 +38460,6 @@ msgstr "Registrering Datum kan inte vara i framtiden"
 msgid "Posting Date will change to today's date as Edit Posting Date and Time is unchecked. Are you sure want to proceed?"
 msgstr "Registrering Datum ändras till dagens datum eftersom Redigera Registrering Datum och Tid är inte valt. Är du säker på att du vill fortsätta?"
 
-#: erpnext/controllers/buying_controller.py:93
-msgid "Posting Date {0} cannot be before Purchase Order Posting Date {1}"
-msgstr "Registreringsdatum {0} får inte vara tidigare än Inköp Order registreringsdatum {1}"
-
 #. Label of the posting_datetime (Datetime) field in DocType 'Stock Closing
 #. Balance'
 #. Label of the posting_datetime (Datetime) field in DocType 'Stock Ledger
@@ -38480,7 +38513,7 @@ msgstr "Registrering Datum och Tid"
 msgid "Posting Time"
 msgstr "Registrering Tid"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1980
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1999
 msgid "Posting date and posting time is mandatory"
 msgstr "Registrering Datum och Tid erfordras"
 
@@ -38876,7 +38909,7 @@ msgstr "Pris är Enhet oberoende"
 msgid "Price Per Unit ({0})"
 msgstr "Pris Per Enhet ({0})"
 
-#: erpnext/selling/page/point_of_sale/pos_controller.js:723
+#: erpnext/selling/page/point_of_sale/pos_controller.js:719
 msgid "Price is not set for the item."
 msgstr "Artikel pris är inte angiven."
 
@@ -39182,7 +39215,7 @@ msgid "Print Preferences"
 msgstr "Utskrift Inställningar"
 
 #: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:63
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:272
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:270
 msgid "Print Receipt"
 msgstr "Skriv ut"
 
@@ -39427,7 +39460,7 @@ msgstr "Process Förlust i Procent får inte vara större än 100  "
 msgid "Process Loss Qty"
 msgstr "Process Förlust Kvantitet"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:252
+#: erpnext/manufacturing/doctype/job_card/job_card.js:260
 msgid "Process Loss Quantity"
 msgstr "Process Förlust Kvantitet"
 
@@ -39976,7 +40009,7 @@ msgstr "Framsteg(%)"
 msgid "Project"
 msgstr "Projekt"
 
-#: erpnext/projects/doctype/project/project.py:367
+#: erpnext/projects/doctype/project/project.py:368
 msgid "Project Collaboration Invitation"
 msgstr "Projekt Samarbete Inbjudan"
 
@@ -40018,7 +40051,7 @@ msgstr "Projekt Status"
 msgid "Project Summary"
 msgstr "Projekt Översikt"
 
-#: erpnext/projects/doctype/project/project.py:668
+#: erpnext/projects/doctype/project/project.py:667
 msgid "Project Summary for {0}"
 msgstr "Projekt Översikt för {0}"
 
@@ -40132,7 +40165,7 @@ msgstr "Förväntad Kvantitet"
 
 #. Name of a Workspace
 #. Label of a Card Break in the Projects Workspace
-#: erpnext/config/projects.py:7 erpnext/projects/doctype/project/project.py:445
+#: erpnext/config/projects.py:7 erpnext/projects/doctype/project/project.py:446
 #: erpnext/projects/workspace/projects/projects.json
 #: erpnext/selling/doctype/customer/customer_dashboard.py:26
 #: erpnext/selling/doctype/sales_order/sales_order_dashboard.py:28
@@ -40476,7 +40509,7 @@ msgstr "Inköp Faktura kan inte skapas mot befintlig tillgång {0}"
 msgid "Purchase Invoice {0} is already submitted"
 msgstr "Inköp Faktura {0} är redan godkänd"
 
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:2010
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:2005
 msgid "Purchase Invoices"
 msgstr "Inköp Fakturor"
 
@@ -40543,7 +40576,7 @@ msgstr "Inköp Huvudansvarig"
 #: erpnext/buying/report/purchase_order_analysis/purchase_order_analysis.js:48
 #: erpnext/buying/report/purchase_order_analysis/purchase_order_analysis.py:203
 #: erpnext/buying/workspace/buying/buying.json
-#: erpnext/controllers/buying_controller.py:804
+#: erpnext/controllers/buying_controller.py:823
 #: erpnext/crm/doctype/contract/contract.json
 #: erpnext/manufacturing/doctype/blanket_order/blanket_order.js:54
 #: erpnext/manufacturing/doctype/production_plan_sub_assembly_item/production_plan_sub_assembly_item.json
@@ -40657,7 +40690,7 @@ msgstr "Inköp Order Nummer erfordras för Artikel {0}"
 msgid "Purchase Order {0} is not submitted"
 msgstr "Inköp Order {0} ej godkänd"
 
-#: erpnext/buying/doctype/purchase_order/purchase_order.py:897
+#: erpnext/buying/doctype/purchase_order/purchase_order.py:905
 msgid "Purchase Orders"
 msgstr "Inköp Ordrar"
 
@@ -40937,7 +40970,7 @@ msgstr "Lila"
 msgid "Purpose"
 msgstr "Anledning"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:370
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:373
 msgid "Purpose must be one of {0}"
 msgstr "Anledning måste vara en av {0}"
 
@@ -41113,7 +41146,7 @@ msgstr "Kvantitet per Enhet"
 msgid "Qty To Manufacture"
 msgstr "Kvantitet att Producera"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1120
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1133
 msgid "Qty To Manufacture ({0}) cannot be a fraction for the UOM {2}. To allow this, disable '{1}' in the UOM {2}."
 msgstr "Kvantitet att Producera ({0}) kan inte vara bråkdel för enhet {2}. För att tillåta detta, inaktivera '{1}' i enhet {2}."
 
@@ -41221,7 +41254,7 @@ msgstr "Kvantitet att Leverera"
 msgid "Qty to Fetch"
 msgstr "Kvantitet att Hämta"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:224
+#: erpnext/manufacturing/doctype/job_card/job_card.js:232
 #: erpnext/manufacturing/doctype/job_card/job_card.py:765
 msgid "Qty to Manufacture"
 msgstr "Kvantitet att Producera"
@@ -41569,7 +41602,7 @@ msgstr "Kvalitet Granskning Avsikt"
 #: erpnext/selling/report/item_wise_sales_history/item_wise_sales_history.py:42
 #: erpnext/selling/report/sales_analytics/sales_analytics.js:44
 #: erpnext/selling/report/sales_partner_transaction_summary/sales_partner_transaction_summary.py:67
-#: erpnext/stock/dashboard/item_dashboard.js:245
+#: erpnext/stock/dashboard/item_dashboard.js:248
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
 #: erpnext/stock/doctype/material_request/material_request.js:335
 #: erpnext/stock/doctype/material_request_item/material_request_item.json
@@ -41674,7 +41707,7 @@ msgstr "Kvantitet och Lager"
 msgid "Quantity cannot be greater than {0} for Item {1}"
 msgstr "Kvantitet kan inte vara högre än {0} för artikel {1}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1388
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1391
 msgid "Quantity in row {0} ({1}) must be same as manufactured quantity {2}"
 msgstr "Kvantitet på rad {0} ({1}) måste vara samma som producerad kvantitet {2}"
 
@@ -41682,7 +41715,7 @@ msgstr "Kvantitet på rad {0} ({1}) måste vara samma som producerad kvantitet {
 msgid "Quantity is required"
 msgstr "Kvantitet erfodras"
 
-#: erpnext/stock/dashboard/item_dashboard.js:282
+#: erpnext/stock/dashboard/item_dashboard.js:285
 msgid "Quantity must be greater than zero, and less or equal to {0}"
 msgstr "Kvantitet måste vara större än noll och mindre eller lika med {0}"
 
@@ -41701,8 +41734,8 @@ msgid "Quantity required for Item {0} in row {1}"
 msgstr "Kvantitet som erfodras för artikel {0} på rad {1}"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:604
-#: erpnext/manufacturing/doctype/job_card/job_card.js:280
-#: erpnext/manufacturing/doctype/job_card/job_card.js:349
+#: erpnext/manufacturing/doctype/job_card/job_card.js:288
+#: erpnext/manufacturing/doctype/job_card/job_card.js:357
 #: erpnext/manufacturing/doctype/workstation/workstation.js:303
 msgid "Quantity should be greater than 0"
 msgstr "Kvantitet ska vara högre än 0"
@@ -41715,11 +41748,11 @@ msgstr "Kvantitet att Producera"
 msgid "Quantity to Manufacture"
 msgstr "Kvantitet att Producera"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2155
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2168
 msgid "Quantity to Manufacture can not be zero for the operation {0}"
 msgstr "Kvantitet att Producera kan inte vara noll för åtgärd {0}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1112
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1125
 msgid "Quantity to Manufacture must be greater than 0."
 msgstr "Kvantitet att Producera måste vara högre än 0."
 
@@ -41727,7 +41760,7 @@ msgstr "Kvantitet att Producera måste vara högre än 0."
 msgid "Quantity to Produce"
 msgstr "Kvantitet att Producera"
 
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:41
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:36
 msgid "Quantity to Produce should be greater than zero."
 msgstr "Kvantitet att producera ska vara högre än noll."
 
@@ -42069,7 +42102,7 @@ msgstr "Intervall"
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
 #: erpnext/selling/report/item_wise_sales_history/item_wise_sales_history.py:45
 #: erpnext/selling/report/sales_partner_transaction_summary/sales_partner_transaction_summary.py:68
-#: erpnext/stock/dashboard/item_dashboard.js:252
+#: erpnext/stock/dashboard/item_dashboard.js:255
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
 #: erpnext/stock/doctype/item_price/item_price.json
 #: erpnext/stock/doctype/landed_cost_item/landed_cost_item.json
@@ -42793,7 +42826,7 @@ msgstr "Hämtar"
 msgid "Recent Orders"
 msgstr "Senaste Ordrar"
 
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:897
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:891
 msgid "Recent Transactions"
 msgstr "Senaste Transaktioner"
 
@@ -42971,7 +43004,7 @@ msgstr "Lös in Mot"
 #. Label of the redeem_loyalty_points (Check) field in DocType 'Sales Invoice'
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.json
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.json
-#: erpnext/selling/page/point_of_sale/pos_payment.js:597
+#: erpnext/selling/page/point_of_sale/pos_payment.js:566
 msgid "Redeem Loyalty Points"
 msgstr "Lös in Lojalitet Poäng"
 
@@ -43537,7 +43570,7 @@ msgstr "Avgång Datum"
 msgid "Remaining"
 msgstr "Återstående"
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:659
+#: erpnext/selling/page/point_of_sale/pos_payment.js:628
 msgid "Remaining Amount"
 msgstr "Återstående Belopp"
 
@@ -43550,7 +43583,7 @@ msgstr "Återstående Saldo"
 
 #. Label of the remark (Small Text) field in DocType 'Journal Entry'
 #: erpnext/accounts/doctype/journal_entry/journal_entry.json
-#: erpnext/selling/page/point_of_sale/pos_payment.js:439
+#: erpnext/selling/page/point_of_sale/pos_payment.js:448
 msgid "Remark"
 msgstr "Anmärkning"
 
@@ -43752,7 +43785,7 @@ msgstr "Inköp Fakturor för Reparationer"
 msgid "Repair Status"
 msgstr "Reparation Status"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:117
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:126
 msgid "Repair cost cannot be greater than purchase invoice base net total {0}"
 msgstr "Reparation kostnad får inte vara högre än netto belopp för inköp faktura {0}"
 
@@ -44170,7 +44203,7 @@ msgstr "Erfodrad Datum "
 #: erpnext/manufacturing/report/bom_stock_calculated/bom_stock_calculated.py:86
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:11
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:21
-#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:30
+#: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:27
 #: erpnext/manufacturing/report/bom_variance_report/bom_variance_report.py:58
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.py:414
 #: erpnext/manufacturing/report/work_order_consumed_materials/work_order_consumed_materials.py:139
@@ -44346,7 +44379,7 @@ msgstr "Reserverad Kvantitet"
 msgid "Reserved Quantity for Production"
 msgstr "Reserverad Kvantitet för Produktion"
 
-#: erpnext/stock/stock_ledger.py:2164
+#: erpnext/stock/stock_ledger.py:2171
 msgid "Reserved Serial No."
 msgstr "Reserverad Serie Nummer"
 
@@ -44362,11 +44395,11 @@ msgstr "Reserverad Serie Nummer"
 #: erpnext/stock/doctype/pick_list/pick_list.js:147
 #: erpnext/stock/report/reserved_stock/reserved_stock.json
 #: erpnext/stock/report/stock_balance/stock_balance.py:499
-#: erpnext/stock/stock_ledger.py:2148
+#: erpnext/stock/stock_ledger.py:2155
 msgid "Reserved Stock"
 msgstr "Reserverad"
 
-#: erpnext/stock/stock_ledger.py:2194
+#: erpnext/stock/stock_ledger.py:2201
 msgid "Reserved Stock for Batch"
 msgstr "Reserverad för Parti"
 
@@ -44378,7 +44411,7 @@ msgstr "Reserverad Lager för Råvaror"
 msgid "Reserved Stock for Sub-assembly"
 msgstr "Reserverad Lager för Undermontering"
 
-#: erpnext/controllers/buying_controller.py:541
+#: erpnext/controllers/buying_controller.py:560
 msgid "Reserved Warehouse is mandatory for the Item {item_code} in Raw Materials supplied."
 msgstr "Reserverat Lager erfordras för artikel {item_code} i levererade Råvaror."
 
@@ -44631,7 +44664,7 @@ msgstr "Resultat Benämning Fält"
 msgid "Resume"
 msgstr "Återuppta"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:159
+#: erpnext/manufacturing/doctype/job_card/job_card.js:167
 msgid "Resume Job"
 msgstr "Återuppta Jobb"
 
@@ -44776,7 +44809,7 @@ msgid "Return of Components"
 msgstr "Retur av Komponenter"
 
 #. Option for the 'Tracking Status' (Select) field in DocType 'Shipment'
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:134
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:138
 #: erpnext/stock/doctype/shipment/shipment.json
 msgid "Returned"
 msgstr "Retur"
@@ -45391,17 +45424,13 @@ msgstr "Rad # {0}: Färdig Artikel är inte specificerad för Service Artikel {1
 msgid "Row #{0}: Finished Good Item {1} must be a sub-contracted item"
 msgstr "Rad # {0}: Färdig Artikel {1} måste vara Underleverantör Artikel  "
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:330
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:333
 msgid "Row #{0}: Finished Good must be {1}"
 msgstr "Rad #{0}: Färdig Artikel måste vara {1}"
 
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.py:473
 msgid "Row #{0}: Finished Good reference is mandatory for Scrap Item {1}."
 msgstr "Rad #{0}: Färdig Artikel referens erfordras för Skrot Artikel {1}."
-
-#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:100
-msgid "Row #{0}: For {1} Clearance date {2} cannot be before Cheque Date {3}"
-msgstr "Rad #{0}: För {1} Avstämning datum {2} kan inte vara före Check Datum {3}"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:762
 msgid "Row #{0}: For {1}, you can select reference document only if account gets credited"
@@ -45419,7 +45448,7 @@ msgstr "Rad # {0}: Från Datum kan inte vara före Till Datum"
 msgid "Row #{0}: From Time and To Time fields are required"
 msgstr "Rad #{0}: Fält Från Tid och Till Tid erfordras"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:719
+#: erpnext/manufacturing/doctype/work_order/work_order.py:732
 msgid "Row #{0}: Incorrect Sequence ID. If any single operation has a Sequence ID then all other operations must have one too."
 msgstr "Rad #{0}: Felaktigt Sekvens ID. Om någon enskild operation har Sekvens ID måste alla andra operationer också ha det."
 
@@ -45475,13 +45504,9 @@ msgstr "Rad # {0}: Endast {1} tillgänglig att reservera för artikel {2} "
 msgid "Row #{0}: Opening Accumulated Depreciation must be less than or equal to {1}"
 msgstr "Rad #{0}: Ingående Ackumulerad Avskrivning måste vara lägre än eller lika med {1}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:695
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:698
 msgid "Row #{0}: Operation {1} is not completed for {2} qty of finished goods in Work Order {3}. Please update operation status via Job Card {4}."
 msgstr "Rad # {0}: Åtgärd {1} är inte Klar för {2} Kvantitet färdiga artiklar i Arbetsorder {3}. Uppdatera drift status via Jobbkort {4}."
-
-#: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:96
-msgid "Row #{0}: Payment document is required to complete the transaction"
-msgstr "Rad #{0}: Betalning Dokument erfordras att slutföra transaktion"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:1009
 msgid "Row #{0}: Please select Item Code in Assembly Items"
@@ -45695,39 +45720,39 @@ msgstr "Rad # {0}: {1} av {2} ska vara {3}. Uppdatera {1} eller välj ett annat 
 msgid "Row #{1}: Warehouse is mandatory for stock Item {0}"
 msgstr "Rad # {1}: Lager erfordras för lager artikel {0}"
 
-#: erpnext/controllers/buying_controller.py:272
+#: erpnext/controllers/buying_controller.py:291
 msgid "Row #{idx}: Cannot select Supplier Warehouse while suppling raw materials to subcontractor."
 msgstr "Rad #{idx}: Kan inte välja Leverantör Lager medan råvaror levereras till underleverantör."
 
-#: erpnext/controllers/buying_controller.py:471
+#: erpnext/controllers/buying_controller.py:490
 msgid "Row #{idx}: Item rate has been updated as per valuation rate since its an internal stock transfer."
 msgstr "Rad # #{idx}: Artikel Pris är uppdaterad enligt Värderingssats eftersom det är intern lager överföring."
 
-#: erpnext/controllers/buying_controller.py:946
+#: erpnext/controllers/buying_controller.py:965
 msgid "Row #{idx}: Please enter a location for the asset item {item_code}."
 msgstr "Rad #{idx}: Ange plats för tillgång artikel {item_code}."
 
-#: erpnext/controllers/buying_controller.py:602
+#: erpnext/controllers/buying_controller.py:621
 msgid "Row #{idx}: Received Qty must be equal to Accepted + Rejected Qty for Item {item_code}."
 msgstr "Rad #{idx}: Mottaget Kvantitet måste vara lika med Godkänd + Avvisad Kvantitet för Artikel {item_code}."
 
-#: erpnext/controllers/buying_controller.py:615
+#: erpnext/controllers/buying_controller.py:634
 msgid "Row #{idx}: {field_label} can not be negative for item {item_code}."
 msgstr "Rad #{idx}: {field_label} kan inte vara negativ för artikel {item_code}."
 
-#: erpnext/controllers/buying_controller.py:561
+#: erpnext/controllers/buying_controller.py:580
 msgid "Row #{idx}: {field_label} is mandatory."
 msgstr "Rad #{idx}: {field_label} erfordras."
 
-#: erpnext/controllers/buying_controller.py:583
+#: erpnext/controllers/buying_controller.py:602
 msgid "Row #{idx}: {field_label} is not allowed in Purchase Return."
 msgstr "Rad #{idx}: {field_label} är inte tillåtet i Inköp Retur."
 
-#: erpnext/controllers/buying_controller.py:263
+#: erpnext/controllers/buying_controller.py:282
 msgid "Row #{idx}: {from_warehouse_field} and {to_warehouse_field} cannot be same."
 msgstr "Rad #{idx}: {from_warehouse_field} och {to_warehouse_field} kan inte vara samma."
 
-#: erpnext/controllers/buying_controller.py:1064
+#: erpnext/controllers/buying_controller.py:1083
 msgid "Row #{idx}: {schedule_date} cannot be before {transaction_date}."
 msgstr "Rad #{idx}: {schedule_date} kan inte vara före {transaction_date}."
 
@@ -45743,15 +45768,15 @@ msgstr "Rad # {}: Finans Register ska inte vara tom eftersom du använder flera.
 msgid "Row #{}: Item Code: {} is not available under warehouse {}."
 msgstr "Rad # {}: Artikel Kod: {} är inte tillgänglig på Lager {}."
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:94
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:93
 msgid "Row #{}: POS Invoice {} has been {}"
 msgstr "Rad # {}: Kassa Faktura {} har {}"
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:75
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:74
 msgid "Row #{}: POS Invoice {} is not against customer {}"
 msgstr "Rad # {}: Kassa Faktura {} är inte mot kund {}"
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:90
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:89
 msgid "Row #{}: POS Invoice {} is not submitted yet"
 msgstr "Rad # {}: Kassa Faktura {} ej godkänd ännu"
 
@@ -45771,7 +45796,7 @@ msgstr "Rad # {}: Serie Nummer {} kan inte returneras eftersom den inte ingick i
 msgid "Row #{}: Stock quantity not enough for Item Code: {} under warehouse {}. Available quantity {}."
 msgstr "Rad # {}: Lager Kvantitet räcker inte för Artikel Kod: {} på Lager {}. Tillgänglig Kvantitet {}."
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:105
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:104
 msgid "Row #{}: The original Invoice {} of return invoice {} is not consolidated."
 msgstr "Rad #{}: Ursprunglig Faktura {} för Retur Faktura {} är inte konsoliderad."
 
@@ -45816,11 +45841,11 @@ msgstr "Rad # {0}: Åtgärd erfodras mot Råmaterial post {1}"
 msgid "Row {0} picked quantity is less than the required quantity, additional {1} {2} required."
 msgstr "Rad # {0}: Plockad kvantitet är lägre än erfordrad kvantitet, ytterligare {1} {2} erfordras."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1251
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1254
 msgid "Row {0}# Item {1} cannot be transferred more than {2} against {3} {4}"
 msgstr "Rad # {0}: Artikel {1} kan inte överföras mer än {2} mot {3} {4}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1275
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1278
 msgid "Row {0}# Item {1} not found in 'Raw Materials Supplied' table in {2} {3}"
 msgstr "Rad # {0}: Artikel {1} hittades inte i tabellen \"Råmaterial Levererad\" i {2} {3}"
 
@@ -45852,7 +45877,7 @@ msgstr "Rad # {0}: Tilldelad belopp {1} måste vara lägre än eller lika med ut
 msgid "Row {0}: Allocated amount {1} must be less than or equal to remaining payment amount {2}"
 msgstr "Rad # {0}: Tilldelad belopp {1} måste vara lägre än eller lika med återstående betalning belopp {2}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:971
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:974
 msgid "Row {0}: As {1} is enabled, raw materials cannot be added to {2} entry. Use {3} entry to consume raw materials."
 msgstr "Rad {0}: Eftersom {1} är aktiverat kan råmaterial inte läggas till {2} post. Använd {3} post för att förbruka råmaterial."
 
@@ -46038,7 +46063,7 @@ msgstr "Rad # {0}: Inköp Faktura {1} har ingen efekt på lager."
 msgid "Row {0}: Qty cannot be greater than {1} for the Item {2}."
 msgstr "Rad # {0}: Kvantitet får inte vara högre än {1} för Artikel {2}."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:415
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:418
 msgid "Row {0}: Qty in Stock UOM can not be zero."
 msgstr "Rad # {0}: Kvantitet i Lager Enhet kan inte vara noll."
 
@@ -46050,7 +46075,7 @@ msgstr "Rad # {0}: Kvantitet måste vara högre än 0."
 msgid "Row {0}: Quantity cannot be negative."
 msgstr "Rad {0}: Kvantitet kan inte vara negativ."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:769
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:772
 msgid "Row {0}: Quantity not available for {4} in warehouse {1} at posting time of the entry ({2} {3})"
 msgstr "Rad # {0}: Kvantitet är inte tillgänglig för {4} på lager {1} vid registrering tid för post ({2} {3})"
 
@@ -46058,7 +46083,7 @@ msgstr "Rad # {0}: Kvantitet är inte tillgänglig för {4} på lager {1} vid re
 msgid "Row {0}: Shift cannot be changed since the depreciation has already been processed"
 msgstr "Rad {0}: Skift kan inte ändras eftersom avskrivning redan är behandlad"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1288
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1291
 msgid "Row {0}: Subcontracted Item is mandatory for the raw material {1}"
 msgstr "Rad # {0}: Underleverantör Artikel erfordras för Råmaterial {1}"
 
@@ -46070,7 +46095,7 @@ msgstr "Rad # {0}: Till Lager erfordras för interna överföringar"
 msgid "Row {0}: Task {1} does not belong to Project {2}"
 msgstr "Rad {0}: Uppgift {1} tillhör inte Projekt {2}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:458
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:461
 msgid "Row {0}: The item {1}, quantity must be positive number"
 msgstr "Rad # {0}: Artikel {1}, Kvantitet måste vara positivt tal"
 
@@ -46082,12 +46107,12 @@ msgstr "Rad {0}: {3} Konto {1} tillhör inte bolag {2}"
 msgid "Row {0}: To set {1} periodicity, difference between from and to date must be greater than or equal to {2}"
 msgstr "Rad # {0}: För att ange periodicitet för {1} måste skillnaden mellan från och till datum vara större än eller lika med {2}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:409
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:412
 msgid "Row {0}: UOM Conversion Factor is mandatory"
 msgstr "Rad # {0}: Enhet Konvertering Faktor erfordras"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:1061
-#: erpnext/manufacturing/doctype/work_order/work_order.py:251
+#: erpnext/manufacturing/doctype/work_order/work_order.py:252
 msgid "Row {0}: Workstation or Workstation Type is mandatory for an operation {1}"
 msgstr "Rad {0}: Arbetsplats eller Arbetsplats Typ erfordras för åtgärd {1}"
 
@@ -46119,7 +46144,7 @@ msgstr "Rad # {0}: {2} Artikel {1} finns inte i {2} {3}"
 msgid "Row {1}: Quantity ({0}) cannot be a fraction. To allow this, disable '{2}' in UOM {3}."
 msgstr "Rad # {1}: Kvantitet ({0}) kan inte vara bråkdel. För att tillåta detta, inaktivera '{2}' i Enhet {3}."
 
-#: erpnext/controllers/buying_controller.py:928
+#: erpnext/controllers/buying_controller.py:947
 msgid "Row {idx}: Asset Naming Series is mandatory for the auto creation of assets for item {item_code}."
 msgstr "Rad {idx}: Tillgång Namngivning Serie erfordras för att automatiskt skapa tillgångar för artikel {item_code}."
 
@@ -46634,7 +46659,7 @@ msgstr "Försäljning Möjligheter efter Källa"
 #: erpnext/manufacturing/report/production_plan_summary/production_plan_summary.py:155
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.py:217
 #: erpnext/projects/doctype/project/project.json
-#: erpnext/selling/doctype/quotation/quotation.js:124
+#: erpnext/selling/doctype/quotation/quotation.js:125
 #: erpnext/selling/doctype/quotation/quotation_dashboard.py:11
 #: erpnext/selling/doctype/quotation/quotation_list.js:16
 #: erpnext/selling/doctype/sales_order/sales_order.json
@@ -46742,12 +46767,12 @@ msgstr "Försäljning Order {0} finns redan mot Kund Inköp Order {1}. För att 
 msgid "Sales Order {0} is not submitted"
 msgstr "Försäljning Order {0} ej godkänd"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:302
+#: erpnext/manufacturing/doctype/work_order/work_order.py:303
 msgid "Sales Order {0} is not valid"
 msgstr "Försäljning Order {0} är inte giltig"
 
 #: erpnext/controllers/selling_controller.py:453
-#: erpnext/manufacturing/doctype/work_order/work_order.py:307
+#: erpnext/manufacturing/doctype/work_order/work_order.py:308
 msgid "Sales Order {0} is {1}"
 msgstr "Försäljning Order {0} är {1}"
 
@@ -47201,7 +47226,7 @@ msgstr "Prov Lager"
 msgid "Sample Size"
 msgstr "Prov Kvantitet"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:3309
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:3328
 msgid "Sample quantity {0} cannot be more than received quantity {1}"
 msgstr "Prov Kvantitet {0} kan inte vara högre än mottagen kvantitet {1}"
 
@@ -47633,7 +47658,7 @@ msgstr "Välj Bokföring Dimension"
 msgid "Select Alternate Item"
 msgstr "Välj Alternativ Artikel"
 
-#: erpnext/selling/doctype/quotation/quotation.js:324
+#: erpnext/selling/doctype/quotation/quotation.js:325
 msgid "Select Alternative Items for Sales Order"
 msgstr "Välj Alternativ Artikel för Försäljning Order"
 
@@ -47679,7 +47704,7 @@ msgstr "Välj Kolumner och Filter"
 msgid "Select Company"
 msgstr "Välj Bolag"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:427
+#: erpnext/manufacturing/doctype/job_card/job_card.js:435
 msgid "Select Corrective Operation"
 msgstr "Välj Korrigerande Åtgärd"
 
@@ -47720,7 +47745,7 @@ msgstr "Välj Avsändning Adress "
 msgid "Select DocType"
 msgstr "Välj DocType"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:145
+#: erpnext/manufacturing/doctype/job_card/job_card.js:153
 msgid "Select Employees"
 msgstr "Välj Personal"
 
@@ -47759,7 +47784,7 @@ msgid "Select Job Worker Address"
 msgstr "Välj Jobb Ansvarig Adress"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.js:1118
-#: erpnext/selling/page/point_of_sale/pos_item_cart.js:961
+#: erpnext/selling/page/point_of_sale/pos_item_cart.js:955
 msgid "Select Loyalty Program"
 msgstr "Välj Lojalitet Program"
 
@@ -47838,6 +47863,10 @@ msgstr "Välj Kund"
 msgid "Select a Default Priority."
 msgstr "Välj Standard Prioritet."
 
+#: erpnext/selling/page/point_of_sale/pos_payment.js:146
+msgid "Select a Payment Method."
+msgstr "Välj Betalning Metod."
+
 #: erpnext/selling/doctype/customer/customer.js:226
 msgid "Select a Supplier"
 msgstr "Välj Leverantör"
@@ -47862,7 +47891,7 @@ msgstr "Välj Konto för utskrift i Konto Valuta"
 msgid "Select an invoice to load summary data"
 msgstr "Välj faktura för att ladda översikt data"
 
-#: erpnext/selling/doctype/quotation/quotation.js:339
+#: erpnext/selling/doctype/quotation/quotation.js:340
 msgid "Select an item from each set to be used in the Sales Order."
 msgstr "Välj artikel från varje uppsättning som ska användas i Försäljning Order."
 
@@ -48390,7 +48419,7 @@ msgstr "Serie Nummer {0} är under garanti till {1}"
 msgid "Serial No {0} not found"
 msgstr "Serie Nummer {0} hittades inte"
 
-#: erpnext/selling/page/point_of_sale/pos_controller.js:878
+#: erpnext/selling/page/point_of_sale/pos_controller.js:874
 msgid "Serial No: {0} has already been transacted into another POS Invoice."
 msgstr "Serie Nummer: {0} har redan använts i annan Kassa Faktura."
 
@@ -48415,7 +48444,7 @@ msgstr "Serie Nummer & Partier"
 msgid "Serial Nos are created successfully"
 msgstr "Serie Nummer skapade"
 
-#: erpnext/stock/stock_ledger.py:2154
+#: erpnext/stock/stock_ledger.py:2161
 msgid "Serial Nos are reserved in Stock Reservation Entries, you need to unreserve them before proceeding."
 msgstr "Serie Nmmer är reserverade iLagerreservationsinlägg, du måste avboka dem innan du fortsätter."
 
@@ -48854,7 +48883,7 @@ msgstr "Service Stopp Datum kan inte vara efter Service Slut Datum"
 msgid "Service Stop Date cannot be before Service Start Date"
 msgstr "Service Stopp Datum kan inte vara före Service Start Datum"
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:99
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:108
 msgid "Service item not present in Purchase Invoice {0}"
 msgstr "Service Artikel saknas i Inköp Faktura {0}"
 
@@ -48891,8 +48920,8 @@ msgstr "Ange Bas Pris Manuellt"
 msgid "Set Default Supplier"
 msgstr "Ange Standard Leverantör"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:298
-#: erpnext/manufacturing/doctype/job_card/job_card.js:367
+#: erpnext/manufacturing/doctype/job_card/job_card.js:306
+#: erpnext/manufacturing/doctype/job_card/job_card.js:375
 msgid "Set Finished Good Quantity"
 msgstr "Ange Färdig Artikel Kvantitet"
 
@@ -49041,7 +49070,7 @@ msgid "Set as Completed"
 msgstr "Ange som Klar"
 
 #: erpnext/public/js/utils/sales_common.js:516
-#: erpnext/selling/doctype/quotation/quotation.js:128
+#: erpnext/selling/doctype/quotation/quotation.js:129
 msgid "Set as Lost"
 msgstr "Ange som Förlorad"
 
@@ -49183,7 +49212,7 @@ msgid "Setting up company"
 msgstr "Konfigurerar Bolag"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:1040
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1167
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1180
 msgid "Setting {} is required"
 msgstr "Inställning {} erfordras"
 
@@ -49870,7 +49899,7 @@ msgstr "Enkel Python formel tillämpad på läsfält.<br> Numerisk t.ex. 1: <b>r
 msgid "Simultaneous"
 msgstr "Samtidig"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:532
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:535
 msgid "Since there is a process loss of {0} units for the finished good {1}, you should reduce the quantity by {0} units for the finished good {1} in the Items Table."
 msgstr "Eftersom det finns processförlust på {0} enheter för färdig artikel {1}, ska man minska kvantitet med {0} enheter för färdig artikel {1} i Artikel Tabell."
 
@@ -49978,7 +50007,7 @@ msgstr "Mjukvaruutvecklare"
 msgid "Sold"
 msgstr "Såld"
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:82
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:86
 msgid "Sold by"
 msgstr "Säljare"
 
@@ -50086,7 +50115,7 @@ msgstr "Käll Typ"
 #: erpnext/manufacturing/doctype/work_order_item/work_order_item.json
 #: erpnext/manufacturing/doctype/work_order_operation/work_order_operation.json
 #: erpnext/manufacturing/report/work_order_stock_report/work_order_stock_report.py:126
-#: erpnext/stock/dashboard/item_dashboard.js:224
+#: erpnext/stock/dashboard/item_dashboard.js:227
 #: erpnext/stock/doctype/material_request_item/material_request_item.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:641
 #: erpnext/stock/doctype/stock_entry_detail/stock_entry_detail.json
@@ -50112,11 +50141,11 @@ msgstr "Från Lager erfordras för artikel {0}."
 msgid "Source and Target Location cannot be same"
 msgstr "Hämta och Lämna Plats kan inte vara samma"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:643
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:646
 msgid "Source and target warehouse cannot be same for row {0}"
 msgstr "Från och Till Lager kan inte vara samma för rad {0}"
 
-#: erpnext/stock/dashboard/item_dashboard.js:287
+#: erpnext/stock/dashboard/item_dashboard.js:290
 msgid "Source and target warehouse must be different"
 msgstr "Från och Till Lager måste vara olika"
 
@@ -50125,8 +50154,8 @@ msgstr "Från och Till Lager måste vara olika"
 msgid "Source of Funds (Liabilities)"
 msgstr "Skulder"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:620
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:637
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:623
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:640
 msgid "Source warehouse is mandatory for row {0}"
 msgstr "Från Lager erfordras för rad {0}"
 
@@ -50393,7 +50422,7 @@ msgstr "Starta Borttagning"
 msgid "Start Import"
 msgstr "Starta Import"
 
-#: erpnext/manufacturing/doctype/job_card/job_card.js:139
+#: erpnext/manufacturing/doctype/job_card/job_card.js:147
 #: erpnext/manufacturing/doctype/workstation/workstation.js:124
 msgid "Start Job"
 msgstr "Starta Jobb"
@@ -50752,7 +50781,7 @@ msgstr "Status Detaljer"
 msgid "Status Illustration"
 msgstr "Statusbild"
 
-#: erpnext/projects/doctype/project/project.py:711
+#: erpnext/projects/doctype/project/project.py:710
 msgid "Status must be Cancelled or Completed"
 msgstr "Status måste vara Annullerad eller Klar"
 
@@ -50789,7 +50818,7 @@ msgstr "Lager"
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:50
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:73
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1330
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1364
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1359
 #: erpnext/accounts/report/account_balance/account_balance.js:58
 msgid "Stock Adjustment"
 msgstr "Lager Justering"
@@ -50891,7 +50920,7 @@ msgstr "Lagerstängning Logg"
 msgid "Stock Details"
 msgstr "Lager Detaljer"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:737
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:740
 msgid "Stock Entries already created for Work Order {0}: {1}"
 msgstr "Lager Poster redan skapade för Arbetsorder {0}: {1}"
 
@@ -51201,7 +51230,7 @@ msgid "Stock Reservation Entries Cancelled"
 msgstr "Lager Reservation Poster Annullerade"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:2138
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1707
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1720
 #: erpnext/stock/doctype/stock_reservation_entry/stock_reservation_entry.py:1707
 msgid "Stock Reservation Entries Created"
 msgstr "Lager Reservation Poster Skapade"
@@ -51493,7 +51522,7 @@ msgstr "Lager reservation är ångrad för arbetsorder {0}."
 msgid "Stock not available for Item {0} in Warehouse {1}."
 msgstr "Lager ej tillgängligt för Artikel {0} i Lager {1}."
 
-#: erpnext/selling/page/point_of_sale/pos_controller.js:858
+#: erpnext/selling/page/point_of_sale/pos_controller.js:854
 msgid "Stock quantity not enough for Item Code: {0} under warehouse {1}. Available quantity {2} {3}."
 msgstr "Lager Kvantitet ej tillgänglig för Artikel Kod: {0} på lager {1}. Tillgänglig kvantitet {2} {3}."
 
@@ -51575,7 +51604,7 @@ msgstr "Driftstopp Anledning"
 msgid "Stopped"
 msgstr "Stoppad"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:791
+#: erpnext/manufacturing/doctype/work_order/work_order.py:804
 msgid "Stopped Work Order cannot be cancelled, Unstop it first to cancel"
 msgstr "Stoppad Arbetsorder kan inte annulleras, Ångra först för att annullera"
 
@@ -51801,7 +51830,7 @@ msgstr "Underleverantör Order Service Artikel"
 msgid "Subcontracting Order Supplied Item"
 msgstr "Underleverantör Order Levererad Artikel"
 
-#: erpnext/buying/doctype/purchase_order/purchase_order.py:933
+#: erpnext/buying/doctype/purchase_order/purchase_order.py:941
 msgid "Subcontracting Order {0} created."
 msgstr "Underleverantör Order {0} skapad"
 
@@ -51858,6 +51887,7 @@ msgstr "Underavdelning"
 #. Label of the subject (Data) field in DocType 'Payment Request'
 #. Label of the subject (Data) field in DocType 'Process Statement Of Accounts'
 #. Label of the subject (Small Text) field in DocType 'Asset Activity'
+#. Label of the subject (Data) field in DocType 'Project'
 #. Label of the subject (Read Only) field in DocType 'Project Template Task'
 #. Label of the subject (Data) field in DocType 'Task'
 #. Label of the subject (Text) field in DocType 'Task Depends On'
@@ -51867,6 +51897,7 @@ msgstr "Underavdelning"
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.json
 #: erpnext/assets/doctype/asset_activity/asset_activity.json
 #: erpnext/buying/doctype/request_for_quotation/request_for_quotation.js:267
+#: erpnext/projects/doctype/project/project.json
 #: erpnext/projects/doctype/project_template_task/project_template_task.json
 #: erpnext/projects/doctype/task/task.json
 #: erpnext/projects/doctype/task/task_tree.js:65
@@ -51889,7 +51920,7 @@ msgstr "Ämne"
 msgid "Submit"
 msgstr "Godkänn"
 
-#: erpnext/buying/doctype/purchase_order/purchase_order.py:929
+#: erpnext/buying/doctype/purchase_order/purchase_order.py:937
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.py:910
 msgid "Submit Action Failed"
 msgstr "Godkännande Misslyckades"
@@ -52471,7 +52502,7 @@ msgstr "Leverantör Faktura"
 msgid "Supplier Invoice Date"
 msgstr "Leverantör Faktura Datum"
 
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1729
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1724
 msgid "Supplier Invoice Date cannot be greater than Posting Date"
 msgstr "Leverantör Faktura Datum kan inte vara senare än Registrering Datum"
 
@@ -52486,7 +52517,7 @@ msgstr "Leverantör Faktura Datum kan inte vara senare än Registrering Datum"
 msgid "Supplier Invoice No"
 msgstr "Leverantör Faktura Nummer"
 
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1756
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1751
 msgid "Supplier Invoice No exists in Purchase Invoice {0}"
 msgstr "Leverantör Faktura Nummer finns i Inköp Faktura {0}"
 
@@ -52818,7 +52849,7 @@ msgstr "Förväntad Rabatt Belopp"
 msgid "Suspended"
 msgstr "Avstängd"
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:392
+#: erpnext/selling/page/point_of_sale/pos_payment.js:401
 msgid "Switch Between Payment Modes"
 msgstr "Växla Mellan Betalning Sätt"
 
@@ -53046,7 +53077,7 @@ msgstr "TDS Belopp"
 msgid "TDS Computation Summary"
 msgstr "TDS Beräkning Översikt"
 
-#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1513
+#: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1508
 msgid "TDS Deducted"
 msgstr "TDS Avdragen"
 
@@ -53235,7 +53266,7 @@ msgstr "Serie Nummer"
 #: erpnext/manufacturing/doctype/production_plan_sub_assembly_item/production_plan_sub_assembly_item.json
 #: erpnext/manufacturing/doctype/work_order/work_order.js:906
 #: erpnext/manufacturing/doctype/work_order/work_order.json
-#: erpnext/stock/dashboard/item_dashboard.js:231
+#: erpnext/stock/dashboard/item_dashboard.js:234
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
 #: erpnext/stock/doctype/material_request_item/material_request_item.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:647
@@ -53254,11 +53285,11 @@ msgstr "Till Lager Adress"
 msgid "Target Warehouse Address Link"
 msgstr "Till Lager Adress"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:220
+#: erpnext/manufacturing/doctype/work_order/work_order.py:221
 msgid "Target Warehouse Reservation Error"
 msgstr "Fel vid reservation av Till Lager"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:532
+#: erpnext/manufacturing/doctype/work_order/work_order.py:545
 msgid "Target Warehouse is required before Submit"
 msgstr "För Lager erfordras före Godkännande"
 
@@ -53266,8 +53297,8 @@ msgstr "För Lager erfordras före Godkännande"
 msgid "Target Warehouse is set for some items but the customer is not an internal customer."
 msgstr "Till Lager angiven för vissa artiklar men kund är inte intern kund."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:626
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:633
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:629
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:636
 msgid "Target warehouse is mandatory for row {0}"
 msgstr "Till Lager erfordras för rad {0}"
 
@@ -53501,7 +53532,7 @@ msgstr "Moms Fördelning"
 msgid "Tax Category"
 msgstr "Moms Kategori"
 
-#: erpnext/controllers/buying_controller.py:219
+#: erpnext/controllers/buying_controller.py:238
 msgid "Tax Category has been changed to \"Total\" because all the Items are non-stock items"
 msgstr "Moms Kategori har ändrats till 'Totalt' eftersom alla Artiklar är Ej Lager Artiklar"
 
@@ -54277,7 +54308,7 @@ msgstr "Betalning Villkor på rad {0} är eventuellt dubblett."
 msgid "The Pick List having Stock Reservation Entries cannot be updated. If you need to make changes, we recommend canceling the existing Stock Reservation Entries before updating the Pick List."
 msgstr "Plocklista med Lager Reservation kan inte uppdateras. Om ändringar behöver göras rekommenderas annullering av befintlig Lager Reservation innan uppdatering av Plocklista."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:2197
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:2216
 msgid "The Process Loss Qty has reset as per job cards Process Loss Qty"
 msgstr "Process Förlust Kvantitet är återställd enligt Jobbkort Process Förlust Kvantitet"
 
@@ -54293,7 +54324,7 @@ msgstr "Serie Nummer på rad #{0}: {1} är inte tillgänglig i lager {2}."
 msgid "The Serial No {0} is reserved against the {1} {2} and cannot be used for any other transaction."
 msgstr "Serienummer {0} är reserverad för {1} {2} och får inte användas för någon annan transaktion."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1460
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1463
 msgid "The Serial and Batch Bundle {0} is not valid for this transaction. The 'Type of Transaction' should be 'Outward' instead of 'Inward' in Serial and Batch Bundle {0}"
 msgstr "Serie och Parti Paket {0} är inte giltigt för denna transaktion. \"Typ av Transaktion\" ska vara \"Utleverans\" istället för \"Inleverans\" i Serie och Parti Paket {0}"
 
@@ -54301,7 +54332,7 @@ msgstr "Serie och Parti Paket {0} är inte giltigt för denna transaktion. \"Typ
 msgid "The Stock Entry of type 'Manufacture' is known as backflush. Raw materials being consumed to manufacture finished goods is known as backflushing. <br><br> When creating Manufacture Entry, raw-material items are backflushed based on BOM of production item. If you want raw-material items to be backflushed based on Material Transfer entry made against that Work Order instead, then you can set it under this field."
 msgstr "Lager Post av typ 'Produktion' kallas backspolning. Råmaterial som förbrukas för att producera färdiga artiklar kallas backspolning.<br><br> När man skapar Produktion Post backspolas Råmaterial Artiklar baserat på Produktion Artikel Stycklista. Om Råmaterial Artiklar ska backspolas baserat på Överföring Poster som skapas mot Arbetsorder istället, ange det under detta fält."
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1926
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1936
 msgid "The Work Order is mandatory for Disassembly Order"
 msgstr "Arbetsorder erfordras för Demontering Order"
 
@@ -54401,7 +54432,7 @@ msgstr "Brutto Vikt på förpackning. Vanligtvis Netto Vikt + Förpackning Mater
 msgid "The holiday on {0} is not between From Date and To Date"
 msgstr "Helgdag {0} är inte mellan Från Datum och Till Datum"
 
-#: erpnext/controllers/buying_controller.py:1131
+#: erpnext/controllers/buying_controller.py:1150
 msgid "The item {item} is not marked as {type_of} item. You can enable it as {type_of} item from its Item master."
 msgstr "Artikel {item} är inte angiven som {type_of} artikel. Du kan aktivera det som {type_of} artikel från dess Artikel Inställningar."
 
@@ -54409,7 +54440,7 @@ msgstr "Artikel {item} är inte angiven som {type_of} artikel. Du kan aktivera d
 msgid "The items {0} and {1} are present in the following {2} :"
 msgstr "Artiklar {0} och {1} finns i följande {2}:"
 
-#: erpnext/controllers/buying_controller.py:1124
+#: erpnext/controllers/buying_controller.py:1143
 msgid "The items {items} are not marked as {type_of} item. You can enable them as {type_of} item from their Item masters."
 msgstr "Artiklar {items} är inte angivna som {type_of} artiklar. Du kan aktivera dem som {type_of} artiklar från deras Artikel Inställningar."
 
@@ -54447,7 +54478,7 @@ msgstr "Åtgärd {0} kan inte läggas till flera gånger"
 msgid "The operation {0} can not be the sub operation"
 msgstr "Åtgärd {0} kan inte vara underåtgärd"
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:109
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:108
 msgid "The original invoice should be consolidated before or along with the return invoice."
 msgstr "Original Faktura ska konsolideras före eller tillsammans med retur faktura."
 
@@ -54681,7 +54712,7 @@ msgstr "Det finns redan aktiv Underleverantör Stycklista {0} för färdig artik
 msgid "There is no batch found against the {0}: {1}"
 msgstr "Det finns ingen Parti mot {0}: {1}"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:1397
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:1400
 msgid "There must be atleast 1 Finished Good in this Stock Entry"
 msgstr "Det måste finnas minst en färdig artikel i denna Lager Post"
 
@@ -54702,7 +54733,7 @@ msgstr "Det uppstod fel när Bank Konto {} skulle uppdateras vid länkning med P
 msgid "There was an issue connecting to Plaid's authentication server. Check browser console for more information"
 msgstr "Det uppstod fel vid anslutning till Plaid autentisering server. Kontrollera webbläsare konsol för mer information"
 
-#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:330
+#: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:328
 msgid "There were errors while sending email. Please try again."
 msgstr "Det uppstod fel när E-post skickdes. Var god försök igen."
 
@@ -54728,7 +54759,7 @@ msgstr "Artikel är variant av {0} (Mall)."
 msgid "This Month's Summary"
 msgstr "Månads Översikt"
 
-#: erpnext/buying/doctype/purchase_order/purchase_order.py:942
+#: erpnext/buying/doctype/purchase_order/purchase_order.py:950
 msgid "This PO has been fully subcontracted."
 msgstr "Detta Inköp Order har helt lagts ut på underleverantörer."
 
@@ -54879,7 +54910,7 @@ msgstr "Detta schema skapades när Tillgång {0} justerades genom Tillgång Vär
 msgid "This schedule was created when Asset {0} was consumed through Asset Capitalization {1}."
 msgstr "Detta schema skapades när Tillgång {0} förbrukades genom Tillgång Kapitalisering {1}."
 
-#: erpnext/assets/doctype/asset_repair/asset_repair.py:373
+#: erpnext/assets/doctype/asset_repair/asset_repair.py:382
 msgid "This schedule was created when Asset {0} was repaired through Asset Repair {1}."
 msgstr "Detta schema skapades när Tillgång {0} reparerades genom Tillgång Reparation {1}."
 
@@ -57336,7 +57367,7 @@ msgstr "Enhet Konvertering Faktor erfordras på rad {0}"
 msgid "UOM Name"
 msgstr "Enhet Namn"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:3231
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:3250
 msgid "UOM conversion factor required for UOM: {0} in Item: {1}"
 msgstr "Enhet Konvertering Faktor erfordras för Enhet: {0} för Artikel: {1}"
 
@@ -57398,7 +57429,7 @@ msgstr "Kunde inte hitta valuta växelkurs för {0} till {1} för nyckel datum {
 msgid "Unable to find score starting at {0}. You need to have standing scores covering 0 to 100"
 msgstr "Kunde inte att hitta resultatkort från {0}. Du måste ha stående resultatkort som täcker 0 till 100"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:749
+#: erpnext/manufacturing/doctype/work_order/work_order.py:762
 msgid "Unable to find the time slot in the next {0} days for the operation {1}. Please increase the 'Capacity Planning For (Days)' in the {2}."
 msgstr "Kunde inte att hitta tider under de kommande {0} dagarna för åtgärd {1}. Öka \"Kapacitet Planering för (Dagar)\" i {2}."
 
@@ -57703,8 +57734,8 @@ msgstr "Kommande Kalender Händelser"
 
 #: erpnext/accounts/doctype/account/account.js:204
 #: erpnext/accounts/doctype/cost_center/cost_center.js:107
-#: erpnext/manufacturing/doctype/job_card/job_card.js:297
-#: erpnext/manufacturing/doctype/job_card/job_card.js:366
+#: erpnext/manufacturing/doctype/job_card/job_card.js:305
+#: erpnext/manufacturing/doctype/job_card/job_card.js:374
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:500
 #: erpnext/public/js/utils.js:598 erpnext/public/js/utils.js:902
 #: erpnext/public/js/utils/barcode_scanner.js:183
@@ -58093,7 +58124,7 @@ msgstr "Använd Serversida Reaktivitet"
 msgid "Use Transaction Date Exchange Rate"
 msgstr "Använd Transaktion Datum Växelkurs"
 
-#: erpnext/projects/doctype/project/project.py:560
+#: erpnext/projects/doctype/project/project.py:561
 msgid "Use a name that is different from previous project name"
 msgstr "Använd namn som skiljer sig från tidigare projekt namn"
 
@@ -58489,11 +58520,11 @@ msgstr "Grund Pris"
 msgid "Valuation Rate (In / Out)"
 msgstr "Grund Pris (In/Ut)"
 
-#: erpnext/stock/stock_ledger.py:1896
+#: erpnext/stock/stock_ledger.py:1903
 msgid "Valuation Rate Missing"
 msgstr "Grund Pris Saknas"
 
-#: erpnext/stock/stock_ledger.py:1874
+#: erpnext/stock/stock_ledger.py:1881
 msgid "Valuation Rate for the Item {0}, is required to do accounting entries for {1} {2}."
 msgstr "Grund Pris för Artikel {0} erfordras att skapa bokföring poster för {1} {2}."
 
@@ -59477,7 +59508,7 @@ msgstr "Lager {0} tillhör inte Bolag {1}."
 msgid "Warehouse {0} does not belong to company {1}"
 msgstr "Lager {0} tillhör inte Bolag {1}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:217
+#: erpnext/manufacturing/doctype/work_order/work_order.py:218
 msgid "Warehouse {0} is not allowed for Sales Order {1}, it should be {2}"
 msgstr "Lager {0} är inte tillåtet för Försäljning Order {1}, det ska vara {2}"
 
@@ -60137,12 +60168,12 @@ msgstr "Arbetsorder Översikt"
 msgid "Work Order cannot be created for following reason: <br> {0}"
 msgstr "Arbetsorder kan inte skapas för följande anledning:<br> {0}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:1105
+#: erpnext/manufacturing/doctype/work_order/work_order.py:1118
 msgid "Work Order cannot be raised against a Item Template"
 msgstr "Arbetsorder kan inte skapas mot Artikel Mall"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2019
-#: erpnext/manufacturing/doctype/work_order/work_order.py:2099
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2032
+#: erpnext/manufacturing/doctype/work_order/work_order.py:2112
 msgid "Work Order has been {0}"
 msgstr "Arbetsorder har varit {0}"
 
@@ -60150,7 +60181,7 @@ msgstr "Arbetsorder har varit {0}"
 msgid "Work Order not created"
 msgstr "Arbetsorder inte skapad"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:687
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:690
 msgid "Work Order {0}: Job Card not found for the operation {1}"
 msgstr "Arbetsorder {0}: Jobbkort hittades inte för Åtgärd {1}"
 
@@ -60180,7 +60211,7 @@ msgstr "Pågående Arbete"
 msgid "Work-in-Progress Warehouse"
 msgstr "Pågående Arbete Lager"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:530
+#: erpnext/manufacturing/doctype/work_order/work_order.py:543
 msgid "Work-in-Progress Warehouse is required before Submit"
 msgstr "Pågående Arbete Lager erfordras före Godkännande"
 
@@ -60558,7 +60589,7 @@ msgstr "Du importerar data för Kod Lista:"
 msgid "You are not allowed to update as per the conditions set in {} Workflow."
 msgstr "Du är inte behörig att uppdatera enligt villkoren i {} Arbetsflöde."
 
-#: erpnext/accounts/general_ledger.py:755
+#: erpnext/accounts/general_ledger.py:766
 msgid "You are not authorized to add or update entries before {0}"
 msgstr "Du är inte behörig att lägga till eller uppdatera poster före {0}"
 
@@ -60574,7 +60605,7 @@ msgstr "Du är inte behörig att ange låst värde"
 msgid "You are picking more than required quantity for the item {0}. Check if there is any other pick list created for the sales order {1}."
 msgstr "Du väljer mer än vad som krävs för artikel {0}. Kontrollera om det finns någon annan plocklista skapad för försäljning order {1}."
 
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:113
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:112
 msgid "You can add the original invoice {} manually to proceed."
 msgstr "Lägg till original faktura {} manuellt för att fortsätta."
 
@@ -60607,7 +60638,7 @@ msgstr "Du kan bara lösa in maximala {0} poäng i denna följd."
 msgid "You can only select one mode of payment as default"
 msgstr "Du kan bara välja ett betalning sätt som standard"
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:578
+#: erpnext/selling/page/point_of_sale/pos_payment.js:547
 msgid "You can redeem upto {0}."
 msgstr "Du kan lösa in upp till {0}."
 
@@ -60639,7 +60670,7 @@ msgstr "Du kan inte skapa {0} inom stängd bokföring period {1}"
 msgid "You cannot create or cancel any accounting entries with in the closed Accounting Period {0}"
 msgstr "Du kan inte skapa eller annullera bokföring poster under stängd bokföring period {0}"
 
-#: erpnext/accounts/general_ledger.py:775
+#: erpnext/accounts/general_ledger.py:786
 msgid "You cannot create/amend any accounting entries till this date."
 msgstr "Du kan inte skapa/ändra några bokföring poster fram till detta datum."
 
@@ -60659,7 +60690,7 @@ msgstr "Man kan inte redigera överordnad nod."
 msgid "You cannot enable both the settings '{0}' and '{1}'."
 msgstr "Du kan inte aktivera både \"{0}\" och \"{1}\" inställningar."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:608
+#: erpnext/selling/page/point_of_sale/pos_payment.js:577
 msgid "You cannot redeem more than {0}."
 msgstr "Du kan inte lösa in mer än {0}."
 
@@ -60671,11 +60702,11 @@ msgstr "Du kan inte posta om artikel värdering före {}"
 msgid "You cannot restart a Subscription that is not cancelled."
 msgstr "Du kan inte starta om prenumeration som inte är annullerad."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:236
+#: erpnext/selling/page/point_of_sale/pos_payment.js:250
 msgid "You cannot submit empty order."
 msgstr "Du kan inte godkänna tom order."
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:235
+#: erpnext/selling/page/point_of_sale/pos_payment.js:249
 msgid "You cannot submit the order without payment."
 msgstr "Du kan inte godkänna order utan betalning."
 
@@ -60691,7 +60722,7 @@ msgstr "Du har inte behörighet att {} artikel i {}."
 msgid "You don't have enough Loyalty Points to redeem"
 msgstr "Det finns inte tillräckligt med Lojalitet Poäng för att lösa in"
 
-#: erpnext/selling/page/point_of_sale/pos_payment.js:571
+#: erpnext/selling/page/point_of_sale/pos_payment.js:540
 msgid "You don't have enough points to redeem."
 msgstr "Du har inte tillräckligt med poäng för att lösa in"
 
@@ -60703,7 +60734,7 @@ msgstr "Du hade {} fel när du skapade öppning fakturor. Kontrollera {} för me
 msgid "You have already selected items from {0} {1}"
 msgstr "Du har redan valt Artikel från {0} {1}"
 
-#: erpnext/projects/doctype/project/project.py:360
+#: erpnext/projects/doctype/project/project.py:361
 msgid "You have been invited to collaborate on the project {0}."
 msgstr "Du är inbjuden att medverka i projekt {0}."
 
@@ -60723,7 +60754,7 @@ msgstr "Du har ändringar som inte är sparade. Vill du spara faktura?"
 msgid "You haven't created a {0} yet"
 msgstr "Du har inte skapat {0} än"
 
-#: erpnext/selling/page/point_of_sale/pos_controller.js:770
+#: erpnext/selling/page/point_of_sale/pos_controller.js:766
 msgid "You must select a customer before adding an item."
 msgstr "Välj Kund före Artikel."
 
@@ -60787,7 +60818,7 @@ msgstr "Noll Saldo"
 msgid "Zero Rated"
 msgstr "Noll Sats"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:415
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:418
 msgid "Zero quantity"
 msgstr "Noll Kvantitet"
 
@@ -60804,7 +60835,7 @@ msgstr "[Viktigt] [System] Automatisk Ombeställning Fel"
 msgid "`Allow Negative rates for Items`"
 msgstr "\"Tillåt Negativa Priser för Artiklar\"."
 
-#: erpnext/stock/stock_ledger.py:1888
+#: erpnext/stock/stock_ledger.py:1895
 msgid "after"
 msgstr "efter"
 
@@ -61026,7 +61057,7 @@ msgstr "payment app är inte installerad. Installera det från {0} eller {1}"
 msgid "per hour"
 msgstr "Kostnad per Timme"
 
-#: erpnext/stock/stock_ledger.py:1889
+#: erpnext/stock/stock_ledger.py:1896
 msgid "performing either one below:"
 msgstr "utför någon av dem nedan:"
 
@@ -61161,7 +61192,7 @@ msgstr "{0} {1} är inaktiverad"
 msgid "{0} '{1}' not in Fiscal Year {2}"
 msgstr "{0} {1} inte under Bokföringsår {2}"
 
-#: erpnext/manufacturing/doctype/work_order/work_order.py:462
+#: erpnext/manufacturing/doctype/work_order/work_order.py:463
 msgid "{0} ({1}) cannot be greater than planned quantity ({2}) in Work Order {3}"
 msgstr "{0} ({1}) kan inte vara högre än planerad kvantitet ({2}) i arbetsorder {3}"
 
@@ -61323,7 +61354,7 @@ msgstr "{0} är erfordrad Bokföring Dimension. <br>Ange värde för {0} Bokför
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:100
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:153
-#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:62
+#: erpnext/accounts/doctype/pos_invoice_merge_log/pos_invoice_merge_log.py:61
 msgid "{0} is added multiple times on rows: {1}"
 msgstr "{0} läggs till flera gånger på rader: {1}"
 
@@ -61349,7 +61380,7 @@ msgid "{0} is mandatory for Item {1}"
 msgstr "{0} är erfodrad för Artikel {1}"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:101
-#: erpnext/accounts/general_ledger.py:799
+#: erpnext/accounts/general_ledger.py:810
 msgid "{0} is mandatory for account {1}"
 msgstr "{0} är erfodrad för konto {1}"
 
@@ -61369,7 +61400,7 @@ msgstr "{0} är inte bolag bank konto"
 msgid "{0} is not a group node. Please select a group node as parent cost center"
 msgstr "{0} är inte grupp. Välj grupp som Överordnad Resultat Enhet"
 
-#: erpnext/stock/doctype/stock_entry/stock_entry.py:464
+#: erpnext/stock/doctype/stock_entry/stock_entry.py:467
 msgid "{0} is not a stock Item"
 msgstr "{0} är inte lager artikel"
 
@@ -61464,16 +61495,16 @@ msgstr "{0} enheter av Artikel {1} är vald  i en annan Plocklista."
 msgid "{0} units of {1} are required in {2} with the inventory dimension: {3} ({4}) on {5} {6} for {7} to complete the transaction."
 msgstr "{0} enheter av {1} erfordras i {2} med lagerdimension: {3} ({4}) på {5} {6} för {7} för att slutföra transaktion."
 
-#: erpnext/stock/stock_ledger.py:1547 erpnext/stock/stock_ledger.py:2040
-#: erpnext/stock/stock_ledger.py:2054
+#: erpnext/stock/stock_ledger.py:1554 erpnext/stock/stock_ledger.py:2047
+#: erpnext/stock/stock_ledger.py:2061
 msgid "{0} units of {1} needed in {2} on {3} {4} for {5} to complete this transaction."
 msgstr "{0} enheter av {1} behövs i {2} den {3} {4} för {5} för att slutföra denna transaktion."
 
-#: erpnext/stock/stock_ledger.py:2141 erpnext/stock/stock_ledger.py:2187
+#: erpnext/stock/stock_ledger.py:2148 erpnext/stock/stock_ledger.py:2194
 msgid "{0} units of {1} needed in {2} on {3} {4} to complete this transaction."
 msgstr "{0} enheter av {1} behövs i {2} den {3} {4} för att slutföra denna transaktion."
 
-#: erpnext/stock/stock_ledger.py:1541
+#: erpnext/stock/stock_ledger.py:1548
 msgid "{0} units of {1} needed in {2} to complete this transaction."
 msgstr "{0} enheter av {1} behövs i {2} för att slutföra denna transaktion."
 
@@ -61708,15 +61739,15 @@ msgstr "{0}: {1} finns inte"
 msgid "{0}: {1} must be less than {2}"
 msgstr "{0}: {1} måste vara mindre än {2}"
 
-#: erpnext/controllers/buying_controller.py:905
+#: erpnext/controllers/buying_controller.py:924
 msgid "{count} Assets created for {item_code}"
 msgstr "{count} Tillgångar skapade för {item_code}"
 
-#: erpnext/controllers/buying_controller.py:803
+#: erpnext/controllers/buying_controller.py:822
 msgid "{doctype} {name} is cancelled or closed."
 msgstr "{doctype} {name} är annullerad eller stängd."
 
-#: erpnext/controllers/buying_controller.py:524
+#: erpnext/controllers/buying_controller.py:543
 msgid "{field_label} is mandatory for sub-contracted {doctype}."
 msgstr "{field_label} erfordras för underleverantör {doctype}."
 
@@ -61724,7 +61755,7 @@ msgstr "{field_label} erfordras för underleverantör {doctype}."
 msgid "{item_name}'s Sample Size ({sample_size}) cannot be greater than the Accepted Quantity ({accepted_quantity})"
 msgstr "{item_name} Prov Kvantitet ({sample_size}) kan inte vara högre än accepterad kvantitete ({accepted_quantity})"
 
-#: erpnext/controllers/buying_controller.py:628
+#: erpnext/controllers/buying_controller.py:647
 msgid "{ref_doctype} {ref_name} is {status}."
 msgstr "{ref_doctype} {ref_name} är {status}."
 
@@ -61790,7 +61821,7 @@ msgstr "{} Att Fakturera"
 msgid "{} can't be cancelled since the Loyalty Points earned has been redeemed. First cancel the {} No {}"
 msgstr "{} kan inte annulleras eftersom intjänade Lojalitet Poäng har lösts in. Först annullera {} Nummer {}"
 
-#: erpnext/controllers/buying_controller.py:247
+#: erpnext/controllers/buying_controller.py:266
 msgid "{} has submitted assets linked to it. You need to cancel the assets to create purchase return."
 msgstr "{} har befintliga tillgångar kopplade till den. Annullera tillgångar att skapa Inköp Retur."
 
