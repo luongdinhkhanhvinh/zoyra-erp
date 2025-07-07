@@ -540,8 +540,8 @@ def get_opening_balance_from_batch(filters, columns, sl_entries):
 	}
 
 	for fields in ["item_code", "warehouse"]:
-		value = filters.get(fields)
-		query_filters[fields] = ("in", value)
+		if value := filters.get(fields):
+			query_filters[fields] = ("in", value)
 
 	opening_data = frappe.get_all(
 		"Stock Ledger Entry",

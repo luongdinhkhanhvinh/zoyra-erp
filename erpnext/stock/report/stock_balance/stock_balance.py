@@ -361,7 +361,7 @@ class StockBalanceReport:
 		warehouse_table = frappe.qb.DocType("Warehouse")
 
 		if self.filters.get("warehouse"):
-			apply_warehouse_filter(query, sle, self.filters)
+			query = apply_warehouse_filter(query, sle, self.filters)
 
 		elif warehouse_type := self.filters.get("warehouse_type"):
 			query = (
