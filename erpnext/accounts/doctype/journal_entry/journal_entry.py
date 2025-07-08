@@ -151,8 +151,8 @@ class JournalEntry(AccountsController):
 
 		if self.docstatus == 0:
 			self.apply_tax_withholding()
-
-		self.title = self.get_title()
+		if self.is_new() or not self.title:
+			self.title = self.get_title()
 
 	def validate_advance_accounts(self):
 		journal_accounts = set([x.account for x in self.accounts])
@@ -1145,7 +1145,9 @@ class JournalEntry(AccountsController):
 
 	def set_print_format_fields(self):
 		bank_amount = party_amount = total_amount = 0.0
-		currency = bank_account_currency = party_account_currency = pay_to_recd_from = None
+		currency = (
+			bank_account_currency
+		) = party_account_currency = pay_to_recd_from = self.pay_to_recd_from = None
 		party_type = None
 		for d in self.get("accounts"):
 			if d.party_type in ["Customer", "Supplier"] and d.party:
