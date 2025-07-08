@@ -46,6 +46,7 @@ from erpnext.accounts.party import (
 from erpnext.accounts.utils import (
 	cancel_exchange_gain_loss_journal,
 	get_account_currency,
+	get_advance_payment_doctypes,
 	get_outstanding_invoices,
 )
 from erpnext.controllers.accounts_controller import (
@@ -1099,10 +1100,7 @@ class PaymentEntry(AccountsController):
 
 	def calculate_base_allocated_amount_for_reference(self, d) -> float:
 		base_allocated_amount = 0
-		advance_payment_doctypes = frappe.get_hooks("advance_payment_receivable_doctypes") + frappe.get_hooks(
-			"advance_payment_payable_doctypes"
-		)
-		if d.reference_doctype in advance_payment_doctypes:
+		if d.reference_doctype in get_advance_payment_doctypes():
 			# When referencing Sales/Purchase Order, use the source/target exchange rate depending on payment type.
 			# This is so there are no Exchange Gain/Loss generated for such doctypes
 
@@ -1384,10 +1382,7 @@ class PaymentEntry(AccountsController):
 		if not self.party_account:
 			return
 
-		advance_payment_doctypes = frappe.get_hooks("advance_payment_receivable_doctypes") + frappe.get_hooks(
-			"advance_payment_payable_doctypes"
-		)
-
+		advance_payment_doctypes = get_advance_payment_doctypes()
 		if self.payment_type == "Receive":
 			against_account = self.paid_to
 		else:
@@ -1780,9 +1775,7 @@ class PaymentEntry(AccountsController):
 		if self.payment_type not in ("Receive", "Pay") or not self.party:
 			return
 
-		advance_payment_doctypes = frappe.get_hooks("advance_payment_receivable_doctypes") + frappe.get_hooks(
-			"advance_payment_payable_doctypes"
-		)
+		advance_payment_doctypes = get_advance_payment_doctypes()
 		for d in self.get("references"):
 			if d.allocated_amount and d.reference_doctype in advance_payment_doctypes:
 				frappe.get_lazy_doc(
