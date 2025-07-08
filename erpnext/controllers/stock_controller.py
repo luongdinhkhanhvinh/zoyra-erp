@@ -1581,7 +1581,7 @@ def get_accounting_ledger_preview(doc, filters):
 
 	doc.docstatus = 1
 
-	if doc.get("update_stock") or doc.doctype in ("Purchase Receipt", "Delivery Note"):
+	if doc.get("update_stock") or doc.doctype in ("Purchase Receipt", "Delivery Note", "Stock Entry"):
 		doc.update_stock_ledger()
 
 	doc.make_gl_entries()
@@ -1622,7 +1622,7 @@ def get_stock_ledger_preview(doc, filters):
 		"stock_value_difference",
 	]
 
-	if doc.get("update_stock") or doc.doctype in ("Purchase Receipt", "Delivery Note"):
+	if doc.get("update_stock") or doc.doctype in ("Purchase Receipt", "Delivery Note", "Stock Entry"):
 		doc.docstatus = 1
 		doc.update_stock_ledger()
 		columns = get_sl_columns(filters)
