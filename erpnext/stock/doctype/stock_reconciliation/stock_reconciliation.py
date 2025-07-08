@@ -895,10 +895,6 @@ class StockReconciliation(StockController):
 
 		self.update_inventory_dimensions(row, data)
 
-		if self.docstatus == 1 and has_dimensions and (not row.batch_no or not row.serial_and_batch_bundle):
-			data.qty_after_transaction = data.actual_qty
-			data.actual_qty = 0.0
-
 		return data
 
 	def make_sle_on_cancel(self):
