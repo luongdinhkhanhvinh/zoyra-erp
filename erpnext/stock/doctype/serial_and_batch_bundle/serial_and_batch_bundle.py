@@ -2222,6 +2222,9 @@ def get_auto_batch_nos(kwargs):
 			picked_batches,
 		)
 
+	if kwargs.based_on == "Expiry":
+		available_batches = sorted(available_batches, key=lambda x: (x.expiry_date or "9999-12-31"))
+
 	if not kwargs.get("do_not_check_future_batches") and available_batches and kwargs.get("posting_date"):
 		filter_zero_near_batches(available_batches, kwargs)
 
@@ -2321,6 +2324,7 @@ def get_available_batches(kwargs):
 			batch_ledger.batch_no,
 			batch_ledger.warehouse,
 			Sum(batch_ledger.qty).as_("qty"),
+			batch_table.expiry_date,
 		)
 		.where(batch_table.disabled == 0)
 		.where(stock_ledger_entry.is_cancelled == 0)
@@ -2611,6 +2615,7 @@ def get_stock_ledgers_batches(kwargs):
 			stock_ledger_entry.item_code,
 			Sum(stock_ledger_entry.actual_qty).as_("qty"),
 			stock_ledger_entry.batch_no,
+			batch_table.expiry_date,
 		)
 		.where((stock_ledger_entry.is_cancelled == 0) & (stock_ledger_entry.batch_no.isnotnull()))
 		.groupby(stock_ledger_entry.batch_no, stock_ledger_entry.warehouse)
