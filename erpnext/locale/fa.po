@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-06 09:36+0000\n"
-"PO-Revision-Date: 2025-07-07 05:55\n"
+"PO-Revision-Date: 2025-07-08 06:47\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -718,7 +718,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:116
 msgid "<p>Please correct the following row(s):</p><ul>"
-msgstr ""
+msgstr "<p>لطفاً ردیف(های) زیر را اصلاح کنید:</p><ul>"
 
 #: erpnext/controllers/buying_controller.py:107
 msgid "<p>Posting Date {0} cannot be before Purchase Order date for the following:</p><ul>"
@@ -6128,7 +6128,7 @@ msgstr "دارایی {0} به روز شده است. لطفاً جزئیات اس
 
 #: erpnext/assets/doctype/asset_repair/asset_repair.py:72
 msgid "Asset {0} is in {1} status and cannot be repaired."
-msgstr ""
+msgstr "دارایی {0} در وضعیت {1} قرار دارد و قابل تعمیر نیست."
 
 #: erpnext/assets/doctype/asset/depreciation.py:367
 msgid "Asset {0} must be submitted"
@@ -9605,7 +9605,7 @@ msgstr "نمی‌توان شماره سریال {0} را حذف کرد، زیر�
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:489
 msgid "Cannot disassemble more than produced quantity."
-msgstr ""
+msgstr "نمی‌توان بیش از مقدار تولید شده دمونتاژ کرد."
 
 #: erpnext/setup/doctype/transaction_deletion_record/transaction_deletion_record.py:109
 msgid "Cannot enqueue multi docs for one company. {0} is already queued/running for company: {1}"
@@ -17301,16 +17301,16 @@ msgstr "واکشی خودکار مقدار موجود را غیرفعال می�
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 #: erpnext/stock/doctype/stock_entry_type/stock_entry_type.json
 msgid "Disassemble"
-msgstr "مجزا کردن (دیس اسمبل)"
+msgstr "دمونتاژ (Disassemble)"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:217
 msgid "Disassemble Order"
-msgstr "سفارش جداسازی قطعات"
+msgstr "دستور دمونتاژ"
 
 #. Label of the disassembled_qty (Float) field in DocType 'Work Order'
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 msgid "Disassembled Qty"
-msgstr ""
+msgstr "مقدار دمونتاژ شده"
 
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.js:64
 msgid "Disburse Loan"
@@ -21173,7 +21173,7 @@ msgstr ""
 
 #: erpnext/projects/doctype/project/project.js:208
 msgid "For project {0}, update your status"
-msgstr ""
+msgstr "برای پروژه {0}، وضعیت خود را به‌روزرسانی کنید"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:1423
 msgid "For quantity {0} should not be greater than allowed quantity {1}"
@@ -47758,7 +47758,7 @@ msgstr "یک اولویت پیش‌فرض را انتخاب کنید."
 
 #: erpnext/selling/page/point_of_sale/pos_payment.js:146
 msgid "Select a Payment Method."
-msgstr ""
+msgstr "یک روش پرداخت انتخاب کنید."
 
 #: erpnext/selling/doctype/customer/customer.js:226
 msgid "Select a Supplier"
@@ -54223,7 +54223,7 @@ msgstr "ثبت موجودی از نوع \"ساخت\" به عنوان کسر خو
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:1936
 msgid "The Work Order is mandatory for Disassembly Order"
-msgstr ""
+msgstr "دستور کار برای دستور دمونتاژ الزامی است"
 
 #. Description of the 'Closing Account Head' (Link) field in DocType 'Period
 #. Closing Voucher'
@@ -60077,7 +60077,7 @@ msgstr "دستور کار {0}: کارت کار برای عملیات {1} یاف�
 #: erpnext/manufacturing/report/job_card_summary/job_card_summary.js:56
 #: erpnext/stock/doctype/material_request/material_request.py:858
 msgid "Work Orders"
-msgstr "دستورات کاری"
+msgstr "دستور کارها"
 
 #: erpnext/selling/doctype/sales_order/sales_order.js:908
 msgid "Work Orders Created: {0}"
