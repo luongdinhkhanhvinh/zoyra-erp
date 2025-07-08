@@ -729,23 +729,8 @@ def update_reference_in_payment_entry(
 	update_advance_paid = []
 
 	# Update Reconciliation effect date in reference
-	reconciliation_takes_effect_on = frappe.get_cached_value(
-		"Company", payment_entry.company, "reconciliation_takes_effect_on"
-	)
 	if payment_entry.book_advance_payments_in_separate_party_account:
-		if reconciliation_takes_effect_on == "Advance Payment Date":
-			reconcile_on = payment_entry.posting_date
-		elif reconciliation_takes_effect_on == "Oldest Of Invoice Or Advance":
-			date_field = "posting_date"
-			if d.against_voucher_type in ["Sales Order", "Purchase Order"]:
-				date_field = "transaction_date"
-			reconcile_on = frappe.db.get_value(d.against_voucher_type, d.against_voucher, date_field)
-
-			if getdate(reconcile_on) < getdate(payment_entry.posting_date):
-				reconcile_on = payment_entry.posting_date
-		elif reconciliation_takes_effect_on == "Reconciliation Date":
-			reconcile_on = nowdate()
-
+		reconcile_on = get_reconciliation_effect_date(d, payment_entry.company, payment_entry.posting_date)
 		reference_details.update({"reconcile_effect_on": reconcile_on})
 
 	if d.voucher_detail_no:
@@ -798,6 +783,28 @@ def update_reference_in_payment_entry(
 	if not do_not_save:
 		payment_entry.save(ignore_permissions=True)
 	return row, update_advance_paid
+
+
+def get_reconciliation_effect_date(reference, company, posting_date):
+	reconciliation_takes_effect_on = frappe.get_cached_value(
+		"Company", company, "reconciliation_takes_effect_on"
+	)
+
+	if reconciliation_takes_effect_on == "Advance Payment Date":
+		reconcile_on = posting_date
+	elif reconciliation_takes_effect_on == "Oldest Of Invoice Or Advance":
+		date_field = "posting_date"
+		if reference.against_voucher_type in ["Sales Order", "Purchase Order"]:
+			date_field = "transaction_date"
+		reconcile_on = frappe.db.get_value(
+			reference.against_voucher_type, reference.against_voucher, date_field
+		)
+		if getdate(reconcile_on) < getdate(posting_date):
+			reconcile_on = posting_date
+	elif reconciliation_takes_effect_on == "Reconciliation Date":
+		reconcile_on = nowdate()
+
+	return reconcile_on
 
 
 def cancel_exchange_gain_loss_journal(
