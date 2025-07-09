@@ -36,10 +36,10 @@ def get_columns(filters):
 			"width": 140,
 		},
 		{
-		"label": _("Currency"),
-		"fieldname": "currency",
-		"fieldtype": "Data",
-		"width": 80,
+			"label": _("Currency"),
+			"fieldname": "currency",
+			"fieldtype": "Data",
+			"width": 80,
 		},
 		{
 			"label": _("Territory"),
@@ -49,7 +49,13 @@ def get_columns(filters):
 			"width": 100,
 		},
 		{"label": _("Posting Date"), "fieldname": "posting_date", "fieldtype": "Date", "width": 100},
-		{"label": _("Amount"), "fieldname": "amount", "fieldtype": "Currency", "options": "currency", "width": 120},
+		{
+			"label": _("Amount"),
+			"fieldname": "amount",
+			"fieldtype": "Currency",
+			"options": "currency",
+			"width": 120,
+		},
 		{
 			"label": _("Sales Partner"),
 			"options": "Sales Partner",
@@ -82,20 +88,19 @@ def get_entries(filters):
 	entries = frappe.db.sql(
 		"""
 		SELECT
-			name, customer, territory, {} as posting_date, base_net_total as amount,
-			sales_partner, commission_rate, total_commission
+			doc.name, doc.customer, doc.territory, doc.{} as posting_date, doc.base_net_total as amount,
+			doc.sales_partner, doc.commission_rate, doc.total_commission, company.default_currency as currency
 		FROM
-			`tab{}`
+			`tab{}` as doc
+		JOIN
+			`tabCompany` as company ON company.name = doc.company
 		WHERE
-			{} and docstatus = 1 and sales_partner is not null
-			and sales_partner != '' order by name desc, sales_partner
+			{} and doc.docstatus = 1 and doc.sales_partner is not null
+			and doc.sales_partner != '' order by doc.name desc, doc.sales_partner
 		""".format(date_field, filters.get("doctype"), conditions),
 		filters,
 		as_dict=1,
 	)
-	currency_company = frappe.get_cached_value("Company", filters.get("company"), "default_currency")
-	for row in entries:
-		row["currency"] = currency_company
 
 	return entries
 
@@ -105,15 +110,15 @@ def get_conditions(filters, date_field):
 
 	for field in ["company", "customer", "territory"]:
 		if filters.get(field):
-			conditions += f" and {field} = %({field})s"
+			conditions += f" and doc.{field} = %({field})s"
 
 	if filters.get("sales_partner"):
-		conditions += " and sales_partner = %(sales_partner)s"
+		conditions += " and doc.sales_partner = %(sales_partner)s"
 
 	if filters.get("from_date"):
-		conditions += f" and {date_field} >= %(from_date)s"
+		conditions += f" and doc.{date_field} >= %(from_date)s"
 
 	if filters.get("to_date"):
-		conditions += f" and {date_field} <= %(to_date)s"
+		conditions += f" and doc.{date_field} <= %(to_date)s"
 
 	return conditions
