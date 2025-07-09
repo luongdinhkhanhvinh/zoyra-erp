@@ -131,7 +131,7 @@ class ReceivablePayableReport:
 		elif self.ple_fetch_method == "UnBuffered Cursor":
 			self.fetch_ple_in_unbuffered_cursor()
 		elif self.ple_fetch_method == "Raw SQL":
-			self.init_and_run_sql_procedures()
+			self.fetch_ple_in_sql_procedures()
 
 		# Build delivery note map against all sales invoices
 		self.build_delivery_note_map()
@@ -321,7 +321,7 @@ class ReceivablePayableReport:
 				row.paid -= amount
 				row.paid_in_account_currency -= amount_in_account_currency
 
-	def init_and_run_sql_procedures(self):
+	def fetch_ple_in_sql_procedures(self):
 		self.proc = InitSQLProceduresForAR()
 
 		build_balance = f"""
