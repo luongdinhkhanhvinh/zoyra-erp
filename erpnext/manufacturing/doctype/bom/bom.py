@@ -1336,7 +1336,7 @@ def get_children(parent=None, is_root=False, **filters):
 
 		bom_items = frappe.get_all(
 			"BOM Item",
-			fields=["item_code", "bom_no as value", "stock_qty"],
+			fields=["item_code", "bom_no as value", "stock_qty", "qty"],
 			filters=[["parent", "=", frappe.form_dict.parent]],
 			order_by="idx",
 		)
