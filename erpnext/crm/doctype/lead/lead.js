@@ -2,8 +2,9 @@
 // License: GNU General Public License v3. See license.txt
 
 frappe.provide("erpnext");
+if (cur_frm) {
 cur_frm.email_field = "email_id";
-
+}
 erpnext.LeadController = class LeadController extends frappe.ui.form.Controller {
 	setup() {
 		this.frm.make_methods = {
@@ -238,5 +239,6 @@ erpnext.LeadController = class LeadController extends frappe.ui.form.Controller 
 		crm_activities.refresh();
 	}
 };
-
+if (cur_frm) {
 extend_cscript(cur_frm.cscript, new erpnext.LeadController({ frm: cur_frm }));
+}
