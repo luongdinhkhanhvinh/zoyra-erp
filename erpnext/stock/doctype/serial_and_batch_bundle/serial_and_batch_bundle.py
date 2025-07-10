@@ -808,7 +808,7 @@ class SerialandBatchBundle(Document):
 		if qty_field == "qty" and row.get("stock_qty"):
 			qty = row.get("stock_qty")
 
-		precision = row.precision
+		precision = row.precision(qty_field)
 		if abs(abs(flt(self.total_qty, precision)) - abs(flt(qty, precision))) > 0.01:
 			total_qty = frappe.format_value(abs(flt(self.total_qty)), "Float", row)
 			set_qty = frappe.format_value(abs(flt(row.get(qty_field))), "Float", row)
