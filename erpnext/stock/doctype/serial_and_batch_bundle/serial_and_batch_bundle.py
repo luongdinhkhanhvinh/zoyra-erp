@@ -11,11 +11,11 @@ from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 from frappe.query_builder.functions import CombineDatetime, Sum
 from frappe.utils import (
-	add_days,
 	cint,
 	cstr,
 	flt,
 	get_link_to_form,
+	getdate,
 	now,
 	nowtime,
 	parse_json,
@@ -2223,7 +2223,7 @@ def get_auto_batch_nos(kwargs):
 		)
 
 	if kwargs.based_on == "Expiry":
-		available_batches = sorted(available_batches, key=lambda x: (x.expiry_date or "9999-12-31"))
+		available_batches = sorted(available_batches, key=lambda x: (x.expiry_date or getdate("9999-12-31")))
 
 	if not kwargs.get("do_not_check_future_batches") and available_batches and kwargs.get("posting_date"):
 		filter_zero_near_batches(available_batches, kwargs)
