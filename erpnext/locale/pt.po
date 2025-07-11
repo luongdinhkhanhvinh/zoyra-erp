@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-06 09:36+0000\n"
-"PO-Revision-Date: 2025-07-07 05:54\n"
+"PO-Revision-Date: 2025-07-10 08:56\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -502,7 +502,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "501-1000"
-msgstr ""
+msgstr "501-1000"
 
 #. Option for the 'No of Employees' (Select) field in DocType 'Lead'
 #. Option for the 'No of Employees' (Select) field in DocType 'Opportunity'
@@ -891,7 +891,7 @@ msgstr ""
 
 #: erpnext/crm/doctype/lead/lead.py:142
 msgid "A Lead requires either a person's name or an organization's name"
-msgstr ""
+msgstr "Um lead requer o nome de uma pessoa ou o nome de uma organização"
 
 #: erpnext/stock/doctype/packing_slip/packing_slip.py:84
 msgid "A Packing Slip can only be created for Draft Delivery Note."
@@ -2387,7 +2387,7 @@ msgstr ""
 #: erpnext/selling/doctype/customer/customer.js:198
 #: erpnext/stock/doctype/item/item.js:518 erpnext/templates/pages/order.html:20
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #. Label of the actions_performed (Text Editor) field in DocType 'Asset
 #. Maintenance Log'
@@ -2443,7 +2443,7 @@ msgstr ""
 #: erpnext/projects/doctype/task/task_dashboard.py:8
 #: erpnext/support/doctype/issue/issue_dashboard.py:5
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #. Name of a DocType
 #. Label of a Link in the Projects Workspace
@@ -3191,7 +3191,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 #: erpnext/support/doctype/warranty_claim/warranty_claim.json
 msgid "Address"
-msgstr ""
+msgstr "Endereço"
 
 #. Label of the address_and_contact_tab (Tab Break) field in DocType 'Dunning'
 #. Label of the address_and_contact_tab (Tab Break) field in DocType 'Purchase
@@ -3781,7 +3781,7 @@ msgstr ""
 #: erpnext/telephony/doctype/voice_call_settings/voice_call_settings.json
 #: erpnext/utilities/doctype/video/video.json
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.js:165
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.js:185
@@ -4918,7 +4918,7 @@ msgstr ""
 #: erpnext/templates/form_grid/stock_entry_grid.html:11
 #: erpnext/templates/pages/order.html:103 erpnext/templates/pages/rfq.html:46
 msgid "Amount"
-msgstr ""
+msgstr "Montante"
 
 #: erpnext/regional/report/uae_vat_201/uae_vat_201.py:22
 msgid "Amount (AED)"
@@ -6304,7 +6304,7 @@ msgstr ""
 #: erpnext/templates/pages/order.html:136
 #: erpnext/templates/pages/projects.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "Anexos"
 
 #. Label of the attendance_and_leave_details (Tab Break) field in DocType
 #. 'Employee'
@@ -9300,7 +9300,7 @@ msgstr ""
 
 #: erpnext/templates/pages/task_info.html:24
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #. Label of the cancel_at_period_end (Check) field in DocType 'Subscription'
 #: erpnext/accounts/doctype/subscription/subscription.json
@@ -9337,7 +9337,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_entry/stock_entry_list.js:25
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Canceled"
-msgstr ""
+msgstr "Cancelado"
 
 #. Option for the 'Status' (Select) field in DocType 'Bank Transaction'
 #. Option for the 'Status' (Select) field in DocType 'Dunning'
@@ -10465,7 +10465,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.js:170
 #: erpnext/support/doctype/issue/issue.js:23
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #. Label of the close_issue_after_days (Int) field in DocType 'Support
 #. Settings'
@@ -10682,7 +10682,7 @@ msgstr ""
 #: erpnext/setup/doctype/holiday_list/holiday_list.json
 #: erpnext/setup/doctype/vehicle/vehicle.json
 msgid "Color"
-msgstr ""
+msgstr "Cor"
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:263
 msgid "Colour"
@@ -10714,7 +10714,7 @@ msgstr ""
 #: erpnext/utilities/doctype/video/video.json
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.py:28
 msgid "Comments"
-msgstr ""
+msgstr "Comentários"
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:161
 msgid "Commercial"
@@ -11601,7 +11601,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Completed"
-msgstr ""
+msgstr "Concluído"
 
 #. Label of the completed_by (Link) field in DocType 'Task'
 #: erpnext/projects/doctype/task/task.json
@@ -12071,7 +12071,7 @@ msgstr ""
 #: erpnext/support/doctype/issue/issue.json
 #: erpnext/support/doctype/warranty_claim/warranty_claim.json
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #. Label of the contact_desc (HTML) field in DocType 'Sales Partner'
 #: erpnext/setup/doctype/sales_partner/sales_partner.json
@@ -12265,12 +12265,12 @@ msgstr ""
 #: erpnext/selling/doctype/sales_order/sales_order.json
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 msgid "Content"
-msgstr ""
+msgstr "Conteúdo"
 
 #. Label of the content_type (Data) field in DocType 'Issue'
 #: erpnext/support/doctype/issue/issue.json
 msgid "Content Type"
-msgstr ""
+msgstr "Tipo de Conteúdo"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.js:162
 #: erpnext/public/js/controllers/transaction.js:2364
@@ -12495,7 +12495,7 @@ msgstr ""
 #: erpnext/crm/report/lead_details/lead_details.js:40
 #: erpnext/selling/page/sales_funnel/sales_funnel.py:58
 msgid "Converted"
-msgstr ""
+msgstr "Convertido"
 
 #. Label of the copied_from (Data) field in DocType 'Project'
 #: erpnext/projects/doctype/project/project.json
@@ -13164,7 +13164,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.js:92
 #: erpnext/support/doctype/issue/issue.js:36
 msgid "Create"
-msgstr ""
+msgstr "Criar"
 
 #. Label of the create_chart_of_accounts_based_on (Select) field in DocType
 #. 'Company'
@@ -13912,7 +13912,7 @@ msgstr ""
 #: erpnext/stock/doctype/price_list/price_list.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 msgid "Currency"
-msgstr ""
+msgstr "Moeda"
 
 #. Label of a Link in the Accounting Workspace
 #. Name of a DocType
@@ -15043,7 +15043,7 @@ msgstr ""
 #: erpnext/support/report/first_response_time_for_issues/first_response_time_for_issues.py:11
 #: erpnext/support/report/support_hour_distribution/support_hour_distribution.py:68
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #. Label of the date (Date) field in DocType 'Bulk Transaction Log Detail'
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log_detail/bulk_transaction_log_detail.json
@@ -15413,7 +15413,7 @@ msgstr ""
 #: erpnext/assets/doctype/asset_shift_factor/asset_shift_factor.json
 #: erpnext/manufacturing/doctype/bom/bom_list.js:7
 msgid "Default"
-msgstr ""
+msgstr "Padrão"
 
 #. Label of the default_account (Link) field in DocType 'Mode of Payment
 #. Account'
@@ -16029,7 +16029,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/company/company.js:215
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #. Label of the delete_linked_ledger_entries (Check) field in DocType 'Accounts
 #. Settings'
@@ -16869,7 +16869,7 @@ msgstr ""
 #: erpnext/templates/generators/bom.html:83
 #: erpnext/utilities/doctype/video/video.json
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. Label of the description_of_content (Small Text) field in DocType 'Shipment'
 #: erpnext/stock/doctype/shipment/shipment.json
@@ -17970,7 +17970,7 @@ msgstr ""
 #: erpnext/public/js/templates/crm_activities.html:77
 #: erpnext/public/js/utils/crm_activities.js:214
 msgid "Done"
-msgstr ""
+msgstr "Feito"
 
 #. Label of the dont_recompute_tax (Check) field in DocType 'Sales Taxes and
 #. Charges'
@@ -18236,7 +18236,7 @@ msgstr ""
 #: erpnext/assets/doctype/asset_maintenance_log/asset_maintenance_log.json
 #: erpnext/selling/report/payment_terms_status_for_sales_order/payment_terms_status_for_sales_order.py:40
 msgid "Due Date"
-msgstr ""
+msgstr "Data de Vencimento"
 
 #. Label of the due_date_based_on (Select) field in DocType 'Payment Term'
 #. Label of the due_date_based_on (Select) field in DocType 'Payment Terms
@@ -18313,7 +18313,7 @@ msgstr ""
 #: erpnext/stock/doctype/item/item.js:210
 #: erpnext/stock/doctype/putaway_rule/putaway_rule.py:55
 msgid "Duplicate"
-msgstr ""
+msgstr "Duplicar"
 
 #: erpnext/accounts/doctype/pos_profile/pos_profile.py:154
 msgid "Duplicate Customer Group"
@@ -18382,7 +18382,7 @@ msgstr ""
 #: erpnext/utilities/doctype/video/video.json
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.py:24
 msgid "Duration"
-msgstr ""
+msgstr "Duração"
 
 #. Label of the duration (Int) field in DocType 'Task'
 #: erpnext/projects/doctype/task/task.json
@@ -18474,7 +18474,7 @@ msgstr ""
 #: erpnext/manufacturing/doctype/bom/bom_tree.js:44
 #: erpnext/setup/doctype/employee/employee_tree.js:18
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:499
 msgid "Edit BOM"
@@ -18942,7 +18942,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/batch/batch_list.js:16
 msgid "Empty"
-msgstr ""
+msgstr "Vazio"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -19103,7 +19103,7 @@ msgstr ""
 #: erpnext/stock/doctype/price_list/price_list.json
 #: erpnext/support/doctype/service_level_agreement/service_level_agreement.json
 msgid "Enabled"
-msgstr ""
+msgstr "Ativado"
 
 #. Description of the 'Fetch Timesheet in Sales Invoice' (Check) field in
 #. DocType 'Projects Settings'
@@ -19430,7 +19430,7 @@ msgstr ""
 #: erpnext/stock/doctype/repost_item_valuation/repost_item_valuation.json
 #: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:314
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #. Label of the description (Long Text) field in DocType 'Asset Repair'
 #. Label of the error_description (Long Text) field in DocType 'Bulk
@@ -20008,7 +20008,7 @@ msgstr ""
 #: erpnext/stock/doctype/item/item_list.js:18
 #: erpnext/stock/doctype/serial_no/serial_no.json
 msgid "Expired"
-msgstr ""
+msgstr "Expirado"
 
 #: erpnext/stock/doctype/pick_list/pick_list.py:250
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:370
@@ -20186,7 +20186,7 @@ msgstr ""
 #: erpnext/telephony/doctype/call_log/call_log.json
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:78
 msgid "Failed"
-msgstr ""
+msgstr "Falhou"
 
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log/bulk_transaction_log.js:17
 msgid "Failed Entries"
@@ -20376,7 +20376,7 @@ msgstr ""
 #: erpnext/manufacturing/page/bom_comparison_tool/bom_comparison_tool.js:106
 #: erpnext/manufacturing/page/bom_comparison_tool/bom_comparison_tool.js:155
 msgid "Field"
-msgstr ""
+msgstr "Campo"
 
 #. Label of the field_mapping_section (Section Break) field in DocType
 #. 'Inventory Dimension'
@@ -20430,7 +20430,7 @@ msgstr ""
 
 #: erpnext/edi/doctype/code_list/code_list_import.js:65
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.js:16
 #: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.js:16
@@ -20486,7 +20486,7 @@ msgstr ""
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
 #: erpnext/public/js/bank_reconciliation_tool/dialog_manager.js:196
 msgid "Filters"
-msgstr ""
+msgstr "Filtros"
 
 #: erpnext/accounts/report/invalid_ledger_entries/invalid_ledger_entries.py:74
 msgid "Filters missing"
@@ -21357,7 +21357,7 @@ msgstr ""
 #: erpnext/telephony/doctype/call_log/call_log.json
 #: erpnext/templates/pages/projects.html:67
 msgid "From"
-msgstr ""
+msgstr "De"
 
 #. Label of the from_bom (Check) field in DocType 'Stock Entry'
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
@@ -22056,7 +22056,7 @@ msgstr ""
 #: erpnext/selling/doctype/customer/customer.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "Gender"
-msgstr ""
+msgstr "Sexo"
 
 #. Option for the 'Type' (Select) field in DocType 'Mode of Payment'
 #: erpnext/accounts/doctype/mode_of_payment/mode_of_payment.json
@@ -22759,7 +22759,7 @@ msgstr ""
 #: erpnext/selling/report/lost_quotations/lost_quotations.js:33
 #: erpnext/stock/report/total_stock_summary/total_stock_summary.js:8
 msgid "Group By"
-msgstr ""
+msgstr "Agrupar por"
 
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.js:140
 msgid "Group By Customer"
@@ -24215,7 +24215,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_closing_entry/stock_closing_entry.json
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "In Progress"
-msgstr ""
+msgstr "Em progresso"
 
 #: erpnext/stock/report/available_serial_no/available_serial_no.py:116
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:77
@@ -24861,7 +24861,7 @@ msgstr ""
 #: erpnext/accounts/doctype/payment_request/payment_request.json
 #: erpnext/buying/doctype/purchase_order/purchase_order.json
 msgid "Initiated"
-msgstr ""
+msgstr "Iniciado"
 
 #. Option for the 'Import Type' (Select) field in DocType 'Bank Statement
 #. Import'
@@ -25797,7 +25797,7 @@ msgstr ""
 #: erpnext/manufacturing/doctype/bom/bom.json
 #: erpnext/stock/doctype/item_manufacturer/item_manufacturer.json
 msgid "Is Default"
-msgstr ""
+msgstr "É Padrão"
 
 #. Label of the is_default (Check) field in DocType 'Bank Account'
 #: erpnext/accounts/doctype/bank_account/bank_account.json
@@ -25929,7 +25929,7 @@ msgstr ""
 #: erpnext/setup/doctype/territory/territory.json
 #: erpnext/stock/doctype/warehouse/warehouse_tree.js:20
 msgid "Is Group"
-msgstr ""
+msgstr "É grupo"
 
 #. Label of the is_group (Check) field in DocType 'Warehouse'
 #: erpnext/stock/doctype/warehouse/warehouse.json
@@ -28180,7 +28180,7 @@ msgstr ""
 #: erpnext/accounts/doctype/pos_field/pos_field.json
 #: erpnext/stock/doctype/item_website_specification/item_website_specification.json
 msgid "Label"
-msgstr ""
+msgstr "Rótulo"
 
 #. Label of the landed_cost_help (HTML) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
@@ -28572,7 +28572,7 @@ msgstr ""
 #: erpnext/setup/doctype/driver/driver.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "Left"
-msgstr ""
+msgstr "Esquerda"
 
 #. Label of the left_child (Link) field in DocType 'Bisect Nodes'
 #: erpnext/accounts/doctype/bisect_nodes/bisect_nodes.json
@@ -30474,7 +30474,7 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Medium"
-msgstr ""
+msgstr "Médio"
 
 #. Label of a Card Break in the Quality Workspace
 #: erpnext/quality_management/workspace/quality/quality.json
@@ -31496,7 +31496,7 @@ msgstr ""
 #: erpnext/selling/doctype/quotation/quotation.js:274
 #: erpnext/setup/doctype/employee_group/employee_group.json
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. Label of the name_and_employee_id (Section Break) field in DocType 'Sales
 #. Person'
@@ -31923,7 +31923,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/account/account_tree.js:231
 msgid "New"
-msgstr ""
+msgstr "Novo"
 
 #: erpnext/accounts/doctype/account/account_tree.js:123
 msgid "New Account Name"
@@ -32189,7 +32189,7 @@ msgstr ""
 #: erpnext/stock/doctype/shipment/shipment.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: erpnext/setup/doctype/company/test_company.py:99
 msgid "No Account matched these filters: {}"
@@ -32724,7 +32724,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.py:984
 #: erpnext/templates/pages/timelog_info.html:43
 msgid "Note"
-msgstr ""
+msgstr "Nota"
 
 #: erpnext/manufacturing/doctype/bom_update_log/bom_update_log_list.js:21
 msgid "Note: Automatic log deletion only applies to logs of type <i>Update Cost</i>"
@@ -32787,7 +32787,7 @@ msgstr ""
 #: erpnext/stock/doctype/manufacturer/manufacturer.json
 #: erpnext/www/book_appointment/index.html:55
 msgid "Notes"
-msgstr ""
+msgstr "Notas"
 
 #. Label of the notes_html (HTML) field in DocType 'Lead'
 #. Label of the notes_html (HTML) field in DocType 'Opportunity'
@@ -33899,7 +33899,7 @@ msgstr ""
 
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.js:80
 msgid "Order By"
-msgstr ""
+msgstr "Ordenar por"
 
 #. Label of the order_confirmation_date (Date) field in DocType 'Purchase
 #. Order'
@@ -34032,7 +34032,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/report/prospects_engaged_but_not_converted/prospects_engaged_but_not_converted.py:30
 msgid "Organization"
-msgstr ""
+msgstr "Organização"
 
 #. Label of the company_name (Data) field in DocType 'Lead'
 #: erpnext/crm/doctype/lead/lead.json
@@ -34199,7 +34199,7 @@ msgstr ""
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.json
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Outgoing"
-msgstr ""
+msgstr "Saída"
 
 #. Label of the outgoing_rate (Float) field in DocType 'Serial and Batch Entry'
 #. Label of the outgoing_rate (Currency) field in DocType 'Stock Ledger Entry'
@@ -34426,7 +34426,7 @@ msgstr ""
 #: erpnext/accounts/report/sales_register/sales_register.py:236
 #: erpnext/crm/report/lead_details/lead_details.py:45
 msgid "Owner"
-msgstr ""
+msgstr "Dono"
 
 #. Label of the pan_no (Data) field in DocType 'Lower Deduction Certificate'
 #: erpnext/regional/doctype/lower_deduction_certificate/lower_deduction_certificate.json
@@ -36354,7 +36354,7 @@ msgstr ""
 #: erpnext/stock/doctype/material_request/material_request_list.js:16
 #: erpnext/templates/pages/order.html:68
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"
 
 #: erpnext/setup/doctype/email_digest/templates/default.html:93
 msgid "Pending Activities"
@@ -36721,7 +36721,7 @@ msgstr ""
 #: erpnext/selling/doctype/sales_order/sales_order.json
 #: erpnext/telephony/doctype/voice_call_settings/voice_call_settings.json
 msgid "Phone"
-msgstr ""
+msgstr "Telefone"
 
 #. Label of the phone_ext (Data) field in DocType 'Lead'
 #. Label of the phone_ext (Data) field in DocType 'Opportunity'
@@ -39254,7 +39254,7 @@ msgstr ""
 #: erpnext/support/doctype/service_level_priority/service_level_priority.json
 #: erpnext/templates/pages/task_info.html:54
 msgid "Priority"
-msgstr ""
+msgstr "Prioridade"
 
 #: erpnext/stock/doctype/putaway_rule/putaway_rule.py:60
 msgid "Priority cannot be lesser than 1."
@@ -41740,11 +41740,11 @@ msgstr ""
 #: erpnext/telephony/doctype/call_log/call_log.json
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:78
 msgid "Queued"
-msgstr ""
+msgstr "Em Fila"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.js:91
 msgid "Quick Entry"
-msgstr ""
+msgstr "Registo Rápido"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.js:585
 msgid "Quick Journal Entry"
@@ -43056,7 +43056,7 @@ msgstr ""
 #. Label of the reference_doctype (Link) field in DocType 'Payment Request'
 #: erpnext/accounts/doctype/payment_request/payment_request.json
 msgid "Reference Doctype"
-msgstr ""
+msgstr "DocType de Referência"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:655
 msgid "Reference Doctype must be one of {0}"
@@ -43313,7 +43313,7 @@ msgstr ""
 #: erpnext/selling/page/point_of_sale/pos_controller.js:194
 #: erpnext/selling/page/sales_funnel/sales_funnel.js:53
 msgid "Refresh"
-msgstr ""
+msgstr "Recarregar"
 
 #. Label of the refresh_google_sheet (Button) field in DocType 'Bank Statement
 #. Import'
@@ -44337,7 +44337,7 @@ msgstr ""
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.js:155
 #: erpnext/support/doctype/issue/issue.js:57
 msgid "Reset"
-msgstr ""
+msgstr "Redefinir"
 
 #. Label of the reset_company_default_values (Check) field in DocType
 #. 'Transaction Deletion Record'
@@ -47049,7 +47049,7 @@ msgstr ""
 #: erpnext/selling/doctype/customer/customer.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "Salutation"
-msgstr ""
+msgstr "Saudação"
 
 #. Label of the expected_value_after_useful_life (Currency) field in DocType
 #. 'Asset Finance Book'
@@ -47151,7 +47151,7 @@ msgstr ""
 #: erpnext/public/js/call_popup/call_popup.js:169
 #: erpnext/selling/page/point_of_sale/pos_payment.js:62
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #. Option for the 'Action on New Invoice' (Select) field in DocType 'POS
 #. Profile'
@@ -47962,7 +47962,7 @@ msgstr ""
 
 #: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:58
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #. Label of the send_after_days (Int) field in DocType 'Campaign Email
 #. Schedule'
@@ -48564,7 +48564,7 @@ msgstr ""
 #: erpnext/support/doctype/issue/issue.json
 #: erpnext/support/doctype/warranty_claim/warranty_claim.json
 msgid "Series"
-msgstr ""
+msgstr "Série"
 
 #. Label of the series_for_depreciation_entry (Data) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -49115,7 +49115,7 @@ msgstr ""
 #: erpnext/stock/workspace/stock/stock.json
 #: erpnext/support/workspace/support/support.json
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #. Description of a DocType
 #: erpnext/crm/doctype/crm_settings/crm_settings.json
@@ -49925,7 +49925,7 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/templates/form_grid/stock_entry_grid.html:29
 msgid "Source"
-msgstr ""
+msgstr "Fonte"
 
 #. Label of the source_doctype (Link) field in DocType 'Support Search Source'
 #: erpnext/support/doctype/support_search_source/support_search_source.json
@@ -51784,7 +51784,7 @@ msgstr ""
 #: erpnext/support/doctype/issue/issue.json
 #: erpnext/templates/pages/task_info.html:44
 msgid "Subject"
-msgstr ""
+msgstr "Assunto"
 
 #: erpnext/accounts/doctype/payment_order/payment_order.js:139
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.js:311
@@ -52003,7 +52003,7 @@ msgstr ""
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.json
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.json
 msgid "Success"
-msgstr ""
+msgstr "Sucesso"
 
 #. Label of the success_redirect_url (Data) field in DocType 'Appointment
 #. Booking Settings'
@@ -52129,7 +52129,7 @@ msgstr ""
 #: erpnext/support/doctype/service_day/service_day.json
 #: erpnext/telephony/doctype/incoming_call_handling_schedule/incoming_call_handling_schedule.json
 msgid "Sunday"
-msgstr ""
+msgstr "Domingo"
 
 #: erpnext/buying/report/subcontract_order_summary/subcontract_order_summary.py:145
 msgid "Supplied Item"
@@ -53214,7 +53214,7 @@ msgstr ""
 #: erpnext/templates/pages/projects.html:56
 #: erpnext/templates/pages/timelog_info.html:28
 msgid "Task"
-msgstr ""
+msgstr "Tarefa"
 
 #. Label of the task_assignee_email (Data) field in DocType 'Asset Maintenance
 #. Log'
@@ -53275,7 +53275,7 @@ msgstr ""
 #: erpnext/templates/pages/projects.html:35
 #: erpnext/templates/pages/projects.html:45
 msgid "Tasks"
-msgstr ""
+msgstr "Tarefas"
 
 #: erpnext/projects/report/project_summary/project_summary.py:68
 msgid "Tasks Completed"
@@ -54084,7 +54084,7 @@ msgstr ""
 #: erpnext/support/doctype/service_level_agreement/service_level_agreement.json
 #: erpnext/support/doctype/warranty_claim/warranty_claim.json
 msgid "Territory"
-msgstr ""
+msgstr "Território"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/territory_item/territory_item.json
@@ -55139,7 +55139,7 @@ msgstr ""
 #: erpnext/utilities/doctype/video/video.json
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.py:23
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #. Label of the email_to (Data) field in DocType 'Payment Request'
 #. Label of the to_uom (Link) field in DocType 'UOM Conversion Factor'
@@ -56984,7 +56984,7 @@ msgstr ""
 #: erpnext/support/doctype/service_day/service_day.json
 #: erpnext/telephony/doctype/incoming_call_handling_schedule/incoming_call_handling_schedule.json
 msgid "Tuesday"
-msgstr ""
+msgstr "Terça-feira"
 
 #. Option for the 'Frequency To Collect Progress' (Select) field in DocType
 #. 'Project'
@@ -57029,7 +57029,7 @@ msgstr ""
 #: erpnext/stock/report/bom_search/bom_search.py:43
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #. Label of the type_of_call (Link) field in DocType 'Call Log'
 #: erpnext/telephony/doctype/call_log/call_log.json
@@ -57394,7 +57394,7 @@ msgstr ""
 #: erpnext/buying/doctype/supplier_scorecard/supplier_scorecard_list.js:10
 #: erpnext/projects/doctype/project/project_dashboard.html:7
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #: erpnext/public/js/call_popup/call_popup.js:110
 msgid "Unknown Caller"
@@ -57618,7 +57618,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.js:179
 #: erpnext/templates/pages/task_info.html:22
 msgid "Update"
-msgstr ""
+msgstr "Atualizar"
 
 #: erpnext/accounts/doctype/account/account.js:52
 msgid "Update Account Name / Number"
@@ -58460,7 +58460,7 @@ msgstr ""
 #: erpnext/stock/report/stock_analytics/stock_analytics.js:26
 #: erpnext/stock/report/warehouse_wise_item_balance_age_and_value/warehouse_wise_item_balance_age_and_value.py:101
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.js:58
 msgid "Value (G - D)"
@@ -60131,7 +60131,7 @@ msgstr ""
 #: erpnext/projects/report/timesheet_billing_summary/timesheet_billing_summary.py:65
 #: erpnext/support/doctype/service_level_agreement/service_level_agreement.json
 msgid "Working Hours"
-msgstr ""
+msgstr "Horas de trabalho"
 
 #. Label of the workstation (Link) field in DocType 'BOM Operation'
 #. Label of the workstation (Link) field in DocType 'BOM Website Operation'

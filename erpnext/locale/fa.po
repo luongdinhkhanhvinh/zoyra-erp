@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-06 09:36+0000\n"
-"PO-Revision-Date: 2025-07-08 06:47\n"
+"PO-Revision-Date: 2025-07-10 08:56\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -2462,7 +2462,7 @@ msgstr "فعالیت"
 #: erpnext/projects/doctype/activity_cost/activity_cost.json
 #: erpnext/projects/workspace/projects/projects.json
 msgid "Activity Cost"
-msgstr "هزینه فعالیت"
+msgstr ""
 
 #: erpnext/projects/doctype/activity_cost/activity_cost.py:51
 msgid "Activity Cost exists for Employee {0} against Activity Type - {1}"
@@ -2511,7 +2511,7 @@ msgstr "مقدار واقعی دسته"
 
 #: erpnext/buying/report/procurement_tracker/procurement_tracker.py:101
 msgid "Actual Cost"
-msgstr "هزینه واقعی"
+msgstr ""
 
 #. Label of the actual_date (Date) field in DocType 'Maintenance Schedule
 #. Detail'
@@ -2933,13 +2933,13 @@ msgstr "اضافی"
 #. Label of the additional_asset_cost (Currency) field in DocType 'Asset'
 #: erpnext/assets/doctype/asset/asset.json
 msgid "Additional Asset Cost"
-msgstr "هزینه دارایی اضافی"
+msgstr ""
 
 #. Label of the additional_cost (Currency) field in DocType 'Stock Entry
 #. Detail'
 #: erpnext/stock/doctype/stock_entry_detail/stock_entry_detail.json
 msgid "Additional Cost"
-msgstr "هزینه های اضافی"
+msgstr ""
 
 #. Label of the additional_cost_per_qty (Currency) field in DocType
 #. 'Subcontracting Order Item'
@@ -11839,7 +11839,7 @@ msgstr "در نظر گرفتن حداقل تعداد سفارش"
 #. 'Production Plan'
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
 msgid "Consider Projected Qty in Calculation"
-msgstr ""
+msgstr "در نظر گرفتن مقدار پیش‌بینی‌شده در محاسبه"
 
 #. Label of the ignore_existing_ordered_qty (Check) field in DocType
 #. 'Production Plan'
@@ -33222,7 +33222,7 @@ msgstr "فقط گره های برگ در تراکنش مجاز هستند"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:994
 msgid "Only one {0} entry can be created against the Work Order {1}"
-msgstr ""
+msgstr "فقط یک ثبت {0} می‌تواند در برابر دستور کار {1} ایجاد شود"
 
 #. Description of the 'Customer Groups' (Table) field in DocType 'POS Profile'
 #: erpnext/accounts/doctype/pos_profile/pos_profile.json
@@ -33388,7 +33388,7 @@ msgstr " باز کردن برای انجام"
 
 #: erpnext/manufacturing/doctype/work_order/work_order_preview.html:24
 msgid "Open Work Order {0}"
-msgstr ""
+msgstr "باز کردن دستور کار {0}"
 
 #. Name of a report
 #: erpnext/manufacturing/report/open_work_orders/open_work_orders.json
@@ -33657,12 +33657,12 @@ msgstr "شناسه عملیات"
 #. Label of the operation_row_id (Int) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid "Operation Row ID"
-msgstr ""
+msgstr "شناسه ردیف عملیات"
 
 #. Label of the operation_row_id (Int) field in DocType 'Work Order Item'
 #: erpnext/manufacturing/doctype/work_order_item/work_order_item.json
 msgid "Operation Row Id"
-msgstr ""
+msgstr "شناسه ردیف عملیات"
 
 #. Label of the operation_row_number (Select) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
@@ -37013,7 +37013,7 @@ msgstr "تعداد برنامه ریزی شده"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:166
 msgid "Planned Qty: Quantity, for which, Work Order has been raised, but is pending to be manufactured."
-msgstr ""
+msgstr "مقدار برنامه‌ریزی‌شده: مقداری که برای آن، دستور کار دریافت شده است، اما در انتظار تولید است."
 
 #. Label of the planned_qty (Float) field in DocType 'Sales Order Item'
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
@@ -39362,7 +39362,7 @@ msgstr "مقدار هدررفت فرآیند"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.js:260
 msgid "Process Loss Quantity"
-msgstr ""
+msgstr "مقدار هدررفت فرآیند"
 
 #. Name of a report
 #: erpnext/manufacturing/report/process_loss_report/process_loss_report.json
@@ -40057,7 +40057,7 @@ msgstr "مقدار پیش بینی شده"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:166
 msgid "Projected Quantity Formula"
-msgstr ""
+msgstr "فرمول مقدار پیش‌بینی‌شده"
 
 #: erpnext/stock/page/stock_balance/stock_balance.js:51
 msgid "Projected qty"
@@ -44251,7 +44251,7 @@ msgstr "تعداد رزرو شده برای برنامه تولید"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:166
 msgid "Reserved Qty for Production: Raw materials quantity to make manufacturing items."
-msgstr ""
+msgstr "مقدار رزرو شده برای تولید: مقدار مواد اولیه برای ساخت آیتم‌های تولیدی."
 
 #. Label of the reserved_qty_for_sub_contract (Float) field in DocType 'Bin'
 #: erpnext/stock/doctype/bin/bin.json
@@ -44268,7 +44268,7 @@ msgstr "تعداد رزرو شده باید بیشتر از تعداد تحوی�
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:166
 msgid "Reserved Qty: Quantity ordered for sale, but not delivered."
-msgstr ""
+msgstr "مقدار رزرو شده: مقدار سفارش داده شده برای فروش، اما تحویل داده نشده."
 
 #: erpnext/stock/report/item_shortage_report/item_shortage_report.py:116
 msgid "Reserved Quantity"
@@ -47054,7 +47054,7 @@ msgstr "فروش و بازده"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:214
 msgid "Sales orders are not available for production"
-msgstr ""
+msgstr "سفارش‌های فروش برای تولید در دسترس نیستند"
 
 #. Label of the salutation (Link) field in DocType 'Lead'
 #. Label of the salutation (Link) field in DocType 'Customer'
@@ -47218,7 +47218,7 @@ msgstr "اسکن شماره دسته"
 #: erpnext/manufacturing/doctype/workstation/workstation.js:127
 #: erpnext/manufacturing/doctype/workstation/workstation.js:154
 msgid "Scan Job Card Qrcode"
-msgstr ""
+msgstr "اسکن Qrcode کارت کار"
 
 #. Label of the scan_mode (Check) field in DocType 'Pick List'
 #. Label of the scan_mode (Check) field in DocType 'Stock Reconciliation'
@@ -54335,11 +54335,11 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/workstation/workstation.py:531
 msgid "The job card {0} is in {1} state and you cannot complete."
-msgstr ""
+msgstr "کارت کار {0} در وضعیت {1} است و شما نمی‌توانید آن را تکمیل کنید."
 
 #: erpnext/manufacturing/doctype/workstation/workstation.py:525
 msgid "The job card {0} is in {1} state and you cannot start it again."
-msgstr ""
+msgstr "کارت کار {0} در وضعیت {1} قرار دارد و نمی‌توانید دوباره آن را شروع کنید."
 
 #: erpnext/accounts/doctype/loyalty_program/loyalty_program.py:46
 msgid "The lowest tier must have a minimum spent amount of 0. Customers need to be part of a tier as soon as they are enrolled in the program."
