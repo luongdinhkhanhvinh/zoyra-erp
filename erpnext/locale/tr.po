@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-06 09:36+0000\n"
-"PO-Revision-Date: 2025-07-07 05:54\n"
+"PO-Revision-Date: 2025-07-11 09:10\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -2416,7 +2416,7 @@ msgstr "Satın Almada Birikimli Aylık Bütçe Aşım Eylemi"
 #. (Select) field in DocType 'Budget'
 #: erpnext/accounts/doctype/budget/budget.json
 msgid "Action if Accumulative Monthly Budget Exceeded on Cumulative Expense"
-msgstr ""
+msgstr "Kümülatif Giderde Aylık Birikimli Bütçe Aşılmışsa Yapılacak İşlem"
 
 #. Label of the action_if_annual_budget_exceeded (Select) field in DocType
 #. 'Budget'
@@ -2440,7 +2440,7 @@ msgstr "Satın Almada Yıllık Bütçe Aşım Eylemi"
 #. in DocType 'Budget'
 #: erpnext/accounts/doctype/budget/budget.json
 msgid "Action if Anual Budget Exceeded on Cumulative Expense"
-msgstr ""
+msgstr "Yıllık Bütçenin Toplam Gider Üzerinden Aşılması Durumunda Yapılacak İşlem"
 
 #. Label of the maintain_same_rate_action (Select) field in DocType 'Accounts
 #. Settings'
@@ -8903,7 +8903,7 @@ msgstr "Binalar"
 
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:78
 msgid "Bulk Rename Jobs"
-msgstr ""
+msgstr "Toplu Yeniden Adlandırma İşleri"
 
 #. Name of a DocType
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log/bulk_transaction_log.json
@@ -9557,7 +9557,7 @@ msgstr "Sürücü Adresi Eksik Olduğu İçin Varış Saati Hesaplanamıyor."
 
 #: erpnext/controllers/sales_and_purchase_return.py:359
 msgid "Cannot Create Return"
-msgstr ""
+msgstr "İade Oluşturulamıyor"
 
 #: erpnext/stock/doctype/item/item.py:629
 #: erpnext/stock/doctype/item/item.py:642
@@ -10001,7 +10001,7 @@ msgstr ""
 
 #: erpnext/accounts/report/general_ledger/general_ledger.js:129
 msgid "Categorize by Account"
-msgstr ""
+msgstr "Hesaba Göre Kategorilendir"
 
 #: erpnext/buying/report/supplier_quotation_comparison/supplier_quotation_comparison.js:84
 msgid "Categorize by Item"
@@ -11556,7 +11556,7 @@ msgstr "Dahili tedarikçinin temsil ettiği şirket"
 
 #: erpnext/accounts/doctype/tax_withholding_category/tax_withholding_category.py:62
 msgid "Company {0} added multiple times"
-msgstr ""
+msgstr "{0} şirketi birden fazla kez eklendi"
 
 #: erpnext/accounts/doctype/account/account.py:472
 msgid "Company {0} does not exist"
@@ -12552,7 +12552,7 @@ msgstr "Ürün {0} için dönüşüm faktörü, birimi {1} stok birimi {2} ile a
 
 #: erpnext/controllers/accounts_controller.py:2878
 msgid "Conversion rate cannot be 0"
-msgstr ""
+msgstr "Dönüşüm oranı 0 olamaz"
 
 #: erpnext/controllers/accounts_controller.py:2885
 msgid "Conversion rate is 1.00, but document currency is different from company currency"
@@ -20725,7 +20725,7 @@ msgstr "Tamamla"
 
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:78
 msgid "Finished"
-msgstr "Bitti"
+msgstr "Tamamlandı"
 
 #. Label of the fg_item (Link) field in DocType 'Purchase Order Item'
 #. Label of the item_code (Link) field in DocType 'BOM Creator'
@@ -25458,7 +25458,7 @@ msgstr "Geçersiz Miktar"
 
 #: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:198
 msgid "Invalid Return"
-msgstr ""
+msgstr "Geçersiz İade"
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:207
 msgid "Invalid Sales Invoices"
@@ -25492,7 +25492,7 @@ msgstr "Geçersiz Depo"
 
 #: erpnext/accounts/doctype/bank_transaction/bank_transaction.py:355
 msgid "Invalid amount in accounting entries of {} {} for Account {}: {}"
-msgstr ""
+msgstr "Hesap {} için {} {} muhasebe girişlerinde geçersiz tutar: {}"
 
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.py:312
 msgid "Invalid condition expression"
@@ -25618,7 +25618,7 @@ msgstr "Fatura Genel Toplamı"
 
 #: erpnext/accounts/print_format/sales_invoice_print/sales_invoice_print.html:64
 msgid "Invoice ID"
-msgstr ""
+msgstr "Fatura No"
 
 #. Label of the invoice_limit (Int) field in DocType 'Payment Reconciliation'
 #: erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.json
@@ -25642,7 +25642,7 @@ msgstr "Fatura Numarası"
 
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.py:812
 msgid "Invoice Paid"
-msgstr ""
+msgstr "Fatura Ödendi"
 
 #. Label of the invoice_portion (Percent) field in DocType 'Overdue Payment'
 #. Label of the invoice_portion (Percent) field in DocType 'Payment Schedule'
@@ -35534,7 +35534,7 @@ msgstr "Taraf Detayları"
 #. Label of the party_full_name (Data) field in DocType 'Contract'
 #: erpnext/crm/doctype/contract/contract.json
 msgid "Party Full Name"
-msgstr ""
+msgstr "Cari Tam Ünvan"
 
 #. Label of the bank_party_iban (Data) field in DocType 'Bank Transaction'
 #: erpnext/accounts/doctype/bank_transaction/bank_transaction.json
@@ -35702,7 +35702,7 @@ msgstr "Son Ödeme Tarihi"
 
 #: erpnext/public/js/templates/crm_activities.html:152
 msgid "Past Events"
-msgstr ""
+msgstr "Geçmiş Etkinlikler"
 
 #. Label of the path (Data) field in DocType 'Supplier Scorecard Scoring
 #. Variable'
@@ -36389,11 +36389,11 @@ msgstr "Ödemeler"
 
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.js:330
 msgid "Payments could not be updated."
-msgstr ""
+msgstr "Ödemeler güncellenemedi."
 
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.js:324
 msgid "Payments updated."
-msgstr ""
+msgstr "Ödemeler güncellendi."
 
 #. Option for the 'Reference Type' (Select) field in DocType 'Journal Entry
 #. Account'
@@ -38063,7 +38063,7 @@ msgstr "Lütfen Vergiler ve Ücretler Tablosunda en az bir satır ayarlayın"
 
 #: erpnext/regional/italy/utils.py:267
 msgid "Please set both the Tax ID and Fiscal Code on Company {0}"
-msgstr ""
+msgstr "Lütfen {0} Şirketi için hem Vergi Kimlik Numarasını hem de Muhasebe Kodunu ayarlayın"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:2246
 msgid "Please set default Cash or Bank account in Mode of Payment {0}"
@@ -50485,7 +50485,7 @@ msgstr "Görev için başlangıç tarihi bitiş tarihinden küçük olmalıdır 
 
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:78
 msgid "Started"
-msgstr "Başladı"
+msgstr "Başlatıldı"
 
 #. Label of the started_time (Datetime) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
@@ -51680,7 +51680,7 @@ msgstr "Alt Prosedür"
 
 #: erpnext/accounts/print_format/sales_invoice_print/sales_invoice_print.html:129
 msgid "Sub Total"
-msgstr ""
+msgstr "Ara Toplam"
 
 #: erpnext/manufacturing/report/bom_operations_time/bom_operations_time.py:127
 msgid "Sub-assembly BOM Count"
