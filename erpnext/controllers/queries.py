@@ -49,7 +49,7 @@ def employee_query(
 		"""select {fields} from `tabEmployee`
 		where status in ('Active', 'Suspended')
 			and docstatus < 2
-			and ({search_conditions})
+			and ({key} like %(txt)s or {search_conditions})
 			{fcond} {mcond}
 		order by
 			(case when locate(%(_txt)s, name) > 0 then locate(%(_txt)s, name) else 99999 end),
