@@ -59,6 +59,7 @@ def employee_query(
 		limit %(page_len)s offset %(start)s""".format(
 			**{
 				"fields": ", ".join(fields),
+				"key": searchfield,
 				"fcond": get_filters_cond(doctype, filters, conditions),
 				"mcond": mcond,
 				"search_conditions": search_conditions,
