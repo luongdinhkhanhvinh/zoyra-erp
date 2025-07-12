@@ -338,16 +338,21 @@ def create_opening_voucher(pos_profile, company, balance_details):
 
 @frappe.whitelist()
 def get_past_order_list(search_term, status, limit=20):
-	fields = ["name", "grand_total", "currency", "customer", "posting_time", "posting_date"]
+	fields = ["name", "grand_total", "currency", "customer", "customer_name", "posting_time", "posting_date"]
 	invoice_list = []
 
 	if search_term and status:
 		pos_invoices_by_customer = frappe.db.get_list(
 			"POS Invoice",
-			filters=get_invoice_filters("POS Invoice", status, customer=search_term),
+			filters=get_invoice_filters("POS Invoice", status),
+			or_filters={
+				"customer_name": ["like", f"%{search_term}%"],
+				"customer": ["like", f"%{search_term}%"],
+			},
 			fields=fields,
 			page_length=limit,
 		)
+
 		pos_invoices_by_name = frappe.db.get_list(
 			"POS Invoice",
 			filters=get_invoice_filters("POS Invoice", status, name=search_term),
@@ -361,7 +366,11 @@ def get_past_order_list(search_term, status, limit=20):
 
 		sales_invoices_by_customer = frappe.db.get_list(
 			"Sales Invoice",
-			filters=get_invoice_filters("Sales Invoice", status, customer=search_term),
+			filters=get_invoice_filters("Sales Invoice", status),
+			or_filters={
+				"customer_name": ["like", f"%{search_term}%"],
+				"customer": ["like", f"%{search_term}%"],
+			},
 			fields=fields,
 			page_length=limit,
 		)
@@ -467,32 +476,35 @@ def order_results_by_posting_date(results):
 	)
 
 
-def get_invoice_filters(doctype, status, name=None, customer=None):
+def get_invoice_filters(doctype, status, name=None):
 	filters = {}
 
 	if name:
 		filters["name"] = ["like", f"%{name}%"]
-	if customer:
-		filters["customer"] = ["like", f"%{customer}%"]
-
 	if doctype == "POS Invoice":
 		filters["status"] = status
+		if status == "Partly Paid":
+			filters["status"] = ["in", ["Partly Paid", "Overdue", "Unpaid"]]
 		return filters
 
 	if doctype == "Sales Invoice":
 		filters["is_created_using_pos"] = 1
 		filters["is_consolidated"] = 0
 
-		if status == "Draft":
-			filters["docstatus"] = 0
+		if status == "Consolidated":
+			filters["pos_closing_entry"] = ["is", "set"]
 		else:
-			filters["docstatus"] = 1
-			if status == "Paid":
-				filters["is_return"] = 0
-			if status == "Return":
-				filters["is_return"] = 1
-
-			filters["pos_closing_entry"] = ["is", "set"] if status == "Consolidated" else ["is", "not set"]
+			filters["pos_closing_entry"] = ["is", "not set"]
+			if status == "Draft":
+				filters["docstatus"] = 0
+			elif status == "Partly Paid":
+				filters["status"] = ["in", ["Partly Paid", "Overdue", "Unpaid"]]
+			else:
+				filters["docstatus"] = 1
+				if status == "Paid":
+					filters["is_return"] = 0
+				if status == "Return":
+					filters["is_return"] = 1
 
 	return filters
 

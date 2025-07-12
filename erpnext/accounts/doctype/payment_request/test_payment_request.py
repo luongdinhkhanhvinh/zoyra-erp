@@ -813,3 +813,33 @@ class TestPaymentRequest(IntegrationTestCase):
 		pi.load_from_db()
 		pr = make_payment_request(dt="Purchase Invoice", dn=pi.name, mute_email=1)
 		self.assertEqual(pr.grand_total, pi.outstanding_amount)
+
+	def test_payment_request_on_unreconcile(self):
+		pi = make_purchase_invoice(currency="INR", qty=1, rate=500)
+		pi.submit()
+
+		pr = make_payment_request(
+			dt=pi.doctype,
+			dn=pi.name,
+			mute_email=1,
+			submit_doc=True,
+			return_doc=True,
+		)
+		self.assertEqual(pr.grand_total, pi.outstanding_amount)
+
+		pe = pr.create_payment_entry()
+		unreconcile = frappe.get_doc(
+			{
+				"doctype": "Unreconcile Payment",
+				"company": pe.company,
+				"voucher_type": pe.doctype,
+				"voucher_no": pe.name,
+			}
+		)
+		unreconcile.add_references()
+		unreconcile.submit()
+
+		pi.load_from_db()
+		pr.load_from_db()
+
+		self.assertEqual(pr.grand_total, pi.outstanding_amount)

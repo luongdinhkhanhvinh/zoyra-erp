@@ -51,6 +51,9 @@ from erpnext.accounts.utils import (
 	get_fiscal_years,
 	validate_fiscal_year,
 )
+from erpnext.accounts.utils import (
+	get_advance_payment_doctypes as _get_advance_payment_doctypes,
+)
 from erpnext.buying.utils import update_last_purchase_rate
 from erpnext.controllers.print_settings import (
 	set_print_templates_for_item_table,
@@ -383,10 +386,7 @@ class AccountsController(TransactionBase):
 		adv = qb.DocType("Advance Payment Ledger Entry")
 		qb.from_(adv).delete().where(adv.voucher_type.eq(self.doctype) & adv.voucher_no.eq(self.name)).run()
 
-		advance_payment_doctypes = frappe.get_hooks("advance_payment_receivable_doctypes") + frappe.get_hooks(
-			"advance_payment_payable_doctypes"
-		)
-		if self.doctype in advance_payment_doctypes:
+		if self.doctype in self.get_advance_payment_doctypes():
 			qb.from_(adv).delete().where(
 				adv.against_voucher_type.eq(self.doctype) & adv.against_voucher_no.eq(self.name)
 			).run()
@@ -1138,6 +1138,10 @@ class AccountsController(TransactionBase):
 			return True
 
 	def set_taxes_and_charges(self):
+		if self.doctype == "Material Request":
+			# Material Request does not have taxes
+			return
+
 		if self.get("taxes") or self.get("is_pos"):
 			return
 
@@ -2265,9 +2269,9 @@ class AccountsController(TransactionBase):
 		)
 
 		if not paid_amount:
-			if self.doctype in frappe.get_hooks("advance_payment_receivable_doctypes"):
+			if self.doctype in self.get_advance_payment_doctypes(payment_type="receivable"):
 				new_status = "Not Requested" if paid_amount is None else "Requested"
-			elif self.doctype in frappe.get_hooks("advance_payment_payable_doctypes"):
+			elif self.doctype in self.get_advance_payment_doctypes(payment_type="payable"):
 				new_status = "Not Initiated" if paid_amount is None else "Initiated"
 		else:
 			total_amount = self.get("rounded_total") or self.get("grand_total")
@@ -2921,10 +2925,8 @@ class AccountsController(TransactionBase):
 		repost_ledger.insert()
 		repost_ledger.submit()
 
-	def get_advance_payment_doctypes(self) -> list:
-		return frappe.get_hooks("advance_payment_receivable_doctypes") + frappe.get_hooks(
-			"advance_payment_payable_doctypes"
-		)
+	def get_advance_payment_doctypes(self, payment_type=None) -> list:
+		return _get_advance_payment_doctypes(payment_type=payment_type)
 
 	def make_advance_payment_ledger_for_journal(self):
 		advance_payment_doctypes = self.get_advance_payment_doctypes()
@@ -3981,6 +3983,7 @@ def update_child_qty_rate(parent_doctype, trans_items, parent_doctype_name, chil
 						).format(frappe.bold(parent.name))
 					)
 	else:  # Sales Order
+		parent.validate_selling_price()
 		parent.validate_for_duplicate_items()
 		parent.validate_warehouse()
 		parent.update_reserved_qty()
