@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-06 09:36+0000\n"
-"PO-Revision-Date: 2025-07-12 09:43\n"
+"PO-Revision-Date: 2025-07-13 09:43\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -41048,7 +41048,7 @@ msgstr "تعداد برای تولید"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:1133
 msgid "Qty To Manufacture ({0}) cannot be a fraction for the UOM {2}. To allow this, disable '{1}' in the UOM {2}."
-msgstr ""
+msgstr "مقدار برای تولید ({0}) نمی‌تواند کسری از UOM {2} باشد. برای مجاز کردن این امر، '{1}' را در UOM {2} غیرفعال کنید."
 
 #. Label of the qty_to_produce (Float) field in DocType 'Batch'
 #: erpnext/stock/doctype/batch/batch.json
