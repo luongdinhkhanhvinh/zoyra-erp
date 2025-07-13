@@ -144,6 +144,7 @@
    "fieldname": "production_capacity",
    "fieldtype": "Int",
    "label": "Job Capacity",
+   "non_negative": 1,
    "reqd": 1
   },
   {
@@ -258,7 +259,7 @@
  "idx": 1,
  "image_field": "on_status_image",
  "links": [],
- "modified": "2025-07-13 14:34:49.637231",
+ "modified": "2025-07-13 16:02:13.615001",
  "modified_by": "Administrator",
  "module": "Manufacturing",
  "name": "Workstation",
