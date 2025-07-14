@@ -1089,7 +1089,7 @@ class StockReconciliation(StockController):
 				{"voucher_detail_no": row.name, "actual_qty": ("<", 0), "is_cancelled": 0},
 				"name",
 			):
-				if not not row.current_serial_and_batch_bundle:
+				if not row.current_serial_and_batch_bundle:
 					self.set_current_serial_and_batch_bundle(voucher_detail_no, save=True)
 					row.reload()
 
