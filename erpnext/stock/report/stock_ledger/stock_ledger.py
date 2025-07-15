@@ -637,6 +637,9 @@ def get_opening_balance(filters, columns, sl_entries):
 
 
 def get_warehouse_condition(warehouses):
+	if not warehouses:
+		return ""
+
 	if isinstance(warehouses, str):
 		warehouses = [warehouses]
 
@@ -653,14 +656,14 @@ def get_warehouse_condition(warehouses):
 		return ""
 
 	alias = "wh"
-	condtions = []
+	conditions = []
 	for lft, rgt in warehouse_range:
-		condtions.append(f"({alias}.lft >= {lft} and {alias}.rgt <= {rgt})")
+		conditions.append(f"({alias}.lft >= {lft} and {alias}.rgt <= {rgt})")
 
-	condtions = " or ".join(condtions)
+	conditions = " or ".join(conditions)
 
 	return f" exists (select name from `tabWarehouse` {alias} \
-		where ({condtions}) and warehouse = {alias}.name)"
+		where ({conditions}) and warehouse = {alias}.name)"
 
 
 def get_item_group_condition(item_group, item_table=None):
