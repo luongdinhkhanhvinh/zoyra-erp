@@ -280,7 +280,7 @@ def apply_warehouse_filter(query, sle, filters):
 	for condition in range_conditions[1:]:
 		combined_condition = combined_condition | condition
 
-	child_query = child_query.where(combined_condition & (warehouse_table.name == sle.warehouse))
+	child_query = child_query.where(combined_condition).where(warehouse_table.name == sle.warehouse)
 
 	query = query.where(ExistsCriterion(child_query))
 
