@@ -43,8 +43,28 @@ frappe.query_reports["Stock Ledger"] = {
 			label: __("Items"),
 			fieldtype: "MultiSelectList",
 			options: "Item",
-			get_data: function (txt) {
-				return frappe.db.get_link_options("Item", txt, {});
+			get_data: async function (txt) {
+				let { message: data } = await frappe.call({
+					method: "erpnext.controllers.queries.item_query",
+					args: {
+						doctype: "Item",
+						txt: txt,
+						searchfield: "name",
+						start: 0,
+						page_len: 10,
+						filters: {},
+						as_dict: 1,
+					},
+				});
+
+				data = data.map(({ name, description }) => {
+					return {
+						value: name,
+						description: description,
+					};
+				});
+
+				return data || [];
 			},
 		},
 		{
