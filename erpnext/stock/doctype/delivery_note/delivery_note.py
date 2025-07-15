@@ -466,6 +466,7 @@ class DeliveryNote(SellingController):
 			self.make_bundle_for_sales_purchase_return(table_name)
 			self.make_bundle_using_old_serial_batch_fields(table_name)
 
+		self.validate_standalone_serial_nos_customer()
 		self.update_stock_reservation_entries()
 
 		# Updating stock ledger should always be called after updating prevdoc status,

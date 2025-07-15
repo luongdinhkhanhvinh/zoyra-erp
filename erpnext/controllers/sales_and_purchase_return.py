@@ -38,6 +38,17 @@ def validate_return_against(doc):
 
 		party_type = "customer" if doc.doctype in ("Sales Invoice", "Delivery Note") else "supplier"
 
+		if ref_doc.get(party_type) != doc.get(party_type):
+			frappe.throw(
+				_("The {0} {1} does not match with the {0} {2} in the {3} {4}").format(
+					doc.meta.get_label(party_type),
+					doc.get(party_type),
+					ref_doc.get(party_type),
+					ref_doc.doctype,
+					ref_doc.name,
+				)
+			)
+
 		if (
 			ref_doc.company == doc.company
 			and ref_doc.get(party_type) == doc.get(party_type)
