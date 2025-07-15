@@ -440,6 +440,9 @@ class WorkOrder(Document):
 		"""Update **Manufactured Qty** and **Material Transferred for Qty** in Work Order
 		based on Stock Entry"""
 
+		if self.track_semi_finished_goods:
+			return
+
 		allowance_percentage = flt(
 			frappe.db.get_single_value("Manufacturing Settings", "overproduction_percentage_for_work_order")
 		)

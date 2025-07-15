@@ -48,22 +48,35 @@ frappe.ui.form.on("Job Card", {
 			frm.doc.track_semi_finished_goods &&
 			frm.doc.docstatus === 1 &&
 			!frm.doc.is_subcontracted &&
+			(frm.doc.skip_material_transfer || frm.doc.transferred_qty > 0) &&
 			flt(frm.doc.for_quantity) + flt(frm.doc.process_loss_qty) > flt(frm.doc.manufactured_qty)
 		) {
 			frm.add_custom_button(__("Make Stock Entry"), () => {
-				frm.call({
-					method: "make_stock_entry_for_semi_fg_item",
-					args: {
-						auto_submit: 1,
+				frappe.confirm(
+					__("Do you want to submit the stock entry?"),
+					() => {
+						frm.events.make_manufacture_stock_entry(frm, 1);
 					},
-					doc: frm.doc,
-					freeze: true,
-					callback() {
-						frm.reload_doc();
-					},
-				});
+					() => {
+						frm.events.make_manufacture_stock_entry(frm, 0);
+					}
+				);
 			}).addClass("btn-primary");
 		}
+	},
+
+	make_manufacture_stock_entry(frm, submit_entry) {
+		frm.call({
+			method: "make_stock_entry_for_semi_fg_item",
+			args: {
+				auto_submit: submit_entry,
+			},
+			doc: frm.doc,
+			freeze: true,
+			callback() {
+				frm.reload_doc();
+			},
+		});
 	},
 
 	refresh: function (frm) {
