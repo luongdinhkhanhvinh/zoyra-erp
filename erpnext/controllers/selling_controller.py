@@ -72,9 +72,12 @@ class SellingController(StockController):
 
 			serial_nos = frappe.get_all(
 				"Serial and Batch Entry",
-				filters={"parent": ("in", bundle_ids)},
+				filters={"parent": ("in", bundle_ids), "serial_no": ("is", "set")},
 				pluck="serial_no",
 			)
+
+			if not serial_nos:
+				return
 
 			if serial_nos := frappe.get_all(
 				"Serial No",
