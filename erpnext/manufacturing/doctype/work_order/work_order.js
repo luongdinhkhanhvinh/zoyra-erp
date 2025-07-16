@@ -444,7 +444,7 @@ frappe.ui.form.on("Work Order", {
 				frm.doc.material_transferred_for_manufacturing -
 				frm.doc.produced_qty -
 				frm.doc.process_loss_qty;
-			if (pending_complete) {
+			if (pending_complete > 0) {
 				var width = (pending_complete / frm.doc.qty) * 100 - added_min;
 				title = __("{0} items in progress", [pending_complete]);
 				bars.push({
@@ -896,6 +896,19 @@ erpnext.work_order = {
 				description: __("Max: {0}", [max]),
 				default: max,
 			},
+			{
+				fieldtype: "Check",
+				label: __("Consider Process Loss"),
+				fieldname: "consider_process_loss",
+				default: 0,
+				onchange: function () {
+					if (this.value) {
+						frm.qty_prompt.set_value("qty", max - frm.doc.process_loss_qty);
+					} else {
+						frm.qty_prompt.set_value("qty", max);
+					}
+				},
+			},
 		];
 
 		if (purpose === "Disassemble") {
@@ -917,7 +930,7 @@ erpnext.work_order = {
 		}
 
 		return new Promise((resolve, reject) => {
-			frappe.prompt(
+			frm.qty_prompt = frappe.prompt(
 				fields,
 				(data) => {
 					max += (frm.doc.qty * (frm.doc.__onload.overproduction_percentage || 0.0)) / 100;
