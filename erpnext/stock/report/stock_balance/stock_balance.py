@@ -8,11 +8,9 @@ from typing import Any, TypedDict
 
 import frappe
 from frappe import _
-from frappe.query_builder import Order
 from frappe.query_builder.functions import Coalesce
 from frappe.utils import add_days, cint, date_diff, flt, getdate
 from frappe.utils.nestedset import get_descendants_of
-from pypika.terms import ExistsCriterion
 
 import erpnext
 from erpnext.stock.doctype.inventory_dimension.inventory_dimension import get_inventory_dimensions
