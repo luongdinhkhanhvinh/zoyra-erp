@@ -1225,6 +1225,9 @@ class PurchaseInvoice(BuyingController):
 	def get_provisional_accounts(self):
 		self.provisional_accounts = frappe._dict()
 		linked_purchase_receipts = set([d.purchase_receipt for d in self.items if d.purchase_receipt])
+		if not linked_purchase_receipts:
+			return
+
 		pr_items = frappe.get_all(
 			"Purchase Receipt Item",
 			filters={"parent": ("in", linked_purchase_receipts)},
