@@ -2214,13 +2214,14 @@ def get_auto_batch_nos(kwargs):
 		if batches:
 			kwargs.batch_no = batches
 			kwargs.warehouse = warehouses
-	available_batches = get_available_batches(kwargs)
-	qty = flt(kwargs.qty)
 
+	available_batches = get_available_batches(kwargs)
 	stock_ledgers_batches = get_stock_ledgers_batches(kwargs)
 	pos_invoice_batches = get_reserved_batches_for_pos(kwargs)
 	sre_reserved_batches = get_reserved_batches_for_sre(kwargs)
-	kwargs.batch_no = kwargs.warehouse = None
+
+	if kwargs.against_sales_order and only_consider_batches:
+		kwargs.batch_no = kwargs.warehouse = None
 
 	picked_batches = frappe._dict()
 	if kwargs.get("is_pick_list"):
@@ -2244,6 +2245,8 @@ def get_auto_batch_nos(kwargs):
 	if not kwargs.consider_negative_batches:
 		precision = frappe.get_precision("Stock Ledger Entry", "actual_qty")
 		available_batches = [d for d in available_batches if flt(d.qty, precision) > 0]
+
+	qty = flt(kwargs.qty)
 
 	if not qty:
 		return available_batches
