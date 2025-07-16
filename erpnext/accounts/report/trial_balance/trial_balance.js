@@ -122,6 +122,7 @@ frappe.query_reports["Trial Balance"] = {
 	tree: true,
 	name_field: "account",
 	parent_field: "parent_account",
+	export_hidden_cols: true,
 	initial_depth: 3,
 };
 

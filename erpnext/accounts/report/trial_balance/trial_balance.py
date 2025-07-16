@@ -402,6 +402,8 @@ def prepare_data(accounts, filters, parent_children_map, company_currency):
 			"to_date": filters.to_date,
 			"currency": company_currency,
 			"is_group_account": d.is_group,
+			"acc_name": d.account_name,
+			"acc_number": d.account_number,
 			"account_name": (
 				f"{d.account_number} - {d.account_name}" if d.account_number else d.account_name
 			),
@@ -435,6 +437,20 @@ def get_columns():
 			"fieldtype": "Link",
 			"options": "Account",
 			"width": 300,
+		},
+		{
+			"fieldname": "acc_name",
+			"label": _("Account Name"),
+			"fieldtype": "Data",
+			"hidden": 1,
+			"width": 250,
+		},
+		{
+			"fieldname": "acc_number",
+			"label": _("Account Number"),
+			"fieldtype": "Data",
+			"hidden": 1,
+			"width": 120,
 		},
 		{
 			"fieldname": "currency",
