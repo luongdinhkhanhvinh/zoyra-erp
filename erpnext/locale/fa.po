@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-14 19:51+0000\n"
-"PO-Revision-Date: 2025-07-15 10:38\n"
+"PO-Revision-Date: 2025-07-16 11:32\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -953,7 +953,7 @@ msgstr "مشتری باید ایمیل تماس اصلی داشته باشد."
 
 #: erpnext/stock/doctype/delivery_trip/delivery_trip.py:55
 msgid "A driver must be set to submit."
-msgstr "یک راننده باید برای ارسال تنظیم شود."
+msgstr "یک راننده باید برای ثبت نهایی تنظیم شود."
 
 #. Description of a DocType
 #: erpnext/stock/doctype/warehouse/warehouse.json
@@ -9739,17 +9739,17 @@ msgstr "ظرفیت (Stock UOM)"
 #. 'Manufacturing Settings'
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.json
 msgid "Capacity Planning"
-msgstr "برنامه ریزی ظرفیت"
+msgstr "برنامه‌ریزی ظرفیت"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:800
 msgid "Capacity Planning Error, planned start time can not be same as end time"
-msgstr "خطای برنامه ریزی ظرفیت، زمان شروع برنامه ریزی شده نمی‌تواند با زمان پایان یکسان باشد"
+msgstr "خطای برنامه‌ریزی ظرفیت، زمان شروع برنامه‌ریزی شده نمی‌تواند با زمان پایان یکسان باشد"
 
 #. Label of the capacity_planning_for_days (Int) field in DocType
 #. 'Manufacturing Settings'
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.json
 msgid "Capacity Planning For (Days)"
-msgstr "برنامه ریزی ظرفیت برای (بر حسب روز)"
+msgstr "برنامه‌ریزی ظرفیت برای (بر حسب روز)"
 
 #. Label of the stock_capacity (Float) field in DocType 'Putaway Rule'
 #: erpnext/stock/doctype/putaway_rule/putaway_rule.json
@@ -13373,7 +13373,7 @@ msgstr "ایجاد سفارش فروش"
 
 #: erpnext/utilities/activation.py:96
 msgid "Create Sales Orders to help you plan your work and deliver on-time"
-msgstr "برای کمک به برنامه ریزی کار و تحویل به موقع، سفارش های فروش ایجاد کنید"
+msgstr "برای کمک به برنامه‌ریزی کار و تحویل به موقع، سفارش های فروش ایجاد کنید"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:410
 msgid "Create Sample Retention Stock Entry"
@@ -17185,7 +17185,7 @@ msgstr "غیر فعال کردن"
 #. 'Manufacturing Settings'
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.json
 msgid "Disable Capacity Planning"
-msgstr "غیرفعال کردن برنامه ریزی ظرفیت"
+msgstr "غیرفعال کردن برنامه‌ریزی ظرفیت"
 
 #. Label of the disable_in_words (Check) field in DocType 'Global Defaults'
 #: erpnext/setup/doctype/global_defaults/global_defaults.json
@@ -19886,7 +19886,7 @@ msgstr "تاریخ پایان مورد انتظار باید کمتر یا مس�
 #: erpnext/projects/doctype/timesheet_detail/timesheet_detail.json
 #: erpnext/public/js/projects/timer.js:16
 msgid "Expected Hrs"
-msgstr "ساعت پیش بینی شده"
+msgstr "ساعت پیش‌بینی شده"
 
 #. Label of the expected_start_date (Datetime) field in DocType 'Job Card'
 #. Label of the expected_start_date (Date) field in DocType 'Project'
@@ -21223,7 +21223,7 @@ msgstr "برای ردیف {0} در {1}. برای گنجاندن {2} در نرخ 
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:1635
 msgid "For row {0}: Enter Planned Qty"
-msgstr "برای ردیف {0}: تعداد برنامه ریزی شده را وارد کنید"
+msgstr "برای ردیف {0}: تعداد برنامه‌ریزی شده را وارد کنید"
 
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.py:178
 msgid "For the 'Apply Rule On Other' condition the field {0} is mandatory"
@@ -23876,7 +23876,7 @@ msgstr "نادیده گرفتن مقدار سفارش‌های موجود"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:1740
 msgid "Ignore Existing Projected Quantity"
-msgstr "نادیده گرفتن مقدار پیش بینی شده موجود"
+msgstr "نادیده گرفتن مقدار پیش‌بینی شده موجود"
 
 #. Label of the ignore_is_opening_check_for_reporting (Check) field in DocType
 #. 'Accounts Settings'
@@ -27869,7 +27869,7 @@ msgstr "عملیات کارت کار"
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/job_card_scheduled_time/job_card_scheduled_time.json
 msgid "Job Card Scheduled Time"
-msgstr "زمان برنامه ریزی شده کارت کار"
+msgstr "زمان برنامه‌ریزی شده کارت کار"
 
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/job_card_scrap_item/job_card_scrap_item.json
@@ -27892,7 +27892,7 @@ msgstr "لاگ زمان کارت کار"
 #. Settings'
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.json
 msgid "Job Card and Capacity Planning"
-msgstr "برنامه ریزی کارت کار و ظرفیت"
+msgstr "برنامه‌ریزی کارت کار و ظرفیت"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.py:1291
 msgid "Job Card {0} has been completed"
@@ -36986,19 +36986,19 @@ msgstr "نام طرح"
 #. Order'
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 msgid "Plan material for sub-assemblies"
-msgstr "برنامه ریزی مواد برای زیر مونتاژ ها"
+msgstr "برنامه‌ریزی مواد برای زیر مونتاژ ها"
 
 #. Description of the 'Capacity Planning For (Days)' (Int) field in DocType
 #. 'Manufacturing Settings'
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.json
 msgid "Plan operations X days in advance"
-msgstr "X روز قبل عملیات را برنامه ریزی کنید"
+msgstr "X روز قبل عملیات را برنامه‌ریزی کنید"
 
 #. Description of the 'Allow Overtime' (Check) field in DocType 'Manufacturing
 #. Settings'
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.json
 msgid "Plan time logs outside Workstation working hours"
-msgstr "برنامه ریزی لاگ‌های زمان خارج از ساعات کاری ایستگاه کاری"
+msgstr "برنامه‌ریزی لاگ‌های زمان خارج از ساعات کاری ایستگاه کاری"
 
 #. Option for the 'Maintenance Status' (Select) field in DocType 'Asset
 #. Maintenance Log'
@@ -37007,19 +37007,19 @@ msgstr "برنامه ریزی لاگ‌های زمان خارج از ساعات 
 #: erpnext/assets/doctype/asset_maintenance_log/asset_maintenance_log.json
 #: erpnext/assets/doctype/asset_maintenance_task/asset_maintenance_task.json
 msgid "Planned"
-msgstr "برنامه ریزی شده"
+msgstr "برنامه‌ریزی شده"
 
 #. Label of the planned_end_date (Datetime) field in DocType 'Work Order'
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.py:236
 msgid "Planned End Date"
-msgstr "تاریخ پایان برنامه ریزی شده"
+msgstr "تاریخ پایان برنامه‌ریزی شده"
 
 #. Label of the planned_end_time (Datetime) field in DocType 'Work Order
 #. Operation'
 #: erpnext/manufacturing/doctype/work_order_operation/work_order_operation.json
 msgid "Planned End Time"
-msgstr "زمان پایان برنامه ریزی شده"
+msgstr "زمان پایان برنامه‌ریزی شده"
 
 #. Label of the planned_operating_cost (Currency) field in DocType 'Work Order'
 #. Label of the planned_operating_cost (Currency) field in DocType 'Work Order
@@ -37027,7 +37027,7 @@ msgstr "زمان پایان برنامه ریزی شده"
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 #: erpnext/manufacturing/doctype/work_order_operation/work_order_operation.json
 msgid "Planned Operating Cost"
-msgstr "هزینه عملیاتی برنامه ریزی شده"
+msgstr "هزینه عملیاتی برنامه‌ریزی شده"
 
 #. Label of the planned_qty (Float) field in DocType 'Production Plan Item'
 #. Label of the planned_qty (Float) field in DocType 'Bin'
@@ -37035,7 +37035,7 @@ msgstr "هزینه عملیاتی برنامه ریزی شده"
 #: erpnext/stock/doctype/bin/bin.json
 #: erpnext/stock/report/stock_projected_qty/stock_projected_qty.py:148
 msgid "Planned Qty"
-msgstr "تعداد برنامه ریزی شده"
+msgstr "مقدار برنامه‌ریزی شده"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:166
 msgid "Planned Qty: Quantity, for which, Work Order has been raised, but is pending to be manufactured."
@@ -37045,7 +37045,7 @@ msgstr "مقدار برنامه‌ریزی‌شده: مقداری که برای 
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
 #: erpnext/stock/report/item_shortage_report/item_shortage_report.py:109
 msgid "Planned Quantity"
-msgstr "مقدار برنامه ریزی شده"
+msgstr "مقدار برنامه‌ریزی شده"
 
 #. Label of the planned_start_date (Datetime) field in DocType 'Production Plan
 #. Item'
@@ -37054,13 +37054,13 @@ msgstr "مقدار برنامه ریزی شده"
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.py:230
 msgid "Planned Start Date"
-msgstr "تاریخ شروع برنامه ریزی شده"
+msgstr "تاریخ شروع برنامه‌ریزی شده"
 
 #. Label of the planned_start_time (Datetime) field in DocType 'Work Order
 #. Operation'
 #: erpnext/manufacturing/doctype/work_order_operation/work_order_operation.json
 msgid "Planned Start Time"
-msgstr "زمان شروع برنامه ریزی شده"
+msgstr "زمان شروع برنامه‌ریزی شده"
 
 #. Label of the item_balance (Section Break) field in DocType 'Quotation Item'
 #. Label of the planning_section (Section Break) field in DocType 'Sales Order
@@ -37069,7 +37069,7 @@ msgstr "زمان شروع برنامه ریزی شده"
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:245
 msgid "Planning"
-msgstr "برنامه ریزی"
+msgstr "برنامه‌ریزی"
 
 #. Label of the sb_4 (Section Break) field in DocType 'Subscription'
 #. Label of the plans (Table) field in DocType 'Subscription'
@@ -37376,7 +37376,7 @@ msgstr "لطفاً ابتدا جزئیات تعمیر و نگهداری را و�
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:192
 msgid "Please enter Planned Qty for Item {0} at row {1}"
-msgstr "لطفاً تعداد برنامه ریزی شده را برای مورد {0} در ردیف {1} وارد کنید"
+msgstr "لطفاً تعداد برنامه‌ریزی شده را برای مورد {0} در ردیف {1} وارد کنید"
 
 #: erpnext/setup/doctype/employee/employee.js:71
 msgid "Please enter Preferred Contact Email"
@@ -39713,7 +39713,7 @@ msgstr "خلاصه برنامه تولید"
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.json
 #: erpnext/manufacturing/workspace/manufacturing/manufacturing.json
 msgid "Production Planning Report"
-msgstr "گزارش برنامه ریزی تولید"
+msgstr "گزارش برنامه‌ریزی تولید"
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:46
 msgid "Products"
@@ -40084,11 +40084,11 @@ msgstr "داده های پروژه محور برای پیش فاکتور در د
 #: erpnext/stock/report/stock_projected_qty/stock_projected_qty.py:204
 #: erpnext/templates/emails/reorder_item.html:12
 msgid "Projected Qty"
-msgstr "مقدار پیش بینی شده"
+msgstr "مقدار پیش‌بینی شده"
 
 #: erpnext/stock/report/item_shortage_report/item_shortage_report.py:130
 msgid "Projected Quantity"
-msgstr "مقدار پیش بینی شده"
+msgstr "مقدار پیش‌بینی شده"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:166
 msgid "Projected Quantity Formula"
@@ -40096,7 +40096,7 @@ msgstr "فرمول مقدار پیش‌بینی‌شده"
 
 #: erpnext/stock/page/stock_balance/stock_balance.js:51
 msgid "Projected qty"
-msgstr "مقدار پیش بینی شده"
+msgstr "مقدار پیش‌بینی شده"
 
 #. Name of a Workspace
 #. Label of a Card Break in the Projects Workspace
@@ -40860,7 +40860,7 @@ msgstr "ارزش خرید"
 
 #: erpnext/utilities/activation.py:105
 msgid "Purchase orders help you plan and follow up on your purchases"
-msgstr "سفارش‌های خرید به شما کمک می‌کند تا خریدهای خود را برنامه ریزی و پیگیری کنید"
+msgstr "سفارش‌های خرید به شما کمک می‌کند تا خریدهای خود را برنامه‌ریزی و پیگیری کنید"
 
 #. Option for the 'Current State' (Select) field in DocType 'Share Balance'
 #: erpnext/accounts/doctype/share_balance/share_balance.json
@@ -47320,7 +47320,7 @@ msgstr "زمان‌بندی شده است"
 #: erpnext/maintenance/doctype/maintenance_schedule/maintenance_schedule.js:118
 #: erpnext/maintenance/doctype/maintenance_schedule_detail/maintenance_schedule_detail.json
 msgid "Scheduled Date"
-msgstr "تاریخ برنامه ریزی شده"
+msgstr "تاریخ برنامه‌ریزی شده"
 
 #. Label of the scheduled_time (Datetime) field in DocType 'Appointment'
 #. Label of the scheduled_time_section (Section Break) field in DocType 'Job
@@ -47329,12 +47329,12 @@ msgstr "تاریخ برنامه ریزی شده"
 #: erpnext/crm/doctype/appointment/appointment.json
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid "Scheduled Time"
-msgstr "زمان برنامه ریزی شده"
+msgstr "زمان برنامه‌ریزی شده"
 
 #. Label of the scheduled_time_logs (Table) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid "Scheduled Time Logs"
-msgstr "لاگ‌های زمان برنامه ریزی شده"
+msgstr "لاگ‌های زمان برنامه‌ریزی شده"
 
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.py:91
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.py:39
@@ -47373,7 +47373,7 @@ msgstr "برنامه"
 #. Reposting Settings'
 #: erpnext/stock/doctype/stock_reposting_settings/stock_reposting_settings.json
 msgid "Scheduling"
-msgstr "برنامه ریزی"
+msgstr "برنامه‌ریزی"
 
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:31
 msgid "Scheduling..."
@@ -47779,7 +47779,7 @@ msgstr "انتخاب انبار..."
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:538
 msgid "Select Warehouses to get Stock for Materials Planning"
-msgstr "برای دریافت موجودی برای برنامه ریزی مواد، انبارها را انتخاب کنید"
+msgstr "برای دریافت موجودی برای برنامه‌ریزی مواد، انبارها را انتخاب کنید"
 
 #: erpnext/public/js/communication.js:80
 msgid "Select a Company"
@@ -49058,7 +49058,7 @@ msgstr "اهداف مورد نظر را از نظر گروهی برای این �
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:1074
 msgid "Set the Planned Start Date (an Estimated Date at which you want the Production to begin)"
-msgstr "تاریخ شروع برنامه ریزی شده را تنظیم کنید (تاریخ تخمینی که در آن می‌خواهید تولید شروع شود)"
+msgstr "تاریخ شروع برنامه‌ریزی شده را تنظیم کنید (تاریخ تخمینی که در آن می‌خواهید تولید شروع شود)"
 
 #. Description of the 'Manual Inspection' (Check) field in DocType 'Quality
 #. Inspection Reading'
@@ -51056,7 +51056,7 @@ msgstr "موجودی تا حدی رزرو شده است"
 #. Settings'
 #: erpnext/stock/doctype/stock_settings/stock_settings.json
 msgid "Stock Planning"
-msgstr "برنامه ریزی موجودی"
+msgstr "برنامه‌ریزی موجودی"
 
 #. Name of a report
 #. Label of a Link in the Stock Workspace
@@ -51064,7 +51064,7 @@ msgstr "برنامه ریزی موجودی"
 #: erpnext/stock/report/stock_projected_qty/stock_projected_qty.json
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Stock Projected Qty"
-msgstr "مقدار موجودی پیش بینی شده"
+msgstr "مقدار موجودی پیش‌بینی شده"
 
 #. Label of the stock_qty (Float) field in DocType 'BOM Creator Item'
 #. Label of the stock_qty (Float) field in DocType 'BOM Explosion Item'
@@ -54826,7 +54826,7 @@ msgstr "این کار برای رسیدگی به مواردی که رسید خر
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:1036
 msgid "This is enabled by default. If you want to plan materials for sub-assemblies of the Item you're manufacturing leave this enabled. If you plan and manufacture the sub-assemblies separately, you can disable this checkbox."
-msgstr "این به طور پیش‌فرض فعال است. اگر می‌خواهید مواد را برای زیر مونتاژ های آیتمی که در حال تولید آن هستید برنامه‌ریزی کنید، این گزینه را فعال کنید. اگر زیر مونتاژ ها را جداگانه برنامه ریزی و تولید می‌کنید، می‌توانید این چک باکس را غیرفعال کنید."
+msgstr "این به طور پیش‌فرض فعال است. اگر می‌خواهید مواد را برای زیر مونتاژ های آیتمی که در حال تولید آن هستید برنامه‌ریزی کنید، این گزینه را فعال کنید. اگر زیر مونتاژ ها را جداگانه برنامه‌ریزی و تولید می‌کنید، می‌توانید این چک باکس را غیرفعال کنید."
 
 #: erpnext/stock/doctype/item/item.js:983
 msgid "This is for raw material Items that'll be used to create finished goods. If the Item is an additional service like 'washing' that'll be used in the BOM, keep this unchecked."
@@ -55625,7 +55625,7 @@ msgstr "برای فعال کردن حسابداری کار سرمایه ای،"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:720
 msgid "To include non-stock items in the material request planning. i.e. Items for which 'Maintain Stock' checkbox is unticked."
-msgstr "گنجاندن آیتم‌های غیر موجودی در برنامه ریزی درخواست مواد. به عنوان مثال آیتم‌هایی که چک باکس \"نگهداری موجودی\" برای آنها علامت گذاری نشده است."
+msgstr "گنجاندن آیتم‌های غیر موجودی در برنامه‌ریزی درخواست مواد. به عنوان مثال آیتم‌هایی که چک باکس \"نگهداری موجودی\" برای آنها علامت گذاری نشده است."
 
 #. Description of the 'Set Operating Cost / Scrap Items From Sub-assemblies'
 #. (Check) field in DocType 'Manufacturing Settings'
@@ -56277,7 +56277,7 @@ msgstr "مقدار کل برداشت‌شده {0} بیشتر از مقدار س�
 #. Label of the total_planned_qty (Float) field in DocType 'Production Plan'
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
 msgid "Total Planned Qty"
-msgstr "تعداد کل برنامه ریزی شده"
+msgstr "تعداد کل برنامه‌ریزی شده"
 
 #. Label of the total_produced_qty (Float) field in DocType 'Production Plan'
 #: erpnext/manufacturing/doctype/production_plan/production_plan.json
@@ -56287,7 +56287,7 @@ msgstr "مجموع تعداد تولید شده"
 #. Label of the total_projected_qty (Float) field in DocType 'Item'
 #: erpnext/stock/doctype/item/item.json
 msgid "Total Projected Qty"
-msgstr "تعداد کل پیش بینی شده"
+msgstr "تعداد کل پیش‌بینی شده"
 
 #: erpnext/buying/report/item_wise_purchase_history/item_wise_purchase_history.py:272
 msgid "Total Purchase Amount"
@@ -57422,7 +57422,7 @@ msgstr "تحت ضمانت"
 
 #: erpnext/manufacturing/doctype/workstation/workstation.js:78
 msgid "Under Working Hours table, you can add start and end times for a Workstation. For example, a Workstation may be active from 9 am to 1 pm, then 2 pm to 5 pm. You can also specify the working hours based on shifts. While scheduling a Work Order, the system will check for the availability of the Workstation based on the working hours specified."
-msgstr "در جدول ساعات کاری، می‌توانید زمان شروع و پایان یک ایستگاه کاری را اضافه کنید. به عنوان مثال، یک ایستگاه کاری ممکن است از ساعت 9 صبح تا 1 بعد از ظهر و سپس از 2 بعد از ظهر تا 5 بعد از ظهر فعال باشد. همچنین می‌توانید ساعت کاری را بر اساس شیفت ها مشخص کنید. هنگام برنامه ریزی یک دستور کار، سیستم بر اساس ساعات کاری مشخص شده، در دسترس بودن ایستگاه کاری را بررسی می‌کند."
+msgstr "در جدول ساعات کاری، می‌توانید زمان شروع و پایان یک ایستگاه کاری را اضافه کنید. به عنوان مثال، یک ایستگاه کاری ممکن است از ساعت 9 صبح تا 1 بعد از ظهر و سپس از 2 بعد از ظهر تا 5 بعد از ظهر فعال باشد. همچنین می‌توانید ساعت کاری را بر اساس شیفت ها مشخص کنید. هنگام برنامه‌ریزی یک دستور کار، سیستم بر اساس ساعات کاری مشخص شده، در دسترس بودن ایستگاه کاری را بررسی می‌کند."
 
 #. Option for the 'Fulfilment Status' (Select) field in DocType 'Contract'
 #: erpnext/crm/doctype/contract/contract.json
@@ -57615,7 +57615,7 @@ msgstr "حل نشده"
 #. Visit'
 #: erpnext/maintenance/doctype/maintenance_visit/maintenance_visit.json
 msgid "Unscheduled"
-msgstr "برنامه ریزی نشده"
+msgstr "برنامه‌ریزی نشده"
 
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:97
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:141
@@ -61133,7 +61133,7 @@ msgstr "{0} «{1}» در سال مالی {2} نیست"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:463
 msgid "{0} ({1}) cannot be greater than planned quantity ({2}) in Work Order {3}"
-msgstr "{0} ({1}) نمی‌تواند بیشتر از مقدار برنامه ریزی شده ({2}) در دستور کار {3} باشد"
+msgstr "{0} ({1}) نمی‌تواند بیشتر از مقدار برنامه‌ریزی شده ({2}) در دستور کار {3} باشد"
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:319
 msgid "{0} <b>{1}</b> has submitted Assets. Remove Item <b>{2}</b> from table to continue."
