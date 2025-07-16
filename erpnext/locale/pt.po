@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-14 19:51+0000\n"
-"PO-Revision-Date: 2025-07-15 10:38\n"
+"PO-Revision-Date: 2025-07-16 11:31\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr ""
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary.js:70
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary_header.html:16
 msgid "% Occupied"
-msgstr ""
+msgstr "% Ocupado"
 
 #: erpnext/accounts/report/item_wise_purchase_register/item_wise_purchase_register.py:285
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:341
