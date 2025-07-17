@@ -88,9 +88,9 @@ frappe.ui.form.on("Project", {
 			);
 
 			frm.add_custom_button(
-				__("Update Total Purchase Cost"),
+				__("Recalculate Costing and Billing"),
 				() => {
-					frm.events.update_total_purchase_cost(frm);
+					frm.events.recalculate_costing_and_billing(frm);
 				},
 				__("Actions")
 			);
@@ -129,15 +129,15 @@ frappe.ui.form.on("Project", {
 		}
 	},
 
-	update_total_purchase_cost: function (frm) {
+	recalculate_costing_and_billing: function (frm) {
 		frappe.call({
-			method: "erpnext.projects.doctype.project.project.recalculate_project_total_purchase_cost",
+			method: "erpnext.projects.doctype.project.project.recalculate_costing_and_billing",
 			args: { project: frm.doc.name },
 			freeze: true,
-			freeze_message: __("Recalculating Purchase Cost against this Project..."),
+			freeze_message: __("Recalculating Costing and Billing fields against this Project..."),
 			callback: function (r) {
 				if (r && !r.exc) {
-					frappe.msgprint(__("Total Purchase Cost has been updated"));
+					frappe.msgprint(__("Costing and Billing fields has been updated"));
 					frm.refresh();
 				}
 			},
