@@ -248,6 +248,9 @@ def get_actual_data(filters, sales_users_or_territory_data, date_field, sales_fi
 		net_amount = child_doc.base_net_amount
 		sales_field_col = parent_doc[sales_field]
 
+	if filters.get("doctype") == "Sales Invoice":
+		query = query.where(~((parent_doc.is_consolidated == 0) & (parent_doc.is_created_using_pos == 1)))
+
 	query = query.select(
 		child_doc.item_group,
 		parent_doc[date_field],

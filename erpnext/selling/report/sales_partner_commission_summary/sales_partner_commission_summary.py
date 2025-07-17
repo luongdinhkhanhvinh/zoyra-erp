@@ -106,4 +106,7 @@ def get_conditions(filters, date_field):
 	if filters.get("to_date"):
 		conditions += f" and {date_field} <= %(to_date)s"
 
+	if filters.get("doctype") == "Sales Invoice":
+		conditions += " and not (is_consolidated = 1 and is_created_using_pos = 0)"
+
 	return conditions
