@@ -527,13 +527,12 @@ class BuyingController(SubcontractingController):
 					raise_error_if_no_rate=False,
 				)
 
-				d.sales_incoming_rate = flt(outgoing_rate * (d.conversion_factor or 1), d.precision("rate"))
+				d.sales_incoming_rate = flt(outgoing_rate * (d.conversion_factor or 1))
 			else:
 				field = "incoming_rate" if self.get("is_internal_supplier") else "rate"
 				d.sales_incoming_rate = flt(
 					frappe.db.get_value(ref_doctype, d.get(frappe.scrub(ref_doctype)), field)
-					* (d.conversion_factor or 1),
-					d.precision("rate"),
+					* (d.conversion_factor or 1)
 				)
 
 	def validate_for_subcontracting(self):
