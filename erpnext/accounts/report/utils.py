@@ -101,7 +101,7 @@ def convert_to_presentation_currency(gl_entries, currency_info, filters=None):
 	account_currencies = list(set(entry["account_currency"] for entry in gl_entries))
 	exchange_gain_or_loss = False
 
-	if filters:
+	if filters and isinstance(filters.get("account"), list):
 		account_filter = filters.get("account")
 		gain_loss_account = frappe.db.get_value("Company", filters.company, "exchange_gain_loss_account")
 
