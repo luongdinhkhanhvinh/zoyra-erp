@@ -137,6 +137,9 @@ def get_conditions(filters, date_field):
 	if filters.get("brand"):
 		conditions += " and dt_item.brand = %(brand)s"
 
+	if filters.get("doctype") == "Sales Invoice":
+		conditions += " and not (is_consolidated = 1 and is_created_using_pos = 0)"
+
 	if filters.get("item_group"):
 		lft, rgt = frappe.get_cached_value("Item Group", filters.get("item_group"), ["lft", "rgt"])
 

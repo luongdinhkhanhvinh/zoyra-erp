@@ -1416,6 +1416,8 @@
    "width": "50%"
   },
   {
+   "fetch_from": "sales_partner.commission_rate",
+   "fetch_if_empty": 1,
    "fieldname": "commission_rate",
    "fieldtype": "Float",
    "label": "Commission Rate (%)",
@@ -1573,7 +1575,7 @@
  "icon": "fa fa-file-text",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-24 12:13:28.242649",
+ "modified": "2025-07-17 16:51:40.886083",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "POS Invoice",
