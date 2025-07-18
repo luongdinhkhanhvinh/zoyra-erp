@@ -40,7 +40,7 @@ frappe.query_reports["Stock Balance"] = {
 			fieldtype: "MultiSelectList",
 			width: "80",
 			options: "Item",
-			get_data: function (txt) {
+			get_data: async function (txt) {
 				let item_group = frappe.query_report.get_filter_value("item_group");
 
 				let filters = {
@@ -48,7 +48,27 @@ frappe.query_reports["Stock Balance"] = {
 					is_stock_item: 1,
 				};
 
-				return frappe.db.get_link_options("Item", txt, filters);
+				let { message: data } = await frappe.call({
+					method: "erpnext.controllers.queries.item_query",
+					args: {
+						doctype: "Item",
+						txt: txt,
+						searchfield: "name",
+						start: 0,
+						page_len: 10,
+						filters: filters,
+						as_dict: 1,
+					},
+				});
+
+				data = data.map(({ name, description }) => {
+					return {
+						value: name,
+						description: description,
+					};
+				});
+
+				return data || [];
 			},
 		},
 		{
