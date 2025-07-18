@@ -749,7 +749,7 @@ def calculate_total_purchase_cost(project: str | None = None):
 
 
 @frappe.whitelist()
-def recalculate_costing_and_billing(project: str | None = None):
+def update_costing_and_billing(project: str | None = None):
 	project = frappe.get_doc("Project", project)
 	project.update_costing()
 	project.db_update()

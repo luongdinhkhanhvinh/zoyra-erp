@@ -88,9 +88,9 @@ frappe.ui.form.on("Project", {
 			);
 
 			frm.add_custom_button(
-				__("Recalculate Costing and Billing"),
+				__("Update Costing and Billing"),
 				() => {
-					frm.events.recalculate_costing_and_billing(frm);
+					frm.events.update_costing_and_billing(frm);
 				},
 				__("Actions")
 			);
@@ -129,12 +129,12 @@ frappe.ui.form.on("Project", {
 		}
 	},
 
-	recalculate_costing_and_billing: function (frm) {
+	update_costing_and_billing: function (frm) {
 		frappe.call({
-			method: "erpnext.projects.doctype.project.project.recalculate_costing_and_billing",
+			method: "erpnext.projects.doctype.project.project.update_costing_and_billing",
 			args: { project: frm.doc.name },
 			freeze: true,
-			freeze_message: __("Recalculating Costing and Billing fields against this Project..."),
+			freeze_message: __("Updating Costing and Billing fields against this Project..."),
 			callback: function (r) {
 				if (r && !r.exc) {
 					frappe.msgprint(__("Costing and Billing fields has been updated"));
