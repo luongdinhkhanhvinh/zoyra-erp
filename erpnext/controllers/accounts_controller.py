@@ -2656,7 +2656,10 @@ class AccountsController(TransactionBase):
 
 		if li:
 			duplicates = "<br>" + "<br>".join(li)
-			frappe.throw(_("Rows with duplicate due dates in other rows were found: {0}").format(duplicates))
+			frappe.throw(
+				_("Rows with duplicate due dates in other rows were found: {0}").format(duplicates),
+				title=_("Payment Schedule"),
+			)
 
 	def validate_payment_schedule_amount(self):
 		if (self.doctype == "Sales Invoice" and self.is_pos) or self.get("is_opening") == "Yes":
