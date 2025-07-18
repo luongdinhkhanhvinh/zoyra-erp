@@ -75,7 +75,7 @@ class AssetRepair(AccountsController):
 			)
 
 	def validate_dates(self):
-		if self.completion_date and (self.failure_date > self.completion_date):
+		if self.completion_date and (getdate(self.failure_date) > getdate(self.completion_date)):
 			frappe.throw(
 				_("Completion Date can not be before Failure Date. Please adjust the dates accordingly.")
 			)
