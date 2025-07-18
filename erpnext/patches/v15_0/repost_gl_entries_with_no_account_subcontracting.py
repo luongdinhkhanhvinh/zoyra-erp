@@ -13,14 +13,13 @@ def execute():
 			account, cost_center = frappe.db.get_values(
 				"Subcontracting Receipt Item", item.reference_name, ["expense_account", "cost_center"]
 			)[0]
+
 			if not item.expense_account:
 				item.db_set("expense_account", account)
 			if not item.cost_center:
 				item.db_set("cost_center", cost_center)
-			repost_doc = frappe.new_doc("Repost Item Valuation")
-			repost_doc.voucher_type = "Subcontracting Receipt"
-			repost_doc.voucher_no = doc.name
-			repost_doc.based_on = "Transaction"
-			repost_doc.company = doc.company
-			repost_doc.save()
-			repost_doc.submit()
+
+			doc.docstatus = 2
+			doc.make_gl_entries_on_cancel()
+			doc.docstatus = 1
+			doc.make_gl_entries()
