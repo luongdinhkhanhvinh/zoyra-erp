@@ -7,10 +7,6 @@ from erpnext.controllers.taxes_and_totals import get_itemised_tax
 
 
 def update_itemised_tax_data(doc):
-	# maybe this should be a standard function rather than a regional one
-	if not doc.taxes:
-		return
-
 	if not doc.items:
 		return
 
@@ -19,6 +15,14 @@ def update_itemised_tax_data(doc):
 		return
 
 	itemised_tax = get_itemised_tax(doc.taxes)
+	is_export = 0
+
+	if doc.customer_address and doc.company_address:
+		company_country = frappe.get_cached_value("Address", doc.company_address, "country")
+		customer_country = frappe.db.get_value("Address", doc.customer_address, "country")
+
+		if company_country != customer_country:
+			is_export = 1
 
 	for row in doc.items:
 		tax_rate, tax_amount = 0.0, 0.0
@@ -30,6 +34,7 @@ def update_itemised_tax_data(doc):
 				tax_amount += flt((row.net_amount * _tax_rate) / 100, row.precision("tax_amount"))
 				tax_rate += _tax_rate
 
+		row.is_zero_rated = is_export
 		row.tax_rate = flt(tax_rate, row.precision("tax_rate"))
 		row.tax_amount = flt(tax_amount, row.precision("tax_amount"))
 		row.total_amount = flt((row.net_amount + row.tax_amount), row.precision("total_amount"))
