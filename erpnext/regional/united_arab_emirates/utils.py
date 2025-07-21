@@ -15,14 +15,25 @@ def update_itemised_tax_data(doc):
 		return
 
 	itemised_tax = get_itemised_tax(doc.taxes)
-	is_export = 0
+	is_export = False
 
-	if doc.customer_address and doc.company_address:
-		company_country = frappe.get_cached_value("Address", doc.company_address, "country")
-		customer_country = frappe.db.get_value("Address", doc.customer_address, "country")
+	def determine_if_export(doc):
+		if doc.flags.export_determined is not None:
+			return doc.flags.export_determined
 
-		if company_country != customer_country:
-			is_export = 1
+		doc.flags.export_determined = False
+		if doc.customer_address and doc.company_address:
+			company_country = frappe.get_cached_value("Address", doc.company_address, "country")
+			customer_country = frappe.db.get_value("Address", doc.customer_address, "country")
+
+			if company_country != customer_country:
+				doc.flags.export_determined = True
+				return doc.flags.export_determined
+		else:
+			frappe.msgprint(
+				_("Please set Customer and Company Address to determine if the transaction is an export."),
+				alert=True,
+			)
 
 	for row in doc.items:
 		tax_rate, tax_amount = 0.0, 0.0
@@ -34,10 +45,15 @@ def update_itemised_tax_data(doc):
 				tax_amount += flt((row.net_amount * _tax_rate) / 100, row.precision("tax_amount"))
 				tax_rate += _tax_rate
 
-		row.is_zero_rated = is_export
+		if not row.is_zero_rated and not tax_rate:
+			is_export = is_export or determine_if_export(doc)
+			row.is_zero_rated = is_export
+
 		row.tax_rate = flt(tax_rate, row.precision("tax_rate"))
 		row.tax_amount = flt(tax_amount, row.precision("tax_amount"))
 		row.total_amount = flt((row.net_amount + row.tax_amount), row.precision("total_amount"))
+
+	doc.flags.export_determined = None
 
 
 def get_account_currency(account):
