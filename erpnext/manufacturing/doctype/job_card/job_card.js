@@ -23,8 +23,8 @@ frappe.ui.form.on("Job Card", {
 			};
 		});
 
-		frm.events.setCompanyFilters(frm, "source_warehouse");
-		frm.events.setCompanyFilters(frm, "wip_warehouse");
+		frm.events.set_company_filters(frm, "source_warehouse");
+		frm.events.set_company_filters(frm, "wip_warehouse");
 		frm.set_query("source_warehouse", "items", () => {
 			return {
 				filters: {
@@ -42,7 +42,7 @@ frappe.ui.form.on("Job Card", {
 		});
 	},
 
-	setCompanyFilters(frm, fieldname) {
+	set_company_filters(frm, fieldname) {
 		frm.set_query(fieldname, () => {
 			return {
 				filters: {
