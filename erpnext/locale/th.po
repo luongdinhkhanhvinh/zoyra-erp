@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-20 12:58\n"
+"PO-Revision-Date: 2025-07-22 12:55\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -141,7 +141,7 @@ msgstr "% สมบูรณ์"
 #. Label of the per_delivered (Percent) field in DocType 'Pick List'
 #: erpnext/stock/doctype/pick_list/pick_list.json
 msgid "% Delivered"
-msgstr ""
+msgstr "% จัดส่งแล้ว"
 
 #: erpnext/manufacturing/doctype/bom/bom.js:892
 #, python-format
@@ -12281,7 +12281,7 @@ msgstr ""
 
 #: erpnext/accounts/print_format/sales_invoice_print/sales_invoice_print.html:55
 msgid "Contact: "
-msgstr ""
+msgstr "ติดต่อ: "
 
 #. Label of the contact_info (Tab Break) field in DocType 'Opportunity'
 #: erpnext/crm/doctype/opportunity/opportunity.json
@@ -31079,7 +31079,7 @@ msgstr "หมายเลขมือถือ"
 
 #: erpnext/accounts/print_format/sales_invoice_print/sales_invoice_print.html:58
 msgid "Mobile: "
-msgstr ""
+msgstr "มือถือ: "
 
 #: erpnext/accounts/report/item_wise_purchase_register/item_wise_purchase_register.py:218
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:252

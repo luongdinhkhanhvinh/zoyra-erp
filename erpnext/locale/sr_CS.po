@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-20 12:58\n"
+"PO-Revision-Date: 2025-07-21 12:57\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Serbian (Latin)\n"
 "MIME-Version: 1.0\n"
@@ -11961,7 +11961,7 @@ msgstr "Razmotrite minimalnu količinu narudžbine"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:901
 msgid "Consider Process Loss"
-msgstr ""
+msgstr "Razmotrite gubitak u procesu"
 
 #. Label of the skip_available_sub_assembly_item (Check) field in DocType
 #. 'Production Plan'
@@ -13037,7 +13037,7 @@ msgstr "Obračun troškova i fakturisanje"
 
 #: erpnext/projects/doctype/project/project.js:140
 msgid "Costing and Billing fields has been updated"
-msgstr ""
+msgstr "Polja za obračun troškova i fakturisanje su ažurirana"
 
 #: erpnext/setup/demo.py:55
 msgid "Could Not Delete Demo Data"
@@ -17976,7 +17976,7 @@ msgstr "Da li želite da podnesete zahtev za nabavku"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.js:56
 msgid "Do you want to submit the stock entry?"
-msgstr ""
+msgstr "Da li želite da podnesete unos zaliha?"
 
 #. Label of the docfield_name (Data) field in DocType 'Transaction Deletion
 #. Record Details'
@@ -35612,7 +35612,7 @@ msgstr "Link stranke"
 
 #: erpnext/controllers/sales_and_purchase_return.py:50
 msgid "Party Mismatch"
-msgstr ""
+msgstr "Nepodudaranje stranke"
 
 #. Label of the party_name (Data) field in DocType 'Payment Entry'
 #. Label of the party_name (Data) field in DocType 'Payment Request'
@@ -45325,7 +45325,7 @@ msgstr "Red # {0}: Vraćena stavka {1} ne postoji u {2} {3}"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:242
 msgid "Row #1: Sequence ID must be 1 for Operation {0}."
-msgstr ""
+msgstr "Red #1: ID sekvence mora biti 1 za operaciju {0}."
 
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.py:517
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:1920
@@ -45672,7 +45672,7 @@ msgstr "Red #{0}: Prodajna cena za stavku {1} je niža od njene {2}.\n"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:248
 msgid "Row #{0}: Sequence ID must be {1} or {2} for Operation {3}."
-msgstr ""
+msgstr "Red #{0}: ID sekvence mora biti {1} ili {2} za operaciju {3}."
 
 #: erpnext/controllers/stock_controller.py:198
 msgid "Row #{0}: Serial No {1} does not belong to Batch {2}"
@@ -48385,7 +48385,7 @@ msgstr "Broj serije / šarža"
 
 #: erpnext/controllers/selling_controller.py:93
 msgid "Serial No Already Assigned"
-msgstr ""
+msgstr "Broj serije je već dodeljen"
 
 #: erpnext/stock/report/stock_qty_vs_serial_no_count/stock_qty_vs_serial_no_count.py:33
 msgid "Serial No Count"
@@ -48479,7 +48479,7 @@ msgstr "Broj serije {0} je već dodat"
 
 #: erpnext/controllers/selling_controller.py:90
 msgid "Serial No {0} is already assigned to customer {1}. Can only be returned against the customer {1}"
-msgstr ""
+msgstr "Broj serije {0} je već dodeljen kupcu {1}. Može biti vraćen samo kupcu {1}"
 
 #: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:374
 msgid "Serial No {0} is not present in the {1} {2}, hence you can't return it against the {1} {2}"
@@ -54738,7 +54738,7 @@ msgstr "{0} {1} uspešno kreiran"
 
 #: erpnext/controllers/sales_and_purchase_return.py:43
 msgid "The {0} {1} does not match with the {0} {2} in the {3} {4}"
-msgstr ""
+msgstr "{0} {1} se ne podudara sa {0} {2} u {3} {4}"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.py:874
 msgid "The {0} {1} is used to calculate the valuation cost for the finished good {2}."
@@ -57936,7 +57936,7 @@ msgstr "Ažuriraj naziv / broj troškovnog centra"
 
 #: erpnext/projects/doctype/project/project.js:91
 msgid "Update Costing and Billing"
-msgstr ""
+msgstr "Ažuriraj obračun troškova i fakturisanje"
 
 #: erpnext/stock/doctype/pick_list/pick_list.js:105
 msgid "Update Current Stock"
@@ -58049,7 +58049,7 @@ msgstr "Ažurirano putem 'Zapis vremena' (u minutima)"
 
 #: erpnext/projects/doctype/project/project.js:137
 msgid "Updating Costing and Billing fields against this Project..."
-msgstr ""
+msgstr "Ažuriranje polja za obračun troškova i fakturisanje za ovaj projekat..."
 
 #: erpnext/stock/doctype/item/item.py:1379
 msgid "Updating Variants..."
