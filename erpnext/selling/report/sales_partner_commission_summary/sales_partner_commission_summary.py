@@ -83,21 +83,19 @@ def get_columns(filters):
 
 def get_entries(filters):
 	date_field = "transaction_date" if filters.get("doctype") == "Sales Order" else "posting_date"
-
+	company_currency = frappe.db.get_value("Company", filters.get("company"), "default_currency")
 	conditions = get_conditions(filters, date_field)
 	entries = frappe.db.sql(
 		"""
 		SELECT
-			doc.name, doc.customer, doc.territory, doc.{} as posting_date, doc.base_net_total as amount,
-			doc.sales_partner, doc.commission_rate, doc.total_commission, company.default_currency as currency
+			name, customer, territory, {} as posting_date, base_net_total as amount,
+			sales_partner, commission_rate, total_commission, '{}' as currency
 		FROM
-			`tab{}` as doc
-		JOIN
-			`tabCompany` as company ON company.name = doc.company
+			`tab{}`
 		WHERE
-			{} and doc.docstatus = 1 and doc.sales_partner is not null
-			and doc.sales_partner != '' order by doc.name desc, doc.sales_partner
-		""".format(date_field, filters.get("doctype"), conditions),
+			{} and docstatus = 1 and sales_partner is not null
+			and sales_partner != '' order by name desc, sales_partner
+		""".format(date_field, company_currency, filters.get("doctype"), conditions),
 		filters,
 		as_dict=1,
 	)
@@ -110,15 +108,15 @@ def get_conditions(filters, date_field):
 
 	for field in ["company", "customer", "territory"]:
 		if filters.get(field):
-			conditions += f" and doc.{field} = %({field})s"
+			conditions += f" and {field} = %({field})s"
 
 	if filters.get("sales_partner"):
-		conditions += " and doc.sales_partner = %(sales_partner)s"
+		conditions += " and sales_partner = %(sales_partner)s"
 
 	if filters.get("from_date"):
-		conditions += f" and doc.{date_field} >= %(from_date)s"
+		conditions += f" and {date_field} >= %(from_date)s"
 
 	if filters.get("to_date"):
-		conditions += f" and doc.{date_field} <= %(to_date)s"
+		conditions += f" and {date_field} <= %(to_date)s"
 
 	return conditions
