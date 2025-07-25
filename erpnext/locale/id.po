@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-22 12:55\n"
+"PO-Revision-Date: 2025-07-25 13:19\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -899,7 +899,7 @@ msgstr ""
 
 #: erpnext/crm/doctype/lead/lead.py:142
 msgid "A Lead requires either a person's name or an organization's name"
-msgstr "Pimpinan membutuhkan nama seseorang atau nama organisasi"
+msgstr ""
 
 #: erpnext/stock/doctype/packing_slip/packing_slip.py:84
 msgid "A Packing Slip can only be created for Draft Delivery Note."
@@ -17356,7 +17356,7 @@ msgstr "Dicairkan"
 #. Profile'
 #: erpnext/accounts/doctype/pos_profile/pos_profile.json
 msgid "Discard Changes and Load New Invoice"
-msgstr ""
+msgstr "Abaikan Perubahan dan Muat Faktur Baru"
 
 #. Label of the discount (Float) field in DocType 'Payment Schedule'
 #. Label of the discount (Float) field in DocType 'Payment Term'
