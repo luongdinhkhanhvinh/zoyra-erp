@@ -732,7 +732,9 @@ def update_reference_in_payment_entry(
 
 	# Update Reconciliation effect date in reference
 	if payment_entry.book_advance_payments_in_separate_party_account:
-		reconcile_on = get_reconciliation_effect_date(d, payment_entry.company, payment_entry.posting_date)
+		reconcile_on = get_reconciliation_effect_date(
+			d.against_voucher_type, d.against_voucher, payment_entry.company, payment_entry.posting_date
+		)
 		reference_details.update({"reconcile_effect_on": reconcile_on})
 
 	if d.voucher_detail_no:
@@ -787,20 +789,21 @@ def update_reference_in_payment_entry(
 	return row, update_advance_paid
 
 
-def get_reconciliation_effect_date(reference, company, posting_date):
+def get_reconciliation_effect_date(against_voucher_type, against_voucher, company, posting_date):
 	reconciliation_takes_effect_on = frappe.get_cached_value(
 		"Company", company, "reconciliation_takes_effect_on"
 	)
+
+	# default
+	reconcile_on = posting_date
 
 	if reconciliation_takes_effect_on == "Advance Payment Date":
 		reconcile_on = posting_date
 	elif reconciliation_takes_effect_on == "Oldest Of Invoice Or Advance":
 		date_field = "posting_date"
-		if reference.against_voucher_type in ["Sales Order", "Purchase Order"]:
+		if against_voucher_type in ["Sales Order", "Purchase Order"]:
 			date_field = "transaction_date"
-		reconcile_on = frappe.db.get_value(
-			reference.against_voucher_type, reference.against_voucher, date_field
-		)
+		reconcile_on = frappe.db.get_value(against_voucher_type, against_voucher, date_field)
 		if getdate(reconcile_on) < getdate(posting_date):
 			reconcile_on = posting_date
 	elif reconciliation_takes_effect_on == "Reconciliation Date":
