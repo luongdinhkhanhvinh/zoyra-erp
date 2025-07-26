@@ -5659,7 +5659,7 @@ msgstr "Áp dụng cho người dùng"
 #. Description of the 'Transporter' (Link) field in DocType 'Driver'
 #: erpnext/setup/doctype/driver/driver.json
 msgid "Applicable for external driver"
-msgstr "Áp dụng cho người lái xe bên ngoài"
+msgstr "Áp dụng cho người nghỉ xe bên ngoài"
 
 #: erpnext/regional/italy/setup.py:162
 msgid "Applicable if the company is SpA, SApA or SRL"
@@ -6809,7 +6809,7 @@ msgstr "Đính kèm"
 #. 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
 msgid "Attendance & Leaves"
-msgstr "Tham dự & Lá"
+msgstr "Tham dự & Nghỉ"
 
 #. Label of the attendance_device_id (Data) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -19171,25 +19171,25 @@ msgstr "Email tài xế"
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/stock/doctype/delivery_trip/delivery_trip.json
 msgid "Driver Name"
-msgstr "Tên người lái"
+msgstr "Tên người nghỉi"
 
 #. Label of the class (Data) field in DocType 'Driving License Category'
 #: erpnext/setup/doctype/driving_license_category/driving_license_category.json
 msgid "Driver licence class"
-msgstr "Lớp giấy phép lái xe"
+msgstr "Lớp giấy phép nghỉi xe"
 
 #. Label of the driving_license_categories (Section Break) field in DocType
 #. 'Driver'
 #: erpnext/setup/doctype/driver/driver.json
 msgid "Driving License Categories"
-msgstr "Lái xe loại giấy phép"
+msgstr "Nghỉi xe loại giấy phép"
 
 #. Label of the driving_license_category (Table) field in DocType 'Driver'
 #. Name of a DocType
 #: erpnext/setup/doctype/driver/driver.json
 #: erpnext/setup/doctype/driving_license_category/driving_license_category.json
 msgid "Driving License Category"
-msgstr "Thể loại giấy phép lái xe"
+msgstr "Thể loại giấy phép nghỉi xe"
 
 #. Label of the drop_ar_procedures (Button) field in DocType 'Accounts
 #. Settings'
@@ -22134,7 +22134,7 @@ msgstr "Các trường sau là bắt buộc để tạo địa chỉ:"
 
 #: erpnext/setup/setup_wizard/data/industry_type.txt:25
 msgid "Food, Beverage & Tobacco"
-msgstr "Thực phẩm, Đồ uống & Thuốc lá"
+msgstr "Thực phẩm, Đồ uống & Thuốc nghỉ"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -23863,7 +23863,7 @@ msgstr "Lớn hơn số tiền"
 #: erpnext/buying/doctype/supplier_scorecard_standing/supplier_scorecard_standing.json
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:266
 msgid "Green"
-msgstr "Màu xanh lá"
+msgstr "Màu xanh nghỉ"
 
 #. Label of the greeting_message (Data) field in DocType 'Incoming Call
 #. Settings'
@@ -35068,7 +35068,7 @@ msgstr "Chỉ có tài sản hiện có"
 #: erpnext/setup/doctype/customer_group/customer_group.json
 #: erpnext/setup/doctype/item_group/item_group.json
 msgid "Only leaf nodes are allowed in transaction"
-msgstr "Chỉ được phép các nút lá được phép trong giao dịch"
+msgstr "Chỉ được phép các nút nghỉ được phép trong giao dịch"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:996
 msgid "Only one {0} entry can be created against the Work Order {1}"
