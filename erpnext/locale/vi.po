@@ -23302,7 +23302,7 @@ msgstr ""
 #. Name of a Workspace
 #: erpnext/setup/workspace/home/home.json
 msgid "Home"
-msgstr ""
+msgstr "Trang chủ"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -40421,7 +40421,7 @@ msgstr ""
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:304
 msgid "Purchase Invoice"
-msgstr ""
+msgstr "Hoá đơn mua hàng"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/purchase_invoice_advance/purchase_invoice_advance.json
