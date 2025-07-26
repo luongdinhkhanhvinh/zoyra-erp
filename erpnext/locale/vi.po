@@ -25,10 +25,10 @@ msgstr ""
 
 #: erpnext/selling/doctype/quotation/quotation.js:73
 msgid " Address"
-msgstr ""
+msgstr " Địa chỉ"
 
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:672
-msgid " Amount"
+msgid " Số lượng"
 msgstr ""
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:114
@@ -38,62 +38,62 @@ msgstr ""
 #. Label of the istable (Check) field in DocType 'Inventory Dimension'
 #: erpnext/stock/doctype/inventory_dimension/inventory_dimension.json
 msgid " Is Child Table"
-msgstr ""
+msgstr " Là bàn trẻ"
 
 #. Label of the is_subcontracted (Check) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid " Is Subcontracted"
-msgstr ""
+msgstr " Được ký hợp đồng phụ"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:174
 msgid " Item"
-msgstr ""
+msgstr " Mục"
 
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:147
 #: erpnext/accounts/report/tax_withholding_details/tax_withholding_details.py:186
 #: erpnext/accounts/report/tds_computation_summary/tds_computation_summary.py:107
 #: erpnext/selling/report/sales_analytics/sales_analytics.py:128
 msgid " Name"
-msgstr ""
+msgstr " Tên"
 
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:663
 msgid " Rate"
-msgstr ""
+msgstr " Tỷ lệ"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:122
 msgid " Raw Material"
-msgstr ""
+msgstr " Nguyên liệu thô"
 
 #. Label of the reserve_stock (Check) field in DocType 'Work Order'
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 msgid " Reserve Stock"
-msgstr ""
+msgstr " Cổ phiếu dự trữ"
 
 #. Label of the skip_material_transfer (Check) field in DocType 'BOM Operation'
 #: erpnext/manufacturing/doctype/bom_operation/bom_operation.json
 msgid " Skip Material Transfer"
-msgstr ""
+msgstr " Bỏ qua chuyển vật liệu"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:133
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:163
 msgid " Sub Assembly"
-msgstr ""
+msgstr " Hội đồng phụ"
 
 #: erpnext/projects/doctype/project_update/project_update.py:104
 msgid " Summary"
-msgstr ""
+msgstr " Bản tóm tắt"
 
 #: erpnext/stock/doctype/item/item.py:238
 msgid "\"Customer Provided Item\" cannot be Purchase Item also"
-msgstr ""
+msgstr "\"Khách hàng cung cấp mặt hàng\" Không thể mua hàng"
 
 #: erpnext/stock/doctype/item/item.py:240
 msgid "\"Customer Provided Item\" cannot have Valuation Rate"
-msgstr ""
+msgstr "\"Khách hàng cung cấp mặt hàng\" không thể có tỷ lệ định giá"
 
 #: erpnext/stock/doctype/item/item.py:316
 msgid "\"Is Fixed Asset\" cannot be unchecked, as Asset record exists against the item"
-msgstr ""
+msgstr "\"Là tài sản cố định\" không thể được chọn, vì bản ghi tài sản tồn tại đối với mục"
 
 #: erpnext/public/js/utils/serial_no_batch_selector.js:262
 msgid "\"SN-01::10\" for \"SN-01\" to \"SN-10\""
@@ -101,16 +101,16 @@ msgstr ""
 
 #: erpnext/manufacturing/report/work_order_stock_report/work_order_stock_report.py:148
 msgid "# In Stock"
-msgstr ""
+msgstr "# Trong kho"
 
 #: erpnext/manufacturing/report/work_order_stock_report/work_order_stock_report.py:141
 msgid "# Req'd Items"
-msgstr ""
+msgstr "# Các mặt hàng req'd"
 
 #. Label of the per_delivered (Percent) field in DocType 'Sales Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
 msgid "%  Delivered"
-msgstr ""
+msgstr "%  Đã giao hàng"
 
 #. Label of the per_billed (Percent) field in DocType 'Timesheet'
 #. Label of the per_billed (Percent) field in DocType 'Sales Order'
@@ -121,22 +121,22 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 msgid "% Amount Billed"
-msgstr ""
+msgstr "% Số tiền được lập hóa đơn"
 
 #. Label of the per_billed (Percent) field in DocType 'Purchase Order'
 #: erpnext/buying/doctype/purchase_order/purchase_order.json
 msgid "% Billed"
-msgstr ""
+msgstr "% Hóa đơn"
 
 #. Label of the percent_complete_method (Select) field in DocType 'Project'
 #: erpnext/projects/doctype/project/project.json
 msgid "% Complete Method"
-msgstr ""
+msgstr "% Phương pháp hoàn chỉnh"
 
 #. Label of the percent_complete (Percent) field in DocType 'Project'
 #: erpnext/projects/doctype/project/project.json
 msgid "% Completed"
-msgstr ""
+msgstr "% Hoàn thành"
 
 #. Label of the per_delivered (Percent) field in DocType 'Pick List'
 #: erpnext/stock/doctype/pick_list/pick_list.json
@@ -146,32 +146,32 @@ msgstr "% Đã giao"
 #: erpnext/manufacturing/doctype/bom/bom.js:892
 #, python-format
 msgid "% Finished Item Quantity"
-msgstr ""
+msgstr "% Hoàn thành số lượng vật phẩm"
 
 #. Label of the per_installed (Percent) field in DocType 'Delivery Note'
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 msgid "% Installed"
-msgstr ""
+msgstr "% Đã cài đặt"
 
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary.js:70
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary_header.html:16
 msgid "% Occupied"
-msgstr ""
+msgstr "% Chiếm lĩnh"
 
 #: erpnext/accounts/report/item_wise_purchase_register/item_wise_purchase_register.py:285
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:341
 msgid "% Of Grand Total"
-msgstr ""
+msgstr "% Của tổng số lớn"
 
 #. Label of the per_ordered (Percent) field in DocType 'Material Request'
 #: erpnext/stock/doctype/material_request/material_request.json
 msgid "% Ordered"
-msgstr ""
+msgstr "% Đặt hàng"
 
 #. Label of the per_picked (Percent) field in DocType 'Sales Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
 msgid "% Picked"
-msgstr ""
+msgstr "% Chọn"
 
 #. Label of the process_loss_percentage (Percent) field in DocType 'BOM'
 #. Label of the process_loss_percentage (Percent) field in DocType 'Stock
@@ -179,12 +179,12 @@ msgstr ""
 #: erpnext/manufacturing/doctype/bom/bom.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 msgid "% Process Loss"
-msgstr ""
+msgstr "% Mất quá trình"
 
 #. Label of the progress (Percent) field in DocType 'Task'
 #: erpnext/projects/doctype/task/task.json
 msgid "% Progress"
-msgstr ""
+msgstr "% Tiến triển"
 
 #. Label of the per_received (Percent) field in DocType 'Purchase Order'
 #. Label of the per_received (Percent) field in DocType 'Material Request'
@@ -193,7 +193,7 @@ msgstr ""
 #: erpnext/stock/doctype/material_request/material_request.json
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 msgid "% Received"
-msgstr ""
+msgstr "% Đã nhận"
 
 #. Label of the per_returned (Percent) field in DocType 'Delivery Note'
 #. Label of the per_returned (Percent) field in DocType 'Purchase Receipt'
@@ -203,26 +203,26 @@ msgstr ""
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "% Returned"
-msgstr ""
+msgstr "% Trả lại"
 
 #. Description of the '% Amount Billed' (Percent) field in DocType 'Sales
 #. Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
 #, python-format
 msgid "% of materials billed against this Sales Order"
-msgstr ""
+msgstr "% vật liệu được lập hóa đơn theo đơn đặt hàng bán hàng này"
 
 #. Description of the '% Delivered' (Percent) field in DocType 'Pick List'
 #: erpnext/stock/doctype/pick_list/pick_list.json
 #, python-format
 msgid "% of materials delivered against this Pick List"
-msgstr ""
+msgstr "% vật liệu được phân phối so với danh sách lựa chọn này"
 
 #. Description of the '%  Delivered' (Percent) field in DocType 'Sales Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
 #, python-format
 msgid "% of materials delivered against this Sales Order"
-msgstr ""
+msgstr "% vật liệu được cung cấp chống lại đơn đặt hàng bán hàng này"
 
 #: erpnext/controllers/accounts_controller.py:2317
 msgid "'Account' in the Accounting section of Customer {0}"
@@ -230,81 +230,81 @@ msgstr ""
 
 #: erpnext/selling/doctype/sales_order/sales_order.py:299
 msgid "'Allow Multiple Sales Orders Against a Customer's Purchase Order'"
-msgstr ""
+msgstr "'Cho phép nhiều đơn đặt hàng so với đơn đặt hàng của khách hàng'"
 
 #: erpnext/controllers/trends.py:56
 msgid "'Based On' and 'Group By' can not be same"
-msgstr ""
+msgstr "'Dựa trên' và 'Nhóm bởi' không thể giống nhau"
 
 #: erpnext/selling/report/inactive_customers/inactive_customers.py:18
 msgid "'Days Since Last Order' must be greater than or equal to zero"
-msgstr ""
+msgstr "'Ngày kể từ lần đặt hàng cuối cùng' phải lớn hơn hoặc bằng 0"
 
 #: erpnext/controllers/accounts_controller.py:2322
 msgid "'Default {0} Account' in Company {1}"
-msgstr ""
+msgstr "'Mặc định {0} tài khoản' trong công ty {1}"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1273
 msgid "'Entries' cannot be empty"
-msgstr ""
+msgstr "'Mục nhập' không thể trống"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:24
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:127
 #: erpnext/stock/report/stock_analytics/stock_analytics.py:313
 msgid "'From Date' is required"
-msgstr ""
+msgstr "'Từ ngày' được yêu cầu"
 
 #: erpnext/stock/report/itemwise_recommended_reorder_level/itemwise_recommended_reorder_level.py:18
 msgid "'From Date' must be after 'To Date'"
-msgstr ""
+msgstr "'Từ ngày' phải sau 'đến ngày'"
 
 #: erpnext/stock/doctype/item/item.py:399
 msgid "'Has Serial No' can not be 'Yes' for non-stock item"
-msgstr ""
+msgstr "'Có sê -ri không' không thể là 'có' cho mặt hàng không chứng minh"
 
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.py:139
 msgid "'Inspection Required before Delivery' has disabled for the item {0}, no need to create the QI"
-msgstr ""
+msgstr "'Yêu cầu kiểm tra trước khi giao hàng' đã vô hiệu hóa cho mục {0}, không cần tạo QI"
 
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.py:130
 msgid "'Inspection Required before Purchase' has disabled for the item {0}, no need to create the QI"
-msgstr ""
+msgstr "'Yêu cầu kiểm tra trước khi mua' đã vô hiệu hóa cho mặt hàng {0}, không cần tạo QI"
 
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:584
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:617
 msgid "'Opening'"
-msgstr ""
+msgstr "'Mở'"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:27
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:129
 #: erpnext/stock/report/stock_analytics/stock_analytics.py:319
 msgid "'To Date' is required"
-msgstr ""
+msgstr "'Đến nay' là bắt buộc"
 
 #: erpnext/stock/doctype/packing_slip/packing_slip.py:95
 msgid "'To Package No.' cannot be less than 'From Package No.'"
-msgstr ""
+msgstr "'Đến số gói. 'không thể nhỏ hơn 'Từ số gói.'"
 
 #: erpnext/controllers/sales_and_purchase_return.py:81
 msgid "'Update Stock' can not be checked because items are not delivered via {0}"
-msgstr ""
+msgstr "Không thể kiểm tra 'Cập nhật cổ phiếu' vì các mục không được phân phối qua {0}"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:381
 msgid "'Update Stock' cannot be checked for fixed asset sale"
-msgstr ""
+msgstr "'Cập nhật cổ phiếu' không thể được kiểm tra để bán tài sản cố định"
 
 #: erpnext/accounts/doctype/bank_account/bank_account.py:65
 msgid "'{0}' account is already used by {1}. Use another account."
-msgstr ""
+msgstr "'{0}' Tài khoản đã được sử dụng bởi {1}.Sử dụng tài khoản khác."
 
 #: erpnext/accounts/doctype/pos_settings/pos_settings.py:43
 msgid "'{0}' has been already added."
-msgstr ""
+msgstr "'{0}' đã được thêm vào."
 
 #: erpnext/setup/doctype/company/company.py:208
 #: erpnext/setup/doctype/company/company.py:219
 msgid "'{0}' should be in company currency {1}."
-msgstr ""
+msgstr "'{0}' nên có tiền tệ của công ty {1}."
 
 #: erpnext/stock/report/fifo_queue_vs_qty_after_transaction_comparison/fifo_queue_vs_qty_after_transaction_comparison.py:174
 #: erpnext/stock/report/stock_ledger_invariant_check/stock_ledger_invariant_check.py:203
@@ -771,7 +771,7 @@ msgstr ""
 #: erpnext/assets/workspace/assets/assets.json
 #: erpnext/quality_management/workspace/quality/quality.json
 msgid "<span class=\"h4\"><b>Reports & Masters</b></span>"
-msgstr ""
+msgstr "<span class=\"h4\"><b>Báo cáo & Dữ liệu gốc</b></span>"
 
 #. Header text in the Accounting Workspace
 #. Header text in the Payables Workspace
@@ -794,12 +794,12 @@ msgstr ""
 #: erpnext/setup/workspace/home/home.json
 #: erpnext/support/workspace/support/support.json
 msgid "<span class=\"h4\"><b>Reports &amp; Masters</b></span>"
-msgstr ""
+msgstr "<span class=\"h4\"><b>Báo cáo &amp; Dữ liệu gốc</b></span>"
 
 #. Header text in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
 msgid "<span class=\"h4\"><b>Settings</b></span>"
-msgstr ""
+msgstr "<span class=\"h4\"><b>Cài đặt</b></span>"
 
 #. Header text in the Accounting Workspace
 #. Header text in the Payables Workspace
@@ -808,7 +808,7 @@ msgstr ""
 #: erpnext/accounts/workspace/payables/payables.json
 #: erpnext/accounts/workspace/receivables/receivables.json
 msgid "<span class=\"h4\"><b>Shortcuts</b></span>"
-msgstr ""
+msgstr "<span class=\"h4\"><b>Phím tắt</b></span>"
 
 #. Header text in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
@@ -819,7 +819,13 @@ msgid "<span class=\"h4\"><b>Your Shortcuts\n"
 "\t\t\n"
 "\t\t\t\n"
 "\t\t</b></span>"
-msgstr ""
+msgstr "<span class=\"h4\"><b>Phím tắt của bạn\n"
+"\t\t\t\n"
+"\t\t\n"
+"\t\t\t\n"
+"\t\t\n"
+"\t\t\t\n"
+"\t\t</b></span>"
 
 #. Header text in the Assets Workspace
 #. Header text in the Buying Workspace
@@ -1226,17 +1232,17 @@ msgstr ""
 #: erpnext/stock/report/incorrect_stock_value_report/incorrect_stock_value_report.js:15
 #: erpnext/stock/report/stock_and_account_value_comparison/stock_and_account_value_comparison.js:15
 msgid "Account"
-msgstr ""
+msgstr "Tài khoản"
 
 #. Name of a report
 #: erpnext/accounts/report/account_balance/account_balance.json
 msgid "Account Balance"
-msgstr ""
+msgstr "Số dư tài khoản"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/account_closing_balance/account_closing_balance.json
 msgid "Account Closing Balance"
-msgstr ""
+msgstr "Số dư cuối tài khoản"
 
 #. Label of the account_currency (Link) field in DocType 'Account Closing
 #. Balance'
@@ -1269,19 +1275,19 @@ msgstr ""
 #: erpnext/accounts/doctype/unreconcile_payment_entries/unreconcile_payment_entries.json
 #: erpnext/stock/doctype/landed_cost_taxes_and_charges/landed_cost_taxes_and_charges.json
 msgid "Account Currency"
-msgstr ""
+msgstr "Tiền tệ tài khoản"
 
 #. Label of the paid_from_account_currency (Link) field in DocType 'Payment
 #. Entry'
 #: erpnext/accounts/doctype/payment_entry/payment_entry.json
 msgid "Account Currency (From)"
-msgstr ""
+msgstr "Tài khoản người gửi"
 
 #. Label of the paid_to_account_currency (Link) field in DocType 'Payment
 #. Entry'
 #: erpnext/accounts/doctype/payment_entry/payment_entry.json
 msgid "Account Currency (To)"
-msgstr ""
+msgstr "Tài khoản người nhận"
 
 #. Label of the account_details_section (Section Break) field in DocType 'Bank
 #. Account'
@@ -1293,7 +1299,7 @@ msgstr ""
 #: erpnext/accounts/doctype/gl_entry/gl_entry.json
 #: erpnext/accounts/doctype/tax_withholding_category/tax_withholding_category.json
 msgid "Account Details"
-msgstr ""
+msgstr "Chi tiết tài khoản"
 
 #. Label of the account_head (Link) field in DocType 'Advance Tax'
 #. Label of the account_head (Link) field in DocType 'Advance Taxes and
@@ -1308,7 +1314,7 @@ msgstr ""
 #: erpnext/accounts/doctype/purchase_taxes_and_charges/purchase_taxes_and_charges.json
 #: erpnext/accounts/doctype/sales_taxes_and_charges/sales_taxes_and_charges.json
 msgid "Account Head"
-msgstr ""
+msgstr "Kế toán trưởng"
 
 #. Label of the account_manager (Link) field in DocType 'Customer'
 #: erpnext/selling/doctype/customer/customer.json
@@ -1318,7 +1324,7 @@ msgstr ""
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:951
 #: erpnext/controllers/accounts_controller.py:2326
 msgid "Account Missing"
-msgstr ""
+msgstr "Không tìm thấy thông tin tài khoản"
 
 #. Label of the account_name (Data) field in DocType 'Account'
 #. Label of the account_name (Data) field in DocType 'Bank Account'
@@ -1331,11 +1337,11 @@ msgstr ""
 #: erpnext/accounts/report/financial_statements.py:660
 #: erpnext/accounts/report/trial_balance/trial_balance.py:443
 msgid "Account Name"
-msgstr ""
+msgstr "Tên tài khoản"
 
 #: erpnext/accounts/doctype/account/account.py:336
 msgid "Account Not Found"
-msgstr ""
+msgstr "Tài khoản không tìm thấy"
 
 #. Label of the account_number (Data) field in DocType 'Account'
 #: erpnext/accounts/doctype/account/account.json
@@ -1343,38 +1349,38 @@ msgstr ""
 #: erpnext/accounts/report/financial_statements.py:667
 #: erpnext/accounts/report/trial_balance/trial_balance.py:450
 msgid "Account Number"
-msgstr ""
+msgstr "Số tài khoản"
 
 #: erpnext/accounts/doctype/account/account.py:322
 msgid "Account Number {0} already used in account {1}"
-msgstr ""
+msgstr "Số tài khoản {0} đã được sử dụng trong tài khoản {1}"
 
 #. Label of the account_opening_balance (Currency) field in DocType 'Bank
 #. Reconciliation Tool'
 #: erpnext/accounts/doctype/bank_reconciliation_tool/bank_reconciliation_tool.json
 msgid "Account Opening Balance"
-msgstr ""
+msgstr "Số dư mở tài khoản"
 
 #. Label of the paid_from (Link) field in DocType 'Payment Entry'
 #: erpnext/accounts/doctype/payment_entry/payment_entry.json
 msgid "Account Paid From"
-msgstr ""
+msgstr "Tài khoản được thanh toán từ"
 
 #. Label of the paid_to (Link) field in DocType 'Payment Entry'
 #: erpnext/accounts/doctype/payment_entry/payment_entry.json
 msgid "Account Paid To"
-msgstr ""
+msgstr "Tài khoản được thanh toán cho"
 
 #: erpnext/accounts/doctype/cheque_print_template/cheque_print_template.py:118
 msgid "Account Pay Only"
-msgstr ""
+msgstr "Chỉ thanh toán tài khoản"
 
 #. Label of the account_subtype (Link) field in DocType 'Bank Account'
 #. Label of the account_subtype (Data) field in DocType 'Bank Account Subtype'
 #: erpnext/accounts/doctype/bank_account/bank_account.json
 #: erpnext/accounts/doctype/bank_account_subtype/bank_account_subtype.json
 msgid "Account Subtype"
-msgstr ""
+msgstr "Loại tài khoản phụ"
 
 #. Label of the account_type (Select) field in DocType 'Account'
 #. Label of the account_type (Link) field in DocType 'Bank Account'
@@ -1394,19 +1400,19 @@ msgstr ""
 #: erpnext/accounts/report/account_balance/account_balance.js:34
 #: erpnext/setup/doctype/party_type/party_type.json
 msgid "Account Type"
-msgstr ""
+msgstr "Loại tài khoản"
 
 #: erpnext/stock/report/stock_and_account_value_comparison/stock_and_account_value_comparison.py:124
 msgid "Account Value"
-msgstr ""
+msgstr "Giá trị tài khoản"
 
 #: erpnext/accounts/doctype/account/account.py:293
 msgid "Account balance already in Credit, you are not allowed to set 'Balance Must Be' as 'Debit'"
-msgstr ""
+msgstr "Số dư tài khoản đã ở chế độ Có, bạn không được phép đặt 'Số dư phải là' thành 'Ghi nợ'"
 
 #: erpnext/accounts/doctype/account/account.py:287
 msgid "Account balance already in Debit, you are not allowed to set 'Balance Must Be' as 'Credit'"
-msgstr ""
+msgstr "Số dư tài khoản đã ở chế độ Ghi nợ, bạn không được phép đặt 'Số dư phải là' thành 'Credit'"
 
 #. Label of the account_for_change_amount (Link) field in DocType 'POS Invoice'
 #. Label of the account_for_change_amount (Link) field in DocType 'POS Profile'
