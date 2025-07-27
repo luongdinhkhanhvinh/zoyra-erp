@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-22 12:55\n"
+"PO-Revision-Date: 2025-07-27 13:24\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -1931,13 +1931,13 @@ msgstr "ثبت‌های حسابداری تا این تاریخ مسدود شد�
 #: erpnext/setup/doctype/incoterm/incoterm.json
 #: erpnext/setup/doctype/supplier_group/supplier_group.json
 msgid "Accounts"
-msgstr "حساب ها"
+msgstr "حساب‌ها"
 
 #. Label of the closing_settings_tab (Tab Break) field in DocType 'Accounts
 #. Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Accounts Closing"
-msgstr "بسته شدن حساب ها"
+msgstr "بسته شدن حساب‌ها"
 
 #. Label of the acc_frozen_upto (Date) field in DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
@@ -2031,7 +2031,7 @@ msgstr "مدیر حسابداری"
 
 #: erpnext/accounts/report/tax_withholding_details/tax_withholding_details.py:342
 msgid "Accounts Missing Error"
-msgstr "خطای گم شدن حساب ها"
+msgstr "خطای گم شدن حساب‌ها"
 
 #. Option for the 'Write Off Based On' (Select) field in DocType 'Journal
 #. Entry'
@@ -2046,7 +2046,7 @@ msgstr "خطای گم شدن حساب ها"
 #: erpnext/accounts/workspace/payables/payables.json
 #: erpnext/buying/doctype/supplier/supplier.js:97
 msgid "Accounts Payable"
-msgstr "حساب های پرداختنی"
+msgstr "حساب‌های پرداختنی"
 
 #. Name of a report
 #. Label of a Link in the Payables Workspace
@@ -2074,7 +2074,7 @@ msgstr "خلاصه حسابهای پرداختنی"
 #: erpnext/accounts/workspace/receivables/receivables.json
 #: erpnext/selling/doctype/customer/customer.js:158
 msgid "Accounts Receivable"
-msgstr "حساب های دریافتنی"
+msgstr "حساب‌های دریافتنی"
 
 #. Label of the accounts_receivable_payable_tuning_section (Section Break)
 #. field in DocType 'Accounts Settings'
@@ -2086,13 +2086,13 @@ msgstr ""
 #. Discounting'
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.json
 msgid "Accounts Receivable Credit Account"
-msgstr "حساب های دریافتنی حساب بستانکار"
+msgstr "حساب‌های دریافتنی حساب بستانکار"
 
 #. Label of the accounts_receivable_discounted (Link) field in DocType 'Invoice
 #. Discounting'
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.json
 msgid "Accounts Receivable Discounted Account"
-msgstr "حساب های دریافتنی حساب تخفیف خورده"
+msgstr "حساب‌های دریافتنی حساب تخفیف خورده"
 
 #. Name of a report
 #. Label of a Link in the Receivables Workspace
@@ -2100,19 +2100,19 @@ msgstr "حساب های دریافتنی حساب تخفیف خورده"
 #: erpnext/accounts/report/accounts_receivable_summary/accounts_receivable_summary.json
 #: erpnext/accounts/workspace/receivables/receivables.json
 msgid "Accounts Receivable Summary"
-msgstr "خلاصه حساب های دریافتنی"
+msgstr "خلاصه حساب‌های دریافتنی"
 
 #. Label of the accounts_receivable_unpaid (Link) field in DocType 'Invoice
 #. Discounting'
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.json
 msgid "Accounts Receivable Unpaid Account"
-msgstr "حساب های دریافتنی حساب پرداخت نشده"
+msgstr "حساب‌های دریافتنی حساب پرداخت نشده"
 
 #. Label of the receivable_payable_remarks_length (Int) field in DocType
 #. 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Accounts Receivable/Payable"
-msgstr "حساب های دریافتنی / پرداختنی"
+msgstr "حساب‌های دریافتنی / پرداختنی"
 
 #. Name of a DocType
 #. Label of a Link in the Accounting Workspace
@@ -2122,7 +2122,7 @@ msgstr "حساب های دریافتنی / پرداختنی"
 #: erpnext/accounts/workspace/accounting/accounting.json
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Accounts Settings"
-msgstr "تنظیمات حساب ها"
+msgstr "تنظیمات حساب‌ها"
 
 #. Name of a role
 #: erpnext/accounts/doctype/account/account.json
@@ -2218,12 +2218,12 @@ msgstr "کاربر حسابداری"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1372
 msgid "Accounts table cannot be blank."
-msgstr "جدول حساب ها نمی‌تواند خالی باشد."
+msgstr "جدول حساب‌ها نمی‌تواند خالی باشد."
 
 #. Label of the merge_accounts (Table) field in DocType 'Ledger Merge'
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.json
 msgid "Accounts to Merge"
-msgstr "حساب ها برای ادغام"
+msgstr "حساب‌ها برای ادغام"
 
 #. Option for the 'Account Type' (Select) field in DocType 'Account'
 #: erpnext/accounts/doctype/account/account.json
@@ -3828,7 +3828,7 @@ msgstr "همه"
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.py:166
 #: erpnext/accounts/utils.py:1446 erpnext/public/js/setup_wizard.js:184
 msgid "All Accounts"
-msgstr "همه حساب ها"
+msgstr "همه حساب‌ها"
 
 #. Label of the all_activities_section (Section Break) field in DocType 'Lead'
 #. Label of the all_activities_section (Section Break) field in DocType
@@ -7468,7 +7468,7 @@ msgstr ""
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:13
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:16
 msgid "Bank Accounts"
-msgstr "حساب های بانکی"
+msgstr "حساب‌های بانکی"
 
 #. Label of the bank_balance (Check) field in DocType 'Email Digest'
 #: erpnext/setup/doctype/email_digest/email_digest.json
@@ -7630,7 +7630,7 @@ msgstr "حساب بانکی {0} از قبل وجود دارد و نمی‌توا
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.js:158
 msgid "Bank accounts added"
-msgstr "حساب های بانکی اضافه شد"
+msgstr "حساب‌های بانکی اضافه شد"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.py:311
 msgid "Bank transaction creation error"
@@ -8766,7 +8766,7 @@ msgstr "حساب بودجه"
 #. Label of the accounts (Table) field in DocType 'Budget'
 #: erpnext/accounts/doctype/budget/budget.json
 msgid "Budget Accounts"
-msgstr "حساب های بودجه"
+msgstr "حساب‌های بودجه"
 
 #. Label of the budget_against (Select) field in DocType 'Budget'
 #: erpnext/accounts/doctype/budget/budget.json
@@ -9607,7 +9607,7 @@ msgstr "نمی‌توان لیست انتخاب برای سفارش فروش {0}
 
 #: erpnext/accounts/general_ledger.py:148
 msgid "Cannot create accounting entries against disabled accounts: {0}"
-msgstr "نمی‌توان ثبت‌های حسابداری را در برابر حساب های غیرفعال ایجاد کرد: {0}"
+msgstr "نمی‌توان ثبت‌های حسابداری را در برابر حساب‌های غیرفعال ایجاد کرد: {0}"
 
 #: erpnext/controllers/sales_and_purchase_return.py:370
 msgid "Cannot create return for consolidated invoice {0}."
@@ -10003,7 +10003,7 @@ msgstr "احتیاط"
 
 #: erpnext/stock/doctype/repost_item_valuation/repost_item_valuation.py:148
 msgid "Caution: This might alter frozen accounts."
-msgstr "احتیاط: این ممکن است حساب های مسدود شده را تغییر دهد."
+msgstr "احتیاط: این ممکن است حساب‌های مسدود شده را تغییر دهد."
 
 #. Label of the cell_number (Data) field in DocType 'Driver'
 #: erpnext/setup/doctype/driver/driver.json
@@ -14487,7 +14487,7 @@ msgstr "محدودیت اعتبار مشتری"
 #. 'Selling Settings'
 #: erpnext/selling/doctype/selling_settings/selling_settings.json
 msgid "Customer Defaults"
-msgstr "پیش‌فرض های مشتری"
+msgstr "پیش‌فرض‌های مشتری"
 
 #. Label of the customer_details_section (Section Break) field in DocType
 #. 'Appointment'
@@ -15494,7 +15494,7 @@ msgstr "حساب پیش‌فرض"
 #: erpnext/setup/doctype/company/company.json
 #: erpnext/setup/doctype/customer_group/customer_group.json
 msgid "Default Accounts"
-msgstr "حساب های پیش‌فرض"
+msgstr "حساب‌های پیش‌فرض"
 
 #: erpnext/projects/doctype/activity_cost/activity_cost.py:62
 msgid "Default Activity Cost exists for Activity Type - {0}"
@@ -15959,7 +15959,7 @@ msgstr "پیش‌فرض: 10 دقیقه"
 #: erpnext/setup/doctype/item_group/item_group.json
 #: erpnext/stock/doctype/stock_settings/stock_settings.json
 msgid "Defaults"
-msgstr "پیش‌فرض ها"
+msgstr "پیش‌فرض‌ها"
 
 #: erpnext/setup/setup_wizard/data/industry_type.txt:17
 msgid "Defense"
@@ -20296,11 +20296,11 @@ msgstr "راه‌اندازی شرکت ناموفق بود"
 
 #: erpnext/setup/setup_wizard/setup_wizard.py:37
 msgid "Failed to setup defaults"
-msgstr "تنظیم پیش‌فرض ها انجام نشد"
+msgstr "تنظیم پیش‌فرض‌ها انجام نشد"
 
 #: erpnext/setup/doctype/company/company.py:730
 msgid "Failed to setup defaults for country {0}. Please contact support."
-msgstr "تنظیم پیش‌فرض های کشور {0} انجام نشد. لطفا با پشتیبانی تماس بگیرید."
+msgstr "تنظیم پیش‌فرض‌های کشور {0} انجام نشد. لطفا با پشتیبانی تماس بگیرید."
 
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.js:532
 msgid "Failure"
@@ -22486,7 +22486,7 @@ msgstr "برای هر N مقدار آیتم رایگان بدهید"
 #: erpnext/setup/doctype/global_defaults/global_defaults.json
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Global Defaults"
-msgstr "پیش‌فرض های سراسری"
+msgstr "پیش‌فرض‌های سراسری"
 
 #: erpnext/www/book_appointment/index.html:58
 msgid "Go back"
@@ -23651,7 +23651,7 @@ msgstr "اگر فعال شود، نرخ آیتم در انتقالات داخل�
 #. field in DocType 'Stock Settings'
 #: erpnext/stock/doctype/stock_settings/stock_settings.json
 msgid "If enabled, the system will allow selecting UOMs in sales and purchase transactions only if the conversion rate is set in the item master."
-msgstr ""
+msgstr "در صورت فعال بودن، سیستم تنها در صورتی امکان انتخاب UOMها را در تراکنش‌های خرید و فروش فراهم می‌کند که نرخ تبدیل در فهرست اصلی آیتم تنظیم شده باشد."
 
 #. Description of the 'Set Valuation Rate for Rejected Materials' (Check) field
 #. in DocType 'Buying Settings'
@@ -24105,7 +24105,7 @@ msgstr "درون‌بُرد"
 #. Description of a DocType
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.json
 msgid "Import Chart of Accounts from a csv file"
-msgstr "درون‌بُرد نمودار حساب ها از یک فایل csv"
+msgstr "درون‌بُرد نمودار حساب‌ها از یک فایل csv"
 
 #. Label of a Link in the Home Workspace
 #. Label of a Link in the Settings Workspace
@@ -25362,7 +25362,7 @@ msgstr "آیتم نامعتبر"
 
 #: erpnext/stock/doctype/item/item.py:1402
 msgid "Invalid Item Defaults"
-msgstr "پیش‌فرض های آیتم نامعتبر"
+msgstr "پیش‌فرض‌های آیتم نامعتبر"
 
 #. Name of a report
 #: erpnext/accounts/report/invalid_ledger_entries/invalid_ledger_entries.json
@@ -26950,7 +26950,7 @@ msgstr "گروه آیتم"
 #. Label of the item_group_defaults (Table) field in DocType 'Item Group'
 #: erpnext/setup/doctype/item_group/item_group.json
 msgid "Item Group Defaults"
-msgstr "پیش‌فرض های گروه آیتم"
+msgstr "پیش‌فرض‌های گروه آیتم"
 
 #. Label of the item_group_name (Data) field in DocType 'Item Group'
 #: erpnext/setup/doctype/item_group/item_group.json
@@ -28625,7 +28625,7 @@ msgstr "ادغام دفتر"
 #. Name of a DocType
 #: erpnext/accounts/doctype/ledger_merge_accounts/ledger_merge_accounts.json
 msgid "Ledger Merge Accounts"
-msgstr "حساب های ادغام دفتر"
+msgstr "حساب‌های ادغام دفتر"
 
 #. Label of a Card Break in the Financial Reports Workspace
 #: erpnext/accounts/workspace/financial_reports/financial_reports.json
@@ -29721,7 +29721,7 @@ msgstr "بازرسی دستی"
 
 #: erpnext/accounts/doctype/process_deferred_accounting/process_deferred_accounting.js:36
 msgid "Manual entry cannot be created! Disable automatic entry for deferred accounting in accounts settings and try again"
-msgstr "ثبت دستی ایجاد نمی‌شود! ثبت خودکار برای حسابداری معوق را در تنظیمات حساب ها غیرفعال کنید و دوباره امتحان کنید"
+msgstr "ثبت دستی ایجاد نمی‌شود! ثبت خودکار برای حسابداری معوق را در تنظیمات حساب‌ها غیرفعال کنید و دوباره امتحان کنید"
 
 #. Label of the manufacture_details (Section Break) field in DocType 'Purchase
 #. Invoice Item'
@@ -30619,7 +30619,7 @@ msgstr "ادغام پیشرفت"
 #. Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Merge Similar Account Heads"
-msgstr "ادغام سرفصل حساب های مشابه"
+msgstr "ادغام سرفصل حساب‌های مشابه"
 
 #: erpnext/public/js/utils.js:1006
 msgid "Merge taxes from multiple documents"
@@ -31654,7 +31654,7 @@ msgstr "پیشوند سری نامگذاری"
 #. DocType 'Buying Settings'
 #: erpnext/buying/doctype/buying_settings/buying_settings.json
 msgid "Naming Series and Price Defaults"
-msgstr "نام گذاری سری ها و پیش‌فرض های قیمت"
+msgstr "نام گذاری سری ها و پیش‌فرض‌های قیمت"
 
 #: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:91
 msgid "Naming Series is mandatory"
@@ -31800,11 +31800,11 @@ msgstr "وجه نقد خالص حاصل از عملیات"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.py:142
 msgid "Net Change in Accounts Payable"
-msgstr "تغییر خالص در حساب های پرداختنی"
+msgstr "تغییر خالص در حساب‌های پرداختنی"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.py:141
 msgid "Net Change in Accounts Receivable"
-msgstr "تغییر خالص در حساب های دریافتنی"
+msgstr "تغییر خالص در حساب‌های دریافتنی"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.py:123
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:253
@@ -40074,7 +40074,7 @@ msgstr "فعالیت / تسک پروژه"
 
 #: erpnext/config/projects.py:13
 msgid "Project master."
-msgstr "استاد پروژه"
+msgstr "مدیر پروژه"
 
 #. Description of the 'Users' (Table) field in DocType 'Project'
 #: erpnext/projects/doctype/project/project.json
@@ -44965,7 +44965,7 @@ msgstr "نقش مجاز برای نادیده گرفتن اقدام توقف"
 #. Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Role Allowed to Set Frozen Accounts and Edit Frozen Entries"
-msgstr "نقش مجاز برای تنظیم حساب های مسدود شده و ویرایش ثبت‌های مسدود شده"
+msgstr "نقش مجاز برای تنظیم حساب‌های مسدود شده و ویرایش ثبت‌های مسدود شده"
 
 #. Label of the credit_controller (Link) field in DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
@@ -46344,7 +46344,7 @@ msgstr "مشارکت ها و مشوق های فروش"
 #. Default'
 #: erpnext/stock/doctype/item_default/item_default.json
 msgid "Sales Defaults"
-msgstr "پیش‌فرض های فروش"
+msgstr "پیش‌فرض‌های فروش"
 
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:68
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:92
@@ -47395,7 +47395,7 @@ msgstr "زمانبند غیرفعال است. نمی‌توان داده ها ر
 
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.py:39
 msgid "Scheduler is inactive. Cannot merge accounts."
-msgstr "زمانبند غیرفعال است. نمی‌توان حساب ها را ادغام کرد."
+msgstr "زمانبند غیرفعال است. نمی‌توان حساب‌ها را ادغام کرد."
 
 #. Label of the schedules (Table) field in DocType 'Maintenance Schedule'
 #: erpnext/maintenance/doctype/maintenance_schedule/maintenance_schedule.json
@@ -49174,7 +49174,7 @@ msgstr "تنظیم مکان مورد..."
 
 #: erpnext/setup/setup_wizard/setup_wizard.py:34
 msgid "Setting defaults"
-msgstr "تنظیم پیش‌فرض ها"
+msgstr "تنظیم پیش‌فرض‌ها"
 
 #. Description of the 'Is Company Account' (Check) field in DocType 'Bank
 #. Account'
@@ -52848,7 +52848,7 @@ msgstr "همگام سازی شروع شد"
 #. Label of the automatic_sync (Check) field in DocType 'Plaid Settings'
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.json
 msgid "Synchronize all accounts every hour"
-msgstr "هر ساعت همه حساب ها را همگام سازی کنید"
+msgstr "هر ساعت همه حساب‌ها را همگام سازی کنید"
 
 #: erpnext/accounts/doctype/account/account.py:624
 msgid "System In Use"
@@ -53961,7 +53961,7 @@ msgstr "موقت"
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:39
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:54
 msgid "Temporary Accounts"
-msgstr "حساب های موقت"
+msgstr "حساب‌های موقت"
 
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:39
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:55
@@ -54763,7 +54763,7 @@ msgstr "این اقدام صورتحساب آینده را متوقف می‌ک�
 
 #: erpnext/accounts/doctype/bank_account/bank_account.js:35
 msgid "This action will unlink this account from any external service integrating ERPNext with your bank accounts. It cannot be undone. Are you certain ?"
-msgstr "این عمل پیوند این حساب را با هر سرویس خارجی که ERPNext را با حساب های بانکی شما یکپارچه می‌کند، لغو می‌کند. نمی‌توان آن را واگرد کرد. مطمئنی؟"
+msgstr "این عمل پیوند این حساب را با هر سرویس خارجی که ERPNext را با حساب‌های بانکی شما یکپارچه می‌کند، لغو می‌کند. نمی‌توان آن را واگرد کرد. مطمئنی؟"
 
 #: erpnext/assets/doctype/asset/asset.py:359
 msgid "This asset category is marked as non-depreciable. Please disable depreciation calculation or choose a different category."
@@ -56157,7 +56157,7 @@ msgstr "کل درآمد امسال"
 #. Label of a number card in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Total Incoming Bills"
-msgstr "مجموع صورتحساب های دریافتی"
+msgstr "مجموع صورتحساب‌های دریافتی"
 
 #. Label of a number card in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
@@ -56847,7 +56847,7 @@ msgstr "تاریخچه سالانه معاملات"
 
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.js:117
 msgid "Transactions against the Company already exist! Chart of Accounts can only be imported for a Company with no transactions."
-msgstr "معاملات در مقابل شرکت در حال حاضر وجود دارد! نمودار حساب ها فقط برای شرکتی بدون تراکنش قابل درون‌بُرد است."
+msgstr "معاملات در مقابل شرکت در حال حاضر وجود دارد! نمودار حساب‌ها فقط برای شرکتی بدون تراکنش قابل درون‌بُرد است."
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:1103
 msgid "Transactions using Sales Invoice in POS are disabled."
@@ -57179,7 +57179,7 @@ msgstr "حساب مالیات بر ارزش افزوده امارات متحده
 #. Label of the uae_vat_accounts (Table) field in DocType 'UAE VAT Settings'
 #: erpnext/regional/doctype/uae_vat_settings/uae_vat_settings.json
 msgid "UAE VAT Accounts"
-msgstr "حساب های مالیات بر ارزش افزوده امارات متحده عربی"
+msgstr "حساب‌های مالیات بر ارزش افزوده امارات متحده عربی"
 
 #. Name of a DocType
 #: erpnext/regional/doctype/uae_vat_settings/uae_vat_settings.json
@@ -58254,7 +58254,7 @@ msgstr "کاربرانی که این نقش را دارند مجاز به بیش
 #. Entries' (Link) field in DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Users with this role are allowed to set frozen accounts and create / modify accounting entries against frozen accounts"
-msgstr "کاربران با این نقش مجاز به تنظیم حساب های مسدود شده و ایجاد / تغییر ثبت‌های حسابداری در برابر حساب های مسدود شده هستند."
+msgstr "کاربران با این نقش مجاز به تنظیم حساب‌های مسدود شده و ایجاد / تغییر ثبت‌های حسابداری در برابر حساب‌های مسدود شده هستند."
 
 #: erpnext/stock/doctype/stock_settings/stock_settings.js:38
 msgid "Using negative stock disables FIFO/Moving average valuation when inventory is negative."
@@ -58269,7 +58269,7 @@ msgstr "هزینه های آب و برق"
 #. Settings'
 #: erpnext/regional/doctype/south_africa_vat_settings/south_africa_vat_settings.json
 msgid "VAT Accounts"
-msgstr "حساب های مالیات بر ارزش افزوده"
+msgstr "حساب‌های مالیات بر ارزش افزوده"
 
 #: erpnext/regional/report/uae_vat_201/uae_vat_201.py:28
 msgid "VAT Amount (AED)"
@@ -58888,7 +58888,7 @@ msgstr "مشاهده لاگ به‌روزرسانی BOM"
 
 #: erpnext/public/js/setup_wizard.js:47
 msgid "View Chart of Accounts"
-msgstr "مشاهده نمودار حساب ها"
+msgstr "مشاهده نمودار حساب‌ها"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.js:247
 msgid "View Exchange Gain/Loss Journals"
@@ -59501,7 +59501,7 @@ msgstr "انبار {0} به هیچ حسابی مرتبط نیست، لطفاً �
 
 #: erpnext/stock/doctype/warehouse/warehouse.py:141
 msgid "Warehouse's Stock Value has already been booked in the following accounts:"
-msgstr "ارزش موجودی انبار قبلاً در حساب های زیر رزرو شده است:"
+msgstr "ارزش موجودی انبار قبلاً در حساب‌های زیر رزرو شده است:"
 
 #: erpnext/stock/report/stock_qty_vs_serial_no_count/stock_qty_vs_serial_no_count.py:20
 msgid "Warehouse: {0} does not belong to {1}"
@@ -59976,7 +59976,7 @@ msgstr "هنگام ایجاد حساب برای شرکت فرزند {0}، حسا
 
 #: erpnext/accounts/doctype/account/account.py:333
 msgid "While creating account for Child Company {0}, parent account {1} not found. Please create the parent account in corresponding COA"
-msgstr "هنگام ایجاد حساب برای شرکت فرزند {0}، حساب والد {1} یافت نشد. لطفاً حساب والد را در نمودار حساب های مربوط ایجاد کنید"
+msgstr "هنگام ایجاد حساب برای شرکت فرزند {0}، حساب والد {1} یافت نشد. لطفاً حساب والد را در نمودار حساب‌های مربوط ایجاد کنید"
 
 #. Description of the 'Use Transaction Date Exchange Rate' (Check) field in
 #. DocType 'Buying Settings'
@@ -61645,7 +61645,7 @@ msgstr "{0} {1}: حساب {2} به شرکت {3} تعلق ندارد"
 #: erpnext/accounts/doctype/gl_entry/gl_entry.py:236
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:75
 msgid "{0} {1}: Account {2} is a Group Account and group accounts cannot be used in transactions"
-msgstr "{0} {1}: حساب {2} یک حساب گروهی است و نمی‌توان از حساب های گروهی در تراکنش ها استفاده کرد"
+msgstr "{0} {1}: حساب {2} یک حساب گروهی است و نمی‌توان از حساب‌های گروهی در تراکنش ها استفاده کرد"
 
 #: erpnext/accounts/doctype/gl_entry/gl_entry.py:243
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:82
