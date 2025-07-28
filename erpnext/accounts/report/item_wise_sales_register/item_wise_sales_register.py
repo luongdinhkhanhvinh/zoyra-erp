@@ -396,17 +396,17 @@ def apply_conditions(query, si, sii, sip, filters, additional_conditions=None):
 
 
 def apply_order_by_conditions(doctype, query, filters):
-	i = f"`tab{doctype}`"
-	ii = f"`tab{doctype} Item`"
+	invoice = f"`tab{doctype}`"
+	invoice_item = f"`tab{doctype} Item`"
 
 	if not filters.get("group_by"):
-		query += f" order by {i}.posting_date desc, {ii}.item_group desc"
+		query += f" order by {invoice}.posting_date desc, {invoice_item}.item_group desc"
 	elif filters.get("group_by") == "Invoice":
-		query += f" order by {ii}.parent desc"
+		query += f" order by {invoice_item}.parent desc"
 	elif filters.get("group_by") == "Item":
-		query += f" order by {ii}.item_code"
+		query += f" order by {invoice_item}.item_code"
 	elif filters.get("group_by") == "Item Group":
-		query += f" order by {ii}.item_group"
+		query += f" order by {invoice_item}.item_group"
 	elif filters.get("group_by") in ("Customer", "Customer Group", "Territory", "Supplier"):
 		filter_field = frappe.scrub(filters.get("group_by"))
 		query += f" order by {filter_field} desc"
