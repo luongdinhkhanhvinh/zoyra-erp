@@ -10,14 +10,22 @@ def update_itemised_tax_data(doc):
 	if not doc.items:
 		return
 
+	has_zero_rated_field = False
 	meta = frappe.get_meta(doc.items[0].doctype)
 	if not meta.has_field("tax_rate"):
 		return
 
+	if meta.has_field("is_zero_rated"):
+		has_zero_rated_field = True
+
 	itemised_tax = get_itemised_tax(doc.taxes)
+	doc.flags.export_determined = None
 	is_export = False
 
 	def determine_if_export(doc):
+		if doc.doctype != "Sales Invoice":
+			return False
+
 		if doc.flags.export_determined is not None:
 			return doc.flags.export_determined
 
@@ -45,7 +53,7 @@ def update_itemised_tax_data(doc):
 				tax_amount += flt((row.net_amount * _tax_rate) / 100, row.precision("tax_amount"))
 				tax_rate += _tax_rate
 
-		if not row.is_zero_rated and not tax_rate:
+		if not tax_rate and has_zero_rated_field and not row.is_zero_rated:
 			is_export = is_export or determine_if_export(doc)
 			row.is_zero_rated = is_export
 
