@@ -152,7 +152,6 @@ class TestCustomerLedgerSummary(AccountsTestMixin, IntegrationTestCase):
 			with self.subTest(field=field):
 				self.assertEqual(report[0].get(field), expected_after_cr_and_payment.get(field))
 
-<<<<<<< HEAD
 	def test_customer_ledger_ignore_cr_dr_filter(self):
 		si = create_sales_invoice()
 
@@ -235,7 +234,7 @@ class TestCustomerLedgerSummary(AccountsTestMixin, IntegrationTestCase):
 		)
 		self.assertEqual(len(data), 1)
 		self.assertEqual(expected, data[0])
-=======
+
 	def test_journal_voucher_against_return_invoice(self):
 		filters = {"company": self.company, "from_date": today(), "to_date": today()}
 
@@ -389,4 +388,3 @@ class TestCustomerLedgerSummary(AccountsTestMixin, IntegrationTestCase):
 					f"Field {field} does not match expected value. "
 					f"Expected: {expected_value}, Got: {actual_value}",
 				)
->>>>>>> 01fcd98c84 (fix: Misclassification of Journal Voucher Entries in Customer Ledger Summary (#48041))
