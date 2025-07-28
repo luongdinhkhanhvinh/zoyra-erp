@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-20 12:58\n"
+"PO-Revision-Date: 2025-07-28 13:24\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -216,7 +216,7 @@ msgstr "% der für diesen Kundenauftrag in Rechnung gestellten Materialien"
 #: erpnext/stock/doctype/pick_list/pick_list.json
 #, python-format
 msgid "% of materials delivered against this Pick List"
-msgstr ""
+msgstr "% der Materialien, die im Rahmen dieser Entnahmeliste kommissioniert wurden"
 
 #. Description of the '%  Delivered' (Percent) field in DocType 'Sales Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
@@ -3726,7 +3726,7 @@ msgstr "\"Zu Buchungssatz\" {0} ist bereits mit einem anderen Beleg abgeglichen"
 #. Label of the against_pick_list (Link) field in DocType 'Delivery Note Item'
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
 msgid "Against Pick List"
-msgstr ""
+msgstr "Gegen Entnahmeliste"
 
 #. Label of the against_sales_invoice (Link) field in DocType 'Delivery Note
 #. Item'
@@ -4362,7 +4362,7 @@ msgstr "Überstunden zulassen"
 #. Label of the allow_partial_payment (Check) field in DocType 'POS Profile'
 #: erpnext/accounts/doctype/pos_profile/pos_profile.json
 msgid "Allow Partial Payment"
-msgstr ""
+msgstr "Teilzahlung zulassen"
 
 #. Label of the allow_partial_reservation (Check) field in DocType 'Stock
 #. Settings'
@@ -4470,7 +4470,7 @@ msgstr "Lieferantenangebot mit Nullmenge zulassen"
 #. DocType 'Stock Settings'
 #: erpnext/stock/doctype/stock_settings/stock_settings.json
 msgid "Allow UOM with Conversion Rate Defined in Item"
-msgstr ""
+msgstr "Maßeinheit mit im Artikel definiertem Umrechnungskurs zulassen"
 
 #. Label of the allow_discount_change (Check) field in DocType 'POS Profile'
 #: erpnext/accounts/doctype/pos_profile/pos_profile.json
@@ -4558,7 +4558,7 @@ msgstr "Bearbeitung der Menge in Lager-ME für Verkaufsdokumente zulassen"
 #. (Check) field in DocType 'Stock Settings'
 #: erpnext/stock/doctype/stock_settings/stock_settings.json
 msgid "Allow to Make Quality Inspection after Purchase / Delivery"
-msgstr ""
+msgstr "Qualitätskontrolle nach Kauf / Lieferung erlauben"
 
 #. Description of the 'Allow Excess Material Transfer' (Check) field in DocType
 #. 'Manufacturing Settings'
@@ -8927,7 +8927,7 @@ msgstr "Gebäude"
 
 #: erpnext/utilities/doctype/rename_tool/rename_tool.js:78
 msgid "Bulk Rename Jobs"
-msgstr ""
+msgstr "Massenumbenennung Jobs"
 
 #. Name of a DocType
 #: erpnext/bulk_transaction/doctype/bulk_transaction_log/bulk_transaction_log.json
@@ -8963,7 +8963,7 @@ msgstr "Bushel (UK)"
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Bushel (US Dry Level)"
-msgstr ""
+msgstr "Bushel (US Dry Level)"
 
 #: erpnext/setup/setup_wizard/data/designation.txt:6
 msgid "Business Analyst"
@@ -8971,7 +8971,7 @@ msgstr "Wirtschaftsanalyst"
 
 #: erpnext/setup/setup_wizard/data/designation.txt:7
 msgid "Business Development Manager"
-msgstr ""
+msgstr "Manager für Geschäftsentwicklung"
 
 #. Option for the 'Status' (Select) field in DocType 'Call Log'
 #: erpnext/telephony/doctype/call_log/call_log.json
@@ -9360,7 +9360,7 @@ msgstr "Kampagnen-E-Mail-Zeitplan"
 #. Name of a DocType
 #: erpnext/accounts/doctype/campaign_item/campaign_item.json
 msgid "Campaign Item"
-msgstr ""
+msgstr "Kampagnen-Element"
 
 #. Label of the campaign_name (Data) field in DocType 'Campaign'
 #. Option for the 'Campaign Naming By' (Select) field in DocType 'CRM Settings'
@@ -9673,11 +9673,11 @@ msgstr "Kostenstelle kann nicht in ein Kontenblatt umgewandelt werden, da sie Un
 
 #: erpnext/projects/doctype/task/task.js:49
 msgid "Cannot convert Task to non-group because the following child Tasks exist: {0}."
-msgstr ""
+msgstr "Aufgabe kann nicht in Nicht-Gruppe konvertiert werden, da die folgenden untergeordneten Aufgaben existieren: {0}."
 
 #: erpnext/accounts/doctype/account/account.py:403
 msgid "Cannot convert to Group because Account Type is selected."
-msgstr ""
+msgstr "Kann nicht in eine Gruppe umgewandelt werden, weil Kontentyp ausgewählt ist."
 
 #: erpnext/accounts/doctype/account/account.py:264
 msgid "Cannot covert to Group because Account Type is selected."
@@ -9719,7 +9719,7 @@ msgstr "Abzug nicht möglich, wenn Kategorie \"Wertbestimmtung\" oder \"Wertbest
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.js:1777
 msgid "Cannot delete Exchange Gain/Loss row"
-msgstr ""
+msgstr "Zeile „Wechselkursgewinn/-verlust“ kann nicht gelöscht werden"
 
 #: erpnext/stock/doctype/serial_no/serial_no.py:118
 msgid "Cannot delete Serial No {0}, as it is used in stock transactions"
@@ -16311,7 +16311,7 @@ msgstr "Gelieferte Stückzahl"
 #. Label of the delivered_qty (Float) field in DocType 'Pick List Item'
 #: erpnext/stock/doctype/pick_list_item/pick_list_item.json
 msgid "Delivered Qty (in Stock UOM)"
-msgstr ""
+msgstr "Kommissionierte Menge (in Lager ME)"
 
 #: erpnext/selling/report/item_wise_sales_history/item_wise_sales_history.py:101
 msgid "Delivered Quantity"
@@ -18504,7 +18504,7 @@ msgstr "Projekt mit Aufgaben duplizieren"
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:157
 msgid "Duplicate Sales Invoices found"
-msgstr ""
+msgstr "Doppelte Ausgangsrechnungen gefunden"
 
 #: erpnext/stock/doctype/stock_closing_entry/stock_closing_entry.py:78
 msgid "Duplicate Stock Closing Entry"
@@ -19284,7 +19284,7 @@ msgstr "Durch Aktivieren dieses Kontrollkästchens wird jedes Jobkarten-Zeitprot
 #. in DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Enabling this ensures each Purchase Invoice has a unique value in Supplier Invoice No. field within a particular fiscal year"
-msgstr ""
+msgstr "Durch Aktivieren dieser Option wird sichergestellt, dass jede Eingangsrechnung innerhalb eines bestimmten Geschäftsjahres einen eindeutigen Wert im Feld Lieferantenrechnungsnummer hat"
 
 #. Description of the 'Book Advance Payments in Separate Party Account' (Check)
 #. field in DocType 'Company'
@@ -19741,11 +19741,11 @@ msgstr "Ausnahmegenehmigerrolle"
 
 #: erpnext/manufacturing/report/work_order_consumed_materials/work_order_consumed_materials.js:55
 msgid "Excess Materials Consumed"
-msgstr ""
+msgstr "Überschüssige Materialien verbraucht"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.py:977
 msgid "Excess Transfer"
-msgstr ""
+msgstr "Überschuss-Übertragung"
 
 #. Option for the 'Stop Reason' (Select) field in DocType 'Downtime Entry'
 #: erpnext/manufacturing/doctype/downtime_entry/downtime_entry.json
@@ -19756,7 +19756,7 @@ msgstr "Übermäßige Rüstzeit der Maschine"
 #. 'Company'
 #: erpnext/setup/doctype/company/company.json
 msgid "Exchange Gain / Loss"
-msgstr ""
+msgstr "Wechselkursgewinn oder -verlust"
 
 #. Label of the exchange_gain_loss_account (Link) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -20888,7 +20888,7 @@ msgstr "Auf Fertigerzeugnissen basierende Betriebskosten"
 #. Label of the fg_item (Link) field in DocType 'BOM Creator Item'
 #: erpnext/manufacturing/doctype/bom_creator_item/bom_creator_item.json
 msgid "Finished Goods Item"
-msgstr ""
+msgstr "Fertigerzeugnisartikel"
 
 #. Label of the finished_good_qty (Float) field in DocType 'BOM Operation'
 #: erpnext/manufacturing/doctype/bom_operation/bom_operation.json
@@ -20917,7 +20917,7 @@ msgstr "Fertigwarenlager"
 #. Label of the fg_based_operating_cost (Check) field in DocType 'BOM'
 #: erpnext/manufacturing/doctype/bom/bom.json
 msgid "Finished Goods based Operating Cost"
-msgstr ""
+msgstr "Auf Fertigerzeugnissen basierende Betriebskosten"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:1387
 msgid "Finished Item {0} does not match with Work Order {1}"
@@ -20952,7 +20952,7 @@ msgstr "Erste Antwort fällig"
 #: erpnext/support/doctype/issue/test_issue.py:238
 #: erpnext/support/doctype/service_level_agreement/service_level_agreement.py:898
 msgid "First Response SLA Failed by {}"
-msgstr ""
+msgstr "Erste Antwort SLA fehlgeschlagen um {}"
 
 #. Label of the first_response_time (Duration) field in DocType 'Opportunity'
 #. Label of the first_response_time (Duration) field in DocType 'Issue'
@@ -21367,7 +21367,7 @@ msgstr ""
 
 #: erpnext/controllers/sales_and_purchase_return.py:1071
 msgid "For the {0}, the quantity is required to make the return entry"
-msgstr ""
+msgstr "Für die {0} ist die Menge erforderlich, um die Retoure zu erstellen"
 
 #: erpnext/accounts/doctype/subscription/subscription.js:42
 msgid "Force-Fetch Subscription Updates"
@@ -22643,22 +22643,22 @@ msgstr "Akademiker"
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Grain"
-msgstr ""
+msgstr "Grain"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Grain/Cubic Foot"
-msgstr ""
+msgstr "Grain/Kubikfuß"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Grain/Gallon (UK)"
-msgstr ""
+msgstr "Grain/Gallone (GB)"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Grain/Gallon (US)"
-msgstr ""
+msgstr "Grain/Gallone (US)"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -26338,7 +26338,7 @@ msgstr "Ist ein Abonnement"
 #. Label of the is_created_using_pos (Check) field in DocType 'Sales Invoice'
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.json
 msgid "Is created using POS"
-msgstr ""
+msgstr "Wird über POS erstellt"
 
 #. Label of the included_in_print_rate (Check) field in DocType 'Purchase Taxes
 #. and Charges'
@@ -27874,7 +27874,7 @@ msgstr "Artikel und Preise"
 
 #: erpnext/controllers/accounts_controller.py:3990
 msgid "Items cannot be updated as Subcontracting Order is created against the Purchase Order {0}."
-msgstr ""
+msgstr "Artikel können nicht aktualisiert werden, da ein Unterauftrag für die Bestellung {0} erstellt ist."
 
 #: erpnext/selling/doctype/sales_order/sales_order.js:1026
 msgid "Items for Raw Material Request"
@@ -27897,7 +27897,7 @@ msgstr "Zu fertigende Gegenstände sind erforderlich, um die damit verbundenen R
 #. Label of a Link in the Buying Workspace
 #: erpnext/buying/workspace/buying/buying.json
 msgid "Items to Order and Receive"
-msgstr ""
+msgstr "Zu bestellende und zu erhaltende Artikel"
 
 #: erpnext/public/js/stock_reservation.js:72
 #: erpnext/selling/doctype/sales_order/sales_order.js:304
@@ -27983,12 +27983,12 @@ msgstr "Jobkartenartikel"
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/job_card_operation/job_card_operation.json
 msgid "Job Card Operation"
-msgstr ""
+msgstr "Jobkartenvorgang"
 
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/job_card_scheduled_time/job_card_scheduled_time.json
 msgid "Job Card Scheduled Time"
-msgstr ""
+msgstr "Geplante Zeit der Jobkarte"
 
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/job_card_scrap_item/job_card_scrap_item.json
@@ -28015,12 +28015,12 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/job_card/job_card.py:1291
 msgid "Job Card {0} has been completed"
-msgstr ""
+msgstr "Jobkarte {0} wurde abgeschlossen"
 
 #. Label of the dashboard_tab (Tab Break) field in DocType 'Workstation'
 #: erpnext/manufacturing/doctype/workstation/workstation.json
 msgid "Job Cards"
-msgstr ""
+msgstr "Jobkarten"
 
 #: erpnext/accounts/doctype/process_payment_reconciliation/process_payment_reconciliation.js:106
 msgid "Job Paused"
@@ -28042,12 +28042,12 @@ msgstr "Stellenbezeichnung"
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Job Worker"
-msgstr ""
+msgstr "Unterauftragnehmer"
 
 #. Label of the supplier_address (Link) field in DocType 'Subcontracting Order'
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 msgid "Job Worker Address"
-msgstr ""
+msgstr "Unterauftragnehmer Adresse"
 
 #. Label of the address_display (Text Editor) field in DocType 'Subcontracting
 #. Order'
@@ -28058,20 +28058,20 @@ msgstr "Vorschau Adresse Unterauftragnehmer"
 #. Label of the contact_person (Link) field in DocType 'Subcontracting Order'
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 msgid "Job Worker Contact"
-msgstr ""
+msgstr "Kontakt des Unterauftragnehmers"
 
 #. Label of the supplier_delivery_note (Data) field in DocType 'Subcontracting
 #. Receipt'
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Job Worker Delivery Note"
-msgstr ""
+msgstr "Lieferschein des Unterauftragnehmers"
 
 #. Label of the supplier_name (Data) field in DocType 'Subcontracting Order'
 #. Label of the supplier_name (Data) field in DocType 'Subcontracting Receipt'
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Job Worker Name"
-msgstr ""
+msgstr "Name des Unterauftragnehmers"
 
 #. Label of the supplier_warehouse (Link) field in DocType 'Subcontracting
 #. Order'
@@ -28080,7 +28080,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Job Worker Warehouse"
-msgstr ""
+msgstr "Lagerhaus des Unterauftragnehmers"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:2244
 msgid "Job card {0} created"
@@ -28179,7 +28179,7 @@ msgstr "Buchungssatz für Ausschuss"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:347
 msgid "Journal Entry type should be set as Depreciation Entry for asset depreciation"
-msgstr ""
+msgstr "Buchungssatz-Typ muss als Abschreibungseintrag für die Abschreibung von Vermögensgegenständen eingestellt werden"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:790
 msgid "Journal Entry {0} does not have account {1} or already matched against other voucher"
@@ -28294,12 +28294,12 @@ msgstr "Kilopascal"
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Kilopond"
-msgstr ""
+msgstr "Kilopond"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
 msgid "Kilopound-Force"
-msgstr ""
+msgstr "Kilopond-Kraft"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -29268,7 +29268,7 @@ msgstr "Treuepunkte-Einlösung"
 
 #: erpnext/accounts/doctype/loyalty_program/loyalty_program.js:8
 msgid "Loyalty Points will be calculated from the spent done (via the Sales Invoice), based on collection factor mentioned."
-msgstr ""
+msgstr "Die Treuepunkte werden aus den getätigten Ausgaben (über die Ausgangsrechnung) basierend auf dem angegebenen Sammelfaktor berechnet."
 
 #: erpnext/public/js/utils.js:109
 msgid "Loyalty Points: {0}"
@@ -33472,11 +33472,11 @@ msgstr "Öffnen Sie Kontakt"
 #: erpnext/public/js/templates/crm_activities.html:117
 #: erpnext/public/js/templates/crm_activities.html:164
 msgid "Open Event"
-msgstr ""
+msgstr "Offenes Ereignis"
 
 #: erpnext/public/js/templates/crm_activities.html:104
 msgid "Open Events"
-msgstr ""
+msgstr "Offene Ereignisse"
 
 #: erpnext/selling/page/point_of_sale/pos_controller.js:252
 msgid "Open Form View"
@@ -33525,7 +33525,7 @@ msgstr "Offene Aufträge"
 #: erpnext/public/js/templates/crm_activities.html:33
 #: erpnext/public/js/templates/crm_activities.html:92
 msgid "Open Task"
-msgstr ""
+msgstr "Aufgabe öffnen"
 
 #: erpnext/public/js/templates/crm_activities.html:21
 msgid "Open Tasks"
@@ -51793,11 +51793,11 @@ msgstr "Unterauftrag"
 #: erpnext/buying/report/subcontract_order_summary/subcontract_order_summary.json
 #: erpnext/manufacturing/workspace/manufacturing/manufacturing.json
 msgid "Subcontract Order Summary"
-msgstr ""
+msgstr "Zusammenfassung der Unteraufträge"
 
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.js:83
 msgid "Subcontract Return"
-msgstr ""
+msgstr "Unterauftrag Retoure"
 
 #. Label of the subcontracted_item (Link) field in DocType 'Stock Entry Detail'
 #: erpnext/buying/report/subcontract_order_summary/subcontract_order_summary.py:136
@@ -51824,7 +51824,7 @@ msgstr "Untervergebene Bestellung"
 #. Item'
 #: erpnext/buying/doctype/purchase_order_item/purchase_order_item.json
 msgid "Subcontracted Quantity"
-msgstr ""
+msgstr "Untervergebene Menge"
 
 #. Name of a report
 #. Label of a Link in the Buying Workspace
@@ -51861,7 +51861,7 @@ msgstr "Stückliste für Untervergabe"
 #. 'Subcontracting Order Item'
 #: erpnext/subcontracting/doctype/subcontracting_order_item/subcontracting_order_item.json
 msgid "Subcontracting Conversion Factor"
-msgstr ""
+msgstr "Umrechnungsfaktor für Unterauftrag"
 
 #. Label of a Link in the Manufacturing Workspace
 #. Label of the subcontracting_order (Link) field in DocType 'Stock Entry'
@@ -51903,11 +51903,11 @@ msgstr "Dienstleistung für Unterauftrag"
 #. Name of a DocType
 #: erpnext/subcontracting/doctype/subcontracting_order_supplied_item/subcontracting_order_supplied_item.json
 msgid "Subcontracting Order Supplied Item"
-msgstr ""
+msgstr "Unterauftrag Gelieferter Artikel"
 
 #: erpnext/buying/doctype/purchase_order/purchase_order.py:941
 msgid "Subcontracting Order {0} created."
-msgstr ""
+msgstr "Unterauftrag {0} erstellt."
 
 #. Label of the purchase_order (Link) field in DocType 'Subcontracting Order'
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
@@ -51942,7 +51942,7 @@ msgstr "Unterauftragsbeleg"
 #: erpnext/stock/doctype/purchase_receipt_item/purchase_receipt_item.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
 msgid "Subcontracting Receipt Item"
-msgstr ""
+msgstr "Unterauftragsbelegposition"
 
 #. Name of a DocType
 #: erpnext/subcontracting/doctype/subcontracting_receipt_supplied_item/subcontracting_receipt_supplied_item.json
@@ -52784,31 +52784,31 @@ msgstr "Lieferantenbewertung Bewertungskriterien"
 #. Name of a DocType
 #: erpnext/buying/doctype/supplier_scorecard_scoring_standing/supplier_scorecard_scoring_standing.json
 msgid "Supplier Scorecard Scoring Standing"
-msgstr ""
+msgstr "Bewertungsstand der Lieferantenbewertung"
 
 #. Name of a DocType
 #: erpnext/buying/doctype/supplier_scorecard_scoring_variable/supplier_scorecard_scoring_variable.json
 msgid "Supplier Scorecard Scoring Variable"
-msgstr ""
+msgstr "Bewertungsvariable der Lieferantenbewertung"
 
 #. Label of the scorecard (Link) field in DocType 'Supplier Scorecard Period'
 #: erpnext/buying/doctype/supplier_scorecard_period/supplier_scorecard_period.json
 msgid "Supplier Scorecard Setup"
-msgstr ""
+msgstr "Einrichtung Lieferantenbewertung"
 
 #. Name of a DocType
 #. Label of a Link in the Buying Workspace
 #: erpnext/buying/doctype/supplier_scorecard_standing/supplier_scorecard_standing.json
 #: erpnext/buying/workspace/buying/buying.json
 msgid "Supplier Scorecard Standing"
-msgstr ""
+msgstr "Stand der Lieferantenbewertung"
 
 #. Name of a DocType
 #. Label of a Link in the Buying Workspace
 #: erpnext/buying/doctype/supplier_scorecard_variable/supplier_scorecard_variable.json
 #: erpnext/buying/workspace/buying/buying.json
 msgid "Supplier Scorecard Variable"
-msgstr ""
+msgstr "Variable der Lieferantenbewertung"
 
 #. Label of the supplier_type (Select) field in DocType 'Supplier'
 #: erpnext/buying/doctype/supplier/supplier.json
@@ -54383,7 +54383,7 @@ msgstr "Die Zahlungsbedingung in Zeile {0} ist möglicherweise ein Duplikat."
 
 #: erpnext/stock/doctype/pick_list/pick_list.py:285
 msgid "The Pick List having Stock Reservation Entries cannot be updated. If you need to make changes, we recommend canceling the existing Stock Reservation Entries before updating the Pick List."
-msgstr ""
+msgstr "Die Entnahmeliste mit Bestandsreservierungseinträgen kann nicht aktualisiert werden. Wenn Sie Änderungen vornehmen müssen, empfehlen wir Ihnen, die bestehenden Bestandsreservierungseinträge zu stornieren, bevor Sie die Entnahmeliste aktualisieren."
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:2215
 msgid "The Process Loss Qty has reset as per job cards Process Loss Qty"
@@ -54523,11 +54523,11 @@ msgstr "Die Artikel {items} sind nicht als {type_of} Artikel gekennzeichnet. Sie
 
 #: erpnext/manufacturing/doctype/workstation/workstation.py:531
 msgid "The job card {0} is in {1} state and you cannot complete."
-msgstr ""
+msgstr "Die Jobkarte {0} befindet sich im Status {1} und Sie können sie nicht abschließen."
 
 #: erpnext/manufacturing/doctype/workstation/workstation.py:525
 msgid "The job card {0} is in {1} state and you cannot start it again."
-msgstr ""
+msgstr "Die Jobkarte {0} befindet sich im Status {1} und Sie können sie nicht erneut starten."
 
 #: erpnext/accounts/doctype/loyalty_program/loyalty_program.py:46
 msgid "The lowest tier must have a minimum spent amount of 0. Customers need to be part of a tier as soon as they are enrolled in the program."
@@ -54787,7 +54787,7 @@ msgstr ""
 
 #: erpnext/subcontracting/doctype/subcontracting_bom/subcontracting_bom.py:77
 msgid "There is already an active Subcontracting BOM {0} for the Finished Good {1}."
-msgstr ""
+msgstr "Es gibt bereits eine aktive Stückliste für Untervergabe {0} für das Fertigerzeugnis {1}."
 
 #: erpnext/stock/doctype/batch/batch.py:414
 msgid "There is no batch found against the {0}: {1}"
@@ -54892,7 +54892,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/bom/bom.js:219
 msgid "This is a Template BOM and will be used to make the work order for {0} of the item {1}"
-msgstr ""
+msgstr "Dies ist eine Stücklistenvorlage und wird verwendet, um den Arbeitsauftrag für {0} des Artikels {1} zu erstellen"
 
 #. Description of the 'Target Warehouse' (Link) field in DocType 'Work Order'
 #: erpnext/manufacturing/doctype/work_order/work_order.json
