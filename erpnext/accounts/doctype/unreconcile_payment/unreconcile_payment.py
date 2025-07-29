@@ -86,9 +86,24 @@ class UnreconcilePayment(Document):
 				alloc.reference_doctype, alloc.reference_name, alloc.account, alloc.party_type, alloc.party
 			)
 			if doc.doctype in get_advance_payment_doctypes():
+				self.make_advance_payment_ledger(alloc)
 				doc.set_total_advance_paid()
 
 			frappe.db.set_value("Unreconcile Payment Entries", alloc.name, "unlinked", True)
+
+	def make_advance_payment_ledger(self, alloc):
+		if alloc.allocated_amount > 0:
+			doc = frappe.new_doc("Advance Payment Ledger Entry")
+			doc.company = self.company
+			doc.voucher_type = self.voucher_type
+			doc.voucher_no = self.voucher_no
+			doc.against_voucher_type = alloc.reference_doctype
+			doc.against_voucher_no = alloc.reference_name
+			doc.amount = -1 * alloc.allocated_amount
+			doc.event = "Unreconcile"
+			doc.currency = alloc.account_currency
+			doc.flags.ignore_permissions = 1
+			doc.save()
 
 
 @frappe.whitelist()
