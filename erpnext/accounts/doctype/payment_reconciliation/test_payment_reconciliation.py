@@ -1714,6 +1714,67 @@ class TestPaymentReconciliation(IntegrationTestCase):
 		)
 		self.assertEqual(len(pl_entries), 3)
 
+	def test_advance_payment_reconciliation_date_for_older_date(self):
+		old_settings = frappe.db.get_value(
+			"Company",
+			self.company,
+			[
+				"reconciliation_takes_effect_on",
+				"default_advance_paid_account",
+				"book_advance_payments_in_separate_party_account",
+			],
+			as_dict=True,
+		)
+		frappe.db.set_value(
+			"Company",
+			self.company,
+			{
+				"book_advance_payments_in_separate_party_account": 1,
+				"default_advance_paid_account": self.advance_payable_account,
+				"reconciliation_takes_effect_on": "Oldest Of Invoice Or Advance",
+			},
+		)
+
+		self.supplier = "_Test Supplier"
+
+		pi1 = self.create_purchase_invoice(qty=10, rate=100)
+		po = self.create_purchase_order(qty=10, rate=100)
+
+		pay = get_payment_entry(po.doctype, po.name)
+		pay.paid_amount = 1000
+		pay.save().submit()
+
+		pr = frappe.new_doc("Payment Reconciliation")
+		pr.company = self.company
+		pr.party_type = "Supplier"
+		pr.party = self.supplier
+		pr.receivable_payable_account = get_party_account(pr.party_type, pr.party, pr.company)
+		pr.default_advance_account = self.advance_payable_account
+		pr.get_unreconciled_entries()
+		invoices = [x.as_dict() for x in pr.invoices]
+		payments = [x.as_dict() for x in pr.payments]
+		pr.allocate_entries(frappe._dict({"invoices": invoices, "payments": payments}))
+		pr.allocation[0].allocated_amount = 100
+		pr.reconcile()
+
+		pay.reload()
+		self.assertEqual(getdate(pay.references[0].reconcile_effect_on), getdate(pi1.posting_date))
+
+		# test setting of date if not available
+		frappe.db.set_value("Payment Entry Reference", pay.references[1].name, "reconcile_effect_on", None)
+		pay.reload()
+		pay.cancel()
+
+		pay.reload()
+		pi1.reload()
+		po.reload()
+
+		self.assertEqual(getdate(pay.references[0].reconcile_effect_on), getdate(pi1.posting_date))
+		pi1.cancel()
+		po.cancel()
+
+		frappe.db.set_value("Company", self.company, old_settings)
+
 	def test_advance_payment_reconciliation_against_journal_for_customer(self):
 		frappe.db.set_value(
 			"Company",
