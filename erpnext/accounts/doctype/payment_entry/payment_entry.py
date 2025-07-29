@@ -1560,13 +1560,14 @@ class PaymentEntry(AccountsController):
 			"voucher_no": self.name,
 			"voucher_detail_no": invoice.name,
 		}
-
 		if invoice.reconcile_effect_on:
 			posting_date = invoice.reconcile_effect_on
 		else:
 			# For backwards compatibility
 			# Supporting reposting on payment entries reconciled before select field introduction
-			posting_date = get_reconciliation_effect_date(invoice, self.company, self.posting_date)
+			posting_date = get_reconciliation_effect_date(
+				invoice.reference_doctype, invoice.reference_name, self.company, self.posting_date
+			)
 			frappe.db.set_value("Payment Entry Reference", invoice.name, "reconcile_effect_on", posting_date)
 
 		dr_or_cr, account = self.get_dr_and_account_for_advances(invoice)
