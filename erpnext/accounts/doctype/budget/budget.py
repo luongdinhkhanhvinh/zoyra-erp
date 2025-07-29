@@ -302,7 +302,7 @@ def compare_expense_with_budget(args, budget_amount, action_for, action, budget_
 
 
 def get_expense_breakup(args, currency, budget_against):
-	msg = "{{ _('<hr>Total Expenses booked through') }} - <ul>"
+	msg = "<hr> {{ _('Total Expenses booked through') }} - <ul>"
 
 	common_filters = frappe._dict(
 		{
