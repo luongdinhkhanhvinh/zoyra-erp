@@ -711,6 +711,19 @@ def get_columns(filters):
 		{"label": _("Party"), "fieldname": "party", "width": 100},
 	]
 
+	supplier_master_name = frappe.db.get_single_value("Buying Settings", "supp_master_name")
+	customer_master_name = frappe.db.get_single_value("Selling Settings", "cust_master_name")
+
+	if supplier_master_name != "Supplier Name" or customer_master_name != "Customer Name":
+		columns.append(
+			{
+				"label": _("Party Name"),
+				"fieldname": "party_name",
+				"fieldtype": "Data",
+				"width": 150,
+			}
+		)
+
 	if filters.get("include_dimensions"):
 		columns.append({"label": _("Project"), "options": "Project", "fieldname": "project", "width": 100})
 
