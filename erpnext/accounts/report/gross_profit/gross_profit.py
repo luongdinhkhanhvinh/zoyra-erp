@@ -255,6 +255,7 @@ def get_columns(group_wise_columns, filters):
 
 	supplier_master_name = frappe.db.get_single_value("Buying Settings", "supp_master_name")
 	customer_master_name = frappe.db.get_single_value("Selling Settings", "cust_master_name")
+
 	column_map = frappe._dict(
 		{
 			"parent": {
