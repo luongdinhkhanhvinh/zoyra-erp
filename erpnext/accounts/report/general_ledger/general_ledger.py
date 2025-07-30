@@ -355,6 +355,9 @@ def get_party_name_map():
 
 	suppliers = frappe.get_all("Supplier", fields=["name", "supplier_name"])
 	party_map["Supplier"] = {s.name: s.supplier_name for s in suppliers}
+
+	employees = frappe.get_all("Employee", fields=["name", "employee_name"])
+	party_map["Employee"] = {e.name: e.employee_name for e in employees}
 	return party_map
 
 
