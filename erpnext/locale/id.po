@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-25 13:19\n"
+"PO-Revision-Date: 2025-07-30 14:59\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -25,83 +25,83 @@ msgstr ""
 
 #: erpnext/selling/doctype/quotation/quotation.js:73
 msgid " Address"
-msgstr ""
+msgstr " Alamat"
 
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:672
 msgid " Amount"
-msgstr ""
+msgstr "Jumlah"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:114
 msgid " BOM"
-msgstr ""
+msgstr " BOM"
 
 #. Label of the istable (Check) field in DocType 'Inventory Dimension'
 #: erpnext/stock/doctype/inventory_dimension/inventory_dimension.json
 msgid " Is Child Table"
-msgstr ""
+msgstr " Tabel Anak"
 
 #. Label of the is_subcontracted (Check) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 msgid " Is Subcontracted"
-msgstr ""
+msgstr " Subkontrak"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:174
 msgid " Item"
-msgstr ""
+msgstr " Item"
 
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:147
 #: erpnext/accounts/report/tax_withholding_details/tax_withholding_details.py:186
 #: erpnext/accounts/report/tds_computation_summary/tds_computation_summary.py:107
 #: erpnext/selling/report/sales_analytics/sales_analytics.py:128
 msgid " Name"
-msgstr ""
+msgstr " Nama"
 
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:663
 msgid " Rate"
-msgstr ""
+msgstr "Tarif"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:122
 msgid " Raw Material"
-msgstr ""
+msgstr " Bahan Baku"
 
 #. Label of the reserve_stock (Check) field in DocType 'Work Order'
 #: erpnext/manufacturing/doctype/work_order/work_order.json
 msgid " Reserve Stock"
-msgstr ""
+msgstr " Cadangkan Stok"
 
 #. Label of the skip_material_transfer (Check) field in DocType 'BOM Operation'
 #: erpnext/manufacturing/doctype/bom_operation/bom_operation.json
 msgid " Skip Material Transfer"
-msgstr ""
+msgstr " Lewati Transfer Material"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:133
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:163
 msgid " Sub Assembly"
-msgstr ""
+msgstr " Sub Rakitan"
 
 #: erpnext/projects/doctype/project_update/project_update.py:104
 msgid " Summary"
-msgstr ""
+msgstr " Ringkasan"
 
 #: erpnext/stock/doctype/item/item.py:238
 msgid "\"Customer Provided Item\" cannot be Purchase Item also"
-msgstr "\"Barang Dari Pelanggan\" tidak bisa berupa Barang Dibeli juga"
+msgstr "\"Item Dari Pelanggan\" tidak boleh sekaligus menjadi Item yang Dibeli"
 
 #: erpnext/stock/doctype/item/item.py:240
 msgid "\"Customer Provided Item\" cannot have Valuation Rate"
-msgstr "\"Barang Dari Pelanggan\" tidak bisa mempunyai Tarif Valuasi"
+msgstr "\"Item Dari Pelanggan\" tidak boleh memiliki Tarif Valuasi"
 
 #: erpnext/stock/doctype/item/item.py:316
 msgid "\"Is Fixed Asset\" cannot be unchecked, as Asset record exists against the item"
-msgstr "\"Aset Tetap\" tidak dapat tidak dicentang, karena ada data Asset terhadap barang"
+msgstr "\"Aset Tetap\" tidak dapat dibatalkan centangnya, karena sudah ada catatan Aset untuk item ini"
 
 #: erpnext/public/js/utils/serial_no_batch_selector.js:262
 msgid "\"SN-01::10\" for \"SN-01\" to \"SN-10\""
-msgstr ""
+msgstr "\"SN-01::10\" untuk \"SN-01\" hingga \"SN-10\""
 
 #: erpnext/manufacturing/report/work_order_stock_report/work_order_stock_report.py:148
 msgid "# In Stock"
-msgstr ""
+msgstr "# Stok Tersedia"
 
 #: erpnext/manufacturing/report/work_order_stock_report/work_order_stock_report.py:141
 msgid "# Req'd Items"
@@ -110,7 +110,7 @@ msgstr ""
 #. Label of the per_delivered (Percent) field in DocType 'Sales Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
 msgid "%  Delivered"
-msgstr ""
+msgstr "% Terkirim"
 
 #. Label of the per_billed (Percent) field in DocType 'Timesheet'
 #. Label of the per_billed (Percent) field in DocType 'Sales Order'
@@ -121,57 +121,57 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 msgid "% Amount Billed"
-msgstr ""
+msgstr "% Jumlah Ditagih"
 
 #. Label of the per_billed (Percent) field in DocType 'Purchase Order'
 #: erpnext/buying/doctype/purchase_order/purchase_order.json
 msgid "% Billed"
-msgstr ""
+msgstr "% Ditagih"
 
 #. Label of the percent_complete_method (Select) field in DocType 'Project'
 #: erpnext/projects/doctype/project/project.json
 msgid "% Complete Method"
-msgstr ""
+msgstr "% Metode Penyelesaian"
 
 #. Label of the percent_complete (Percent) field in DocType 'Project'
 #: erpnext/projects/doctype/project/project.json
 msgid "% Completed"
-msgstr ""
+msgstr "% Selesai"
 
 #. Label of the per_delivered (Percent) field in DocType 'Pick List'
 #: erpnext/stock/doctype/pick_list/pick_list.json
 msgid "% Delivered"
-msgstr ""
+msgstr "% Terkirim"
 
 #: erpnext/manufacturing/doctype/bom/bom.js:892
 #, python-format
 msgid "% Finished Item Quantity"
-msgstr ""
+msgstr "% Kuantitas Barang Jadi"
 
 #. Label of the per_installed (Percent) field in DocType 'Delivery Note'
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 msgid "% Installed"
-msgstr ""
+msgstr "% Terpasang"
 
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary.js:70
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary_header.html:16
 msgid "% Occupied"
-msgstr ""
+msgstr "% Terisi"
 
 #: erpnext/accounts/report/item_wise_purchase_register/item_wise_purchase_register.py:285
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:341
 msgid "% Of Grand Total"
-msgstr ""
+msgstr "% dari Total Keseluruhan"
 
 #. Label of the per_ordered (Percent) field in DocType 'Material Request'
 #: erpnext/stock/doctype/material_request/material_request.json
 msgid "% Ordered"
-msgstr ""
+msgstr "% Dipesan"
 
 #. Label of the per_picked (Percent) field in DocType 'Sales Order'
 #: erpnext/selling/doctype/sales_order/sales_order.json
 msgid "% Picked"
-msgstr ""
+msgstr "% Dipilih"
 
 #. Label of the process_loss_percentage (Percent) field in DocType 'BOM'
 #. Label of the process_loss_percentage (Percent) field in DocType 'Stock
@@ -179,12 +179,12 @@ msgstr ""
 #: erpnext/manufacturing/doctype/bom/bom.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 msgid "% Process Loss"
-msgstr ""
+msgstr "% Kehilangan Proses"
 
 #. Label of the progress (Percent) field in DocType 'Task'
 #: erpnext/projects/doctype/task/task.json
 msgid "% Progress"
-msgstr ""
+msgstr "% Progres"
 
 #. Label of the per_received (Percent) field in DocType 'Purchase Order'
 #. Label of the per_received (Percent) field in DocType 'Material Request'
@@ -193,7 +193,7 @@ msgstr ""
 #: erpnext/stock/doctype/material_request/material_request.json
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 msgid "% Received"
-msgstr ""
+msgstr "% Diterima"
 
 #. Label of the per_returned (Percent) field in DocType 'Delivery Note'
 #. Label of the per_returned (Percent) field in DocType 'Purchase Receipt'
@@ -203,7 +203,7 @@ msgstr ""
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "% Returned"
-msgstr ""
+msgstr "% Dikembalikan"
 
 #. Description of the '% Amount Billed' (Percent) field in DocType 'Sales
 #. Order'
@@ -246,21 +246,21 @@ msgstr ""
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1273
 msgid "'Entries' cannot be empty"
-msgstr "'Entries' tidak boleh kosong"
+msgstr "'Entri' tidak boleh kosong"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:24
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:127
 #: erpnext/stock/report/stock_analytics/stock_analytics.py:313
 msgid "'From Date' is required"
-msgstr "'Dari Tanggal' diperlukan"
+msgstr "'Tanggal Awal' wajib diisi"
 
 #: erpnext/stock/report/itemwise_recommended_reorder_level/itemwise_recommended_reorder_level.py:18
 msgid "'From Date' must be after 'To Date'"
-msgstr "'Tanggal Mulai' harus sebelum 'Tanggal Akhir'"
+msgstr "'Tanggal Awal harus sebelum 'Tanggal Akhir'"
 
 #: erpnext/stock/doctype/item/item.py:399
 msgid "'Has Serial No' can not be 'Yes' for non-stock item"
-msgstr "'Bernomor Seri' tidak dapat ‘Ya’ untuk barang non-persediaan"
+msgstr "'Memiliki No. Seri' tidak bisa 'Ya' untuk barang non-stok"
 
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.py:139
 msgid "'Inspection Required before Delivery' has disabled for the item {0}, no need to create the QI"
@@ -273,13 +273,13 @@ msgstr ""
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:584
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:617
 msgid "'Opening'"
-msgstr "'Awal'"
+msgstr "'Saldo Awal'"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:27
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:129
 #: erpnext/stock/report/stock_analytics/stock_analytics.py:319
 msgid "'To Date' is required"
-msgstr "'Tanggal Akhir' harus diisi"
+msgstr "'Tanggal Akhir' wajib diisi"
 
 #: erpnext/stock/doctype/packing_slip/packing_slip.py:95
 msgid "'To Package No.' cannot be less than 'From Package No.'"
@@ -287,11 +287,11 @@ msgstr ""
 
 #: erpnext/controllers/sales_and_purchase_return.py:81
 msgid "'Update Stock' can not be checked because items are not delivered via {0}"
-msgstr "'Pembaruan Persediaan’ tidak dapat dipilih karena barang tidak dikirim melalui {0}"
+msgstr "'Perbarui Stok' tidak dapat dicentang karena barang tidak dikirim melalui {0}"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:381
 msgid "'Update Stock' cannot be checked for fixed asset sale"
-msgstr "'Pembaruan Persediaan’ tidak dapat ditandai untuk penjualan aset tetap"
+msgstr "'Perbarui Stok' tidak dapat dicentang untuk penjualan aset tetap"
 
 #: erpnext/accounts/doctype/bank_account/bank_account.py:65
 msgid "'{0}' account is already used by {1}. Use another account."
@@ -345,7 +345,7 @@ msgstr ""
 
 #: erpnext/manufacturing/report/exponential_smoothing_forecasting/exponential_smoothing_forecasting.py:192
 msgid "(Forecast)"
-msgstr "(Ramalan cuaca)"
+msgstr "(Ramalan)"
 
 #: erpnext/stock/report/stock_ledger_invariant_check/stock_ledger_invariant_check.py:253
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.py:156
@@ -543,7 +543,7 @@ msgstr ""
 
 #: erpnext/crm/doctype/appointment_booking_settings/appointment_booking_settings.py:61
 msgid "<b>From Time</b> cannot be later than <b>To Time</b> for {0}"
-msgstr "<b>From Time</b> tidak boleh lebih dari <b>To Time</b> untuk {0}"
+msgstr "<b>Waktu Mulai</b> tidak boleh lebih lambat dari <b>Waktu Selesai</b> untuk {0}"
 
 #. Content of the 'Help Text' (HTML) field in DocType 'Process Statement Of
 #. Accounts'
@@ -579,11 +579,11 @@ msgstr ""
 #. Reconciliation Tool'
 #: erpnext/accounts/doctype/bank_reconciliation_tool/bank_reconciliation_tool.json
 msgid "<div class=\"text-muted text-center\">No Matching Bank Transactions Found</div>"
-msgstr ""
+msgstr "<div class=\"text-muted text-center\">Tidak Ditemukan Transaksi Bank yang Cocok</div>"
 
 #: erpnext/public/js/bank_reconciliation_tool/dialog_manager.js:262
 msgid "<div class=\"text-muted text-center\">{0}</div>"
-msgstr ""
+msgstr "<div class=\"text-muted text-center\">{0}</div>"
 
 #. Content of the 'settings' (HTML) field in DocType 'Cheque Print Template'
 #: erpnext/accounts/doctype/cheque_print_template/cheque_print_template.json
@@ -881,21 +881,21 @@ msgstr ""
 #: erpnext/stock/report/stock_ledger_invariant_check/stock_ledger_invariant_check.py:213
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.py:116
 msgid "A - B"
-msgstr ""
+msgstr "A - B"
 
 #: erpnext/stock/report/fifo_queue_vs_qty_after_transaction_comparison/fifo_queue_vs_qty_after_transaction_comparison.py:189
 #: erpnext/stock/report/stock_ledger_invariant_check/stock_ledger_invariant_check.py:228
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.py:131
 msgid "A - C"
-msgstr ""
+msgstr "A - C"
 
 #: erpnext/selling/doctype/customer/customer.py:314
 msgid "A Customer Group exists with same name please change the Customer name or rename the Customer Group"
-msgstr "Sudah ada Kelompok Pelanggan dengan nama yang sama, silakan ganti Nama Pelanggan atau ubah nama Kelompok Pelanggan"
+msgstr "Grup Pelanggan dengan nama yang sama sudah ada, silakan ubah Nama Pelanggan atau ganti nama Grup Pelanggan"
 
 #: erpnext/manufacturing/doctype/workstation/workstation.js:73
 msgid "A Holiday List can be added to exclude counting these days for the Workstation."
-msgstr ""
+msgstr "Daftar Hari Libur dapat ditambahkan untuk mengecualikan penghitungan hari-hari ini untuk Workstation."
 
 #: erpnext/crm/doctype/lead/lead.py:142
 msgid "A Lead requires either a person's name or an organization's name"
@@ -945,7 +945,7 @@ msgstr ""
 
 #: erpnext/templates/emails/confirm_appointment.html:2
 msgid "A new appointment has been created for you with {0}"
-msgstr "Sebuah janji baru telah dibuat untuk Anda dengan {0}"
+msgstr ""
 
 #: erpnext/accounts/doctype/sales_taxes_and_charges_template/sales_taxes_and_charges_template.py:96
 msgid "A template with tax category {0} already exists. Only one template is allowed with each tax category"
@@ -1076,7 +1076,7 @@ msgstr ""
 #. Name of a role
 #: erpnext/setup/doctype/department/department.json
 msgid "Academics User"
-msgstr "Pengguna Akademis"
+msgstr "Pengguna Akademik"
 
 #. Label of the acceptance_formula (Code) field in DocType 'Item Quality
 #. Inspection Parameter'
@@ -1122,7 +1122,7 @@ msgstr ""
 #: erpnext/stock/doctype/purchase_receipt_item/purchase_receipt_item.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
 msgid "Accepted Quantity"
-msgstr "Qty Diterima"
+msgstr "Jumlah Diterima"
 
 #. Label of the warehouse (Link) field in DocType 'Purchase Invoice Item'
 #. Label of the set_warehouse (Link) field in DocType 'Purchase Receipt'
@@ -1231,7 +1231,7 @@ msgstr "Akun"
 #. Name of a report
 #: erpnext/accounts/report/account_balance/account_balance.json
 msgid "Account Balance"
-msgstr "Saldo Akun Rekening"
+msgstr "Saldo Akun"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/account_closing_balance/account_closing_balance.json
@@ -1318,7 +1318,7 @@ msgstr ""
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:951
 #: erpnext/controllers/accounts_controller.py:2326
 msgid "Account Missing"
-msgstr "Akun Hilang"
+msgstr "Akun Tidak Ada"
 
 #. Label of the account_name (Data) field in DocType 'Account'
 #. Label of the account_name (Data) field in DocType 'Bank Account'
@@ -1367,7 +1367,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/cheque_print_template/cheque_print_template.py:118
 msgid "Account Pay Only"
-msgstr "Akun Pembayaran Saja"
+msgstr "Hanya Untuk Rekening Penerima"
 
 #. Label of the account_subtype (Link) field in DocType 'Bank Account'
 #. Label of the account_subtype (Data) field in DocType 'Bank Account Subtype'
@@ -1394,7 +1394,7 @@ msgstr ""
 #: erpnext/accounts/report/account_balance/account_balance.js:34
 #: erpnext/setup/doctype/party_type/party_type.json
 msgid "Account Type"
-msgstr "Jenis Account"
+msgstr "Tipe Akun"
 
 #: erpnext/stock/report/stock_and_account_value_comparison/stock_and_account_value_comparison.py:124
 msgid "Account Value"
@@ -1402,11 +1402,11 @@ msgstr "Nilai Akun"
 
 #: erpnext/accounts/doctype/account/account.py:293
 msgid "Account balance already in Credit, you are not allowed to set 'Balance Must Be' as 'Debit'"
-msgstr "Saldo rekening telah berada di Kredit, Anda tidak diizinkan untuk mengatur 'Balance Harus' sebagai 'Debit'"
+msgstr "Saldo akun sudah Kredit, Anda tidak diizinkan mengatur 'Saldo Wajib' menjadi 'Debit'"
 
 #: erpnext/accounts/doctype/account/account.py:287
 msgid "Account balance already in Debit, you are not allowed to set 'Balance Must Be' as 'Credit'"
-msgstr "Saldo rekening sudah berada di Debit, Anda tidak diizinkan untuk mengatur 'Balance Harus' sebagai 'Kredit'"
+msgstr "Saldo akun sudah Debit, Anda tidak diizinkan mengatur 'Saldo Wajib' menjadi 'Kredit'"
 
 #. Label of the account_for_change_amount (Link) field in DocType 'POS Invoice'
 #. Label of the account_for_change_amount (Link) field in DocType 'POS Profile'
@@ -1420,11 +1420,11 @@ msgstr ""
 
 #: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:46
 msgid "Account is mandatory to get payment entries"
-msgstr "Akun wajib untuk mendapatkan entri pembayaran"
+msgstr "Akun wajib diisi untuk mendapatkan entri pembayaran"
 
 #: erpnext/accounts/dashboard_chart_source/account_balance_timeline/account_balance_timeline.py:44
 msgid "Account is not set for the dashboard chart {0}"
-msgstr "Akun tidak disetel untuk bagan dasbor {0}"
+msgstr "Akun belum diatur untuk bagan dasbor {0}"
 
 #: erpnext/assets/doctype/asset/asset.py:755
 msgid "Account not Found"
@@ -1432,24 +1432,24 @@ msgstr ""
 
 #: erpnext/accounts/doctype/account/account.py:390
 msgid "Account with child nodes cannot be converted to ledger"
-msgstr "Akun dengan node anak tidak dapat dikonversi ke buku besar"
+msgstr "Akun dengan sub-akun tidak dapat dikonversi menjadi buku besar"
 
 #: erpnext/accounts/doctype/account/account.py:266
 msgid "Account with child nodes cannot be set as ledger"
-msgstr "Akun dengan sub-akun tidak dapat digunakan sebagai akun buku besar"
+msgstr "Akun dengan sub-akun tidak dapat ditetapkan sebagai buku besar"
 
 #: erpnext/accounts/doctype/account/account.py:401
 msgid "Account with existing transaction can not be converted to group."
-msgstr "Akun dengan transaksi yang ada tidak dapat dikonversi ke grup."
+msgstr "Akun yang telah mengandung transaksi tidak dapat dikonversi menjadi grup."
 
 #: erpnext/accounts/doctype/account/account.py:430
 msgid "Account with existing transaction can not be deleted"
-msgstr "Akun dengan transaksi yang ada tidak dapat dihapus"
+msgstr "Akun yang telah mengandung transaksi tidak dapat dihapus"
 
 #: erpnext/accounts/doctype/account/account.py:261
 #: erpnext/accounts/doctype/account/account.py:392
 msgid "Account with existing transaction cannot be converted to ledger"
-msgstr "Akun dengan transaksi yang ada tidak dapat dikonversi ke buku besar"
+msgstr "Akun yang telah mengandung transaksi tidak dapat dikonversi menjadi buku besar"
 
 #: erpnext/accounts/doctype/tax_withholding_category/tax_withholding_category.py:67
 msgid "Account {0} added multiple times"
@@ -1477,7 +1477,7 @@ msgstr "Akun {0} tidak ada dalam bagan dasbor {1}"
 
 #: erpnext/accounts/doctype/mode_of_payment/mode_of_payment.py:48
 msgid "Account {0} does not match with Company {1} in Mode of Account: {2}"
-msgstr "Akun {0} tidak sesuai Perusahaan {1} dalam Mode Akun: {2}"
+msgstr "Akun {0} tidak cocok dengan Perusahaan {1} dalam Mode Akun: {2}"
 
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py:117
 msgid "Account {0} doesn't belong to Company {1}"
@@ -1501,7 +1501,7 @@ msgstr "Akun {0} dibekukan"
 
 #: erpnext/controllers/accounts_controller.py:1388
 msgid "Account {0} is invalid. Account Currency must be {1}"
-msgstr "Akun {0} tidak berlaku. Mata Uang Akun harus {1}"
+msgstr "Akun {0} tidak valid. Mata Uang Akun harus {1}"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:351
 msgid "Account {0} should be of type Expense"
@@ -1509,7 +1509,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/account/account.py:148
 msgid "Account {0}: Parent account {1} can not be a ledger"
-msgstr "Akun {0}: akun Induk {1} tidak dapat berupa buku besar"
+msgstr "Akun {0}: Akun Induk {1} tidak bisa menjadi buku besar"
 
 #: erpnext/accounts/doctype/account/account.py:154
 msgid "Account {0}: Parent account {1} does not belong to company: {2}"
@@ -1521,11 +1521,11 @@ msgstr "Akun {0}: Akun induk {1} tidak ada"
 
 #: erpnext/accounts/doctype/account/account.py:145
 msgid "Account {0}: You can not assign itself as parent account"
-msgstr "Akun {0}: Anda tidak dapat menetapkanya sebagai Akun Induk"
+msgstr "Akun {0}: Anda tidak dapat menetapkannya sebagai Akun Induk"
 
 #: erpnext/accounts/general_ledger.py:435
 msgid "Account: <b>{0}</b> is capital Work in progress and can not be updated by Journal Entry"
-msgstr "Akun: <b>{0}</b> adalah modal sedang dalam proses dan tidak dapat diperbarui oleh Entri Jurnal"
+msgstr "Akun: <b>{0}</b> adalah Aset Dalam Pengerjaan dan tidak dapat diperbarui oleh Entri Jurnal"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:366
 msgid "Account: {0} can only be updated via Stock Transactions"
@@ -1627,12 +1627,12 @@ msgstr "Dimensi Akuntansi"
 #: erpnext/accounts/doctype/gl_entry/gl_entry.py:207
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:153
 msgid "Accounting Dimension <b>{0}</b> is required for 'Balance Sheet' account {1}."
-msgstr "Dimensi Akuntansi <b>{0}</b> diperlukan untuk akun &#39;Neraca&#39; {1}."
+msgstr "Dimensi Akuntansi <b>{0}</b> diperlukan untuk akun 'Neraca' {1}."
 
 #: erpnext/accounts/doctype/gl_entry/gl_entry.py:193
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:140
 msgid "Accounting Dimension <b>{0}</b> is required for 'Profit and Loss' account {1}."
-msgstr "Dimensi Akuntansi <b>{0}</b> diperlukan untuk akun &#39;Untung dan Rugi&#39; {1}."
+msgstr "Dimensi Akuntansi <b>{0}</b> diperlukan untuk akun 'Laba Rugi' {1}."
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/accounting_dimension_detail/accounting_dimension_detail.json
@@ -1812,7 +1812,7 @@ msgstr ""
 #: erpnext/assets/doctype/asset/asset.py:804
 #: erpnext/assets/doctype/asset_capitalization/asset_capitalization.py:559
 msgid "Accounting Entry for Asset"
-msgstr "Pembukuan Akuntansi untuk Aset"
+msgstr "Entri Akuntansi untuk Aset"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:1681
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:1701
@@ -1851,7 +1851,7 @@ msgstr ""
 
 #: erpnext/controllers/accounts_controller.py:2367
 msgid "Accounting Entry for {0}: {1} can only be made in currency: {2}"
-msgstr "Entri Akuntansi untuk {0}: {1} hanya dapat dilakukan dalam mata uang: {2}"
+msgstr "Entri Akuntansi untuk {0}: {1} hanya dapat dibuat dalam mata uang: {2}"
 
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.js:193
 #: erpnext/buying/doctype/supplier/supplier.js:85
@@ -1865,7 +1865,7 @@ msgstr "Buku Besar Akuntansi"
 #. Label of a Card Break in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Accounting Masters"
-msgstr "Magister Akuntansi"
+msgstr "Master Akuntansi"
 
 #. Name of a DocType
 #. Label of a Link in the Accounting Workspace
@@ -1914,7 +1914,7 @@ msgstr ""
 #: erpnext/setup/doctype/incoterm/incoterm.json
 #: erpnext/setup/doctype/supplier_group/supplier_group.json
 msgid "Accounts"
-msgstr "Akun / Rekening"
+msgstr "Akun"
 
 #. Label of the closing_settings_tab (Tab Break) field in DocType 'Accounts
 #. Settings'
@@ -2010,7 +2010,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_closing_balance/stock_closing_balance.json
 #: erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.json
 msgid "Accounts Manager"
-msgstr "Pengelola Akun"
+msgstr "Manajer Akun"
 
 #: erpnext/accounts/report/tax_withholding_details/tax_withholding_details.py:342
 msgid "Accounts Missing Error"
@@ -2029,7 +2029,7 @@ msgstr ""
 #: erpnext/accounts/workspace/payables/payables.json
 #: erpnext/buying/doctype/supplier/supplier.js:97
 msgid "Accounts Payable"
-msgstr "Hutang"
+msgstr "Utang Usaha"
 
 #. Name of a report
 #. Label of a Link in the Payables Workspace
@@ -2037,7 +2037,7 @@ msgstr "Hutang"
 #: erpnext/accounts/report/accounts_payable_summary/accounts_payable_summary.json
 #: erpnext/accounts/workspace/payables/payables.json
 msgid "Accounts Payable Summary"
-msgstr "Ringkasan Buku Besar Hutang"
+msgstr "Ringkasan Utang Usaha"
 
 #. Option for the 'Write Off Based On' (Select) field in DocType 'Journal
 #. Entry'
@@ -2057,7 +2057,7 @@ msgstr "Ringkasan Buku Besar Hutang"
 #: erpnext/accounts/workspace/receivables/receivables.json
 #: erpnext/selling/doctype/customer/customer.js:158
 msgid "Accounts Receivable"
-msgstr "Piutang"
+msgstr "Piutang Usaha"
 
 #. Label of the accounts_receivable_payable_tuning_section (Section Break)
 #. field in DocType 'Accounts Settings'
@@ -2083,7 +2083,7 @@ msgstr ""
 #: erpnext/accounts/report/accounts_receivable_summary/accounts_receivable_summary.json
 #: erpnext/accounts/workspace/receivables/receivables.json
 msgid "Accounts Receivable Summary"
-msgstr "Ringkasan Buku Piutang"
+msgstr "Ringkasan Piutang Usaha"
 
 #. Label of the accounts_receivable_unpaid (Link) field in DocType 'Invoice
 #. Discounting'
@@ -2201,7 +2201,7 @@ msgstr "Pengguna Akun"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1372
 msgid "Accounts table cannot be blank."
-msgstr "Tabel account tidak boleh kosong."
+msgstr "Tabel Akun tidak boleh kosong."
 
 #. Label of the merge_accounts (Table) field in DocType 'Ledger Merge'
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.json
@@ -2214,7 +2214,7 @@ msgstr ""
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:46
 #: erpnext/accounts/report/account_balance/account_balance.js:37
 msgid "Accumulated Depreciation"
-msgstr "Akumulasi penyusutan"
+msgstr "Akumulasi Penyusutan"
 
 #. Label of the accumulated_depreciation_account (Link) field in DocType 'Asset
 #. Category Account'
@@ -2231,12 +2231,12 @@ msgstr ""
 #: erpnext/assets/doctype/asset/asset.js:289
 #: erpnext/assets/doctype/depreciation_schedule/depreciation_schedule.json
 msgid "Accumulated Depreciation Amount"
-msgstr "Akumulasi Penyusutan Jumlah"
+msgstr "Jumlah Akumulasi Penyusutan"
 
 #: erpnext/accounts/report/asset_depreciations_and_balances/asset_depreciations_and_balances.py:497
 #: erpnext/accounts/report/asset_depreciations_and_balances/asset_depreciations_and_balances.py:515
 msgid "Accumulated Depreciation as on"
-msgstr "Akumulasi Penyusutan seperti pada"
+msgstr "Akumulasi Penyusutan per tanggal"
 
 #: erpnext/accounts/doctype/budget/budget.py:251
 msgid "Accumulated Monthly"
@@ -2258,11 +2258,11 @@ msgstr "Nilai Akumulasi"
 
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.js:125
 msgid "Accumulated Values in Group Company"
-msgstr "Nilai Akumulasi dalam Grup Perusahaan"
+msgstr "Nilai Akumulasi di Perusahaan Grup"
 
 #: erpnext/selling/report/sales_partner_target_variance_based_on_item_group/item_group_wise_sales_target_variance.py:111
 msgid "Achieved ({})"
-msgstr "Dicapai ({})"
+msgstr "Tercapai ({})"
 
 #. Label of the acquisition_date (Date) field in DocType 'Vehicle'
 #: erpnext/setup/doctype/vehicle/vehicle.json
@@ -2304,7 +2304,7 @@ msgstr ""
 
 #: erpnext/quality_management/doctype/quality_review/quality_review_list.js:7
 msgid "Action Initialised"
-msgstr "Tindakan diinisialisasi"
+msgstr "Tindakan Dimulai"
 
 #. Label of the action_if_accumulated_monthly_budget_exceeded (Select) field in
 #. DocType 'Budget'
@@ -2435,12 +2435,12 @@ msgstr "Aktif"
 
 #: erpnext/selling/page/sales_funnel/sales_funnel.py:55
 msgid "Active Leads"
-msgstr "Pimpinan Aktif"
+msgstr "Prospek Aktif"
 
 #. Label of the on_status_image (Attach Image) field in DocType 'Workstation'
 #: erpnext/manufacturing/doctype/workstation/workstation.json
 msgid "Active Status"
-msgstr ""
+msgstr "Status Aktif"
 
 #. Label of the activities_tab (Tab Break) field in DocType 'Lead'
 #. Label of the activities_tab (Tab Break) field in DocType 'Opportunity'
@@ -2470,7 +2470,7 @@ msgstr "Biaya Aktivitas"
 
 #: erpnext/projects/doctype/activity_cost/activity_cost.py:51
 msgid "Activity Cost exists for Employee {0} against Activity Type - {1}"
-msgstr "Terdapat Biaya Kegiatan untuk Karyawan {0} untuk Jenis Kegiatan - {1}"
+msgstr "Biaya Aktivitas sudah ada untuk Karyawan {0} untuk Tipe Aktivitas - {1}"
 
 #: erpnext/projects/doctype/activity_type/activity_type.js:10
 msgid "Activity Cost per Employee"
@@ -2491,7 +2491,7 @@ msgstr "Biaya Aktivitas per Karyawan"
 #: erpnext/public/js/projects/timer.js:9
 #: erpnext/templates/pages/timelog_info.html:25
 msgid "Activity Type"
-msgstr "Jenis Kegiatan"
+msgstr "Tipe Aktivitas"
 
 #. Option for the 'Type' (Select) field in DocType 'Advance Taxes and Charges'
 #. Option for the 'Type' (Select) field in DocType 'Purchase Taxes and Charges'
@@ -2502,7 +2502,7 @@ msgstr "Jenis Kegiatan"
 #: erpnext/accounts/report/budget_variance_report/budget_variance_report.py:100
 #: erpnext/accounts/report/budget_variance_report/budget_variance_report.py:110
 msgid "Actual"
-msgstr "Sebenarnya"
+msgstr "Aktual"
 
 #: erpnext/stock/report/incorrect_balance_qty_after_transaction/incorrect_balance_qty_after_transaction.py:125
 msgid "Actual Balance Qty"
@@ -2515,7 +2515,7 @@ msgstr ""
 
 #: erpnext/buying/report/procurement_tracker/procurement_tracker.py:101
 msgid "Actual Cost"
-msgstr "Harga asli"
+msgstr "Biaya Aktual"
 
 #. Label of the actual_date (Date) field in DocType 'Maintenance Schedule
 #. Detail'
@@ -2536,7 +2536,7 @@ msgstr "Tanggal Pengiriman Aktual"
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.py:254
 #: erpnext/projects/report/delayed_tasks_summary/delayed_tasks_summary.py:107
 msgid "Actual End Date"
-msgstr "Tanggal Akhir Aktual"
+msgstr "Tanggal Selesai Aktual"
 
 #. Label of the actual_end_date (Date) field in DocType 'Project'
 #. Label of the act_end_date (Date) field in DocType 'Task'
@@ -2590,7 +2590,7 @@ msgstr ""
 #: erpnext/stock/report/product_bundle_balance/product_bundle_balance.py:96
 #: erpnext/stock/report/stock_projected_qty/stock_projected_qty.py:141
 msgid "Actual Qty"
-msgstr "Jumlah aktual"
+msgstr "Kuantitas Aktual"
 
 #. Label of the actual_qty (Float) field in DocType 'Stock Entry Detail'
 #: erpnext/stock/doctype/stock_entry_detail/stock_entry_detail.json
@@ -2605,7 +2605,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.py:198
 msgid "Actual Qty is mandatory"
-msgstr "Qty Aktual wajib diisi"
+msgstr "Kuantitas Aktual wajib diisi"
 
 #: erpnext/manufacturing/doctype/plant_floor/stock_summary_template.html:37
 #: erpnext/stock/dashboard/item_dashboard_list.html:28
@@ -2661,12 +2661,12 @@ msgstr ""
 
 #: erpnext/stock/page/stock_balance/stock_balance.js:55
 msgid "Actual qty in stock"
-msgstr "Jumlah persediaan aktual"
+msgstr "Kuantitas aktual di stok"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.js:1490
 #: erpnext/public/js/controllers/accounts.js:176
 msgid "Actual type tax cannot be included in Item rate in row {0}"
-msgstr "Jenis pajak aktual tidak dapat dimasukkan dalam tarif di baris {0}"
+msgstr "Pajak tipe Aktual tidak dapat dimasukkan dalam tarif Item di baris {0}"
 
 #. Option for the 'Add Or Deduct' (Select) field in DocType 'Advance Taxes and
 #. Charges'
@@ -2685,7 +2685,7 @@ msgstr "Jenis pajak aktual tidak dapat dimasukkan dalam tarif di baris {0}"
 #: erpnext/public/js/utils/serial_no_batch_selector.js:191
 #: erpnext/stock/dashboard/item_dashboard_list.html:61
 msgid "Add"
-msgstr "Tambahkan"
+msgstr "Tambah"
 
 #: erpnext/stock/doctype/item/item.js:514
 #: erpnext/stock/doctype/price_list/price_list.js:8
@@ -2694,7 +2694,7 @@ msgstr "Tambah / Edit Harga"
 
 #: erpnext/accounts/doctype/account/account_tree.js:252
 msgid "Add Child"
-msgstr "Tambah Anak"
+msgstr "Tambah Sub-Akun"
 
 #: erpnext/accounts/report/general_ledger/general_ledger.js:202
 msgid "Add Columns in Transaction Currency"
@@ -2713,7 +2713,7 @@ msgstr ""
 
 #: erpnext/public/js/event.js:24
 msgid "Add Customers"
-msgstr "Tambahkan Pelanggan"
+msgstr "Tambah Pelanggan"
 
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:92
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:442
@@ -2722,18 +2722,18 @@ msgstr ""
 
 #: erpnext/public/js/event.js:40
 msgid "Add Employees"
-msgstr "Tambahkan Karyawan"
+msgstr "Tambah Karyawan"
 
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:234
 #: erpnext/selling/doctype/sales_order/sales_order.js:254
 #: erpnext/stock/dashboard/item_dashboard.js:216
 msgid "Add Item"
-msgstr "Tambahkan Barang"
+msgstr "Tambah Item"
 
 #: erpnext/public/js/utils/item_selector.js:20
 #: erpnext/public/js/utils/item_selector.js:35
 msgid "Add Items"
-msgstr "Tambahkan Item"
+msgstr "Tambah Item"
 
 #: erpnext/maintenance/doctype/maintenance_visit/maintenance_visit.py:56
 msgid "Add Items in the Purpose Table"
@@ -2745,7 +2745,7 @@ msgstr ""
 
 #: erpnext/public/js/event.js:16
 msgid "Add Leads"
-msgstr "Tambahkan Prospek"
+msgstr "Tambah Prospek"
 
 #. Label of the add_local_holidays (Section Break) field in DocType 'Holiday
 #. List'
@@ -2760,11 +2760,11 @@ msgstr ""
 
 #: erpnext/projects/doctype/task/task_tree.js:42
 msgid "Add Multiple"
-msgstr "Tambahkan Beberapa"
+msgstr "Tambah Beberapa"
 
 #: erpnext/projects/doctype/task/task_tree.js:49
 msgid "Add Multiple Tasks"
-msgstr "Tambahkan Beberapa Tugas"
+msgstr "Tambah Beberapa Tugas"
 
 #. Label of the add_deduct_tax (Select) field in DocType 'Advance Taxes and
 #. Charges'
@@ -2774,13 +2774,13 @@ msgstr ""
 
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:280
 msgid "Add Order Discount"
-msgstr "Tambahkan Diskon Pesanan"
+msgstr "Tambah Diskon Pesanan"
 
 #: erpnext/public/js/event.js:20 erpnext/public/js/event.js:28
 #: erpnext/public/js/event.js:36 erpnext/public/js/event.js:44
 #: erpnext/public/js/event.js:52
 msgid "Add Participants"
-msgstr "Tambahkan Peserta"
+msgstr "Tambah Peserta"
 
 #. Label of the add_quote (Check) field in DocType 'Email Digest'
 #: erpnext/setup/doctype/email_digest/email_digest.json
@@ -2795,7 +2795,7 @@ msgstr ""
 
 #: erpnext/public/js/event.js:48
 msgid "Add Sales Partners"
-msgstr "Tambahkan Mitra Penjualan"
+msgstr "Tambah Mitra Penjualan"
 
 #. Label of the add_serial_batch_bundle (Button) field in DocType
 #. 'Subcontracting Receipt Item'
@@ -2842,7 +2842,7 @@ msgstr ""
 #: erpnext/buying/doctype/request_for_quotation/request_for_quotation.js:503
 #: erpnext/public/js/event.js:32
 msgid "Add Suppliers"
-msgstr "Tambahkan Pemasok"
+msgstr "Tambah Pemasok"
 
 #. Label of the add_template (Button) field in DocType 'Shipment'
 #: erpnext/stock/doctype/shipment/shipment.json
@@ -2851,7 +2851,7 @@ msgstr ""
 
 #: erpnext/utilities/activation.py:124
 msgid "Add Timesheets"
-msgstr "menambahkan Timesheets"
+msgstr "Tambah Timesheet"
 
 #. Label of the add_weekly_holidays (Section Break) field in DocType 'Holiday
 #. List'
@@ -2880,7 +2880,7 @@ msgstr ""
 
 #: erpnext/utilities/activation.py:114
 msgid "Add the rest of your organization as your users. You can also add invite Customers to your portal by adding them from Contacts"
-msgstr "Tambahkan sisa organisasi Anda sebagai pengguna Anda. Anda juga dapat menambahkan mengundang Pelanggan portal Anda dengan menambahkan mereka dari Kontak"
+msgstr "Tambahkan anggota organisasi lainnya sebagai pengguna. Anda juga dapat mengundang Pelanggan ke portal Anda dengan menambahkan mereka dari Kontak"
 
 #. Label of the get_weekly_off_dates (Button) field in DocType 'Holiday List'
 #. Label of the get_local_holidays (Button) field in DocType 'Holiday List'
@@ -3306,13 +3306,13 @@ msgstr ""
 #: erpnext/public/js/utils/contact_address_quick_entry.js:76
 #: erpnext/stock/doctype/warehouse/warehouse.json
 msgid "Address Line 1"
-msgstr "Alamat Baris 1"
+msgstr "Baris Alamat 1"
 
 #. Label of the address_line_2 (Data) field in DocType 'Warehouse'
 #: erpnext/public/js/utils/contact_address_quick_entry.js:81
 #: erpnext/stock/doctype/warehouse/warehouse.json
 msgid "Address Line 2"
-msgstr "Alamat Baris 2"
+msgstr "Baris Alamat 2"
 
 #. Label of the address (Link) field in DocType 'Delivery Stop'
 #: erpnext/stock/doctype/delivery_stop/delivery_stop.json
@@ -3458,7 +3458,7 @@ msgstr ""
 #: erpnext/controllers/accounts_controller.py:272
 #: erpnext/setup/doctype/company/company.json
 msgid "Advance Payments"
-msgstr "Uang Muka Pembayaran(Down Payment / Advance)"
+msgstr "Pembayaran Uang Muka"
 
 #. Name of a DocType
 #. Label of the advance_tax (Table) field in DocType 'Purchase Invoice'
@@ -3482,7 +3482,7 @@ msgstr ""
 
 #: erpnext/controllers/taxes_and_totals.py:843
 msgid "Advance amount cannot be greater than {0} {1}"
-msgstr "Jumlah muka tidak dapat lebih besar dari {0} {1}"
+msgstr "Jumlah uang muka tidak boleh lebih besar dari {0} {1}"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:940
 msgid "Advance paid against {0} {1} cannot be greater than Grand Total {2}"
@@ -3543,7 +3543,7 @@ msgstr ""
 #: erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.py:91
 #: erpnext/accounts/report/general_ledger/general_ledger.py:709
 msgid "Against Account"
-msgstr "Terhadap Akun"
+msgstr "Akun Lawan"
 
 #. Label of the against_blanket_order (Check) field in DocType 'Purchase Order
 #. Item'
@@ -3562,7 +3562,7 @@ msgstr ""
 
 #: erpnext/selling/doctype/sales_order/sales_order.js:1191
 msgid "Against Default Supplier"
-msgstr "Melawan Pemasok Default"
+msgstr "Terhadap Pemasok Default"
 
 #. Label of the dn_detail (Data) field in DocType 'Delivery Note Item'
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
@@ -3613,11 +3613,11 @@ msgstr ""
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:802
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:775
 msgid "Against Journal Entry {0} does not have any unmatched {1} entry"
-msgstr "Catatan Jurnal {0} tidak memiliki {1} catatan yang belum dicocokan."
+msgstr "Entri Jurnal Lawan {0} tidak memiliki entri {1} yang belum dicocokkan"
 
 #: erpnext/accounts/doctype/gl_entry/gl_entry.py:371
 msgid "Against Journal Entry {0} is already adjusted against some other voucher"
-msgstr "Atas Catatan Jurnal {0} sudah dilakukan penyesuaian terhadap beberapa dokumen lain."
+msgstr "Entri Jurnal Lawan {0} sudah disesuaikan terhadap voucher lain"
 
 #. Label of the against_pick_list (Link) field in DocType 'Delivery Note Item'
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
@@ -3660,7 +3660,7 @@ msgstr ""
 #: erpnext/accounts/doctype/gl_entry/gl_entry.json
 #: erpnext/accounts/report/general_ledger/general_ledger.py:729
 msgid "Against Voucher"
-msgstr "Terhadap Voucher"
+msgstr "Voucher Lawan"
 
 #. Label of the against_voucher_no (Dynamic Link) field in DocType 'Advance
 #. Payment Ledger Entry'
@@ -3685,14 +3685,14 @@ msgstr ""
 #: erpnext/accounts/report/general_ledger/general_ledger.py:727
 #: erpnext/accounts/report/payment_ledger/payment_ledger.py:177
 msgid "Against Voucher Type"
-msgstr "Terhadap Tipe Voucher"
+msgstr "Tipe Voucher Lawan"
 
 #: erpnext/accounts/report/payment_period_based_on_invoice_date/payment_period_based_on_invoice_date.py:113
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.js:60
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.py:259
 #: erpnext/stock/report/warehouse_wise_item_balance_age_and_value/warehouse_wise_item_balance_age_and_value.py:102
 msgid "Age"
-msgstr "Usia"
+msgstr "Umur"
 
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts_accounts_receivable.html:152
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:133
@@ -3712,7 +3712,7 @@ msgstr ""
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.js:87
 #: erpnext/accounts/report/accounts_receivable_summary/accounts_receivable_summary.js:21
 msgid "Ageing Based On"
-msgstr "Umur Berdasarkan"
+msgstr "Pengelompokan Umur Berdasarkan"
 
 #: erpnext/accounts/report/accounts_payable/accounts_payable.js:72
 #: erpnext/accounts/report/accounts_payable_summary/accounts_payable_summary.js:35
@@ -3835,7 +3835,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/bom/bom.py:303
 msgid "All BOMs"
-msgstr "Semua BOMs"
+msgstr "Semua BOM"
 
 #. Option for the 'Send To' (Select) field in DocType 'SMS Center'
 #: erpnext/selling/doctype/sms_center/sms_center.json
@@ -3855,11 +3855,11 @@ msgstr ""
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:169
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:175
 msgid "All Customer Groups"
-msgstr "Semua Kelompok Pelanggan"
+msgstr "Semua Grup Pelanggan"
 
 #: erpnext/setup/doctype/email_digest/templates/default.html:113
 msgid "All Day"
-msgstr "Semua Hari"
+msgstr "Sepanjang Hari"
 
 #: erpnext/patches/v11_0/create_department_records_for_each_company.py:23
 #: erpnext/patches/v11_0/update_department_lft_rgt.py:9
@@ -3897,7 +3897,7 @@ msgstr ""
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:67
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:73
 msgid "All Item Groups"
-msgstr "Semua Grup Stok Barang/Item"
+msgstr "Semua Grup Item"
 
 #: erpnext/selling/page/point_of_sale/pos_item_selector.js:25
 msgid "All Items"
@@ -3975,7 +3975,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.py:1327
 msgid "All items have already been Invoiced/Returned"
-msgstr "Semua item sudah Ditagih / Dikembalikan"
+msgstr "Semua item sudah Ditagih/Dikembalikan"
 
 #: erpnext/stock/doctype/delivery_note/delivery_note.py:1166
 msgid "All items have already been received"
@@ -4005,7 +4005,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/delivery_note/delivery_note.py:840
 msgid "All these items have already been Invoiced/Returned"
-msgstr "Semua item ini telah Ditagih / Dikembalikan"
+msgstr "Semua item ini telah Ditagih/Dikembalikan"
 
 #: erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.js:84
 #: erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.js:85
@@ -4091,7 +4091,7 @@ msgstr ""
 
 #: erpnext/accounts/utils.py:637
 msgid "Allocated amount cannot be greater than unadjusted amount"
-msgstr "Jumlah yang dialokasikan tidak boleh lebih besar dari jumlah yang tidak disesuaikan"
+msgstr "Jumlah yang dialokasikan tidak boleh lebih besar dari jumlah yang belum disesuaikan"
 
 #: erpnext/accounts/utils.py:635
 msgid "Allocated amount cannot be negative"
@@ -4116,7 +4116,7 @@ msgstr ""
 
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.py:415
 msgid "Allotted Qty"
-msgstr "Qty yang dialokasikan"
+msgstr "Jml Dialokasikan"
 
 #. Option for the 'Allow Or Restrict Dimension' (Select) field in DocType
 #. 'Accounting Dimension Filter'
@@ -4217,7 +4217,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.js:9
 msgid "Allow Multiple Material Consumption"
-msgstr "Izinkan Penggunaan Beberapa Material Sekaligus"
+msgstr "Izinkan Konsumsi Banyak Material"
 
 #. Label of the allow_against_multiple_purchase_orders (Check) field in DocType
 #. 'Selling Settings'
@@ -4544,7 +4544,7 @@ msgstr "Sudah ada catatan untuk item {0}"
 
 #: erpnext/accounts/doctype/pos_profile/pos_profile.py:116
 msgid "Already set default in pos profile {0} for user {1}, kindly disabled default"
-msgstr "Sudah menetapkan default pada profil pos {0} untuk pengguna {1}, dengan baik dinonaktifkan secara default"
+msgstr "Sudah menetapkan default pada profil POS {0} untuk pengguna {1}, harap nonaktifkan default"
 
 #: erpnext/stock/doctype/item/item.js:20
 msgid "Also you can't switch back to FIFO after setting the valuation method to Moving Average for this item."
@@ -4576,7 +4576,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item_alternative/item_alternative.py:37
 msgid "Alternative item must not be same as item code"
-msgstr "Barang alternatif tidak boleh sama dengan kode barang"
+msgstr "Item alternatif tidak boleh sama dengan kode item"
 
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.py:378
 msgid "Alternatively, you can download the template and fill your data in."
@@ -4941,7 +4941,7 @@ msgstr ""
 #: erpnext/templates/form_grid/stock_entry_grid.html:11
 #: erpnext/templates/pages/order.html:103 erpnext/templates/pages/rfq.html:46
 msgid "Amount"
-msgstr "Total"
+msgstr "Jumlah"
 
 #: erpnext/regional/report/uae_vat_201/uae_vat_201.py:22
 msgid "Amount (AED)"
@@ -5065,7 +5065,7 @@ msgstr "Jumlah {0} {1} dipotong terhadap {2}"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:1303
 msgid "Amount {0} {1} transferred from {2} to {3}"
-msgstr "Jumlah {0} {1} ditransfer dari {2} untuk {3}"
+msgstr "Jumlah {0} {1} ditransfer dari {2} ke {3}"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:1309
 msgid "Amount {0} {1} {2} {3}"
@@ -5113,7 +5113,7 @@ msgstr ""
 #: erpnext/public/js/controllers/buying.js:331
 #: erpnext/public/js/utils/sales_common.js:463
 msgid "An error occurred during the update process"
-msgstr "Kesalahan terjadi selama proses pembaruan"
+msgstr "Terjadi kesalahan selama proses pembaruan"
 
 #: erpnext/stock/reorder_item.py:378
 msgid "An error occurred for certain Items while creating Material Requests based on Re-order level. Please rectify these issues :"
@@ -5172,7 +5172,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/budget/budget.py:86
 msgid "Another Budget record '{0}' already exists against {1} '{2}' and account '{3}' for fiscal year {4}"
-msgstr "Rekaman Anggaran lain &#39;{0}&#39; sudah ada terhadap {1} &#39;{2}&#39; dan akun &#39;{3}&#39; untuk tahun fiskal {4}"
+msgstr "Catatan Anggaran lain '{0}' sudah ada terhadap {1} '{2}' dan akun '{3}' untuk tahun fiskal {4}"
 
 #: erpnext/accounts/doctype/cost_center_allocation/cost_center_allocation.py:107
 msgid "Another Cost Center Allocation record {0} applicable from {1}, hence this allocation will be applicable upto {2}"
@@ -5184,7 +5184,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/sales_person/sales_person.py:123
 msgid "Another Sales Person {0} exists with the same Employee id"
-msgstr "Sales Person lain {0} ada dengan id Karyawan yang sama"
+msgstr "Tenaga Penjual lain {0} sudah ada dengan ID Karyawan yang sama"
 
 #: erpnext/stock/report/fifo_queue_vs_qty_after_transaction_comparison/fifo_queue_vs_qty_after_transaction_comparison.py:37
 msgid "Any one of following filters required: warehouse, Item Code, Item Group"
@@ -5276,11 +5276,11 @@ msgstr ""
 
 #: erpnext/regional/italy/setup.py:162
 msgid "Applicable if the company is SpA, SApA or SRL"
-msgstr "Berlaku jika perusahaannya adalah SpA, SApA atau SRL"
+msgstr "Berlaku jika perusahaan adalah SpA, SApA atau SRL"
 
 #: erpnext/regional/italy/setup.py:171
 msgid "Applicable if the company is a limited liability company"
-msgstr "Berlaku jika perusahaan tersebut merupakan perseroan terbatas"
+msgstr "Berlaku jika perusahaan adalah perseroan terbatas"
 
 #: erpnext/regional/italy/setup.py:122
 msgid "Applicable if the company is an Individual or a Proprietorship"
@@ -5312,11 +5312,11 @@ msgstr ""
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:10
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:10
 msgid "Application of Funds (Assets)"
-msgstr "Penerapan Dana (Aset)"
+msgstr "Penggunaan Dana (Aset)"
 
 #: erpnext/templates/includes/order/order_taxes.html:70
 msgid "Applied Coupon Code"
-msgstr "Kode Kupon Terapan"
+msgstr "Kode Kupon yang Diterapkan"
 
 #. Description of the 'Minimum Value' (Float) field in DocType 'Quality
 #. Inspection Reading'
@@ -5491,12 +5491,12 @@ msgstr ""
 #: erpnext/crm/doctype/appointment/appointment.json
 #: erpnext/crm/workspace/crm/crm.json
 msgid "Appointment"
-msgstr "Janji"
+msgstr "Janji Temu"
 
 #. Name of a DocType
 #: erpnext/crm/doctype/appointment_booking_settings/appointment_booking_settings.json
 msgid "Appointment Booking Settings"
-msgstr "Pengaturan Pemesanan Pengangkatan"
+msgstr "Pengaturan Pemesanan Janji Temu"
 
 #. Name of a DocType
 #: erpnext/crm/doctype/appointment_booking_slots/appointment_booking_slots.json
@@ -5505,7 +5505,7 @@ msgstr "Slot Pemesanan Janji Temu"
 
 #: erpnext/crm/doctype/appointment/appointment.py:95
 msgid "Appointment Confirmation"
-msgstr "Konfirmasi perjanjian"
+msgstr "Konfirmasi Janji Temu"
 
 #: erpnext/www/book_appointment/index.js:237
 msgid "Appointment Created Successfully"
@@ -5547,7 +5547,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.py:79
 msgid "Approving Role cannot be same as role the rule is Applicable To"
-msgstr "Menyetujui Peran tidak bisa sama dengan peran aturan yang Berlaku Untuk"
+msgstr "Peran Menyetujui tidak boleh sama dengan peran yang berlaku untuk aturan tersebut"
 
 #. Label of the approving_user (Link) field in DocType 'Authorization Rule'
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.json
@@ -5556,7 +5556,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.py:77
 msgid "Approving User cannot be same as user the rule is Applicable To"
-msgstr "Menyetujui Pengguna tidak bisa sama dengan pengguna aturan yang Berlaku Untuk"
+msgstr "Pengguna yang diberi peran Menyetujui tidak boleh sama dengan pengguna yang dikenakan aturan tersebut"
 
 #. Description of the 'Enable Fuzzy Matching' (Check) field in DocType
 #. 'Accounts Settings'
@@ -5610,7 +5610,7 @@ msgstr ""
 #: erpnext/stock/report/stock_ageing/stock_ageing.js:16
 #: erpnext/stock/report/stock_and_account_value_comparison/stock_and_account_value_comparison.js:30
 msgid "As On Date"
-msgstr "Seperti Pada Tanggal"
+msgstr "Per Tanggal"
 
 #: erpnext/accounts/report/billed_items_to_be_received/billed_items_to_be_received.js:15
 #: erpnext/accounts/report/delivered_items_to_be_billed/delivered_items_to_be_billed.js:15
@@ -5626,11 +5626,11 @@ msgstr ""
 
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.py:189
 msgid "As the field {0} is enabled, the field {1} is mandatory."
-msgstr "Saat bidang {0} diaktifkan, bidang {1} wajib diisi."
+msgstr "Karena bidang {0} diaktifkan, bidang {1} wajib diisi."
 
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.py:197
 msgid "As the field {0} is enabled, the value of the field {1} should be more than 1."
-msgstr "Saat bidang {0} diaktifkan, nilai bidang {1} harus lebih dari 1."
+msgstr "Karena bidang {0} diaktifkan, nilai bidang {1} harus lebih dari 1."
 
 #: erpnext/stock/doctype/item/item.py:981
 msgid "As there are existing submitted transactions against item {0}, you can not change the value of {1}."
@@ -5650,7 +5650,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.py:1743
 msgid "As there are sufficient raw materials, Material Request is not required for Warehouse {0}."
-msgstr "Karena ada bahan baku yang cukup, Permintaan Material tidak diperlukan untuk Gudang {0}."
+msgstr "Karena bahan baku mencukupi, Permintaan Material tidak diperlukan untuk Gudang {0}."
 
 #: erpnext/stock/doctype/stock_settings/stock_settings.py:175
 #: erpnext/stock/doctype/stock_settings/stock_settings.py:187
@@ -5766,12 +5766,12 @@ msgstr ""
 #: erpnext/stock/doctype/item/item.json
 #: erpnext/stock/doctype/purchase_receipt_item/purchase_receipt_item.json
 msgid "Asset Category"
-msgstr "Aset Kategori"
+msgstr "Kategori Aset"
 
 #. Name of a DocType
 #: erpnext/assets/doctype/asset_category_account/asset_category_account.json
 msgid "Asset Category Account"
-msgstr "Aset Kategori Akun"
+msgstr "Akun Kategori Aset"
 
 #. Label of the asset_category_name (Data) field in DocType 'Asset Category'
 #: erpnext/assets/doctype/asset_category/asset_category.json
@@ -5780,7 +5780,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:307
 msgid "Asset Category is mandatory for Fixed Asset item"
-msgstr "Aset Kategori adalah wajib untuk item aset tetap"
+msgstr "Kategori Aset wajib diisi untuk item Aset Tetap"
 
 #. Label of the depreciation_cost_center (Link) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -5792,7 +5792,7 @@ msgstr ""
 #: erpnext/accounts/report/asset_depreciation_ledger/asset_depreciation_ledger.json
 #: erpnext/assets/workspace/assets/assets.json
 msgid "Asset Depreciation Ledger"
-msgstr "Aset Penyusutan Ledger"
+msgstr "Buku Besar Penyusutan Aset"
 
 #. Name of a DocType
 #: erpnext/assets/doctype/asset_depreciation_schedule/asset_depreciation_schedule.json
@@ -5825,7 +5825,7 @@ msgstr ""
 #: erpnext/accounts/report/asset_depreciations_and_balances/asset_depreciations_and_balances.json
 #: erpnext/assets/workspace/assets/assets.json
 msgid "Asset Depreciations and Balances"
-msgstr "Penyusutan aset dan Saldo"
+msgstr "Penyusutan dan Saldo Aset"
 
 #. Label of the asset_details (Section Break) field in DocType 'Serial No'
 #: erpnext/stock/doctype/serial_no/serial_no.json
@@ -5840,7 +5840,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/assets/doctype/asset_finance_book/asset_finance_book.json
 msgid "Asset Finance Book"
-msgstr "Buku Aset Keuangan"
+msgstr "Buku Keuangan Aset"
 
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:411
 msgid "Asset ID"
@@ -5871,7 +5871,7 @@ msgstr "Pemeliharaan Aset"
 #: erpnext/assets/doctype/asset_maintenance_log/asset_maintenance_log.json
 #: erpnext/assets/workspace/assets/assets.json
 msgid "Asset Maintenance Log"
-msgstr "Log pemeliharaan aset"
+msgstr "Log Pemeliharaan Aset"
 
 #. Name of a DocType
 #: erpnext/assets/doctype/asset_maintenance_task/asset_maintenance_task.json
@@ -5891,7 +5891,7 @@ msgstr "Tim Pemeliharaan Aset"
 #: erpnext/assets/workspace/assets/assets.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.js:232
 msgid "Asset Movement"
-msgstr "Gerakan aset"
+msgstr "Pergerakan Aset"
 
 #. Name of a DocType
 #: erpnext/assets/doctype/asset_movement_item/asset_movement_item.json
@@ -5900,7 +5900,7 @@ msgstr "Item Pergerakan Aset"
 
 #: erpnext/assets/doctype/asset/asset.py:1035
 msgid "Asset Movement record {0} created"
-msgstr "Gerakan aset catatan {0} dibuat"
+msgstr "Catatan Pergerakan Aset {0} dibuat"
 
 #. Label of the asset_name (Data) field in DocType 'Asset'
 #. Label of the target_asset_name (Data) field in DocType 'Asset
@@ -5920,7 +5920,7 @@ msgstr "Gerakan aset catatan {0} dibuat"
 #: erpnext/assets/doctype/asset_repair/asset_repair.json
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:417
 msgid "Asset Name"
-msgstr "Aset Nama"
+msgstr "Nama Aset"
 
 #. Label of the asset_naming_series (Select) field in DocType 'Item'
 #: erpnext/stock/doctype/item/item.json
@@ -5950,7 +5950,7 @@ msgstr ""
 #: erpnext/accounts/report/account_balance/account_balance.js:38
 #: erpnext/setup/doctype/company/company.json
 msgid "Asset Received But Not Billed"
-msgstr "Aset Diterima Tapi Tidak Ditagih"
+msgstr "Aset Diterima Tetapi Belum Ditagih"
 
 #. Name of a DocType
 #. Label of a Link in the Assets Workspace
@@ -6008,7 +6008,7 @@ msgstr ""
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:394
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:441
 msgid "Asset Value"
-msgstr "Nilai aset"
+msgstr "Nilai Aset"
 
 #. Name of a DocType
 #. Label of a Link in the Assets Workspace
@@ -6019,13 +6019,13 @@ msgstr "Penyesuaian Nilai Aset"
 
 #: erpnext/assets/doctype/asset_value_adjustment/asset_value_adjustment.py:53
 msgid "Asset Value Adjustment cannot be posted before Asset's purchase date <b>{0}</b>."
-msgstr "Penyesuaian Nilai Aset tidak dapat diposting sebelum tanggal pembelian Aset <b>{0}</b> ."
+msgstr "Penyesuaian Nilai Aset tidak dapat diposting sebelum tanggal pembelian Aset <b>{0}</b>."
 
 #. Label of a chart in the Assets Workspace
 #: erpnext/assets/dashboard_fixtures.py:56
 #: erpnext/assets/workspace/assets/assets.json
 msgid "Asset Value Analytics"
-msgstr "Analisis Nilai Aset"
+msgstr "Analitik Nilai Aset"
 
 #: erpnext/assets/doctype/asset/asset.py:208
 msgid "Asset cancelled"
@@ -6085,7 +6085,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/depreciation.py:437
 msgid "Asset scrapped via Journal Entry {0}"
-msgstr "Aset membatalkan via Journal Entri {0}"
+msgstr "Aset dihapusbukukan melalui Entri Jurnal {0}"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:1371
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:1374
@@ -6110,7 +6110,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/depreciation.py:369
 msgid "Asset {0} cannot be scrapped, as it is already {1}"
-msgstr "Aset {0} tidak dapat dihapus, karena sudah {1}"
+msgstr "Aset {0} tidak dapat dihapusbukukan, karena sudah {1}"
 
 #: erpnext/assets/doctype/asset_capitalization/asset_capitalization.py:214
 msgid "Asset {0} does not belong to Item {1}"
@@ -6122,11 +6122,11 @@ msgstr "Aset {0} bukan milik perusahaan {1}"
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:92
 msgid "Asset {0} does not belongs to the custodian {1}"
-msgstr "Aset {0} bukan milik penjaga {1}"
+msgstr "Aset {0} bukan milik kustodian {1}"
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:64
 msgid "Asset {0} does not belongs to the location {1}"
-msgstr "Aset {0} bukan milik lokasi {1}"
+msgstr "Aset {0} tidak berada di lokasi {1}"
 
 #: erpnext/assets/doctype/asset_capitalization/asset_capitalization.py:669
 #: erpnext/assets/doctype/asset_capitalization/asset_capitalization.py:761
@@ -6143,7 +6143,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/depreciation.py:367
 msgid "Asset {0} must be submitted"
-msgstr "Aset {0} harus diserahkan"
+msgstr "Aset {0} harus disubmit"
 
 #: erpnext/controllers/buying_controller.py:934
 msgid "Asset {assets_link} created for {item_code}"
@@ -6248,7 +6248,7 @@ msgstr ""
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.py:484
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:540
 msgid "At least one mode of payment is required for POS invoice."
-msgstr "Setidaknya satu cara pembayaran diperlukan untuk POS faktur."
+msgstr "Setidaknya satu mode pembayaran diperlukan untuk faktur POS."
 
 #: erpnext/setup/doctype/terms_and_conditions/terms_and_conditions.py:34
 msgid "At least one of the Applicable Modules should be selected"
@@ -6268,7 +6268,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/routing/routing.py:50
 msgid "At row #{0}: the sequence id {1} cannot be less than previous row sequence id {2}"
-msgstr "Di baris # {0}: id urutan {1} tidak boleh kurang dari id urutan baris sebelumnya {2}"
+msgstr "Pada baris #{0}: ID urutan {1} tidak boleh kurang dari ID urutan baris sebelumnya {2}"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:579
 msgid "At row #{0}: you have selected the Difference Account {1}, which is a Cost of Goods Sold type account. Please select a different account"
@@ -6362,7 +6362,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:922
 msgid "Attribute table is mandatory"
-msgstr "Tabel atribut wajib"
+msgstr "Tabel atribut wajib diisi"
 
 #: erpnext/stock/doctype/item_attribute/item_attribute.py:108
 msgid "Attribute value: {0} must appear only once"
@@ -6370,7 +6370,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:926
 msgid "Attribute {0} selected multiple times in Attributes Table"
-msgstr "Atribut {0} karena beberapa kali dalam Atribut Tabel"
+msgstr "Atribut {0} dipilih beberapa kali dalam Tabel Atribut"
 
 #: erpnext/stock/doctype/item/item.py:854
 msgid "Attributes"
@@ -6392,11 +6392,11 @@ msgstr "Atribut"
 #: erpnext/regional/doctype/south_africa_vat_settings/south_africa_vat_settings.json
 #: erpnext/setup/doctype/company/company.json
 msgid "Auditor"
-msgstr "Akuntan"
+msgstr "Auditor"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_connector.py:68
 msgid "Authentication Failed"
-msgstr "Otentikasi gagal"
+msgstr "Otentikasi Gagal"
 
 #. Label of the authorised_by_section (Section Break) field in DocType
 #. 'Contract'
@@ -6407,16 +6407,16 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/setup/doctype/authorization_control/authorization_control.json
 msgid "Authorization Control"
-msgstr "Pengendali Otorisasi"
+msgstr "Kontrol Otorisasi"
 
 #. Name of a DocType
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.json
 msgid "Authorization Rule"
-msgstr "Regulasi Autorisasi"
+msgstr "Aturan Otorisasi"
 
 #: erpnext/accounts/print_format/payment_receipt_voucher/payment_receipt_voucher.html:27
 msgid "Authorized Signatory"
-msgstr "Penandatangan yang sah"
+msgstr "Pihak yang Berwenang Menandatangani"
 
 #. Label of the value (Float) field in DocType 'Authorization Rule'
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.json
@@ -6496,7 +6496,7 @@ msgstr ""
 
 #: erpnext/stock/reorder_item.py:329
 msgid "Auto Material Requests Generated"
-msgstr "Pembuatan Form Permintaan Material Otomatis"
+msgstr "Permintaan Material Otomatis Dihasilkan"
 
 #. Option for the 'Supplier Naming By' (Select) field in DocType 'Buying
 #. Settings'
@@ -6625,7 +6625,7 @@ msgstr ""
 #: erpnext/public/js/controllers/buying.js:329
 #: erpnext/public/js/utils/sales_common.js:458
 msgid "Auto repeat document updated"
-msgstr "Pembaruan dokumen otomatis diperbarui"
+msgstr "Dokumen ulang otomatis diperbarui"
 
 #. Description of the 'Write Off Limit' (Currency) field in DocType 'POS
 #. Profile'
@@ -6709,7 +6709,7 @@ msgstr ""
 
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:428
 msgid "Available For Use Date"
-msgstr "Tersedia Untuk Digunakan Tanggal"
+msgstr "Tanggal Siap Digunakan"
 
 #. Label of the available_qty_section (Section Break) field in DocType
 #. 'Delivery Note Item'
@@ -6719,7 +6719,7 @@ msgstr "Tersedia Untuk Digunakan Tanggal"
 #: erpnext/stock/doctype/delivery_note_item/delivery_note_item.json
 #: erpnext/stock/report/stock_ageing/stock_ageing.py:167
 msgid "Available Qty"
-msgstr "Qty Tersedia"
+msgstr "Jml Tersedia"
 
 #. Label of the required_qty (Float) field in DocType 'Purchase Receipt Item
 #. Supplied'
@@ -6786,22 +6786,22 @@ msgstr ""
 
 #: erpnext/selling/report/customer_wise_item_price/customer_wise_item_price.py:38
 msgid "Available Stock"
-msgstr "Stok tersedia"
+msgstr "Stok Tersedia"
 
 #. Name of a report
 #. Label of a Link in the Selling Workspace
 #: erpnext/selling/report/available_stock_for_packing_items/available_stock_for_packing_items.json
 #: erpnext/selling/workspace/selling/selling.json
 msgid "Available Stock for Packing Items"
-msgstr "Tersedia untuk Barang Paket"
+msgstr "Stok Tersedia untuk Item Kemasan"
 
 #: erpnext/assets/doctype/asset/asset.py:313
 msgid "Available for use date is required"
-msgstr "Tersedia untuk tanggal penggunaan diperlukan"
+msgstr "Tanggal siap digunakan wajib diisi"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:784
 msgid "Available quantity is {0}, you need {1}"
-msgstr "Kuantitas yang tersedia adalah {0}, Anda perlu {1}"
+msgstr "Jumlah tersedia adalah {0}, Anda memerlukan {1}"
 
 #: erpnext/stock/dashboard/item_dashboard.js:251
 msgid "Available {0}"
@@ -6814,13 +6814,13 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/asset.py:418
 msgid "Available-for-use Date should be after purchase date"
-msgstr "Tanggal Tersedia untuk digunakan harus setelah tanggal pembelian"
+msgstr "Tanggal Siap Digunakan harus setelah Tanggal Pembelian"
 
 #: erpnext/stock/report/stock_ageing/stock_ageing.py:168
 #: erpnext/stock/report/stock_ageing/stock_ageing.py:202
 #: erpnext/stock/report/stock_balance/stock_balance.py:517
 msgid "Average Age"
-msgstr "Rata-rata Usia"
+msgstr "Usia Rata-rata"
 
 #: erpnext/projects/report/project_summary/project_summary.py:124
 msgid "Average Completion"
@@ -6833,7 +6833,7 @@ msgstr ""
 
 #: erpnext/accounts/report/share_balance/share_balance.py:60
 msgid "Average Rate"
-msgstr "Harga rata-rata"
+msgstr "Tarif Rata-rata"
 
 #. Label of the avg_response_time (Duration) field in DocType 'Issue'
 #: erpnext/support/doctype/issue/issue.json
@@ -6847,7 +6847,7 @@ msgstr ""
 
 #: erpnext/stock/report/itemwise_recommended_reorder_level/itemwise_recommended_reorder_level.py:63
 msgid "Avg Daily Outgoing"
-msgstr "Rata-rata Harian Outgoing"
+msgstr "Rata-rata Keluar Harian"
 
 #. Label of the avg_rate (Float) field in DocType 'Serial and Batch Bundle'
 #: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.json
@@ -6869,7 +6869,7 @@ msgstr "Rata-rata Tarif Daftar Harga Jual"
 
 #: erpnext/accounts/report/gross_profit/gross_profit.py:316
 msgid "Avg. Selling Rate"
-msgstr "Harga Jual Rata-rata"
+msgstr "Tarif Jual Rata-rata"
 
 #. Option for the 'Blood Group' (Select) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -6994,7 +6994,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/bom_explosion_item/bom_explosion_item.json
 msgid "BOM Explosion Item"
-msgstr "Rincian Barang BOM"
+msgstr "Item Rincian BOM"
 
 #: erpnext/manufacturing/report/bom_operations_time/bom_operations_time.js:20
 #: erpnext/manufacturing/report/bom_operations_time/bom_operations_time.py:101
@@ -7009,7 +7009,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/bom_item/bom_item.json
 msgid "BOM Item"
-msgstr "Komponen BOM"
+msgstr "Item BOM"
 
 #: erpnext/manufacturing/report/bom_explorer/bom_explorer.py:60
 #: erpnext/manufacturing/report/production_plan_summary/production_plan_summary.py:175
@@ -7069,12 +7069,12 @@ msgstr ""
 
 #: erpnext/stock/report/item_prices/item_prices.py:60
 msgid "BOM Rate"
-msgstr "Tingkat BOM"
+msgstr "Tarif BOM"
 
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/bom_scrap_item/bom_scrap_item.json
 msgid "BOM Scrap Item"
-msgstr "BOM Scrap Barang"
+msgstr "Item Sisa BOM"
 
 #. Label of a Link in the Manufacturing Workspace
 #. Name of a report
@@ -7086,7 +7086,7 @@ msgstr "Pencarian BOM"
 #. Name of a report
 #: erpnext/manufacturing/report/bom_stock_calculated/bom_stock_calculated.json
 msgid "BOM Stock Calculated"
-msgstr "BOM Stock Dihitung"
+msgstr "Stok BOM Terhitung"
 
 #. Name of a report
 #. Label of a Link in the Manufacturing Workspace
@@ -7095,7 +7095,7 @@ msgstr "BOM Stock Dihitung"
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.json
 #: erpnext/manufacturing/workspace/manufacturing/manufacturing.json
 msgid "BOM Stock Report"
-msgstr "Laporan Persediaan BOM"
+msgstr "Laporan Stok BOM"
 
 #. Label of the tab_2_tab (Tab Break) field in DocType 'BOM Creator'
 #: erpnext/manufacturing/doctype/bom_creator/bom_creator.json
@@ -7143,21 +7143,21 @@ msgstr ""
 #. Name of a report
 #: erpnext/manufacturing/report/bom_variance_report/bom_variance_report.json
 msgid "BOM Variance Report"
-msgstr "Laporan Varians BOM"
+msgstr "Laporan Selisih BOM"
 
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/bom_website_item/bom_website_item.json
 msgid "BOM Website Item"
-msgstr "BOM Situs Persediaan"
+msgstr "Item Website BOM"
 
 #. Name of a DocType
 #: erpnext/manufacturing/doctype/bom_website_operation/bom_website_operation.json
 msgid "BOM Website Operation"
-msgstr "BOM Operasi Situs"
+msgstr "Operasi Website BOM"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:1208
 msgid "BOM and Manufacturing Quantity are required"
-msgstr "BOM dan Kuantitas Manufaktur diperlukan"
+msgstr "BOM dan Kuantitas Manufaktur wajib diisi"
 
 #. Label of the bom_and_work_order_tab (Tab Break) field in DocType
 #. 'Manufacturing Settings'
@@ -7168,11 +7168,11 @@ msgstr ""
 #: erpnext/stock/doctype/material_request/material_request.js:365
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:685
 msgid "BOM does not contain any stock item"
-msgstr "BOM tidak berisi barang persediaan apapun"
+msgstr "BOM tidak berisi item stok apa pun"
 
 #: erpnext/manufacturing/doctype/bom_update_log/bom_updation_utils.py:85
 msgid "BOM recursion: {0} cannot be child of {1}"
-msgstr "Rekursi BOM: {0} tidak boleh anak dari {1}"
+msgstr "Rekursi BOM: {0} tidak boleh sub dari {1}"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:666
 msgid "BOM recursion: {1} cannot be parent or child of {0}"
@@ -7180,7 +7180,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/bom/bom.py:1321
 msgid "BOM {0} does not belong to Item {1}"
-msgstr "BOM {0} bukan milik Barang {1}"
+msgstr ""
 
 #: erpnext/manufacturing/doctype/bom/bom.py:1303
 msgid "BOM {0} must be active"
@@ -7188,7 +7188,7 @@ msgstr "BOM {0} harus aktif"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:1306
 msgid "BOM {0} must be submitted"
-msgstr "BOM {0} harus dikirimkan"
+msgstr "BOM {0} harus disubmit"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:723
 msgid "BOM {0} not found for the item {1}"
@@ -7213,7 +7213,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.py:340
 msgid "Backdated Stock Entry"
-msgstr "Entri Stok Backdated"
+msgstr "Entri Stok Bertanggal Mundur"
 
 #. Label of the backflush_from_wip_warehouse (Check) field in DocType 'BOM
 #. Operation'
@@ -7230,7 +7230,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/manufacturing_settings/manufacturing_settings.js:16
 msgid "Backflush Raw Materials"
-msgstr "Bahan Baku Backflush"
+msgstr "Backflush Bahan Baku"
 
 #. Label of the backflush_raw_materials_based_on (Select) field in DocType
 #. 'Manufacturing Settings'
@@ -7255,7 +7255,7 @@ msgstr ""
 #: erpnext/accounts/report/sales_register/sales_register.py:278
 #: erpnext/stock/report/incorrect_serial_no_valuation/incorrect_serial_no_valuation.py:46
 msgid "Balance"
-msgstr "Keseimbangan"
+msgstr "Saldo"
 
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.html:41
 msgid "Balance (Dr - Cr)"
@@ -7283,7 +7283,7 @@ msgstr ""
 #: erpnext/stock/report/stock_balance/stock_balance.py:445
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:250
 msgid "Balance Qty"
-msgstr "Jumlah Saldo"
+msgstr "Jml Saldo"
 
 #: erpnext/stock/page/warehouse_capacity_summary/warehouse_capacity_summary.js:71
 msgid "Balance Qty (Stock)"
@@ -7333,7 +7333,7 @@ msgstr "Nilai Saldo"
 
 #: erpnext/accounts/doctype/gl_entry/gl_entry.py:322
 msgid "Balance for Account {0} must always be {1}"
-msgstr "Saldo Rekening {0} harus selalu {1}"
+msgstr "Saldo untuk Akun {0} harus selalu {1}"
 
 #. Label of the balance_must_be (Select) field in DocType 'Account'
 #: erpnext/accounts/doctype/account/account.json
@@ -7437,12 +7437,12 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/accounts/doctype/bank_account_subtype/bank_account_subtype.json
 msgid "Bank Account Subtype"
-msgstr "Subjenis Rekening Bank"
+msgstr "Subtipe Rekening Bank"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/bank_account_type/bank_account_type.json
 msgid "Bank Account Type"
-msgstr "Jenis Rekening Bank"
+msgstr "Tipe Rekening Bank"
 
 #: erpnext/accounts/doctype/bank_transaction/bank_transaction.py:338
 msgid "Bank Account {} in Bank Transaction {} is not matching with Bank Account {}"
@@ -7474,12 +7474,12 @@ msgstr ""
 #: erpnext/accounts/doctype/bank_clearance/bank_clearance.json
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Bank Clearance"
-msgstr "Izin Bank"
+msgstr "Kliring Bank"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/bank_clearance_detail/bank_clearance_detail.json
 msgid "Bank Clearance Detail"
-msgstr "Detail Izin Bank"
+msgstr "Detail Kliring Bank"
 
 #. Name of a report
 #: erpnext/accounts/report/bank_clearance_summary/bank_clearance_summary.json
@@ -7498,7 +7498,7 @@ msgstr ""
 #: erpnext/accounts/doctype/bank/bank_dashboard.py:7
 #: erpnext/setup/doctype/employee/employee.json
 msgid "Bank Details"
-msgstr "Rincian bank"
+msgstr "Rincian Bank"
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:243
 msgid "Bank Draft"
@@ -7515,7 +7515,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/accounts/doctype/bank_guarantee/bank_guarantee.json
 msgid "Bank Guarantee"
-msgstr "Bank Garansi"
+msgstr "Garansi Bank"
 
 #. Label of the bank_guarantee_number (Data) field in DocType 'Bank Guarantee'
 #: erpnext/accounts/doctype/bank_guarantee/bank_guarantee.json
@@ -7539,7 +7539,7 @@ msgstr ""
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:98
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:142
 msgid "Bank Overdraft Account"
-msgstr "Akun Overdraft Bank"
+msgstr "Akun Bank Overdraft"
 
 #. Name of a report
 #. Label of a Link in the Accounting Workspace
@@ -7569,7 +7569,7 @@ msgstr "Saldo Laporan Bank sesuai Buku Besar"
 #: erpnext/accounts/doctype/bank_transaction/bank_transaction.json
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.js:32
 msgid "Bank Transaction"
-msgstr "Transaksi bank"
+msgstr "Transaksi Bank"
 
 #. Label of the bank_transaction_mapping (Table) field in DocType 'Bank'
 #. Name of a DocType
@@ -7605,7 +7605,7 @@ msgstr ""
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:547
 msgid "Bank account cannot be named as {0}"
-msgstr "Rekening bank tidak dapat namakan sebagai {0}"
+msgstr "Rekening bank tidak dapat dinamakan sebagai {0}"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.py:146
 msgid "Bank account {0} already exists and could not be created again"
@@ -7660,7 +7660,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_entry_detail/stock_entry_detail.json
 #: erpnext/stock/doctype/stock_reconciliation_item/stock_reconciliation_item.json
 msgid "Barcode"
-msgstr "Kode batang"
+msgstr "Kode Batang"
 
 #. Label of the barcode_type (Select) field in DocType 'Item Barcode'
 #: erpnext/stock/doctype/item_barcode/item_barcode.json
@@ -7669,11 +7669,11 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:458
 msgid "Barcode {0} already used in Item {1}"
-msgstr "Barcode {0} sudah digunakan dalam Produk {1}"
+msgstr "Kode Batang {0} sudah digunakan pada Item {1}"
 
 #: erpnext/stock/doctype/item/item.py:473
 msgid "Barcode {0} is not a valid {1} code"
-msgstr "Kode batang {0} bukan kode {1} yang valid"
+msgstr "Kode Batang {0} bukan kode {1} yang valid"
 
 #. Label of the sb_barcodes (Section Break) field in DocType 'Item'
 #. Label of the barcodes (Table) field in DocType 'Item'
@@ -7861,7 +7861,7 @@ msgstr ""
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.py:80
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Batch"
-msgstr "Kumpulan"
+msgstr "Batch"
 
 #. Label of the description (Small Text) field in DocType 'Batch'
 #: erpnext/stock/doctype/batch/batch.json
@@ -7884,14 +7884,14 @@ msgstr ""
 
 #: erpnext/stock/doctype/batch/batch.py:129
 msgid "Batch ID is mandatory"
-msgstr "Batch ID adalah wajib"
+msgstr "ID Batch wajib diisi"
 
 #. Name of a report
 #. Label of a Link in the Stock Workspace
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.json
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Batch Item Expiry Status"
-msgstr "Status Kadaluarsa Persediaan Batch"
+msgstr "Status Kadaluarsa Item Batch"
 
 #. Label of the batch_no (Link) field in DocType 'POS Invoice Item'
 #. Label of the batch_no (Link) field in DocType 'Purchase Invoice Item'
@@ -8039,18 +8039,18 @@ msgstr ""
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:2828
 #: erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.py:286
 msgid "Batch {0} of Item {1} has expired."
-msgstr "Kumpulan {0} Barang {1} telah berakhir."
+msgstr "Batch {0} dari Barang {1} telah kedaluwarsa."
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:2834
 msgid "Batch {0} of Item {1} is disabled."
-msgstr "Batch {0} dari Item {1} dinonaktifkan."
+msgstr "Batch {0} dari Barang {1} dinonaktifkan."
 
 #. Name of a report
 #. Label of a Link in the Stock Workspace
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.json
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Batch-Wise Balance History"
-msgstr "Rekap Saldo menurut Kumpulan"
+msgstr "Riwayat Saldo Berdasarkan Batch"
 
 #: erpnext/stock/report/fifo_queue_vs_qty_after_transaction_comparison/fifo_queue_vs_qty_after_transaction_comparison.py:164
 #: erpnext/stock/report/stock_ledger_invariant_check/stock_ledger_invariant_check.py:183
@@ -8086,7 +8086,7 @@ msgstr ""
 #: erpnext/accounts/report/purchase_register/purchase_register.py:214
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Bill Date"
-msgstr "Tanggal Penagihan"
+msgstr "Tanggal Tagihan"
 
 #. Label of the bill_no (Data) field in DocType 'Journal Entry'
 #. Label of the bill_no (Data) field in DocType 'Subcontracting Receipt'
@@ -8095,7 +8095,7 @@ msgstr "Tanggal Penagihan"
 #: erpnext/accounts/report/purchase_register/purchase_register.py:213
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Bill No"
-msgstr "Nomor Tagihan"
+msgstr "No. Tagihan"
 
 #. Label of the bill_for_rejected_quantity_in_purchase_invoice (Check) field in
 #. DocType 'Buying Settings'
@@ -8110,7 +8110,7 @@ msgstr ""
 #: erpnext/stock/doctype/material_request/material_request.js:123
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:615
 msgid "Bill of Materials"
-msgstr "Bill of material"
+msgstr "Bill of Material"
 
 #. Option for the 'Status' (Select) field in DocType 'Timesheet'
 #: erpnext/controllers/website_list_for_contact.py:203
@@ -8130,7 +8130,7 @@ msgstr "Ditagih"
 #: erpnext/selling/report/sales_order_analysis/sales_order_analysis.py:209
 #: erpnext/selling/report/sales_order_analysis/sales_order_analysis.py:298
 msgid "Billed Amount"
-msgstr "Nilai Tagihan"
+msgstr "Jumlah Ditagih"
 
 #. Label of the billed_amt (Currency) field in DocType 'Sales Order Item'
 #. Label of the billed_amt (Currency) field in DocType 'Delivery Note Item'
@@ -8149,7 +8149,7 @@ msgstr ""
 #: erpnext/buying/report/purchase_order_analysis/purchase_order_analysis.py:261
 #: erpnext/selling/report/sales_order_analysis/sales_order_analysis.py:276
 msgid "Billed Qty"
-msgstr "Jumlah Tagihan"
+msgstr "Jml Ditagih"
 
 #. Label of the section_break_56 (Section Break) field in DocType 'Purchase
 #. Order Item'
@@ -8245,7 +8245,7 @@ msgstr ""
 
 #: erpnext/public/js/purchase_trends_filters.js:39
 msgid "Billing Date"
-msgstr "Tanggal tagihan"
+msgstr "Tanggal Tagihan"
 
 #. Label of the billing_details (Section Break) field in DocType 'Timesheet'
 #: erpnext/projects/doctype/timesheet/timesheet.json
@@ -8265,7 +8265,7 @@ msgstr ""
 #: erpnext/projects/doctype/timesheet_detail/timesheet_detail.json
 #: erpnext/projects/report/timesheet_billing_summary/timesheet_billing_summary.py:67
 msgid "Billing Hours"
-msgstr "Jam penagihan"
+msgstr "Jam Penagihan"
 
 #. Label of the billing_interval (Select) field in DocType 'Subscription Plan'
 #: erpnext/accounts/doctype/subscription_plan/subscription_plan.json
@@ -8280,7 +8280,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/subscription_plan/subscription_plan.py:41
 msgid "Billing Interval Count cannot be less than 1"
-msgstr "Hitungan Interval Penagihan tidak boleh kurang dari 1"
+msgstr "Jumlah Interval Penagihan tidak boleh kurang dari 1"
 
 #: erpnext/accounts/doctype/subscription/subscription.py:363
 msgid "Billing Interval in Subscription Plan must be Month to follow calendar months"
@@ -8313,7 +8313,7 @@ msgstr ""
 
 #: erpnext/accounts/party.py:610
 msgid "Billing currency must be equal to either default company's currency or party account currency"
-msgstr "Mata uang penagihan harus sama dengan mata uang perusahaan atau mata uang akun tertagih"
+msgstr "Mata uang penagihan harus sama dengan mata uang perusahaan default atau mata uang akun pihak"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/bin/bin.json
@@ -8391,7 +8391,7 @@ msgstr "Hitam"
 #: erpnext/selling/doctype/sales_order_item/sales_order_item.json
 #: erpnext/selling/workspace/selling/selling.json
 msgid "Blanket Order"
-msgstr "Pesanan Selimut"
+msgstr "Pesanan Blanket"
 
 #. Label of the blanket_order_allowance (Float) field in DocType 'Buying
 #. Settings'
@@ -8490,7 +8490,7 @@ msgstr ""
 
 #: erpnext/www/book_appointment/index.html:3
 msgid "Book Appointment"
-msgstr "Penunjukan Buku"
+msgstr "Buat Janji Temu"
 
 #. Label of the book_asset_depreciation_entry_automatically (Check) field in
 #. DocType 'Accounts Settings'
@@ -8524,7 +8524,7 @@ msgstr ""
 #: erpnext/stock/doctype/shipment/shipment.json
 #: erpnext/stock/doctype/shipment/shipment_list.js:5
 msgid "Booked"
-msgstr "Memesan"
+msgstr "Dipesan"
 
 #. Label of the booked_fixed_asset (Check) field in DocType 'Asset'
 #: erpnext/assets/doctype/asset/asset.json
@@ -8555,7 +8555,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/subscription/subscription.py:339
 msgid "Both Trial Period Start Date and Trial Period End Date must be set"
-msgstr "Tanggal Awal Periode Uji Coba dan Tanggal Akhir Periode Uji Coba harus ditetapkan"
+msgstr "Tanggal Mulai Periode Uji Coba dan Tanggal Akhir Periode Uji Coba harus ditetapkan"
 
 #: erpnext/utilities/transaction_base.py:230
 msgid "Both {0} Account: {1} and Advance Account: {2} must be of same currency for company: {3}"
@@ -8656,7 +8656,7 @@ msgstr ""
 #: erpnext/stock/workspace/stock/stock.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
 msgid "Brand"
-msgstr "Merek"
+msgstr "Brand"
 
 #. Label of the brand_defaults (Table) field in DocType 'Brand'
 #: erpnext/setup/doctype/brand/brand.json
@@ -8739,12 +8739,12 @@ msgstr ""
 #: erpnext/accounts/report/budget_variance_report/budget_variance_report.py:380
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Budget"
-msgstr "Anggaran belanja"
+msgstr "Anggaran"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/budget_account/budget_account.json
 msgid "Budget Account"
-msgstr "Akun anggaran"
+msgstr "Akun Anggaran"
 
 #. Label of the accounts (Table) field in DocType 'Budget'
 #: erpnext/accounts/doctype/budget/budget.json
@@ -8784,15 +8784,15 @@ msgstr "Daftar Anggaran"
 #: erpnext/accounts/report/budget_variance_report/budget_variance_report.json
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Budget Variance Report"
-msgstr "Laporan Perbedaan Anggaran"
+msgstr "Laporan Selisih Anggaran"
 
 #: erpnext/accounts/doctype/budget/budget.py:101
 msgid "Budget cannot be assigned against Group Account {0}"
-msgstr "Anggaran tidak dapat diberikan terhadap Account Group {0}"
+msgstr "Anggaran tidak dapat ditetapkan terhadap Akun Grup {0}"
 
 #: erpnext/accounts/doctype/budget/budget.py:108
 msgid "Budget cannot be assigned against {0}, as it's not an Income or Expense account"
-msgstr "Anggaran tidak dapat ditugaskan terhadap {0}, karena itu bukan Penghasilan atau Beban akun"
+msgstr "Anggaran tidak dapat ditetapkan terhadap {0}, karena bukan akun Pendapatan atau Beban"
 
 #: erpnext/accounts/doctype/fiscal_year/fiscal_year_dashboard.py:8
 msgid "Budgets"
@@ -8849,7 +8849,7 @@ msgstr ""
 
 #: erpnext/stock/report/product_bundle_balance/product_bundle_balance.py:95
 msgid "Bundle Qty"
-msgstr "Bundel Qty"
+msgstr "Jml Bundel"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -8877,7 +8877,7 @@ msgstr ""
 #: erpnext/stock/doctype/batch/batch_dashboard.py:8
 #: erpnext/stock/doctype/item/item_dashboard.py:22
 msgid "Buy"
-msgstr "Membeli"
+msgstr "Beli"
 
 #. Description of a DocType
 #: erpnext/selling/doctype/customer/customer.json
@@ -8922,7 +8922,7 @@ msgstr "Daftar Harga Beli"
 
 #: erpnext/stock/report/item_price_stock/item_price_stock.py:46
 msgid "Buying Rate"
-msgstr "Tingkat Pembelian"
+msgstr "Tarif Beli"
 
 #. Name of a DocType
 #. Label of a Link in the Buying Workspace
@@ -8932,7 +8932,7 @@ msgstr "Tingkat Pembelian"
 #: erpnext/buying/workspace/buying/buying.json
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Buying Settings"
-msgstr "Setting Pembelian"
+msgstr "Pengaturan Pembelian"
 
 #. Label of the buying_and_selling_tab (Tab Break) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -8941,7 +8941,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.py:219
 msgid "Buying must be checked, if Applicable For is selected as {0}"
-msgstr "Membeli harus dicentang, jika \"Berlaku Untuk\" dipilih sebagai {0}"
+msgstr "Pembelian harus dicentang, jika Berlaku Untuk dipilih sebagai {0}"
 
 #: erpnext/buying/doctype/buying_settings/buying_settings.js:13
 msgid "By default, the Supplier Name is set as per the Supplier Name entered. If you want Suppliers to be named by a <a href='https://docs.erpnext.com/docs/user/manual/en/setting-up/settings/naming-series' target='_blank'>Naming Series</a> choose the 'Naming Series' option."
@@ -9068,7 +9068,7 @@ msgstr ""
 
 #: erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.py:53
 msgid "Calculated Bank Statement balance"
-msgstr "Dihitung keseimbangan Laporan Bank"
+msgstr "Saldo Laporan Bank Terhitung"
 
 #. Name of a report
 #: erpnext/accounts/report/calculated_discount_mismatch/calculated_discount_mismatch.json
@@ -9129,11 +9129,11 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Call Log"
-msgstr "Laporan panggilan"
+msgstr "Log Panggilan"
 
 #: erpnext/public/js/call_popup/call_popup.js:45
 msgid "Call Missed"
-msgstr "Panggilan tidak terjawab"
+msgstr "Panggilan Tak Terjawab"
 
 #. Label of the call_received_by (Link) field in DocType 'Call Log'
 #: erpnext/telephony/doctype/call_log/call_log.json
@@ -9239,14 +9239,14 @@ msgstr ""
 #: erpnext/setup/setup_wizard/data/marketing_source.txt:9
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 msgid "Campaign"
-msgstr "Promosi"
+msgstr "Kampanye"
 
 #. Name of a report
 #. Label of a Link in the CRM Workspace
 #: erpnext/crm/report/campaign_efficiency/campaign_efficiency.json
 #: erpnext/crm/workspace/crm/crm.json
 msgid "Campaign Efficiency"
-msgstr "Efisiensi Promosi"
+msgstr "Efisiensi Kampanye"
 
 #. Name of a DocType
 #: erpnext/crm/doctype/campaign_email_schedule/campaign_email_schedule.json
@@ -9312,13 +9312,13 @@ msgstr "Tidak dapat memfilter berdasarkan No. Voucher, jika dikelompokkan berdas
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1431
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:2946
 msgid "Can only make payment against unbilled {0}"
-msgstr "Hanya dapat melakukan pembayaran terhadap yang belum ditagihkan {0}"
+msgstr "Hanya dapat melakukan pembayaran terhadap {0} yang belum ditagih"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.js:1458
 #: erpnext/controllers/accounts_controller.py:3064
 #: erpnext/public/js/controllers/accounts.js:90
 msgid "Can refer row only if the charge type is 'On Previous Row Amount' or 'Previous Row Total'"
-msgstr "Dapat merujuk baris hanya jika jenis biaya adalah 'On Sebelumnya Row Jumlah' atau 'Sebelumnya Row Jumlah'"
+msgstr "Dapat merujuk baris hanya jika jenis biaya adalah 'Pada Jumlah Baris Sebelumnya' atau 'Total Baris Sebelumnya'"
 
 #: erpnext/stock/doctype/stock_settings/stock_settings.py:142
 msgid "Can't change the valuation method, as there are transactions against some items which do not have its own valuation method"
@@ -9335,11 +9335,11 @@ msgstr ""
 
 #: erpnext/support/doctype/warranty_claim/warranty_claim.py:72
 msgid "Cancel Material Visit {0} before cancelling this Warranty Claim"
-msgstr "Batal Bahan Kunjungan {0} sebelum membatalkan Garansi Klaim ini"
+msgstr "Batalkan Kunjungan Material {0} sebelum membatalkan Klaim Garansi ini"
 
 #: erpnext/maintenance/doctype/maintenance_visit/maintenance_visit.py:192
 msgid "Cancel Material Visits {0} before cancelling this Maintenance Visit"
-msgstr "Batal Kunjungan Material {0} sebelum membatalkan ini Maintenance Visit"
+msgstr "Batalkan Kunjungan Material {0} sebelum membatalkan Kunjungan Pemeliharaan ini"
 
 #: erpnext/accounts/doctype/subscription/subscription.js:48
 msgid "Cancel Subscription"
@@ -9489,11 +9489,11 @@ msgstr ""
 
 #: erpnext/stock/doctype/delivery_trip/delivery_trip.js:123
 msgid "Cannot Optimize Route as Driver Address is Missing."
-msgstr "Tidak Dapat Mengoptimalkan Rute karena Alamat Driver Tidak Ada."
+msgstr "Tidak Dapat Mengoptimalkan Rute karena Alamat Pengemudi Tidak Ada."
 
 #: erpnext/setup/doctype/employee/employee.py:182
 msgid "Cannot Relieve Employee"
-msgstr "Tidak Bisa Meringankan Karyawan"
+msgstr "Tidak Dapat Memberhentikan Karyawan"
 
 #: erpnext/accounts/doctype/repost_accounting_ledger/repost_accounting_ledger.py:72
 msgid "Cannot Resubmit Ledger entries for vouchers in Closed fiscal year."
@@ -9509,7 +9509,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:310
 msgid "Cannot be a fixed asset item as Stock Ledger is created."
-msgstr "Tidak dapat menjadi item aset tetap karena Stock Ledger dibuat."
+msgstr "Tidak dapat menjadi item aset tetap karena Buku Besar Persediaan telah dibuat."
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:246
 msgid "Cannot cancel POS Closing Entry"
@@ -9521,7 +9521,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:831
 msgid "Cannot cancel because submitted Stock Entry {0} exists"
-msgstr "Tidak bisa membatalkan karena ada Entri Persediaan {0} terkirim"
+msgstr "Tidak dapat membatalkan karena Entri Stok {0} yang telah disubmit sudah ada."
 
 #: erpnext/stock/stock_ledger.py:205
 msgid "Cannot cancel the transaction. Reposting of item valuation on submission is not completed yet."
@@ -9533,15 +9533,15 @@ msgstr ""
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:357
 msgid "Cannot cancel transaction for Completed Work Order."
-msgstr "Tidak dapat membatalkan transaksi untuk Perintah Kerja Selesai."
+msgstr "Tidak dapat membatalkan transaksi untuk Perintah Kerja yang Sudah Selesai."
 
 #: erpnext/stock/doctype/item/item.py:874
 msgid "Cannot change Attributes after stock transaction. Make a new Item and transfer stock to the new Item"
-msgstr "Tidak dapat mengubah Atribut setelah transaksi saham. Buat Item baru dan transfer saham ke Item baru"
+msgstr "Tidak dapat mengubah Atribut setelah transaksi stok. Buat Item baru dan transfer stok ke Item baru."
 
 #: erpnext/accounts/doctype/fiscal_year/fiscal_year.py:49
 msgid "Cannot change Fiscal Year Start Date and Fiscal Year End Date once the Fiscal Year is saved."
-msgstr "Tidak dapat mengubah Tahun Anggaran Tanggal Mulai dan Tanggal Akhir Tahun Anggaran setelah Tahun Anggaran disimpan."
+msgstr "Tidak dapat mengubah Tanggal Awal Tahun Fiskal dan Tanggal Akhir Tahun Fiskal setelah Tahun Fiskal disimpan."
 
 #: erpnext/accounts/doctype/accounting_dimension/accounting_dimension.py:73
 msgid "Cannot change Reference Document Type."
@@ -9549,15 +9549,15 @@ msgstr ""
 
 #: erpnext/accounts/deferred_revenue.py:51
 msgid "Cannot change Service Stop Date for item in row {0}"
-msgstr "Tidak dapat mengubah Tanggal Berhenti Layanan untuk item di baris {0}"
+msgstr "Tidak dapat mengubah Tanggal Berhenti Layanan untuk item di baris {0}."
 
 #: erpnext/stock/doctype/item/item.py:865
 msgid "Cannot change Variant properties after stock transaction. You will have to make a new Item to do this."
-msgstr "Tidak dapat mengubah properti Varian setelah transaksi saham. Anda harus membuat Item baru untuk melakukan ini."
+msgstr "Tidak dapat mengubah properti Varian setelah transaksi stok. Anda harus membuat Item baru untuk melakukan ini."
 
 #: erpnext/setup/doctype/company/company.py:235
 msgid "Cannot change company's default currency, because there are existing transactions. Transactions must be cancelled to change the default currency."
-msgstr "Tidak dapat mengubah mata uang default perusahaan, karena ada transaksi yang ada. Transaksi harus dibatalkan untuk mengubah mata uang default."
+msgstr "Tidak dapat mengubah mata uang default perusahaan, karena sudah ada transaksi. Transaksi harus dibatalkan untuk mengubah mata uang default."
 
 #: erpnext/projects/doctype/task/task.py:139
 msgid "Cannot complete task {0} as its dependant task {1} are not completed / cancelled."
@@ -9565,7 +9565,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/cost_center/cost_center.py:61
 msgid "Cannot convert Cost Center to ledger as it has child nodes"
-msgstr "Tidak dapat mengkonversi Pusat Biaya untuk buku karena memiliki node anak"
+msgstr "Tidak dapat mengonversi Pusat Biaya menjadi buku besar karena memiliki node anak."
 
 #: erpnext/projects/doctype/task/task.js:49
 msgid "Cannot convert Task to non-group because the following child Tasks exist: {0}."
@@ -10331,7 +10331,7 @@ msgstr ""
 #: erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.js:50
 #: erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.py:50
 msgid "Cheques and Deposits incorrectly cleared"
-msgstr "Cek dan Deposit tidak benar dibersihkan"
+msgstr "Cek dan Deposit dikliring secara tidak benar"
 
 #: erpnext/setup/setup_wizard/data/designation.txt:9
 msgid "Chief Executive Officer"
@@ -10363,19 +10363,19 @@ msgstr ""
 
 #: erpnext/projects/doctype/task/task.py:283
 msgid "Child Task exists for this Task. You can not delete this Task."
-msgstr "Tugas Anak ada untuk Tugas ini. Anda tidak dapat menghapus Tugas ini."
+msgstr "Tugas ini memiliki Subtugas. Anda tidak dapat menghapus Tugas ini."
 
 #: erpnext/stock/doctype/warehouse/warehouse_tree.js:21
 msgid "Child nodes can be only created under 'Group' type nodes"
-msgstr "node anak hanya dapat dibuat di bawah &#39;Grup&#39; Jenis node"
+msgstr "Node anak hanya dapat dibuat di bawah node tipe 'Grup'"
 
 #: erpnext/stock/doctype/warehouse/warehouse.py:100
 msgid "Child warehouse exists for this warehouse. You can not delete this warehouse."
-msgstr "Gudang anak ada untuk gudang ini. Anda tidak dapat menghapus gudang ini."
+msgstr "Gudang ini memiliki Sub gudang. Anda tidak dapat menghapus gudang ini."
 
 #: erpnext/projects/doctype/task/task.py:231
 msgid "Circular Reference Error"
-msgstr "Referensi Kesalahan melingkar"
+msgstr "Kesalahan Referensi Sirkular"
 
 #. Label of the city (Data) field in DocType 'Lead'
 #. Label of the city (Data) field in DocType 'Opportunity'
@@ -10438,11 +10438,11 @@ msgstr ""
 #: erpnext/accounts/report/cheques_and_deposits_incorrectly_cleared/cheques_and_deposits_incorrectly_cleared.py:152
 #: erpnext/templates/form_grid/bank_reconciliation_grid.html:7
 msgid "Clearance Date"
-msgstr "Izin Tanggal"
+msgstr "Tanggal Kliring"
 
 #: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:132
 msgid "Clearance Date not mentioned"
-msgstr "Izin Tanggal tidak disebutkan"
+msgstr "Tanggal Kliring tidak disebutkan"
 
 #: erpnext/accounts/doctype/bank_clearance/bank_clearance.py:149
 msgid "Clearance Date updated"
@@ -10591,12 +10591,12 @@ msgstr ""
 #: erpnext/accounts/report/trial_balance/trial_balance.py:499
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:226
 msgid "Closing (Cr)"
-msgstr "Penutup (Cr)"
+msgstr "Penutupan (Kr)"
 
 #: erpnext/accounts/report/trial_balance/trial_balance.py:492
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:219
 msgid "Closing (Dr)"
-msgstr "Penutup (Dr)"
+msgstr "Penutupan (Db)"
 
 #: erpnext/accounts/report/general_ledger/general_ledger.py:379
 msgid "Closing (Opening + Total)"
@@ -10610,7 +10610,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher.py:122
 msgid "Closing Account {0} must be of type Liability / Equity"
-msgstr "Penutupan Rekening {0} harus dari jenis Kewajiban / Ekuitas"
+msgstr "Penutupan Rekening {0} harus dari jenis Liabilitas / Ekuitas"
 
 #. Label of the closing_amount (Currency) field in DocType 'POS Closing Entry
 #. Detail'
@@ -10623,7 +10623,7 @@ msgstr ""
 #: erpnext/accounts/doctype/bank_reconciliation_tool/bank_reconciliation_tool.json
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:201
 msgid "Closing Balance"
-msgstr "Saldo akhir"
+msgstr "Saldo Penutup"
 
 #: erpnext/public/js/bank_reconciliation_tool/number_card.js:18
 msgid "Closing Balance as per Bank Statement"
@@ -10674,7 +10674,7 @@ msgstr ""
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:194
 #: erpnext/public/js/setup_wizard.js:200
 msgid "Collapse All"
-msgstr "Perkecil Semua"
+msgstr "Ciutkan Semua"
 
 #: erpnext/accounts/doctype/pos_invoice/pos_invoice.js:269
 msgid "Collect Outstanding Amount"
@@ -10824,12 +10824,12 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/communication/doctype/communication_medium/communication_medium.json
 msgid "Communication Medium"
-msgstr "Komunikasi Medium"
+msgstr "Media Komunikasi"
 
 #. Name of a DocType
 #: erpnext/communication/doctype/communication_medium_timeslot/communication_medium_timeslot.json
 msgid "Communication Medium Timeslot"
-msgstr "Timeslot Komunikasi Sedang"
+msgstr "Slot Waktu Media Komunikasi"
 
 #. Label of the communication_medium_type (Select) field in DocType
 #. 'Communication Medium'
@@ -10839,7 +10839,7 @@ msgstr ""
 
 #: erpnext/setup/install.py:94
 msgid "Compact Item Print"
-msgstr "Kompak Barang Cetak"
+msgstr "Cetak Item Ringkas"
 
 #. Label of the companies (Table) field in DocType 'Fiscal Year'
 #. Label of the section_break_xdsp (Section Break) field in DocType 'Ledger
@@ -11283,7 +11283,7 @@ msgstr "Singkatan Perusahaan"
 
 #: erpnext/public/js/setup_wizard.js:174
 msgid "Company Abbreviation cannot have more than 5 characters"
-msgstr "Singkatan Perusahaan tidak boleh memiliki lebih dari 5 karakter"
+msgstr "Singkatan Perusahaan tidak boleh lebih dari 5 karakter"
 
 #. Label of the account (Link) field in DocType 'Bank Account'
 #: erpnext/accounts/doctype/bank_account/bank_account.json
@@ -11410,7 +11410,7 @@ msgstr "Nama Perusahaan"
 
 #: erpnext/public/js/setup_wizard.js:77
 msgid "Company Name cannot be Company"
-msgstr "Nama perusahaan tidak dapat perusahaan"
+msgstr "Nama perusahaan tidak boleh Perusahaan"
 
 #: erpnext/accounts/custom/address.py:34
 msgid "Company Not Linked"
@@ -11432,12 +11432,12 @@ msgstr ""
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:2406
 msgid "Company currencies of both the companies should match for Inter Company Transactions."
-msgstr "Mata uang perusahaan dari kedua perusahaan harus sesuai untuk Transaksi Perusahaan Inter."
+msgstr "Mata uang perusahaan dari kedua perusahaan harus sesuai untuk Transaksi Antar Perusahaan."
 
 #: erpnext/stock/doctype/material_request/material_request.js:359
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:679
 msgid "Company field is required"
-msgstr "Bidang perusahaan wajib diisi"
+msgstr "Kolom perusahaan wajib diisi"
 
 #: erpnext/accounts/report/invalid_ledger_entries/invalid_ledger_entries.py:77
 msgid "Company is mandatory"
@@ -11533,7 +11533,7 @@ msgstr ""
 #: erpnext/manufacturing/doctype/workstation/workstation_job_card.html:73
 #: erpnext/public/js/projects/timer.js:35
 msgid "Complete"
-msgstr "Lengkap"
+msgstr "Selesai"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.js:210
 #: erpnext/manufacturing/doctype/workstation/workstation.js:151
@@ -11651,7 +11651,7 @@ msgstr ""
 
 #: erpnext/manufacturing/dashboard_fixtures.py:76
 msgid "Completed Operation"
-msgstr "Operasi Selesai"
+msgstr ""
 
 #. Label of the completed_qty (Float) field in DocType 'Job Card Operation'
 #. Label of the completed_qty (Float) field in DocType 'Job Card Time Log'
@@ -11666,13 +11666,13 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:1095
 msgid "Completed Qty cannot be greater than 'Qty to Manufacture'"
-msgstr "Kuantitas Lengkap tidak boleh lebih besar dari &#39;Kuantitas hingga Pembuatan&#39;"
+msgstr "Jml Produksi Selesai tidak boleh lebih besar dari Jml yang Akan Diproduksi"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.js:258
 #: erpnext/manufacturing/doctype/job_card/job_card.js:353
 #: erpnext/manufacturing/doctype/workstation/workstation.js:296
 msgid "Completed Quantity"
-msgstr "Kuantitas Lengkap"
+msgstr "Jumlah Produksi Selesai"
 
 #: erpnext/projects/report/project_summary/project_summary.py:136
 #: erpnext/public/js/templates/crm_activities.html:64
@@ -11837,7 +11837,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Connections"
-msgstr ""
+msgstr "Koneksi"
 
 #: erpnext/accounts/report/general_ledger/general_ledger.js:175
 msgid "Consider Accounting Dimensions"
@@ -11951,7 +11951,7 @@ msgstr ""
 #: erpnext/manufacturing/doctype/workstation/workstation.json
 #: erpnext/manufacturing/doctype/workstation_type/workstation_type.json
 msgid "Consumable Cost"
-msgstr ""
+msgstr "Biaya Habis Pakai"
 
 #. Option for the 'Status' (Select) field in DocType 'Serial No'
 #: erpnext/stock/doctype/serial_no/serial_no.json
@@ -12801,7 +12801,7 @@ msgstr ""
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:1411
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.py:865
 msgid "Cost Center is required in row {0} in Taxes table for type {1}"
-msgstr "Biaya Pusat diperlukan dalam baris {0} dalam tabel Pajak untuk tipe {1}"
+msgstr "Pusat Biaya diperlukan pada baris {0} di tabel Pajak untuk tipe {1}"
 
 #: erpnext/accounts/doctype/cost_center/cost_center.py:72
 msgid "Cost Center with Allocation records can not be converted to a group"
@@ -12809,11 +12809,11 @@ msgstr ""
 
 #: erpnext/accounts/doctype/cost_center/cost_center.py:78
 msgid "Cost Center with existing transactions can not be converted to group"
-msgstr "Biaya Center dengan transaksi yang ada tidak dapat dikonversi ke grup"
+msgstr "Pusat Biaya yang mengandung transaksi tidak dapat dikonversi menjadi grup"
 
 #: erpnext/accounts/doctype/cost_center/cost_center.py:63
 msgid "Cost Center with existing transactions can not be converted to ledger"
-msgstr "Biaya Center dengan transaksi yang ada tidak dapat dikonversi ke buku"
+msgstr "Pusat Biaya yang mengandung transaksi tidak dapat dikonversi menjadi buku besar"
 
 #: erpnext/accounts/doctype/cost_center_allocation/cost_center_allocation.py:152
 msgid "Cost Center {0} cannot be used for allocation as it is used as main cost center in other allocation record."
@@ -12852,7 +12852,7 @@ msgstr ""
 
 #: erpnext/projects/report/project_wise_stock_tracking/project_wise_stock_tracking.py:41
 msgid "Cost of Delivered Items"
-msgstr "Biaya Produk Terkirim"
+msgstr "Biaya Item Terkirim"
 
 #. Option for the 'Account Type' (Select) field in DocType 'Account'
 #: erpnext/accounts/doctype/account/account.json
@@ -12860,7 +12860,7 @@ msgstr "Biaya Produk Terkirim"
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:64
 #: erpnext/accounts/report/account_balance/account_balance.js:43
 msgid "Cost of Goods Sold"
-msgstr "Harga pokok penjualan"
+msgstr "Harga Pokok Penjualan"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:582
 msgid "Cost of Goods Sold Account in Items Table"
@@ -12868,7 +12868,7 @@ msgstr ""
 
 #: erpnext/projects/report/project_wise_stock_tracking/project_wise_stock_tracking.py:40
 msgid "Cost of Issued Items"
-msgstr "Biaya Produk Dikeluarkan"
+msgstr "Biaya Item Dikeluarkan"
 
 #. Name of a report
 #: erpnext/manufacturing/report/cost_of_poor_quality_report/cost_of_poor_quality_report.json
@@ -12877,11 +12877,11 @@ msgstr ""
 
 #: erpnext/projects/report/project_wise_stock_tracking/project_wise_stock_tracking.py:39
 msgid "Cost of Purchased Items"
-msgstr "Biaya Produk Dibeli"
+msgstr "Biaya Item yang Dibeli"
 
 #: erpnext/config/projects.py:67
 msgid "Cost of various activities"
-msgstr "Biaya berbagai kegiatan"
+msgstr "Biaya berbagai aktivitas"
 
 #. Label of the ctc (Currency) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -12941,11 +12941,11 @@ msgstr ""
 
 #: erpnext/selling/doctype/quotation/quotation.py:584
 msgid "Could not auto create Customer due to the following missing mandatory field(s):"
-msgstr "Tidak dapat membuat Pelanggan secara otomatis karena bidang wajib berikut tidak ada:"
+msgstr "Tidak dapat membuat Pelanggan secara otomatis karena bidang wajib berikut kosong:"
 
 #: erpnext/stock/doctype/delivery_note/delivery_note.py:672
 msgid "Could not create Credit Note automatically, please uncheck 'Issue Credit Note' and submit again"
-msgstr "Tidak dapat membuat Catatan Kredit secara otomatis, hapus centang &#39;Terbitkan Catatan Kredit&#39; dan kirimkan lagi"
+msgstr "Tidak dapat membuat Nota Kredit secara otomatis, harap batalkan centang 'Terbitkan Nota Kredit' dan kirim ulang"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_settings.py:353
 msgid "Could not detect the Company for updating Bank Accounts"
@@ -12967,11 +12967,11 @@ msgstr "Tidak dapat mengambil informasi untuk {0}."
 
 #: erpnext/buying/doctype/supplier_scorecard_period/supplier_scorecard_period.py:80
 msgid "Could not solve criteria score function for {0}. Make sure the formula is valid."
-msgstr "Tidak dapat memecahkan kriteria fungsi skor untuk {0}. Pastikan rumusnya benar."
+msgstr "Tidak dapat menyelesaikan fungsi skor kriteria untuk {0}. Pastikan formula valid."
 
 #: erpnext/buying/doctype/supplier_scorecard_period/supplier_scorecard_period.py:100
 msgid "Could not solve weighted score function. Make sure the formula is valid."
-msgstr "Tidak dapat memecahkan fungsi skor tertimbang. Pastikan rumusnya benar."
+msgstr "Tidak dapat menyelesaikan fungsi skor tertimbang. Pastikan formula valid."
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -13230,7 +13230,7 @@ msgstr "Buat Karyawan"
 
 #: erpnext/utilities/activation.py:135
 msgid "Create Employee Records"
-msgstr "Buat Rekaman Karyawan"
+msgstr "Buat Catatan Karyawan"
 
 #: erpnext/utilities/activation.py:136
 msgid "Create Employee records."
@@ -13243,7 +13243,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.js:105
 msgid "Create Inter Company Journal Entry"
-msgstr "Buat Entri Jurnal Perusahaan Inter"
+msgstr "Buat Entri Jurnal Antar Perusahaan"
 
 #: erpnext/accounts/doctype/opening_invoice_creation_tool/opening_invoice_creation_tool.js:54
 msgid "Create Invoices"
@@ -13251,7 +13251,7 @@ msgstr "Buat Faktur"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:192
 msgid "Create Job Card"
-msgstr "Buat Kartu Pekerjaan"
+msgstr "Buat Kartu Kerja"
 
 #. Label of the create_job_card_based_on_batch_size (Check) field in DocType
 #. 'Operation'
@@ -13269,7 +13269,7 @@ msgstr "Buat Entri Jurnal"
 
 #: erpnext/utilities/activation.py:79
 msgid "Create Lead"
-msgstr "Buat Lead"
+msgstr "Buat Prospek"
 
 #: erpnext/utilities/activation.py:77
 msgid "Create Leads"
@@ -13306,7 +13306,7 @@ msgstr ""
 
 #: erpnext/public/js/call_popup/call_popup.js:134
 msgid "Create New Lead"
-msgstr "Buat Pemimpin Baru"
+msgstr "Buat Prospek Baru"
 
 #: erpnext/crm/doctype/lead/lead.js:160
 msgid "Create Opportunity"
@@ -13326,11 +13326,11 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:718
 msgid "Create Pick List"
-msgstr "Buat Daftar Pilih"
+msgstr "Buat Daftar Ambil"
 
 #: erpnext/accounts/doctype/cheque_print_template/cheque_print_template.js:10
 msgid "Create Print Format"
-msgstr "Buat Print Format"
+msgstr "Buat Format Cetak"
 
 #: erpnext/crm/doctype/lead/lead_list.js:8
 msgid "Create Prospect"
@@ -13343,11 +13343,11 @@ msgstr "Buat Pesanan Pembelian"
 
 #: erpnext/utilities/activation.py:104
 msgid "Create Purchase Orders"
-msgstr "Buat Purchase Order"
+msgstr "Buat Pesanan Pembelian"
 
 #: erpnext/utilities/activation.py:88
 msgid "Create Quotation"
-msgstr "Buat Quotation"
+msgstr "Buat Penawaran"
 
 #. Label of the create_receiver_list (Button) field in DocType 'SMS Center'
 #: erpnext/selling/doctype/sms_center/sms_center.json
@@ -13371,15 +13371,15 @@ msgstr "Buat Faktur Penjualan"
 
 #: erpnext/utilities/activation.py:97
 msgid "Create Sales Order"
-msgstr "Buat Sales Order"
+msgstr "Buat Pesanan Penjualan"
 
 #: erpnext/utilities/activation.py:96
 msgid "Create Sales Orders to help you plan your work and deliver on-time"
-msgstr "Buat Pesanan Penjualan untuk membantu Anda merencanakan pekerjaan Anda dan mengirimkan tepat waktu"
+msgstr "Buat Pesanan Penjualan untuk membantu Anda merencanakan pekerjaan dan mengirim tepat waktu"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:410
 msgid "Create Sample Retention Stock Entry"
-msgstr "Buat Sampel Stok Retensi Sampel"
+msgstr "Buat Entri Stok Penyimpanan Sampel"
 
 #: erpnext/stock/dashboard/item_dashboard.js:283
 #: erpnext/stock/doctype/material_request/material_request.js:479
@@ -13397,13 +13397,13 @@ msgstr "Buat Template Pajak"
 
 #: erpnext/utilities/activation.py:128
 msgid "Create Timesheet"
-msgstr "Buat absen"
+msgstr "Buat Timesheet"
 
 #. Label of the create_user (Button) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
 #: erpnext/utilities/activation.py:117
 msgid "Create User"
-msgstr "Buat pengguna"
+msgstr "Buat Pengguna"
 
 #. Label of the create_user_permission (Check) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -13434,11 +13434,11 @@ msgstr ""
 
 #: erpnext/stock/stock_ledger.py:1900
 msgid "Create an incoming stock transaction for the Item."
-msgstr "Buat transaksi stok masuk untuk Item tersebut."
+msgstr "Buat transaksi stok masuk untuk Barang tersebut."
 
 #: erpnext/utilities/activation.py:86
 msgid "Create customer quotes"
-msgstr "Buat kutipan pelanggan"
+msgstr "Buat penawaran pelanggan"
 
 #. Label of the create_pr_in_draft_status (Check) field in DocType 'Accounts
 #. Settings'
@@ -13474,7 +13474,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/accounting_dimension/accounting_dimension.py:146
 msgid "Creating Dimensions..."
-msgstr "Membuat Dimensi ..."
+msgstr "Membuat Dimensi..."
 
 #: erpnext/accounts/doctype/exchange_rate_revaluation/exchange_rate_revaluation.js:92
 msgid "Creating Journal Entries..."
@@ -13576,7 +13576,7 @@ msgstr "Kredit ({0})"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.js:601
 msgid "Credit Account"
-msgstr "Akun kredit"
+msgstr "Akun Kredit"
 
 #. Label of the credit (Currency) field in DocType 'Account Closing Balance'
 #. Label of the credit (Currency) field in DocType 'GL Entry'
@@ -13606,7 +13606,7 @@ msgstr "Saldo Kredit"
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:241
 msgid "Credit Card"
-msgstr "Kartu kredit"
+msgstr "Kartu Kredit"
 
 #. Option for the 'Entry Type' (Select) field in DocType 'Journal Entry'
 #. Option for the 'Journal Entry Type' (Select) field in DocType 'Journal Entry
@@ -13692,12 +13692,12 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note.js:89
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 msgid "Credit Note"
-msgstr "Nota kredit"
+msgstr "Nota Kredit"
 
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts_accounts_receivable.html:201
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:162
 msgid "Credit Note Amount"
-msgstr "Jumlah Catatan Kredit"
+msgstr "Jumlah Nota Kredit"
 
 #. Option for the 'Status' (Select) field in DocType 'POS Invoice'
 #. Option for the 'Status' (Select) field in DocType 'Sales Invoice'
@@ -13705,7 +13705,7 @@ msgstr "Jumlah Catatan Kredit"
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.json
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:267
 msgid "Credit Note Issued"
-msgstr "Kredit Catatan Ditempatkan"
+msgstr "Nota Kredit Diterbitkan"
 
 #. Description of the 'Update Outstanding for Self' (Check) field in DocType
 #. 'Sales Invoice'
@@ -13733,7 +13733,7 @@ msgstr ""
 #: erpnext/selling/doctype/customer/customer.py:550
 #: erpnext/selling/doctype/customer/customer.py:605
 msgid "Credit limit has been crossed for customer {0} ({1}/{2})"
-msgstr "Batas kredit telah disilangkan untuk pelanggan {0} ({1} / {2})"
+msgstr "Batas kredit telah terlampaui untuk pelanggan {0} ({1}/{2})"
 
 #: erpnext/selling/doctype/customer/customer.py:343
 msgid "Credit limit is already defined for the Company {0}"
@@ -13746,7 +13746,7 @@ msgstr "Batas kredit tercapai untuk pelanggan {0}"
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:87
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:118
 msgid "Creditors"
-msgstr "Kreditor"
+msgstr "Kreditur"
 
 #. Label of the criteria (Table) field in DocType 'Supplier Scorecard Period'
 #: erpnext/buying/doctype/supplier_scorecard_period/supplier_scorecard_period.json
@@ -13952,7 +13952,7 @@ msgstr ""
 #: erpnext/stock/doctype/price_list/price_list.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 msgid "Currency"
-msgstr "Mata uang"
+msgstr "Mata Uang"
 
 #. Label of a Link in the Accounting Workspace
 #. Name of a DocType
@@ -13967,7 +13967,7 @@ msgstr "Kurs Mata Uang"
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 #: erpnext/accounts/doctype/currency_exchange_settings/currency_exchange_settings.json
 msgid "Currency Exchange Settings"
-msgstr "Pengaturan Pertukaran Mata Uang"
+msgstr "Pengaturan Kurs Mata Uang"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/currency_exchange_settings_details/currency_exchange_settings_details.json
@@ -13981,7 +13981,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/currency_exchange/currency_exchange.py:55
 msgid "Currency Exchange must be applicable for Buying or for Selling."
-msgstr "Pertukaran Mata Uang harus berlaku untuk Membeli atau untuk Penjualan."
+msgstr "Kurs Mata Uang harus berlaku untuk Pembelian atau Penjualan."
 
 #. Label of the currency_and_price_list (Section Break) field in DocType 'POS
 #. Invoice'
@@ -14015,17 +14015,17 @@ msgstr ""
 
 #: erpnext/accounts/doctype/account/account.py:309
 msgid "Currency can not be changed after making entries using some other currency"
-msgstr "Mata uang tidak dapat diubah setelah melakukan entri menggunakan beberapa mata uang lainnya"
+msgstr "Mata Uang tidak dapat diubah setelah membuat entri menggunakan mata uang lain"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:1660
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:1728
 #: erpnext/accounts/utils.py:2250
 msgid "Currency for {0} must be {1}"
-msgstr "Mata uang untuk {0} harus {1}"
+msgstr "Mata Uang untuk {0} harus {1}"
 
 #: erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher.py:129
 msgid "Currency of the Closing Account must be {0}"
-msgstr "Mata uang dari Rekening Penutupan harus {0}"
+msgstr "Mata Uang Akun Penutup harus {0}"
 
 #: erpnext/manufacturing/doctype/bom/bom.py:611
 msgid "Currency of the price list {0} must be {1} or {2}"
@@ -14700,7 +14700,7 @@ msgstr ""
 #: erpnext/stock/report/delayed_item_report/delayed_item_report.py:165
 #: erpnext/stock/report/delayed_order_report/delayed_order_report.py:80
 msgid "Customer PO"
-msgstr "PO pelanggan"
+msgstr "PO Pelanggan"
 
 #. Label of the customer_po_details (Section Break) field in DocType 'POS
 #. Invoice'
@@ -14779,7 +14779,7 @@ msgstr "Kontak pelanggan berhasil diperbarui."
 
 #: erpnext/support/doctype/warranty_claim/warranty_claim.py:54
 msgid "Customer is required"
-msgstr "Pelanggan diwajibkan"
+msgstr "Pelanggan wajib diisi"
 
 #: erpnext/accounts/doctype/loyalty_program/loyalty_program.py:126
 #: erpnext/accounts/doctype/loyalty_program/loyalty_program.py:148
@@ -14793,13 +14793,13 @@ msgstr ""
 
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.py:95
 msgid "Customer required for 'Customerwise Discount'"
-msgstr "Pelanggan diperlukan untuk 'Diskon Pelanggan'"
+msgstr "Pelanggan diperlukan untuk 'Diskon Berdasarkan Pelanggan'"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:1087
 #: erpnext/selling/doctype/sales_order/sales_order.py:373
 #: erpnext/stock/doctype/delivery_note/delivery_note.py:416
 msgid "Customer {0} does not belong to project {1}"
-msgstr "Pelanggan {0} tidak termasuk proyek {1}"
+msgstr "Pelanggan {0} bukan bagian dari proyek {1}"
 
 #. Label of the customer_item_code (Data) field in DocType 'POS Invoice Item'
 #. Label of the customer_item_code (Data) field in DocType 'Sales Invoice Item'
@@ -14846,11 +14846,11 @@ msgstr ""
 #. Name of a report
 #: erpnext/selling/report/customer_wise_item_price/customer_wise_item_price.json
 msgid "Customer-wise Item Price"
-msgstr "Harga Barang menurut pelanggan"
+msgstr "Harga Barang Berdasarkan Pelanggan"
 
 #: erpnext/crm/report/lost_opportunity/lost_opportunity.py:38
 msgid "Customer/Lead Name"
-msgstr "Nama Pelanggan / Prospek"
+msgstr "Nama Pelanggan/Prospek"
 
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.html:19
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.html:21
@@ -14870,11 +14870,11 @@ msgstr ""
 #: erpnext/selling/report/customers_without_any_sales_transactions/customers_without_any_sales_transactions.json
 #: erpnext/selling/workspace/selling/selling.json
 msgid "Customers Without Any Sales Transactions"
-msgstr "Pelanggan Tanpa Transaksi Penjualan apa pun"
+msgstr "Pelanggan Tanpa Transaksi Penjualan"
 
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py:104
 msgid "Customers not selected."
-msgstr "Pelanggan tidak dipilih."
+msgstr "Pelanggan belum dipilih."
 
 #. Option for the 'Based On' (Select) field in DocType 'Authorization Rule'
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.json
@@ -14888,7 +14888,7 @@ msgstr ""
 #: erpnext/stock/doctype/item/item.json
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Customs Tariff Number"
-msgstr "Tarif Bea Nomor"
+msgstr "Nomor Tarif Bea Cukai"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -14927,7 +14927,7 @@ msgstr ""
 #: erpnext/setup/doctype/email_digest/email_digest.json
 #: erpnext/utilities/doctype/video_settings/video_settings.json
 msgid "Daily"
-msgstr "Sehari-hari"
+msgstr "Harian"
 
 #: erpnext/projects/doctype/project/project.py:673
 msgid "Daily Project Summary for {0}"
@@ -14947,7 +14947,7 @@ msgstr ""
 #: erpnext/projects/report/daily_timesheet_summary/daily_timesheet_summary.json
 #: erpnext/projects/workspace/projects/projects.json
 msgid "Daily Timesheet Summary"
-msgstr "Timesheet Ringkasan Harian"
+msgstr "Ringkasan Timesheet Harian"
 
 #. Label of a shortcut in the Accounting Workspace
 #. Label of a shortcut in the Assets Workspace
@@ -14993,7 +14993,7 @@ msgstr ""
 #. Label of a Card Break in the Home Workspace
 #: erpnext/setup/workspace/home/home.json
 msgid "Data Import and Settings"
-msgstr "Impor dan Pengaturan Data"
+msgstr "Impor Data dan Pengaturan"
 
 #. Label of the date (Date) field in DocType 'Bank Transaction'
 #. Label of the date (Date) field in DocType 'Cashier Closing'
@@ -15118,7 +15118,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/employee/employee.py:147
 msgid "Date of Birth cannot be greater than today."
-msgstr "Tanggal Lahir tidak dapat lebih besar dari saat ini."
+msgstr "Tanggal Lahir tidak boleh melewati hari ini."
 
 #. Label of the date_of_commencement (Date) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -15127,7 +15127,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/company/company.js:75
 msgid "Date of Commencement should be greater than Date of Incorporation"
-msgstr "Tanggal Mulai harus lebih besar dari Tanggal Pendirian"
+msgstr "Tanggal Mulai harus setelah Tanggal Pendirian"
 
 #. Label of the date_of_establishment (Date) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -15226,11 +15226,11 @@ msgstr ""
 #: erpnext/selling/report/inactive_customers/inactive_customers.js:8
 #: erpnext/selling/report/inactive_customers/inactive_customers.py:83
 msgid "Days Since Last Order"
-msgstr "Hari Sejak Pemesanan Terakhir"
+msgstr "Hari Sejak Pesanan Terakhir"
 
 #: erpnext/accounts/report/inactive_sales_items/inactive_sales_items.js:34
 msgid "Days Since Last order"
-msgstr "Hari Sejak Pemesanan Terakhir"
+msgstr "Hari Sejak Pesanan Terakhir"
 
 #. Label of the days_until_due (Int) field in DocType 'Subscription'
 #: erpnext/accounts/doctype/subscription/subscription.json
@@ -15259,11 +15259,11 @@ msgstr ""
 
 #: erpnext/templates/emails/confirm_appointment.html:1
 msgid "Dear"
-msgstr "Kepada Yth."
+msgstr "Yth."
 
 #: erpnext/stock/reorder_item.py:376
 msgid "Dear System Manager,"
-msgstr "Kepada System Manager Yth.,"
+msgstr "Yth. Manajer Sistem,"
 
 #. Option for the 'Balance must be' (Select) field in DocType 'Account'
 #. Label of the debit_in_account_currency (Currency) field in DocType 'Journal
@@ -15293,7 +15293,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.js:591
 msgid "Debit Account"
-msgstr "Akun debit"
+msgstr "Akun Debit"
 
 #. Label of the debit (Currency) field in DocType 'Account Closing Balance'
 #. Label of the debit (Currency) field in DocType 'GL Entry'
@@ -15334,7 +15334,7 @@ msgstr ""
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts_accounts_receivable.html:203
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:162
 msgid "Debit Note Amount"
-msgstr "Jumlah Catatan Debet"
+msgstr "Jumlah Nota Debit"
 
 #. Option for the 'Status' (Select) field in DocType 'Purchase Invoice'
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.json
@@ -15359,11 +15359,11 @@ msgstr ""
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.py:951
 msgid "Debit To is required"
-msgstr "Debit Untuk diperlukan"
+msgstr "Debit Ke wajib diisi"
 
 #: erpnext/accounts/general_ledger.py:506
 msgid "Debit and Credit not equal for {0} #{1}. Difference is {2}."
-msgstr "Debit dan Kredit tidak sama untuk {0} # {1}. Perbedaan adalah {2}."
+msgstr "Debit dan Kredit tidak sama untuk {0} #{1}. Selisihnya adalah {2}."
 
 #. Label of the debit (Currency) field in DocType 'Journal Entry Account'
 #: erpnext/accounts/doctype/journal_entry_account/journal_entry_account.json
@@ -15416,7 +15416,7 @@ msgstr ""
 
 #: erpnext/public/js/utils/sales_common.js:557
 msgid "Declare Lost"
-msgstr "Nyatakan Hilang"
+msgstr "Nyatakan Gagal"
 
 #. Option for the 'Add Or Deduct' (Select) field in DocType 'Advance Taxes and
 #. Charges'
@@ -15455,7 +15455,7 @@ msgstr ""
 #: erpnext/assets/doctype/asset_shift_factor/asset_shift_factor.json
 #: erpnext/manufacturing/doctype/bom/bom_list.js:7
 msgid "Default"
-msgstr "Standar"
+msgstr "Default"
 
 #. Label of the default_account (Link) field in DocType 'Mode of Payment
 #. Account'
@@ -15481,7 +15481,7 @@ msgstr ""
 
 #: erpnext/projects/doctype/activity_cost/activity_cost.py:62
 msgid "Default Activity Cost exists for Activity Type - {0}"
-msgstr "Standar Kegiatan Biaya ada untuk Jenis Kegiatan - {0}"
+msgstr "Biaya Aktivitas Default sudah ada untuk Jenis Aktivitas - {0}"
 
 #. Label of the default_advance_account (Link) field in DocType 'Payment
 #. Reconciliation'
@@ -15512,7 +15512,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:419
 msgid "Default BOM ({0}) must be active for this item or its template"
-msgstr "Standar BOM ({0}) harus aktif untuk item ini atau template-nya"
+msgstr "BOM Default ({0}) harus aktif untuk item ini atau templatenya"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:1861
 msgid "Default BOM for {0} not found"
@@ -15524,7 +15524,7 @@ msgstr ""
 
 #: erpnext/manufacturing/doctype/work_order/work_order.py:1858
 msgid "Default BOM not found for Item {0} and Project {1}"
-msgstr "Default BOM tidak ditemukan untuk Item {0} dan Project {1}"
+msgstr "BOM Default tidak ditemukan untuk Item {0} dan Proyek {1}"
 
 #. Label of the default_bank_account (Link) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -15859,11 +15859,11 @@ msgstr ""
 
 #: erpnext/stock/doctype/item/item.py:1247
 msgid "Default Unit of Measure for Item {0} cannot be changed directly because you have already made some transaction(s) with another UOM. You will need to create a new Item to use a different Default UOM."
-msgstr "Standar Satuan Ukur untuk Item {0} tidak dapat diubah secara langsung karena Anda telah membuat beberapa transaksi (s) dengan UOM lain. Anda akan perlu untuk membuat item baru menggunakan default UOM berbeda."
+msgstr "Satuan Ukur Default untuk Barang {0} tidak dapat diubah secara langsung karena Anda telah melakukan transaksi dengan UOM lain. Anda perlu membuat Barang baru untuk menggunakan UOM Default yang berbeda."
 
 #: erpnext/stock/doctype/item/item.py:900
 msgid "Default Unit of Measure for Variant '{0}' must be same as in Template '{1}'"
-msgstr "Standar Satuan Ukur untuk Variant &#39;{0}&#39; harus sama seperti di Template &#39;{1}&#39;"
+msgstr "Satuan Ukur Default untuk Varian '{0}' harus sama seperti di Template '{1}'."
 
 #. Label of the valuation_method (Select) field in DocType 'Stock Settings'
 #: erpnext/stock/doctype/stock_settings/stock_settings.json
@@ -16018,7 +16018,7 @@ msgstr ""
 
 #: erpnext/config/projects.py:39
 msgid "Define Project type."
-msgstr "Tentukan jenis Proyek."
+msgstr "Tentukan tipe Proyek."
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -16050,7 +16050,7 @@ msgstr ""
 #: erpnext/stock/report/delayed_item_report/delayed_item_report.py:157
 #: erpnext/stock/report/delayed_order_report/delayed_order_report.py:72
 msgid "Delayed Days"
-msgstr "Hari yang Tertunda"
+msgstr "Hari Tertunda"
 
 #. Name of a report
 #: erpnext/stock/report/delayed_item_report/delayed_item_report.json
@@ -16624,7 +16624,7 @@ msgstr "Baris Penyusutan {0}: Nilai yang diharapkan setelah masa manfaat harus l
 #: erpnext/assets/doctype/asset_shift_allocation/asset_shift_allocation.json
 #: erpnext/assets/doctype/depreciation_schedule/depreciation_schedule.json
 msgid "Depreciation Schedule"
-msgstr "Jadwal penyusutan"
+msgstr "Jadwal Penyusutan"
 
 #. Label of the depreciation_schedule_view (HTML) field in DocType 'Asset'
 #: erpnext/assets/doctype/asset/asset.json
@@ -16930,7 +16930,7 @@ msgstr ""
 #: erpnext/setup/doctype/employee_external_work_history/employee_external_work_history.json
 #: erpnext/setup/doctype/employee_internal_work_history/employee_internal_work_history.json
 msgid "Designation"
-msgstr "Penunjukan"
+msgstr "Jabatan"
 
 #: erpnext/setup/setup_wizard/data/designation.txt:14
 msgid "Designer"
@@ -16957,7 +16957,7 @@ msgstr ""
 #: erpnext/public/js/utils/sales_common.js:536
 #: erpnext/selling/doctype/quotation/quotation.json
 msgid "Detailed Reason"
-msgstr "Alasan terperinci"
+msgstr "Alasan Rinci"
 
 #. Label of the details_section (Section Break) field in DocType 'Asset
 #. Depreciation Schedule'
@@ -17010,7 +17010,7 @@ msgstr ""
 #: erpnext/stock/report/incorrect_balance_qty_after_transaction/incorrect_balance_qty_after_transaction.py:130
 #: erpnext/stock/report/stock_qty_vs_serial_no_count/stock_qty_vs_serial_no_count.py:35
 msgid "Difference"
-msgstr "Perbedaan"
+msgstr "Selisih"
 
 #. Label of the difference (Currency) field in DocType 'Journal Entry'
 #: erpnext/accounts/doctype/journal_entry/journal_entry.json
@@ -17032,7 +17032,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_entry_detail/stock_entry_detail.json
 #: erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.json
 msgid "Difference Account"
-msgstr "Perbedaan Akun"
+msgstr "Akun Selisih"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:574
 msgid "Difference Account in Items Table"
@@ -17044,7 +17044,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.py:962
 msgid "Difference Account must be a Asset/Liability type account, since this Stock Reconciliation is an Opening Entry"
-msgstr "Akun Perbedaan harus jenis rekening Aset / Kewajiban, karena Rekonsiliasi Persediaan adalah Entri Pembukaan"
+msgstr "Akun Selisih harus merupakan akun jenis Aset/Kewajiban, karena Rekonsiliasi Stok ini adalah Entri Pembuka"
 
 #. Label of the difference_amount (Currency) field in DocType 'Payment
 #. Reconciliation Allocation'
@@ -17063,7 +17063,7 @@ msgstr "Akun Perbedaan harus jenis rekening Aset / Kewajiban, karena Rekonsilias
 #: erpnext/assets/doctype/asset_value_adjustment/asset_value_adjustment.json
 #: erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.json
 msgid "Difference Amount"
-msgstr "Jumlah Perbedaan"
+msgstr "Jumlah Selisih"
 
 #. Label of the difference_amount (Currency) field in DocType 'Payment Entry'
 #: erpnext/accounts/doctype/payment_entry/payment_entry.json
@@ -17072,7 +17072,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:201
 msgid "Difference Amount must be zero"
-msgstr "Perbedaan Jumlah harus nol"
+msgstr "Jumlah Selisih harus nol"
 
 #: erpnext/stock/report/stock_ledger_variance/stock_ledger_variance.js:49
 msgid "Difference In"
@@ -17100,7 +17100,7 @@ msgstr ""
 #: erpnext/stock/report/incorrect_stock_value_report/incorrect_stock_value_report.py:136
 #: erpnext/stock/report/stock_and_account_value_comparison/stock_and_account_value_comparison.py:130
 msgid "Difference Value"
-msgstr "Nilai Perbedaan"
+msgstr "Nilai Selisih"
 
 #: erpnext/stock/doctype/delivery_note/delivery_note.js:491
 msgid "Different 'Source Warehouse' and 'Target Warehouse' can be set for each row."
@@ -17108,7 +17108,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/packing_slip/packing_slip.py:194
 msgid "Different UOM for items will lead to incorrect (Total) Net Weight value. Make sure that Net Weight of each item is in the same UOM."
-msgstr "UOM berbeda akan menyebabkan kesalahan Berat Bersih (Total). Pastikan Berat Bersih untuk setiap barang memakai UOM yang sama."
+msgstr "Satuan Ukur (UOM) yang berbeda untuk barang akan menyebabkan nilai Berat Bersih (Total) yang salah. Pastikan Berat Bersih setiap barang menggunakan Satuan Ukur (UOM) yang sama."
 
 #. Label of the dimension_defaults (Table) field in DocType 'Accounting
 #. Dimension'
@@ -17318,7 +17318,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/sales_taxes_and_charges_template/sales_taxes_and_charges_template.py:79
 msgid "Disabled template must not be default template"
-msgstr "Template cacat tidak harus template default"
+msgstr "Template yang dinonaktifkan tidak boleh menjadi template default"
 
 #. Description of the 'Scan Mode' (Check) field in DocType 'Stock
 #. Reconciliation'
@@ -17344,7 +17344,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.js:64
 msgid "Disburse Loan"
-msgstr "Pinjaman Pinjaman"
+msgstr "Cairkan Pinjaman"
 
 #. Option for the 'Status' (Select) field in DocType 'Invoice Discounting'
 #: erpnext/accounts/doctype/invoice_discounting/invoice_discounting.json
@@ -17609,7 +17609,7 @@ msgstr ""
 #: erpnext/utilities/doctype/video/video.json
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.py:27
 msgid "Dislikes"
-msgstr "Tidak suka"
+msgstr "Tidak Suka"
 
 #: erpnext/setup/doctype/company/company.py:384
 msgid "Dispatch"
@@ -17664,7 +17664,7 @@ msgstr ""
 #: erpnext/setup/setup_wizard/operations/defaults_setup.py:58
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:314
 msgid "Dispatch Notification"
-msgstr "Pemberitahuan Pengiriman"
+msgstr "Notifikasi Pengiriman"
 
 #. Label of the dispatch_attachment (Link) field in DocType 'Delivery Settings'
 #: erpnext/stock/doctype/delivery_settings/delivery_settings.json
@@ -17800,7 +17800,7 @@ msgstr ""
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:105
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts_with_account_number.py:152
 msgid "Dividends Paid"
-msgstr "Dividen Dibagi"
+msgstr "Dividen Dibayarkan"
 
 #. Option for the 'Marital Status' (Select) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -17846,7 +17846,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/asset.js:822
 msgid "Do you really want to restore this scrapped asset?"
-msgstr "Apakah Anda benar-benar ingin mengembalikan aset dibuang ini?"
+msgstr "Apakah Anda yakin ingin memulihkan aset yang telah dihapus ini?"
 
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.js:15
 msgid "Do you still want to enable immutable ledger?"
@@ -17866,7 +17866,7 @@ msgstr "Apakah Anda ingin memberi tahu semua pelanggan melalui email?"
 
 #: erpnext/manufacturing/doctype/production_plan/production_plan.js:321
 msgid "Do you want to submit the material request"
-msgstr "Apakah Anda ingin mengirimkan permintaan materi"
+msgstr "Apakah Anda ingin mengirimkan permintaan material?"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.js:56
 msgid "Do you want to submit the stock entry?"
@@ -17893,7 +17893,7 @@ msgstr ""
 
 #: erpnext/templates/pages/search_help.py:22
 msgid "Docs Search"
-msgstr "Pencarian Docs"
+msgstr "Pencarian Dokumen"
 
 #. Label of the document_type (Link) field in DocType 'Repost Allowed Types'
 #: erpnext/accounts/doctype/repost_allowed_types/repost_allowed_types.json
@@ -17911,7 +17911,7 @@ msgstr "DOCTYPE"
 #: erpnext/public/js/bank_reconciliation_tool/dialog_manager.js:111
 #: erpnext/quality_management/doctype/quality_meeting_minutes/quality_meeting_minutes.json
 msgid "Document Name"
-msgstr "Dokumen Nama"
+msgstr "Nama Dokumen"
 
 #. Label of the reference_doctype (Link) field in DocType 'Bank Statement
 #. Import'
@@ -17941,7 +17941,7 @@ msgstr "Dokumen Nama"
 #: erpnext/selling/report/sales_person_wise_transaction_summary/sales_person_wise_transaction_summary.js:14
 #: erpnext/selling/report/territory_target_variance_based_on_item_group/territory_target_variance_based_on_item_group.js:22
 msgid "Document Type"
-msgstr "Jenis Dokumen"
+msgstr "Tipe Dokumen"
 
 #. Label of the document_type (Link) field in DocType 'Subscription Invoice'
 #: erpnext/accounts/doctype/subscription_invoice/subscription_invoice.json
@@ -18010,7 +18010,7 @@ msgstr ""
 #: erpnext/public/js/templates/crm_activities.html:77
 #: erpnext/public/js/utils/crm_activities.js:214
 msgid "Done"
-msgstr "Matang"
+msgstr "Selesai"
 
 #. Label of the dont_recompute_tax (Check) field in DocType 'Sales Taxes and
 #. Charges'
@@ -18096,7 +18096,7 @@ msgstr "Analisis Waktu Henti"
 #: erpnext/manufacturing/doctype/downtime_entry/downtime_entry.json
 #: erpnext/manufacturing/workspace/manufacturing/manufacturing.json
 msgid "Downtime Entry"
-msgstr "Masuk Waktu Henti"
+msgstr "Entri Waktu Henti"
 
 #. Label of the downtime_reason_section (Section Break) field in DocType
 #. 'Downtime Entry'
@@ -18200,7 +18200,7 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 #: erpnext/stock/doctype/delivery_trip/delivery_trip.json
 msgid "Driver"
-msgstr "Sopir"
+msgstr "Pengemudi"
 
 #. Label of the driver_address (Link) field in DocType 'Delivery Trip'
 #: erpnext/stock/doctype/delivery_trip/delivery_trip.json
@@ -18235,7 +18235,7 @@ msgstr ""
 #: erpnext/setup/doctype/driver/driver.json
 #: erpnext/setup/doctype/driving_license_category/driving_license_category.json
 msgid "Driving License Category"
-msgstr "Kategori Lisensi Mengemudi"
+msgstr "Kategori SIM"
 
 #. Label of the drop_ar_procedures (Button) field in DocType 'Accounts
 #. Settings'
@@ -18345,7 +18345,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/accounts/doctype/dunning_letter_text/dunning_letter_text.json
 msgid "Dunning Letter Text"
-msgstr "Teks Surat Dunning"
+msgstr "Teks Surat Penagihan"
 
 #. Label of the dunning_level (Int) field in DocType 'Overdue Payment'
 #: erpnext/accounts/doctype/overdue_payment/overdue_payment.json
@@ -18360,7 +18360,7 @@ msgstr ""
 #: erpnext/accounts/doctype/dunning_type/dunning_type.json
 #: erpnext/accounts/workspace/receivables/receivables.json
 msgid "Dunning Type"
-msgstr "Jenis Dunning"
+msgstr "Jenis Penagihan"
 
 #: erpnext/stock/doctype/item/item.js:210
 #: erpnext/stock/doctype/putaway_rule/putaway_rule.py:55
@@ -18373,7 +18373,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/authorization_rule/authorization_rule.py:71
 msgid "Duplicate Entry. Please check Authorization Rule {0}"
-msgstr "Gandakan entri. Silakan periksa Peraturan Otorisasi {0}"
+msgstr "Entri Duplikat. Silakan periksa Aturan Otorisasi {0}"
 
 #: erpnext/assets/doctype/asset/asset.py:342
 msgid "Duplicate Finance Book"
@@ -18394,7 +18394,7 @@ msgstr ""
 
 #: erpnext/projects/doctype/project/project.js:83
 msgid "Duplicate Project with Tasks"
-msgstr "Proyek Duplikat dengan Tugas"
+msgstr "Duplikat Proyek dengan Tugas"
 
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.py:157
 msgid "Duplicate Sales Invoices found"
@@ -18410,7 +18410,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/item_manufacturer/item_manufacturer.py:44
 msgid "Duplicate entry against the item code {0} and manufacturer {1}"
-msgstr "Entri duplikat terhadap kode item {0} dan pabrikan {1}"
+msgstr "Entri duplikat terhadap kode barang {0} dan produsen {1}"
 
 #: erpnext/accounts/doctype/pos_profile/pos_profile.py:148
 msgid "Duplicate item group found in the item group table"
@@ -18629,7 +18629,7 @@ msgstr "Listrik"
 #: erpnext/manufacturing/doctype/workstation/workstation.json
 #: erpnext/manufacturing/doctype/workstation_type/workstation_type.json
 msgid "Electricity Cost"
-msgstr ""
+msgstr "Biaya Listrik"
 
 #. Option for the 'Stop Reason' (Select) field in DocType 'Downtime Entry'
 #: erpnext/manufacturing/doctype/downtime_entry/downtime_entry.json
@@ -18931,7 +18931,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/setup/doctype/employee_external_work_history/employee_external_work_history.json
 msgid "Employee External Work History"
-msgstr "Karyawan Eksternal Riwayat Pekerjaan"
+msgstr "Riwayat Kerja Eksternal Karyawan"
 
 #. Label of the employee_group (Link) field in DocType 'Communication Medium
 #. Timeslot'
@@ -18948,12 +18948,12 @@ msgstr "Tabel Grup Karyawan"
 
 #: erpnext/projects/report/timesheet_billing_summary/timesheet_billing_summary.py:33
 msgid "Employee ID"
-msgstr "identitas pegawai"
+msgstr "ID Karyawan"
 
 #. Name of a DocType
 #: erpnext/setup/doctype/employee_internal_work_history/employee_internal_work_history.json
 msgid "Employee Internal Work History"
-msgstr "Riwayat Kerja Karyawan Internal"
+msgstr "Riwayat Kerja Internal Karyawan"
 
 #. Label of the employee_name (Data) field in DocType 'Activity Cost'
 #. Label of the employee_name (Data) field in DocType 'Timesheet'
@@ -18964,7 +18964,7 @@ msgstr "Riwayat Kerja Karyawan Internal"
 #: erpnext/projects/report/timesheet_billing_summary/timesheet_billing_summary.py:53
 #: erpnext/setup/doctype/employee_group_table/employee_group_table.json
 msgid "Employee Name"
-msgstr "nama karyawan"
+msgstr "Nama Karyawan"
 
 #. Label of the employee_number (Data) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -18978,16 +18978,16 @@ msgstr ""
 
 #: erpnext/setup/doctype/employee/employee.py:214
 msgid "Employee cannot report to himself."
-msgstr "Karyawan tidak bisa melaporkan kepada dirinya sendiri."
+msgstr "Karyawan tidak dapat melapor ke dirinya sendiri."
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:96
 msgid "Employee is required while issuing Asset {0}"
-msgstr "Karyawan diperlukan saat menerbitkan Aset {0}"
+msgstr "Karyawan wajib diisi saat menerbitkan Aset {0}"
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:79
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:100
 msgid "Employee {0} does not belongs to the company {1}"
-msgstr "Karyawan {0} bukan milik perusahaan {1}"
+msgstr "Karyawan {0} bukan bagian dari perusahaan {1}"
 
 #: erpnext/manufacturing/doctype/job_card/job_card.py:306
 msgid "Employee {0} is currently working on another workstation. Please assign another employee."
@@ -19233,7 +19233,7 @@ msgstr ""
 #: erpnext/support/doctype/service_level_agreement/service_level_agreement.json
 #: erpnext/templates/pages/projects.html:47
 msgid "End Date"
-msgstr "Tanggal Berakhir"
+msgstr "Tanggal Akhir"
 
 #: erpnext/crm/doctype/contract/contract.py:70
 msgid "End Date cannot be before Start Date."
@@ -19250,7 +19250,7 @@ msgstr "Tanggal Akhir tidak boleh sebelum Tanggal Mulai."
 #: erpnext/support/doctype/service_day/service_day.json
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "End Time"
-msgstr ""
+msgstr "Waktu Selesai"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:278
 msgid "End Transit"
@@ -19262,11 +19262,11 @@ msgstr ""
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.js:89
 #: erpnext/public/js/financial_statements.js:208
 msgid "End Year"
-msgstr "Akhir tahun"
+msgstr "Tahun Akhir"
 
 #: erpnext/accounts/report/financial_statements.py:133
 msgid "End Year cannot be before Start Year"
-msgstr "Akhir Tahun tidak boleh sebelum Mulai Tahun"
+msgstr "Tahun Akhir tidak boleh sebelum Tahun Mulai"
 
 #: erpnext/accounts/doctype/process_deferred_accounting/process_deferred_accounting.js:48
 #: erpnext/accounts/doctype/process_deferred_accounting/process_deferred_accounting.py:37
@@ -19307,7 +19307,7 @@ msgstr ""
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.html:23
 #: erpnext/manufacturing/report/bom_stock_report/bom_stock_report.py:29
 msgid "Enough Parts to Build"
-msgstr "Bagian yang cukup untuk Membangun"
+msgstr "Komponen Cukup untuk Dirakit"
 
 #. Label of the ensure_delivery_based_on_produced_serial_no (Check) field in
 #. DocType 'Sales Order Item'
@@ -19359,7 +19359,7 @@ msgstr ""
 
 #: erpnext/selling/page/point_of_sale/pos_payment.js:611
 msgid "Enter amount to be redeemed."
-msgstr "Masukkan jumlah yang akan ditebus."
+msgstr "Masukkan jumlah yang akan ditukarkan."
 
 #: erpnext/stock/doctype/item/item.js:964
 msgid "Enter an Item Code, the name will be auto-filled the same as Item Code on clicking inside the Item Name field."
@@ -19379,7 +19379,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset/asset.py:410
 msgid "Enter depreciation details"
-msgstr "Masukkan detail depresiasi"
+msgstr "Masukkan detail penyusutan"
 
 #: erpnext/selling/page/point_of_sale/pos_item_cart.js:408
 msgid "Enter discount percentage."
@@ -19420,7 +19420,7 @@ msgstr ""
 
 #: erpnext/selling/page/point_of_sale/pos_payment.js:535
 msgid "Enter {0} amount."
-msgstr "Masukkan {0} jumlah."
+msgstr "Masukkan jumlah {0}."
 
 #: erpnext/setup/setup_wizard/data/industry_type.txt:22
 msgid "Entertainment & Leisure"
@@ -19461,7 +19461,7 @@ msgstr ""
 #: erpnext/accounts/report/balance_sheet/balance_sheet.py:247
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:289
 msgid "Equity"
-msgstr "Modal"
+msgstr "Ekuitas"
 
 #. Label of the equity_or_liability_account (Link) field in DocType 'Share
 #. Transfer'
@@ -19527,7 +19527,7 @@ msgstr ""
 
 #: erpnext/buying/doctype/supplier_scorecard_criteria/supplier_scorecard_criteria.py:53
 msgid "Error evaluating the criteria formula"
-msgstr "Kesalahan dalam mengevaluasi rumus kriteria"
+msgstr "Kesalahan mengevaluasi formula kriteria"
 
 #: erpnext/accounts/doctype/bank_transaction/bank_transaction.py:303
 msgid "Error in party matching for Bank Transaction {0}"
@@ -19570,7 +19570,7 @@ msgstr ""
 #: erpnext/buying/report/procurement_tracker/procurement_tracker.py:96
 #: erpnext/projects/doctype/project/project.json
 msgid "Estimated Cost"
-msgstr "Estimasi biaya"
+msgstr "Estimasi Biaya"
 
 #. Label of the estimated_time_and_cost (Section Break) field in DocType 'Work
 #. Order Operation'
@@ -19671,7 +19671,7 @@ msgstr ""
 #: erpnext/accounts/doctype/sales_invoice_advance/sales_invoice_advance.json
 #: erpnext/setup/doctype/company/company.py:548
 msgid "Exchange Gain/Loss"
-msgstr "Efek Gain / Loss"
+msgstr "Laba/Rugi Kurs"
 
 #: erpnext/controllers/accounts_controller.py:1693
 #: erpnext/controllers/accounts_controller.py:1777
@@ -19758,7 +19758,7 @@ msgstr ""
 
 #: erpnext/controllers/sales_and_purchase_return.py:73
 msgid "Exchange Rate must be same as {0} {1} ({2})"
-msgstr "Kurs harus sama dengan {0} {1} ({2})"
+msgstr "Nilai Tukar harus sama dengan {0} {1} ({2})"
 
 #. Option for the 'Entry Type' (Select) field in DocType 'Journal Entry'
 #. Option for the 'Journal Entry Type' (Select) field in DocType 'Journal Entry
@@ -19770,7 +19770,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.js:1276
 msgid "Excise Invoice"
-msgstr "Cukai Faktur"
+msgstr "Faktur Cukai"
 
 #. Label of the excise_page (Data) field in DocType 'Delivery Note'
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
@@ -19828,7 +19828,7 @@ msgstr ""
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:197
 #: erpnext/public/js/setup_wizard.js:191
 msgid "Expand All"
-msgstr "Melebarkan semua"
+msgstr "Perluas Semua"
 
 #: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.py:444
 msgid "Expected"
@@ -19842,7 +19842,7 @@ msgstr ""
 
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.py:417
 msgid "Expected Arrival Date"
-msgstr "Tanggal Kedatangan yang Diharapkan"
+msgstr "Tanggal Target Kedatangan"
 
 #: erpnext/stock/report/incorrect_balance_qty_after_transaction/incorrect_balance_qty_after_transaction.py:119
 msgid "Expected Balance Qty"
@@ -19868,11 +19868,11 @@ msgstr ""
 #: erpnext/stock/report/delayed_order_report/delayed_order_report.py:60
 #: erpnext/subcontracting/doctype/subcontracting_order_item/subcontracting_order_item.json
 msgid "Expected Delivery Date"
-msgstr "Diharapkan Pengiriman Tanggal"
+msgstr "Tanggal Target Pengiriman"
 
 #: erpnext/selling/doctype/sales_order/sales_order.py:354
 msgid "Expected Delivery Date should be after Sales Order Date"
-msgstr "Tanggal Pengiriman yang diharapkan harus setelah Tanggal Pesanan Penjualan"
+msgstr "Tanggal Target Pengiriman harus setelah Tanggal Pesanan Penjualan"
 
 #. Label of the expected_end_date (Datetime) field in DocType 'Job Card'
 #. Label of the expected_end_date (Date) field in DocType 'Project'
@@ -19884,7 +19884,7 @@ msgstr "Tanggal Pengiriman yang diharapkan harus setelah Tanggal Pesanan Penjual
 #: erpnext/projects/report/delayed_tasks_summary/delayed_tasks_summary.py:104
 #: erpnext/templates/pages/task_info.html:64
 msgid "Expected End Date"
-msgstr "Diharapkan Tanggal Akhir"
+msgstr "Tanggal Target Selesai"
 
 #: erpnext/projects/doctype/task/task.py:108
 msgid "Expected End Date should be less than or equal to parent task's Expected End Date {0}."
@@ -19894,7 +19894,7 @@ msgstr ""
 #: erpnext/projects/doctype/timesheet_detail/timesheet_detail.json
 #: erpnext/public/js/projects/timer.js:16
 msgid "Expected Hrs"
-msgstr "Diharapkan Jam"
+msgstr "Jam Target"
 
 #. Label of the expected_start_date (Datetime) field in DocType 'Job Card'
 #. Label of the expected_start_date (Date) field in DocType 'Project'
@@ -19906,7 +19906,7 @@ msgstr "Diharapkan Jam"
 #: erpnext/projects/report/delayed_tasks_summary/delayed_tasks_summary.py:98
 #: erpnext/templates/pages/task_info.html:59
 msgid "Expected Start Date"
-msgstr "Diharapkan Tanggal Mulai"
+msgstr "Tanggal Target Mulai"
 
 #: erpnext/stock/report/incorrect_stock_value_report/incorrect_stock_value_report.py:129
 msgid "Expected Stock Value"
@@ -23765,7 +23765,7 @@ msgstr ""
 
 #: erpnext/buying/doctype/buying_settings/buying_settings.js:27
 msgid "If this option is configured 'Yes', ERPNext will prevent you from creating a Purchase Invoice or Receipt without creating a Purchase Order first. This configuration can be overridden for a particular supplier by enabling the 'Allow Purchase Invoice Creation Without Purchase Order' checkbox in the Supplier master."
-msgstr "Jika opsi ini dikonfigurasi &#39;Ya&#39;, ERPNext akan mencegah Anda membuat Faktur Pembelian atau Tanda Terima tanpa membuat Pesanan Pembelian terlebih dahulu. Konfigurasi ini dapat diganti untuk pemasok tertentu dengan mengaktifkan kotak centang &#39;Izinkan Pembuatan Faktur Pembelian Tanpa Pesanan Pembelian&#39; di master Pemasok."
+msgstr ""
 
 #: erpnext/buying/doctype/buying_settings/buying_settings.js:34
 msgid "If this option is configured 'Yes', ERPNext will prevent you from creating a Purchase Invoice without creating a Purchase Receipt first. This configuration can be overridden for a particular supplier by enabling the 'Allow Purchase Invoice Creation Without Purchase Receipt' checkbox in the Supplier master."
@@ -27469,7 +27469,7 @@ msgstr ""
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:130
 msgid "Item must be added using 'Get Items from Purchase Receipts' button"
-msgstr "Item harus ditambahkan dengan menggunakan 'Dapatkan Produk dari Pembelian Penerimaan' tombol"
+msgstr "Item harus ditambahkan dengan menggunakan tombol 'Dapatkan Item dari Tanda Terima Pembelian'"
 
 #: erpnext/buying/report/subcontracted_item_to_be_received/subcontracted_item_to_be_received.py:42
 #: erpnext/selling/doctype/sales_order/sales_order.js:1210
@@ -32521,7 +32521,7 @@ msgstr "Tidak ditemukan faktur luar biasa"
 
 #: erpnext/accounts/doctype/exchange_rate_revaluation/exchange_rate_revaluation.py:327
 msgid "No outstanding invoices require exchange rate revaluation"
-msgstr "Tidak ada faktur terutang yang membutuhkan penilaian kembali nilai tukar"
+msgstr "Tidak ada faktur terutang yang membutuhkan revaluasi kurs"
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:2498
 msgid "No outstanding {0} found for the {1} {2} which qualify the filters you have specified."
@@ -40460,7 +40460,7 @@ msgstr "Faktur Pembelian {0} sudah Terkirim"
 
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py:2010
 msgid "Purchase Invoices"
-msgstr "Beli Faktur"
+msgstr "Faktur Pembelian"
 
 #. Name of a role
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.json
@@ -40834,7 +40834,7 @@ msgstr "Pajak Pembelian dan Biaya"
 #: erpnext/buying/workspace/buying/buying.json
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.json
 msgid "Purchase Taxes and Charges Template"
-msgstr "Membeli Pajak dan Biaya Template"
+msgstr "Templat Pajak dan Biaya Pembelian"
 
 #. Name of a role
 #: erpnext/accounts/doctype/account/account.json
@@ -47022,7 +47022,7 @@ msgstr "Pajak Penjualan dan Biaya"
 #: erpnext/selling/workspace/selling/selling.json
 #: erpnext/stock/doctype/delivery_note/delivery_note.json
 msgid "Sales Taxes and Charges Template"
-msgstr "Penjualan Pajak dan Biaya Template"
+msgstr "Templat Pajak dan Biaya Penjualan"
 
 #. Label of the section_break2 (Section Break) field in DocType 'POS Invoice'
 #. Label of the sales_team (Table) field in DocType 'POS Invoice'
@@ -56157,7 +56157,7 @@ msgstr ""
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts_accounts_receivable.html:197
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:160
 msgid "Total Invoiced Amount"
-msgstr "Jumlah Total Tagihan"
+msgstr "Total Jumlah Tertagih"
 
 #: erpnext/support/report/issue_summary/issue_summary.py:82
 msgid "Total Issues"
@@ -60691,7 +60691,7 @@ msgstr "Anda tidak memiliki cukup poin untuk ditukarkan."
 
 #: erpnext/accounts/doctype/opening_invoice_creation_tool/opening_invoice_creation_tool.py:270
 msgid "You had {} errors while creating opening invoices. Check {} for more details"
-msgstr "Anda mengalami {} kesalahan saat membuat pembukaan faktur. Periksa {} untuk detail selengkapnya"
+msgstr "Anda mengalami {} kesalahan saat membuat faktur pembuka. Periksa {} untuk detail selengkapnya."
 
 #: erpnext/public/js/utils.js:954
 msgid "You have already selected items from {0} {1}"

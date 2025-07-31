@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-07-20 09:37+0000\n"
-"PO-Revision-Date: 2025-07-20 12:58\n"
+"PO-Revision-Date: 2025-07-30 14:58\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -6643,7 +6643,7 @@ msgstr "Automatisk avstämning har startat i bakgrunden"
 #: erpnext/accounts/doctype/process_payment_reconciliation/process_payment_reconciliation.py:147
 #: erpnext/accounts/doctype/process_payment_reconciliation/process_payment_reconciliation.py:195
 msgid "Auto Reconciliation of Payments has been disabled. Enable it through {0}"
-msgstr "Automatisk Avstämning av Betalningar har inaktiverats. Aktivera genom {0}"
+msgstr "Automatisk Avstämning av Betalningar är inaktiverad. Aktivera genom {0}"
 
 #. Label of the auto_repeat (Link) field in DocType 'Journal Entry'
 #. Label of the auto_repeat (Link) field in DocType 'Payment Entry'
@@ -6719,7 +6719,7 @@ msgstr "Automatiskt Stäng Besvarad Möjlighet efter ovan angivet antal dagar"
 #. DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Auto match and set the Party in Bank Transactions"
-msgstr "Automatiskt stäm av och ange Parti i Bank Transaktioner"
+msgstr "Automatiskt avstämning av Parti i Bank Transaktioner"
 
 #. Label of the reorder_section (Section Break) field in DocType 'Item'
 #: erpnext/stock/doctype/item/item.json
@@ -7739,7 +7739,7 @@ msgstr "Bank / Kassa Konto {0} tillhör inte bolag {1}"
 #: erpnext/accounts/workspace/accounting/accounting.json
 #: erpnext/setup/setup_wizard/data/industry_type.txt:8
 msgid "Banking"
-msgstr "Bankverksamhet"
+msgstr "Bank"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -43000,7 +43000,7 @@ msgstr "Avstämning Framsteg"
 #. Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Reconciliation Queue Size"
-msgstr "Avstämning Kö Storlek"
+msgstr "Avstämningskö Storlek"
 
 #. Label of the reconciliation_takes_effect_on (Select) field in DocType
 #. 'Company'
