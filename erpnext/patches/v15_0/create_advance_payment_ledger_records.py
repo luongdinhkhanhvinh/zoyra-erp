@@ -32,6 +32,10 @@ def execute():
 	"""
 	frappe.db.truncate(DOCTYPE)
 	advance_doctpyes = get_advance_payment_doctypes()
+
+	if not advance_doctpyes:
+		return
+
 	make_advance_ledger_entries_for_payment_entries(advance_doctpyes)
 	make_advance_ledger_entries_for_journal_entries(advance_doctpyes)
 
