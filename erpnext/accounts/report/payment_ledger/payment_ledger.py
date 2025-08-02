@@ -46,6 +46,7 @@ class PaymentLedger:
 						against_voucher_no=ple.against_voucher_no,
 						amount=ple.amount,
 						currency=ple.account_currency,
+						company=ple.company,
 					)
 
 					if self.filters.include_account_currency:
