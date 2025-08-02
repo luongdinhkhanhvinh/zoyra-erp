@@ -78,6 +78,7 @@ class PaymentLedger:
 					against_voucher_no="Outstanding:",
 					amount=total,
 					currency=voucher_data[0].currency,
+					company=voucher_data[0].company,
 				)
 
 				if self.filters.include_account_currency:
