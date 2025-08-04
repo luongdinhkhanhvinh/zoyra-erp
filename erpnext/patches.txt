@@ -357,7 +357,7 @@ execute:frappe.db.set_single_value("Buying Settings", "project_update_frequency"
 execute:frappe.db.set_default("date_format", frappe.db.get_single_value("System Settings", "date_format"))
 erpnext.patches.v14_0.update_total_asset_cost_field
 erpnext.patches.v15_0.create_advance_payment_status
-erpnext.patches.v15_0.allow_on_submit_dimensions_for_repostable_doctypes
+erpnext.patches.v15_0.allow_on_submit_dimensions_for_repostable_doctypes #2025-06-19
 erpnext.patches.v14_0.create_accounting_dimensions_in_reconciliation_tool
 erpnext.patches.v14_0.update_flag_for_return_invoices #2024-03-22
 erpnext.patches.v15_0.create_accounting_dimensions_in_payment_request
