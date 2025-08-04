@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-03 15:10\n"
+"PO-Revision-Date: 2025-08-04 15:49\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Serbian (Latin)\n"
 "MIME-Version: 1.0\n"
@@ -3585,7 +3585,7 @@ msgstr "Akontacija poreza i taksi"
 #: erpnext/accounts/doctype/journal_entry_account/journal_entry_account.json
 #: erpnext/accounts/doctype/payment_entry_reference/payment_entry_reference.json
 msgid "Advance Voucher No"
-msgstr ""
+msgstr "Broj dokumenta za avans"
 
 #. Label of the advance_voucher_type (Link) field in DocType 'Journal Entry
 #. Account'
@@ -3594,7 +3594,7 @@ msgstr ""
 #: erpnext/accounts/doctype/journal_entry_account/journal_entry_account.json
 #: erpnext/accounts/doctype/payment_entry_reference/payment_entry_reference.json
 msgid "Advance Voucher Type"
-msgstr ""
+msgstr "Vrsta dokumenta za avans"
 
 #. Label of the advance_amount (Currency) field in DocType 'Sales Invoice
 #. Advance'
@@ -10516,7 +10516,7 @@ msgstr "Grad"
 #. 'Purchase Invoice'
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.json
 msgid "Claimed Landed Cost Amount (Company Currency)"
-msgstr ""
+msgstr "Potraživani troškovi nabavke (valuta kompanije)"
 
 #. Label of the class_per (Data) field in DocType 'Employee Education'
 #: erpnext/setup/doctype/employee_education/employee_education.json
@@ -20534,7 +20534,7 @@ msgstr "Preuzmi evidenciju rada u izlaznoj fakturi"
 #. DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Fetch Valuation Rate for Internal Transaction"
-msgstr ""
+msgstr "Preuzimanje stope vrednovanja za internu transakciju"
 
 #. Label of the fetch_from_parent (Select) field in DocType 'Inventory
 #. Dimension'
@@ -23719,7 +23719,7 @@ msgstr "Ukoliko je omogućeno, sistem neće primenjivati pravilo određivanja ce
 #. Description of the 'Pick Manually' (Check) field in DocType 'Pick List'
 #: erpnext/stock/doctype/pick_list/pick_list.json
 msgid "If enabled then system won't override the picked qty / batches / serial numbers / warehouse."
-msgstr ""
+msgstr "Ukoliko je omogućeno, sistem neće poništiti već preuzetu količinu / šarže / serijske brojeve / skladište."
 
 #. Description of the 'Send Document Print' (Check) field in DocType 'Request
 #. for Quotation'
@@ -25550,7 +25550,7 @@ msgstr "Nevažeća količina"
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:435
 msgid "Invalid Query"
-msgstr ""
+msgstr "Nevažeći upit"
 
 #: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:198
 msgid "Invalid Return"
@@ -25612,7 +25612,7 @@ msgstr "Nevažeći ključ rezultata. Odgovor:"
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:435
 msgid "Invalid search query"
-msgstr ""
+msgstr "Nevažeći upit pretrage"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:108
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:118
@@ -28397,7 +28397,7 @@ msgstr "Oznaka"
 #. Label of the taxes (Table) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Landed Cost"
-msgstr ""
+msgstr "Troškovi nabavke"
 
 #. Label of the landed_cost_help (HTML) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
@@ -28406,7 +28406,7 @@ msgstr "Pomoć za sletne troškove"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:18
 msgid "Landed Cost Id"
-msgstr ""
+msgstr "ID troška nabavke"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_item/landed_cost_item.json
@@ -28421,7 +28421,7 @@ msgstr "Prijemnica nabavke sa ukupnim troškovima isporuke"
 #. Name of a report
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.json
 msgid "Landed Cost Report"
-msgstr ""
+msgstr "Izveštaj o troškovima nabavke"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_taxes_and_charges/landed_cost_taxes_and_charges.json
@@ -28431,7 +28431,7 @@ msgstr "Porezi i takse ukupni troškova isporuke"
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_vendor_invoice/landed_cost_vendor_invoice.json
 msgid "Landed Cost Vendor Invoice"
-msgstr ""
+msgstr "Faktura dobavljača za troškove nabavke"
 
 #. Name of a DocType
 #. Label of a Link in the Stock Workspace
@@ -32900,7 +32900,7 @@ msgstr "Nije započeto"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.py:399
 msgid "Not able to find the earliest Fiscal Year for the given company."
-msgstr ""
+msgstr "Nije moguće pronaći najraniju fiskalnu godinu za datu kompaniju."
 
 #: erpnext/manufacturing/doctype/bom/bom_list.js:11
 msgid "Not active"
@@ -33668,7 +33668,7 @@ msgstr "Početni iznos"
 
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:158
 msgid "Opening Balance"
-msgstr "Početni stanje"
+msgstr "Početno stanje"
 
 #. Label of the balance_details (Table) field in DocType 'POS Opening Entry'
 #: erpnext/accounts/doctype/pos_opening_entry/pos_opening_entry.json
@@ -37977,7 +37977,7 @@ msgstr "Molimo Vas da izaberete barem jednu stavku da biste nastavili"
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:355
 msgid "Please select atleast one operation to create Job Card"
-msgstr ""
+msgstr "Molimo Vas da izaberete barem jednu operaciju za kreiranje radne kartice"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1749
 msgid "Please select correct account"
@@ -41065,11 +41065,11 @@ msgstr "Nabavna vrednost"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:35
 msgid "Purchase Voucher No"
-msgstr ""
+msgstr "Broj dokumenta za nabavku"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:29
 msgid "Purchase Voucher Type"
-msgstr ""
+msgstr "Vrsta dokumenta za nabavku"
 
 #: erpnext/utilities/activation.py:105
 msgid "Purchase orders help you plan and follow up on your purchases"
@@ -42549,11 +42549,11 @@ msgstr "Vrednost sirovine"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.js:36
 msgid "Raw Material Voucher No"
-msgstr ""
+msgstr "Broj dokumenta za sirovine"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.js:30
 msgid "Raw Material Voucher Type"
-msgstr ""
+msgstr "Vrsta dokumenta za sirovine"
 
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.js:65
 msgid "Raw Material Warehouse"
@@ -49894,7 +49894,7 @@ msgstr "Prikaži unose početnog stanja"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.js:26
 msgid "Show Opening and Closing Balance"
-msgstr ""
+msgstr "Prikaži početno i završno stanje"
 
 #. Label of the show_operations (Check) field in DocType 'BOM'
 #: erpnext/manufacturing/doctype/bom/bom.json
@@ -56388,13 +56388,13 @@ msgstr "Ukupno stavki"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:24
 msgid "Total Landed Cost"
-msgstr ""
+msgstr "Ukupni troškovi nabavke"
 
 #. Label of the total_taxes_and_charges (Currency) field in DocType 'Landed
 #. Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Total Landed Cost (Company Currency)"
-msgstr ""
+msgstr "Ukupni troškovi nabavke (valuta kompanije)"
 
 #: erpnext/accounts/report/balance_sheet/balance_sheet.py:213
 msgid "Total Liability"
@@ -56754,7 +56754,7 @@ msgstr "Ukupno odstupanje"
 #. Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Total Vendor Invoices Cost (Company Currency)"
-msgstr ""
+msgstr "Ukupan iznos faktura dobavljača (valuta kompanije)"
 
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.py:70
 msgid "Total Views"
@@ -58996,12 +58996,12 @@ msgstr "Vrednost vozila"
 #: erpnext/stock/doctype/landed_cost_vendor_invoice/landed_cost_vendor_invoice.json
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:42
 msgid "Vendor Invoice"
-msgstr ""
+msgstr "Faktura dobavljača"
 
 #. Label of the vendor_invoices (Table) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Vendor Invoices"
-msgstr ""
+msgstr "Fakture dobavljača"
 
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:475
 msgid "Vendor Name"
@@ -61445,7 +61445,7 @@ msgstr "{0} transakcija(e) usklađeno"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:59
 msgid "{0} account is not of company {1}"
-msgstr ""
+msgstr "Račun {0} ne pripada kompaniji {1}"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:62
 msgid "{0} account is not of type {1}"
