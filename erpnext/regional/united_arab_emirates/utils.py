@@ -10,38 +10,32 @@ def update_itemised_tax_data(doc):
 	if not doc.items:
 		return
 
-	has_zero_rated_field = False
 	meta = frappe.get_meta(doc.items[0].doctype)
 	if not meta.has_field("tax_rate"):
 		return
 
-	if meta.has_field("is_zero_rated"):
-		has_zero_rated_field = True
-
 	itemised_tax = get_itemised_tax(doc.taxes)
-	doc.flags.export_determined = None
-	is_export = False
 
 	def determine_if_export(doc):
 		if doc.doctype != "Sales Invoice":
 			return False
 
-		if doc.flags.export_determined is not None:
-			return doc.flags.export_determined
-
-		doc.flags.export_determined = False
-		if doc.customer_address and doc.company_address:
-			company_country = frappe.get_cached_value("Address", doc.company_address, "country")
-			customer_country = frappe.db.get_value("Address", doc.customer_address, "country")
-
-			if company_country != customer_country:
-				doc.flags.export_determined = True
-				return doc.flags.export_determined
-		else:
+		if not doc.customer_address:
 			frappe.msgprint(
-				_("Please set Customer and Company Address to determine if the transaction is an export."),
+				_("Please set Customer Address to determine if the transaction is an export."),
 				alert=True,
 			)
+			return False
+
+		company_country = frappe.get_cached_value("Company", doc.company, "country")
+		customer_country = frappe.db.get_value("Address", doc.customer_address, "country")
+
+		if company_country != customer_country:
+			return True
+
+		return False
+
+	is_export = determine_if_export(doc)
 
 	for row in doc.items:
 		tax_rate, tax_amount = 0.0, 0.0
@@ -53,15 +47,12 @@ def update_itemised_tax_data(doc):
 				tax_amount += flt((row.net_amount * _tax_rate) / 100, row.precision("tax_amount"))
 				tax_rate += _tax_rate
 
-		if not tax_rate and has_zero_rated_field and not row.is_zero_rated:
-			is_export = is_export or determine_if_export(doc)
-			row.is_zero_rated = is_export
+		if not tax_rate and is_export:
+			row.is_zero_rated = 1
 
 		row.tax_rate = flt(tax_rate, row.precision("tax_rate"))
 		row.tax_amount = flt(tax_amount, row.precision("tax_amount"))
 		row.total_amount = flt((row.net_amount + row.tax_amount), row.precision("total_amount"))
-
-	doc.flags.export_determined = None
 
 
 def get_account_currency(account):
