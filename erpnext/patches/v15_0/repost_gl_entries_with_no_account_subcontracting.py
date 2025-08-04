@@ -19,7 +19,7 @@ def execute():
 			if not item.cost_center:
 				item.db_set("cost_center", cost_center)
 
-			doc.docstatus = 2
-			doc.make_gl_entries_on_cancel()
-			doc.docstatus = 1
-			doc.make_gl_entries()
+		doc.docstatus = 2
+		doc.make_gl_entries_on_cancel()
+		doc.docstatus = 1
+		doc.make_gl_entries()

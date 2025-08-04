@@ -96,7 +96,6 @@ class DeliveryNote(SellingController):
 		per_billed: DF.Percent
 		per_installed: DF.Percent
 		per_returned: DF.Percent
-		pick_list: DF.Link | None
 		plc_conversion_rate: DF.Float
 		po_date: DF.Date | None
 		po_no: DF.SmallText | None

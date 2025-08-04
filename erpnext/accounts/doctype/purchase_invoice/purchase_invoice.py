@@ -104,6 +104,7 @@ class PurchaseInvoice(BuyingController):
 		billing_address_display: DF.TextEditor | None
 		buying_price_list: DF.Link | None
 		cash_bank_account: DF.Link | None
+		claimed_landed_cost_amount: DF.Currency
 		clearance_date: DF.Date | None
 		company: DF.Link | None
 		contact_display: DF.SmallText | None
