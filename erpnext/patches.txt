@@ -431,3 +431,4 @@ erpnext.patches.v15_0.repost_gl_entries_with_no_account_subcontracting #2025-08-
 erpnext.patches.v15_0.patch_missing_buying_price_list_in_material_request
 erpnext.patches.v15_0.remove_sales_partner_from_consolidated_sales_invoice
 erpnext.patches.v15_0.add_company_payment_gateway_account
+erpnext.patches.v16_0.update_serial_no_reference_name

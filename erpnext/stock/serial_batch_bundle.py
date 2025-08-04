@@ -423,7 +423,7 @@ class SerialBatchBundle:
 				"Active"
 				if warehouse
 				else status
-				if (sn_table.purchase_document_no != sle.voucher_no or sle.is_cancelled != 1)
+				if (sn_table.reference_name != sle.voucher_no or sle.is_cancelled != 1)
 				else "Inactive",
 			)
 			.set(sn_table.company, sle.company)
@@ -1263,6 +1263,10 @@ class SerialBatchCreation:
 		if self.get("voucher_no"):
 			voucher_no = self.get("voucher_no")
 
+		voucher_type = ""
+		if self.get("voucher_type"):
+			voucher_type = self.get("voucher_type")
+
 		for _i in range(abs(cint(self.actual_qty))):
 			serial_no = make_autoname(self.serial_no_series, "Serial No")
 			sr_nos.append(serial_no)
@@ -1280,6 +1284,7 @@ class SerialBatchCreation:
 					self.item_name,
 					self.description,
 					"Active",
+					voucher_type,
 					voucher_no,
 					self.batch_no,
 				)
@@ -1299,7 +1304,8 @@ class SerialBatchCreation:
 				"item_name",
 				"description",
 				"status",
-				"purchase_document_no",
+				"reference_doctype",
+				"reference_name",
 				"batch_no",
 			]
 

@@ -1137,12 +1137,12 @@ class SerialandBatchBundle(Document):
 	def before_submit(self):
 		self.validate_serial_and_batch_data()
 		self.validate_serial_and_batch_no_for_returned()
-		self.set_purchase_document_no()
+		self.set_source_document_no()
 
 	def on_submit(self):
 		self.validate_serial_nos_inventory()
 
-	def set_purchase_document_no(self):
+	def set_source_document_no(self):
 		if self.flags.ignore_validate_serial_batch:
 			return
 
@@ -1154,10 +1154,9 @@ class SerialandBatchBundle(Document):
 			sn_table = frappe.qb.DocType("Serial No")
 			(
 				frappe.qb.update(sn_table)
-				.set(
-					sn_table.purchase_document_no,
-					self.voucher_no if not sn_table.purchase_document_no else self.voucher_no,
-				)
+				.set(sn_table.reference_doctype, self.voucher_type)
+				.set(sn_table.reference_name, self.voucher_no)
+				.set(sn_table.posting_date, self.posting_date)
 				.where(sn_table.name.isin(serial_nos))
 			).run()
 
