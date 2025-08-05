@@ -2,6 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 
+from collections import defaultdict
 from json import loads
 from typing import TYPE_CHECKING, Optional
 
@@ -2451,25 +2452,37 @@ def sync_auto_reconcile_config(auto_reconciliation_job_trigger: int = 15):
 		).save()
 
 
+def get_link_fields_grouped_by_option(doctype):
+	meta = frappe.get_meta(doctype)
+	link_fields_map = defaultdict(list)
+
+	for df in meta.fields:
+		if df.fieldtype == "Link" and df.options and not df.ignore_user_permissions:
+			link_fields_map[df.options].append(df.fieldname)
+
+	return link_fields_map
+
+
 def build_qb_match_conditions(doctype, user=None) -> list:
 	match_filters = build_match_conditions(doctype, user, False)
+	link_fields_map = get_link_fields_grouped_by_option(doctype)
 	criterion = []
 	apply_strict_user_permissions = frappe.get_system_settings("apply_strict_user_permissions")
 
 	if match_filters:
-		from frappe import qb
-
 		_dt = qb.DocType(doctype)
 
 		for filter in match_filters:
-			for d, names in filter.items():
-				fieldname = d.lower().replace(" ", "_")
-				field = _dt[fieldname]
+			for link_option, allowed_values in filter.items():
+				fieldnames = link_fields_map.get(link_option, [])
 
-				cond = field.isin(names)
-				if not apply_strict_user_permissions:
-					cond = (Coalesce(field, "") == "") | field.isin(names)
+				for fieldname in fieldnames:
+					field = _dt[fieldname]
+					cond = field.isin(allowed_values)
 
-				criterion.append(cond)
+					if not apply_strict_user_permissions:
+						cond = (Coalesce(field, "") == "") | cond
+
+					criterion.append(cond)
 
 	return criterion
