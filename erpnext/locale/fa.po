@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-04 15:49\n"
+"PO-Revision-Date: 2025-08-05 16:06\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -273,7 +273,7 @@ msgstr "«بازرسی قبل از خرید لازم است» برای آیتم 
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:597
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:630
 msgid "'Opening'"
-msgstr "'افتتاح'"
+msgstr "'افتتاحیه'"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:27
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:129
