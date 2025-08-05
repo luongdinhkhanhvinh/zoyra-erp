@@ -112,7 +112,8 @@ class AssetDepreciationSchedule(DepreciationScheduleController):
 	def cancel_depreciation_entries(self):
 		for d in self.get("depreciation_schedule"):
 			if d.journal_entry:
-				if d.journal_entry == "Draft":
+				je_status = frappe.db.get_value("Journal Entry", d.journal_entry, "docstatus")
+				if je_status == 0:
 					frappe.throw(
 						_(
 							"Cannot cancel Asset Depreciation Schedule {0} as it has a draft journal entry {1}."
