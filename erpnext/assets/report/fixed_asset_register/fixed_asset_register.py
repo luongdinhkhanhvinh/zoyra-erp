@@ -31,51 +31,6 @@ def execute(filters=None):
 	return columns, data, None, chart
 
 
-def get_conditions(filters):
-	conditions = {"docstatus": 1}
-	status = filters.status
-	date_field = frappe.scrub(filters.date_based_on or "Purchase Date")
-
-	if filters.get("company"):
-		conditions["company"] = filters.company
-
-	if filters.filter_based_on == "Date Range":
-		if not filters.from_date and not filters.to_date:
-			filters.from_date = add_months(nowdate(), -12)
-			filters.to_date = nowdate()
-
-		conditions[date_field] = ["between", [filters.from_date, filters.to_date]]
-	elif filters.filter_based_on == "Fiscal Year":
-		if not filters.from_fiscal_year and not filters.to_fiscal_year:
-			default_fiscal_year = get_fiscal_year(today())[0]
-			filters.from_fiscal_year = default_fiscal_year
-			filters.to_fiscal_year = default_fiscal_year
-
-		fiscal_year = get_fiscal_year_data(filters.from_fiscal_year, filters.to_fiscal_year)
-		validate_fiscal_year(fiscal_year, filters.from_fiscal_year, filters.to_fiscal_year)
-		filters.year_start_date = getdate(fiscal_year.year_start_date)
-		filters.year_end_date = getdate(fiscal_year.year_end_date)
-
-		conditions[date_field] = ["between", [filters.year_start_date, filters.year_end_date]]
-
-	if filters.get("only_existing_assets"):
-		conditions["is_existing_asset"] = filters.get("only_existing_assets")
-	if filters.get("asset_category"):
-		conditions["asset_category"] = filters.get("asset_category")
-	if filters.get("cost_center"):
-		conditions["cost_center"] = filters.get("cost_center")
-
-	if status:
-		# In Store assets are those that are not sold or scrapped or capitalized
-		operand = "not in"
-		if status not in "In Location":
-			operand = "in"
-
-		conditions["status"] = (operand, ["Sold", "Scrapped", "Capitalized"])
-
-	return conditions
-
-
 def get_data(filters):
 	data = []
 
@@ -159,6 +114,51 @@ def get_data(filters):
 		data.append(row)
 
 	return data
+
+
+def get_conditions(filters):
+	conditions = {"docstatus": 1}
+	status = filters.status
+	date_field = frappe.scrub(filters.date_based_on or "Purchase Date")
+
+	if filters.get("company"):
+		conditions["company"] = filters.company
+
+	if filters.filter_based_on == "Date Range":
+		if not filters.from_date and not filters.to_date:
+			filters.from_date = add_months(nowdate(), -12)
+			filters.to_date = nowdate()
+
+		conditions[date_field] = ["between", [filters.from_date, filters.to_date]]
+	elif filters.filter_based_on == "Fiscal Year":
+		if not filters.from_fiscal_year and not filters.to_fiscal_year:
+			default_fiscal_year = get_fiscal_year(today())[0]
+			filters.from_fiscal_year = default_fiscal_year
+			filters.to_fiscal_year = default_fiscal_year
+
+		fiscal_year = get_fiscal_year_data(filters.from_fiscal_year, filters.to_fiscal_year)
+		validate_fiscal_year(fiscal_year, filters.from_fiscal_year, filters.to_fiscal_year)
+		filters.year_start_date = getdate(fiscal_year.year_start_date)
+		filters.year_end_date = getdate(fiscal_year.year_end_date)
+
+		conditions[date_field] = ["between", [filters.year_start_date, filters.year_end_date]]
+
+	if filters.get("only_existing_assets"):
+		conditions["is_existing_asset"] = filters.get("only_existing_assets")
+	if filters.get("asset_category"):
+		conditions["asset_category"] = filters.get("asset_category")
+	if filters.get("cost_center"):
+		conditions["cost_center"] = filters.get("cost_center")
+
+	if status:
+		# In Store assets are those that are not sold or scrapped or capitalized
+		operand = "not in"
+		if status not in "In Location":
+			operand = "in"
+
+		conditions["status"] = (operand, ["Sold", "Scrapped", "Capitalized"])
+
+	return conditions
 
 
 def prepare_chart_data(data, filters):
