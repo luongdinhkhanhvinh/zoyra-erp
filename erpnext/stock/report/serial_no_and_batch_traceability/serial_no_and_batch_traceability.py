@@ -8,6 +8,7 @@ from frappe.query_builder import Case
 
 def execute(filters: dict | None = None):
 	report = ReportData(filters)
+	report.validate_filters()
 	data = report.get_data()
 	columns = report.get_columns()
 
@@ -18,6 +19,13 @@ class ReportData:
 	def __init__(self, filters):
 		self.filters = filters
 		self.doctype_name = self.get_doctype()
+
+	def validate_filters(self):
+		if not self.filters.item_code and not self.filters.batches and not self.filters.serial_nos:
+			frappe.throw(
+				_("Please select at least one filter: Item Code, Batch, or Serial No."),
+				title=_("Missing Filters"),
+			)
 
 	def get_data(self):
 		result_data = []
@@ -93,6 +101,11 @@ class ReportData:
 		source_data = frappe._dict({})
 		for row in data:
 			key = (row.item_code, row.reference_name)
+
+			value = row.serial_no or row.batch_no
+			if value:
+				key = (row.item_code, row.reference_name, value)
+
 			if self.doctype_name == "Batch":
 				sabb_details = self.get_qty_from_sabb(row)
 				row.update(sabb_details)
@@ -139,19 +152,24 @@ class ReportData:
 
 		materials = self.get_materials(sabb_data)
 		for material in materials:
-			key = (material.item_code, material.batch_no)
-
 			# Recursive: batch has sub-components
 			if material.serial_no or material.batch_no:
+				key = (material.item_code, material.reference_name)
 				value = material.serial_no or material.batch_no
 
 				if key not in sabb_data.raw_materials:
 					details = self.get_serial_no_batches(value)
+					if not details:
+						inward_data = self.get_sabb_entries(value, "Inward")
+						if inward_data:
+							details = inward_data[-1]
+
 					if details:
 						details.update(self.get_qty_from_sabb(details))
 						sabb_data.raw_materials[key] = details
 
-				self.set_backward_data(sabb_data.raw_materials[key], material.qty)
+				if sabb_data.raw_materials.get(key):
+					self.set_backward_data(sabb_data.raw_materials[key], material.qty)
 			else:
 				sub_key = material.item_code
 				if sub_key not in sabb_data.raw_materials:
@@ -269,7 +287,7 @@ class ReportData:
 		return query.run(as_dict=True)
 
 	def set_forward_data(self, value, sabb_data):
-		outward_entries = self.get_outward_sabb_entries(value)
+		outward_entries = self.get_sabb_entries(value)
 
 		for row in outward_entries:
 			if row.reference_doctype == "Stock Entry":
@@ -283,7 +301,10 @@ class ReportData:
 			row["indent"] = 0
 			batch_details[key] = row
 
-	def get_outward_sabb_entries(self, value):
+	def get_sabb_entries(self, value, type_of_transaction=None):
+		if not type_of_transaction:
+			type_of_transaction = "Outward"
+
 		SABB = frappe.qb.DocType("Serial and Batch Bundle")
 		SABE = frappe.qb.DocType("Serial and Batch Entry")
 
@@ -302,13 +323,16 @@ class ReportData:
 				SABB.posting_date,
 				SABB.warehouse,
 			)
-			.where((SABB.is_cancelled == 0) & (SABE.docstatus == 1) & (SABB.type_of_transaction == "Outward"))
+			.where(
+				(SABB.is_cancelled == 0)
+				& (SABE.docstatus == 1)
+				& (SABB.type_of_transaction == type_of_transaction)
+			)
+			.orderby(SABB.posting_date)
+			.orderby(SABE.posting_time)
 		)
 
-		if self.doctype_name == "Serial No":
-			query = query.where(SABE.serial_no == value)
-		else:
-			query = query.where(SABE.batch_no == value)
+		query = query.where((SABE.serial_no == value) | (SABE.batch_no == value))
 
 		return query.run(as_dict=True)
 
@@ -364,7 +388,7 @@ class ReportData:
 		return (sabb_details.serial_no, sabb_details.batch_no) if sabb_details else (None, None)
 
 	def get_columns(self):
-		columns = [
+		return [
 			{
 				"fieldname": "item_code",
 				"label": _("Item Code"),
@@ -378,85 +402,71 @@ class ReportData:
 				"fieldtype": "Data",
 				"width": 120,
 			},
+			{
+				"fieldname": "serial_no",
+				"label": _("Serial No"),
+				"fieldtype": "Link",
+				"options": "Serial No",
+				"width": 150,
+			},
+			{
+				"fieldname": "batch_no",
+				"label": _("Batch No"),
+				"fieldtype": "Link",
+				"options": "Batch",
+				"width": 140,
+			},
+			{
+				"fieldname": "qty",
+				"label": _("Quantity"),
+				"fieldtype": "Float",
+				"width": 90,
+			},
+			{
+				"fieldname": "reference_doctype",
+				"label": _("Voucher Type"),
+				"fieldtype": "Data",
+				"width": 130,
+			},
+			{
+				"fieldname": "reference_name",
+				"label": _("Source Document No"),
+				"fieldtype": "Dynamic Link",
+				"options": "reference_doctype",
+				"width": 200,
+			},
+			{
+				"fieldname": "warehouse",
+				"label": _("Warehouse"),
+				"fieldtype": "Link",
+				"options": "Warehouse",
+				"width": 120,
+			},
+			{
+				"fieldname": "posting_date",
+				"label": _("Posting Date"),
+				"fieldtype": "Date",
+				"width": 120,
+			},
+			{
+				"fieldname": "work_order",
+				"label": _("Work Order"),
+				"fieldtype": "Link",
+				"options": "Work Order",
+				"width": 160,
+			},
+			{
+				"fieldname": "supplier",
+				"label": _("Supplier"),
+				"fieldtype": "Link",
+				"options": "Supplier",
+				"width": 150,
+			},
+			{
+				"fieldname": "customer",
+				"label": _("Customer"),
+				"fieldtype": "Link",
+				"options": "Customer",
+				"width": 150,
+			},
 		]
-
-		if self.doctype_name == "Serial No":
-			columns.append(
-				{
-					"fieldname": "serial_no",
-					"label": _("Serial No"),
-					"fieldtype": "Link",
-					"options": "Serial No",
-					"width": 150,
-				}
-			)
-		else:
-			columns.append(
-				{
-					"fieldname": "batch_no",
-					"label": _("Batch No"),
-					"fieldtype": "Link",
-					"options": "Batch",
-					"width": 140,
-				}
-			)
-
-		columns.extend(
-			[
-				{
-					"fieldname": "qty",
-					"label": _("Quantity"),
-					"fieldtype": "Float",
-					"width": 90,
-				},
-				{
-					"fieldname": "reference_doctype",
-					"label": _("Voucher Type"),
-					"fieldtype": "Data",
-					"width": 130,
-				},
-				{
-					"fieldname": "reference_name",
-					"label": _("Source Document No"),
-					"fieldtype": "Dynamic Link",
-					"options": "reference_doctype",
-					"width": 200,
-				},
-				{
-					"fieldname": "warehouse",
-					"label": _("Warehouse"),
-					"fieldtype": "Link",
-					"options": "Warehouse",
-					"width": 120,
-				},
-				{
-					"fieldname": "posting_date",
-					"label": _("Posting Date"),
-					"fieldtype": "Date",
-					"width": 120,
-				},
-				{
-					"fieldname": "work_order",
-					"label": _("Work Order"),
-					"fieldtype": "Link",
-					"options": "Work Order",
-					"width": 160,
-				},
-				{
-					"fieldname": "supplier",
-					"label": _("Supplier"),
-					"fieldtype": "Link",
-					"options": "Supplier",
-					"width": 150,
-				},
-				{
-					"fieldname": "customer",
-					"label": _("Customer"),
-					"fieldtype": "Link",
-					"options": "Customer",
-					"width": 150,
-				},
-			]
-		)
-
-		return columns
