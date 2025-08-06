@@ -96,10 +96,14 @@ def get_data(filters):
 
 	depreciation_amount_map = get_asset_depreciation_amount_map(filters, finance_book)
 
+	revaluation_amount_map = get_asset_value_adjustment_map(filters, finance_book)
+
 	group_by = frappe.scrub(filters.get("group_by"))
 
 	if group_by in ("asset_category", "location"):
-		data = get_group_by_data(group_by, conditions, assets_linked_to_fb, depreciation_amount_map)
+		data = get_group_by_data(
+			group_by, conditions, assets_linked_to_fb, depreciation_amount_map, revaluation_amount_map
+		)
 		return data
 
 	fields = [
@@ -126,8 +130,12 @@ def get_data(filters):
 			continue
 
 		depreciation_amount = depreciation_amount_map.get(asset.asset_id) or 0.0
+		revaluation_amount = revaluation_amount_map.get(asset.asset_id, 0.0)
 		asset_value = (
-			asset.gross_purchase_amount - asset.opening_accumulated_depreciation - depreciation_amount
+			asset.gross_purchase_amount
+			- asset.opening_accumulated_depreciation
+			- depreciation_amount
+			+ revaluation_amount
 		)
 
 		row = {
@@ -290,7 +298,59 @@ def get_asset_depreciation_amount_map(filters, finance_book):
 	return dict(asset_depr_amount_map)
 
 
-def get_group_by_data(group_by, conditions, assets_linked_to_fb, depreciation_amount_map):
+def get_asset_value_adjustment_map(filters, finance_book):
+	start_date = filters.from_date if filters.filter_based_on == "Date Range" else filters.year_start_date
+	end_date = filters.to_date if filters.filter_based_on == "Date Range" else filters.year_end_date
+
+	asset = frappe.qb.DocType("Asset")
+	gle = frappe.qb.DocType("GL Entry")
+	aca = frappe.qb.DocType("Asset Category Account")
+	company = frappe.qb.DocType("Company")
+
+	query = (
+		frappe.qb.from_(gle)
+		.join(asset)
+		.on(gle.against_voucher == asset.name)
+		.join(aca)
+		.on((aca.parent == asset.asset_category) & (aca.company_name == asset.company))
+		.join(company)
+		.on(company.name == asset.company)
+		.select(asset.name.as_("asset"), Sum(gle.debit - gle.credit).as_("adjustment_amount"))
+		.where(gle.account == aca.fixed_asset_account)
+		.where(gle.is_cancelled == 0)
+		.where(company.name == filters.company)
+		.where(asset.docstatus == 1)
+	)
+
+	if filters.only_existing_assets:
+		query = query.where(asset.is_existing_asset == 1)
+	if filters.asset_category:
+		query = query.where(asset.asset_category == filters.asset_category)
+	if filters.cost_center:
+		query = query.where(asset.cost_center == filters.cost_center)
+	if filters.status:
+		if filters.status == "In Location":
+			query = query.where(asset.status.notin(["Sold", "Scrapped", "Capitalized"]))
+		else:
+			query = query.where(asset.status.isin(["Sold", "Scrapped", "Capitalized"]))
+	if finance_book:
+		query = query.where((gle.finance_book.isin([cstr(finance_book), ""])) | (gle.finance_book.isnull()))
+	else:
+		query = query.where((gle.finance_book.isin([""])) | (gle.finance_book.isnull()))
+	if filters.filter_based_on in ("Date Range", "Fiscal Year"):
+		query = query.where(gle.posting_date >= start_date)
+		query = query.where(gle.posting_date <= end_date)
+
+	query = query.groupby(asset.name)
+
+	asset_adjustment_map = query.run()
+
+	return dict(asset_adjustment_map)
+
+
+def get_group_by_data(
+	group_by, conditions, assets_linked_to_fb, depreciation_amount_map, revaluation_amount_map
+):
 	fields = [
 		group_by,
 		"name",
@@ -307,8 +367,12 @@ def get_group_by_data(group_by, conditions, assets_linked_to_fb, depreciation_am
 			continue
 
 		a["depreciated_amount"] = depreciation_amount_map.get(a["name"], 0.0)
+		a["revaluation_amount"] = revaluation_amount_map.get(a["name"], 0.0)
 		a["asset_value"] = (
-			a["gross_purchase_amount"] - a["opening_accumulated_depreciation"] - a["depreciated_amount"]
+			a["gross_purchase_amount"]
+			- a["opening_accumulated_depreciation"]
+			- a["depreciated_amount"]
+			+ a["revaluation_amount"]
 		)
 
 		del a["name"]
