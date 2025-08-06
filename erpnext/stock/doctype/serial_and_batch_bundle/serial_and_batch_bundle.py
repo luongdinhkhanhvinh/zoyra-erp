@@ -1146,10 +1146,13 @@ class SerialandBatchBundle(Document):
 		if self.flags.ignore_validate_serial_batch:
 			return
 
-		if not self.has_serial_no:
+		if not self.has_serial_no and not self.has_batch_no:
 			return
 
-		if self.total_qty > 0:
+		if self.total_qty <= 0:
+			return
+
+		if self.has_serial_no:
 			serial_nos = [d.serial_no for d in self.entries if d.serial_no]
 			sn_table = frappe.qb.DocType("Serial No")
 			(
@@ -1157,7 +1160,17 @@ class SerialandBatchBundle(Document):
 				.set(sn_table.reference_doctype, self.voucher_type)
 				.set(sn_table.reference_name, self.voucher_no)
 				.set(sn_table.posting_date, self.posting_date)
-				.where(sn_table.name.isin(serial_nos))
+				.where((sn_table.name.isin(serial_nos)) & (sn_table.reference_name.isnull()))
+			).run()
+
+		if self.has_batch_no:
+			batch_nos = [d.batch_no for d in self.entries if d.batch_no]
+			batch_table = frappe.qb.DocType("Batch")
+			(
+				frappe.qb.update(batch_table)
+				.set(batch_table.reference_doctype, self.voucher_type)
+				.set(batch_table.reference_name, self.voucher_no)
+				.where((batch_table.name.isin(batch_nos)) & (batch_table.reference_name.isnull()))
 			).run()
 
 	def validate_serial_and_batch_inventory(self):
