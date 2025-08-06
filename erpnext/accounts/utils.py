@@ -481,7 +481,6 @@ def reconcile_against_document(
 			reconciled_entries[(row.voucher_type, row.voucher_no)] = []
 
 		reconciled_entries[(row.voucher_type, row.voucher_no)].append(row)
-
 	for key, entries in reconciled_entries.items():
 		voucher_type, voucher_no = key
 
@@ -1835,6 +1834,7 @@ def get_payment_ledger_entries(gl_entries, cancel=0):
 
 		dr_or_cr = 0
 		account_type = None
+
 		for gle in gl_entries:
 			if gle.account in receivable_or_payable_accounts:
 				account_type = get_account_type(gle.account)
@@ -1939,7 +1939,8 @@ def update_voucher_outstanding(voucher_type, voucher_no, account, party_type, pa
 	if not voucher_type or not voucher_no:
 		return
 
-	if voucher_type in ["Purchase Order", "Sales Order"]:
+	# todo use get advanced dotypes hooks
+	if voucher_type in get_advance_payment_doctypes():
 		ref_doc = frappe.get_lazy_doc(voucher_type, voucher_no)
 		ref_doc.set_total_advance_paid()
 		return
