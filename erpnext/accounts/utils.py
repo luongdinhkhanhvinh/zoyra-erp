@@ -1939,7 +1939,6 @@ def update_voucher_outstanding(voucher_type, voucher_no, account, party_type, pa
 	if not voucher_type or not voucher_no:
 		return
 
-	# todo use get advanced dotypes hooks
 	if voucher_type in get_advance_payment_doctypes():
 		ref_doc = frappe.get_lazy_doc(voucher_type, voucher_no)
 		ref_doc.set_total_advance_paid()
