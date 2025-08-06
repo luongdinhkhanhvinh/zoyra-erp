@@ -1,4 +1,5 @@
 import frappe
+
 from erpnext.regional.united_arab_emirates.setup import make_custom_fields
 
 
