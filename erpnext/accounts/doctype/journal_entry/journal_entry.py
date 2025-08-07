@@ -654,6 +654,7 @@ class JournalEntry(AccountsController):
 				elif (
 					d.party_type
 					and frappe.db.get_value("Party Type", d.party_type, "account_type") != account_type
+					and (not self.flags.ignore_party_account_validation)
 				):
 					frappe.throw(
 						_("Row {0}: Account {1} and Party Type {2} have different account types").format(
