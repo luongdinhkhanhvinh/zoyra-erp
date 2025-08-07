@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-03 15:10\n"
+"PO-Revision-Date: 2025-08-07 16:22\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -431,7 +431,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "1-10"
-msgstr ""
+msgstr "1-10"
 
 #. Option for the 'No of Employees' (Select) field in DocType 'Lead'
 #. Option for the 'No of Employees' (Select) field in DocType 'Opportunity'
@@ -440,7 +440,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "1000+"
-msgstr ""
+msgstr "1000+"
 
 #. Option for the 'No of Employees' (Select) field in DocType 'Lead'
 #. Option for the 'No of Employees' (Select) field in DocType 'Opportunity'
@@ -449,7 +449,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "11-50"
-msgstr ""
+msgstr "11-50"
 
 #: erpnext/regional/report/uae_vat_201/uae_vat_201.py:95
 #: erpnext/regional/report/uae_vat_201/uae_vat_201.py:101
@@ -469,7 +469,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "201-500"
-msgstr ""
+msgstr "201-500"
 
 #. Option for the 'Periodicity' (Select) field in DocType 'Asset Maintenance
 #. Task'
@@ -502,7 +502,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "501-1000"
-msgstr ""
+msgstr "501-1000"
 
 #. Option for the 'No of Employees' (Select) field in DocType 'Lead'
 #. Option for the 'No of Employees' (Select) field in DocType 'Opportunity'
@@ -511,7 +511,7 @@ msgstr ""
 #: erpnext/crm/doctype/opportunity/opportunity.json
 #: erpnext/crm/doctype/prospect/prospect.json
 msgid "51-200"
-msgstr ""
+msgstr "51-200"
 
 #. Option for the 'Frequency' (Select) field in DocType 'Video Settings'
 #: erpnext/utilities/doctype/video_settings/video_settings.json
@@ -1102,7 +1102,7 @@ msgstr ""
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.json
 #: erpnext/stock/doctype/quality_inspection_reading/quality_inspection_reading.json
 msgid "Accepted"
-msgstr ""
+msgstr "Accettato"
 
 #. Label of the qty (Float) field in DocType 'Purchase Invoice Item'
 #: erpnext/accounts/doctype/purchase_invoice_item/purchase_invoice_item.json
@@ -4140,7 +4140,7 @@ msgstr ""
 #. 'Accounting Dimension Filter'
 #: erpnext/accounts/doctype/accounting_dimension_filter/accounting_dimension_filter.json
 msgid "Allow"
-msgstr ""
+msgstr "Permettere"
 
 #. Label of the allow_account_creation_against_child_company (Check) field in
 #. DocType 'Company'
@@ -10740,7 +10740,7 @@ msgstr ""
 #: erpnext/setup/doctype/holiday_list/holiday_list.json
 #: erpnext/setup/doctype/vehicle/vehicle.json
 msgid "Color"
-msgstr ""
+msgstr "Colore"
 
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:263
 msgid "Colour"
@@ -13485,7 +13485,7 @@ msgstr ""
 
 #: erpnext/manufacturing/report/work_order_summary/work_order_summary.py:224
 msgid "Created On"
-msgstr ""
+msgstr "Creato Il"
 
 #: erpnext/buying/doctype/supplier_scorecard/supplier_scorecard.py:250
 msgid "Created {0} scorecards for {1} between:"
@@ -18033,7 +18033,7 @@ msgstr ""
 #. Label of the mute_emails (Check) field in DocType 'Bank Statement Import'
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.json
 msgid "Don't Send Emails"
-msgstr ""
+msgstr "Non Inviare E-mail"
 
 #. Label of the done (Check) field in DocType 'Transaction Deletion Record
 #. Details'
@@ -19191,7 +19191,7 @@ msgstr ""
 #: erpnext/stock/doctype/price_list/price_list.json
 #: erpnext/support/doctype/service_level_agreement/service_level_agreement.json
 msgid "Enabled"
-msgstr ""
+msgstr "Abilitato"
 
 #. Description of the 'Fetch Timesheet in Sales Invoice' (Check) field in
 #. DocType 'Projects Settings'
@@ -20863,7 +20863,7 @@ msgstr ""
 #: erpnext/selling/doctype/customer/customer.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "First Name"
-msgstr ""
+msgstr "Nome di battesimo"
 
 #. Label of the first_responded_on (Datetime) field in DocType 'Issue'
 #: erpnext/support/doctype/issue/issue.json
@@ -21945,7 +21945,7 @@ msgstr ""
 #: erpnext/setup/doctype/employee/employee.json
 #: erpnext/stock/doctype/manufacturer/manufacturer.json
 msgid "Full Name"
-msgstr ""
+msgstr "Nome e Cognome"
 
 #. Option for the 'Reference Type' (Select) field in DocType 'Journal Entry
 #. Account'
@@ -23340,7 +23340,7 @@ msgstr ""
 #. Name of a Workspace
 #: erpnext/setup/workspace/home/home.json
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -23450,7 +23450,7 @@ msgstr ""
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.py:350
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. Label of the ip_address (Data) field in DocType 'Contract'
 #: erpnext/crm/doctype/contract/contract.json
@@ -24137,7 +24137,7 @@ msgstr ""
 #. Label of the import_file (Attach) field in DocType 'Bank Statement Import'
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.json
 msgid "Import File"
-msgstr ""
+msgstr "File Import"
 
 #. Label of the import_warnings_section (Section Break) field in DocType 'Bank
 #. Statement Import'
@@ -24198,7 +24198,7 @@ msgstr ""
 #. Label of the import_type (Select) field in DocType 'Bank Statement Import'
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.json
 msgid "Import Type"
-msgstr ""
+msgstr "Tipo Importazione"
 
 #: erpnext/public/js/utils/serial_no_batch_selector.js:217
 #: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.js:84
@@ -32947,7 +32947,7 @@ msgstr ""
 #. Label of a Link in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Notification Settings"
-msgstr ""
+msgstr "Impostazioni Notifica"
 
 #: erpnext/stock/doctype/delivery_trip/delivery_trip.js:45
 msgid "Notify Customers via Email"
@@ -35138,7 +35138,7 @@ msgstr ""
 #. Label of the sb_00 (Section Break) field in DocType 'Quality Procedure'
 #: erpnext/quality_management/doctype/quality_procedure/quality_procedure.json
 msgid "Parent"
-msgstr ""
+msgstr "Principale"
 
 #. Label of the parent_account (Link) field in DocType 'Account'
 #: erpnext/accounts/doctype/account/account.json
@@ -39273,7 +39273,7 @@ msgstr ""
 #: erpnext/stock/doctype/pick_list/pick_list.json
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.json
 msgid "Print Settings"
-msgstr ""
+msgstr "Impostazioni di Stampa"
 
 #. Label of a Link in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
@@ -43877,7 +43877,7 @@ msgstr ""
 #: erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.json
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.js:110
 msgid "Report"
-msgstr ""
+msgstr "Report"
 
 #. Label of the report_date (Date) field in DocType 'Quality Inspection'
 #: erpnext/manufacturing/report/quality_inspection_summary/quality_inspection_summary.py:75
@@ -43907,7 +43907,7 @@ msgstr ""
 #: erpnext/accounts/report/balance_sheet/balance_sheet.js:13
 #: erpnext/accounts/report/profit_and_loss_statement/profit_and_loss_statement.js:13
 msgid "Report View"
-msgstr ""
+msgstr "Vista Report"
 
 #: erpnext/setup/install.py:154
 msgid "Report an Issue"
@@ -50233,7 +50233,7 @@ msgstr ""
 #. Label of the spacer (Data) field in DocType 'Dunning'
 #: erpnext/accounts/doctype/dunning/dunning.json
 msgid "Spacer"
-msgstr ""
+msgstr "Separatore"
 
 #. Description of a DocType
 #: erpnext/setup/doctype/currency_exchange/currency_exchange.json
@@ -55835,7 +55835,7 @@ msgstr ""
 #: erpnext/setup/doctype/email_digest/email_digest.json
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Tools"
-msgstr ""
+msgstr "Strumenti"
 
 #. Name of a UOM
 #: erpnext/setup/setup_wizard/data/uom_data.json
@@ -60656,7 +60656,7 @@ msgstr ""
 #: erpnext/stock/doctype/shipment/shipment.json
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 msgid "Yes"
-msgstr ""
+msgstr "Sì"
 
 #: erpnext/edi/doctype/code_list/code_list_import.js:29
 msgid "You are importing data for the code list:"
@@ -60829,7 +60829,7 @@ msgstr ""
 
 #: erpnext/templates/pages/projects.html:132
 msgid "You haven't created a {0} yet"
-msgstr ""
+msgstr "Non hai ancora creato un {0}"
 
 #: erpnext/selling/page/point_of_sale/pos_controller.js:767
 msgid "You must select a customer before adding an item."
