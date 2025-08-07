@@ -268,7 +268,9 @@ class ReportData:
 				(
 					(
 						stock_entry_detail.qty
-						/ Case().when(stock_entry.fg_completed_qty > 0, stock_entry.fg_completed_qty).else_(1)
+						/ Case()
+						.when(stock_entry.fg_completed_qty > 0, stock_entry.fg_completed_qty)
+						.else_(sabb_data.qty)
 					)
 					* sabb_data.qty
 				).as_("qty"),
@@ -329,7 +331,7 @@ class ReportData:
 				& (SABB.type_of_transaction == type_of_transaction)
 			)
 			.orderby(SABB.posting_date)
-			.orderby(SABE.posting_time)
+			.orderby(SABB.posting_time)
 		)
 
 		query = query.where((SABE.serial_no == value) | (SABE.batch_no == value))
