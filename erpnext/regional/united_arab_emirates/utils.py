@@ -49,7 +49,7 @@ def update_itemised_tax_data(doc):
 				tax_amount += flt((row.net_amount * _tax_rate) / 100, row.precision("tax_amount"))
 				tax_rate += _tax_rate
 
-		if not tax_rate:
+		if not tax_rate or row.get("is_zero_rated"):
 			row.is_zero_rated = is_export or frappe.get_cached_value("Item", row.item_code, "is_zero_rated")
 
 		row.tax_rate = flt(tax_rate, row.precision("tax_rate"))
