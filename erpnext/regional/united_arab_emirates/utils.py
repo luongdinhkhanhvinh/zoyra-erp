@@ -21,10 +21,12 @@ def update_itemised_tax_data(doc):
 			return False
 
 		if not doc.customer_address:
-			frappe.msgprint(
-				_("Please set Customer Address to determine if the transaction is an export."),
-				alert=True,
-			)
+			if not doc.total_taxes_and_charges:
+				frappe.msgprint(
+					_("Please set Customer Address to determine if the transaction is an export."),
+					alert=True,
+				)
+
 			return False
 
 		company_country = frappe.get_cached_value("Company", doc.company, "country")
@@ -47,8 +49,10 @@ def update_itemised_tax_data(doc):
 				tax_amount += flt((row.net_amount * _tax_rate) / 100, row.precision("tax_amount"))
 				tax_rate += _tax_rate
 
-		if not tax_rate and is_export:
-			row.is_zero_rated = 1
+		if not tax_rate:
+			row.is_zero_rated = (
+				is_export or frappe.get_cached_value("Item", row.item_code, "is_zero_rated")
+			)
 
 		row.tax_rate = flt(tax_rate, row.precision("tax_rate"))
 		row.tax_amount = flt(tax_amount, row.precision("tax_amount"))
