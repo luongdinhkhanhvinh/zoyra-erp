@@ -10,7 +10,7 @@ import frappe
 from frappe import _, bold
 from frappe.core.doctype.version.version import get_diff
 from frappe.model.mapper import get_mapped_doc
-from frappe.utils import cint, cstr, flt, parse_json, today
+from frappe.utils import cint, cstr, flt, get_link_to_form, parse_json, today
 from frappe.website.website_generator import WebsiteGenerator
 
 import erpnext
@@ -652,12 +652,23 @@ class BOM(WebsiteGenerator):
 			frappe.throw(_("Raw Materials cannot be blank."))
 
 		check_list = []
+		items = []
 		for m in self.get("items"):
 			if m.bom_no:
 				validate_bom_no(m.item_code, m.bom_no)
 			if flt(m.qty) <= 0:
 				frappe.throw(_("Quantity required for Item {0} in row {1}").format(m.item_code, m.idx))
 			check_list.append(m)
+			items.append(m.item_code)
+
+		if fixed_asset_items := frappe.db.get_all(
+			"Item", filters={"item_code": ("in", items), "is_fixed_asset": 1}, pluck="name"
+		):
+			frappe.throw(
+				_("Fixed Asset item {0} cannot be used in BOMs.").format(
+					", ".join(get_link_to_form("Item", item) for item in fixed_asset_items)
+				)
+			)
 
 	def check_recursion(self, bom_list=None):
 		"""Check whether recursion occurs in any bom"""
