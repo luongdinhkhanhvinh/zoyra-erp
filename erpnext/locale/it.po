@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-08 16:44\n"
+"PO-Revision-Date: 2025-08-09 16:53\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -1076,7 +1076,7 @@ msgstr ""
 #. Name of a role
 #: erpnext/setup/doctype/department/department.json
 msgid "Academics User"
-msgstr ""
+msgstr "Utente Accademico"
 
 #. Label of the acceptance_formula (Code) field in DocType 'Item Quality
 #. Inspection Parameter'
@@ -1872,7 +1872,7 @@ msgstr ""
 #: erpnext/accounts/doctype/accounting_period/accounting_period.json
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Accounting Period"
-msgstr ""
+msgstr "Periodo Contabile"
 
 #: erpnext/accounts/doctype/accounting_period/accounting_period.py:66
 msgid "Accounting Period overlaps with {0}"
@@ -2010,7 +2010,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_closing_balance/stock_closing_balance.json
 #: erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.json
 msgid "Accounts Manager"
-msgstr ""
+msgstr "Responsabile Contabilità"
 
 #: erpnext/accounts/report/tax_withholding_details/tax_withholding_details.py:342
 msgid "Accounts Missing Error"
@@ -2197,7 +2197,7 @@ msgstr ""
 #: erpnext/stock/doctype/warehouse_type/warehouse_type.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Accounts User"
-msgstr ""
+msgstr "Utente Contabilità"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1370
 msgid "Accounts table cannot be blank."
@@ -2431,7 +2431,7 @@ msgstr ""
 #: erpnext/stock/doctype/putaway_rule/putaway_rule_list.js:7
 #: erpnext/stock/doctype/serial_no/serial_no.json
 msgid "Active"
-msgstr ""
+msgstr "Attivo"
 
 #: erpnext/selling/page/sales_funnel/sales_funnel.py:55
 msgid "Active Leads"
@@ -2847,7 +2847,7 @@ msgstr ""
 #. Label of the add_template (Button) field in DocType 'Shipment'
 #: erpnext/stock/doctype/shipment/shipment.json
 msgid "Add Template"
-msgstr ""
+msgstr "Aggiungi Modello"
 
 #: erpnext/utilities/activation.py:124
 msgid "Add Timesheets"
@@ -4140,7 +4140,7 @@ msgstr ""
 #. 'Accounting Dimension Filter'
 #: erpnext/accounts/doctype/accounting_dimension_filter/accounting_dimension_filter.json
 msgid "Allow"
-msgstr "Permettere"
+msgstr "Consenti"
 
 #. Label of the allow_account_creation_against_child_company (Check) field in
 #. DocType 'Company'
@@ -5238,7 +5238,7 @@ msgstr ""
 #: erpnext/accounts/doctype/promotional_scheme/promotional_scheme.py:262
 #: erpnext/stock/doctype/inventory_dimension/inventory_dimension.json
 msgid "Applicable For"
-msgstr ""
+msgstr "Applicabile Per"
 
 #. Description of the 'Holiday List' (Link) field in DocType 'Employee'
 #: erpnext/setup/doctype/employee/employee.json
@@ -6412,7 +6412,7 @@ msgstr ""
 #: erpnext/regional/doctype/south_africa_vat_settings/south_africa_vat_settings.json
 #: erpnext/setup/doctype/company/company.json
 msgid "Auditor"
-msgstr ""
+msgstr "Ispettore"
 
 #: erpnext/erpnext_integrations/doctype/plaid_settings/plaid_connector.py:68
 msgid "Authentication Failed"
@@ -11864,7 +11864,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Connections"
-msgstr ""
+msgstr "Connessioni"
 
 #: erpnext/accounts/report/general_ledger/general_ledger.js:175
 msgid "Consider Accounting Dimensions"
@@ -13008,7 +13008,7 @@ msgstr ""
 #. Label of the count (Int) field in DocType 'Shipment Parcel'
 #: erpnext/stock/doctype/shipment_parcel/shipment_parcel.json
 msgid "Count"
-msgstr ""
+msgstr "Q.tà"
 
 #. Label of the country (Read Only) field in DocType 'POS Profile'
 #. Label of the country (Link) field in DocType 'Shipping Rule Country'
@@ -14406,7 +14406,7 @@ msgstr ""
 #: erpnext/support/report/issue_summary/issue_summary.py:34
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Customer"
-msgstr ""
+msgstr "Cliente"
 
 #. Label of the customer (Link) field in DocType 'Customer Item'
 #: erpnext/accounts/doctype/customer_item/customer_item.json
@@ -17942,7 +17942,7 @@ msgstr ""
 #: erpnext/public/js/bank_reconciliation_tool/dialog_manager.js:111
 #: erpnext/quality_management/doctype/quality_meeting_minutes/quality_meeting_minutes.json
 msgid "Document Name"
-msgstr ""
+msgstr "Nome Documento"
 
 #. Label of the reference_doctype (Link) field in DocType 'Bank Statement
 #. Import'
@@ -18724,7 +18724,7 @@ msgstr ""
 #: erpnext/setup/workspace/settings/settings.json
 #: erpnext/support/doctype/issue/issue.json
 msgid "Email Account"
-msgstr ""
+msgstr "Account E-mail"
 
 #. Label of the email_id (Data) field in DocType 'Warehouse'
 #: erpnext/stock/doctype/warehouse/warehouse.json
@@ -18828,7 +18828,7 @@ msgstr ""
 #: erpnext/crm/doctype/campaign_email_schedule/campaign_email_schedule.json
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Email Template"
-msgstr ""
+msgstr "Modello E-mail"
 
 #: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:317
 msgid "Email not sent to {0} (unsubscribed / disabled)"
@@ -18925,7 +18925,7 @@ msgstr ""
 #: erpnext/stock/doctype/serial_no/serial_no.json
 #: erpnext/telephony/doctype/call_log/call_log.json
 msgid "Employee"
-msgstr ""
+msgstr "Dipendente"
 
 #. Label of the employee_link (Link) field in DocType 'Supplier Scorecard
 #. Scoring Standing'
@@ -21032,7 +21032,7 @@ msgstr ""
 #: erpnext/setup/doctype/driver/driver.json
 #: erpnext/setup/doctype/vehicle/vehicle.json
 msgid "Fleet Manager"
-msgstr ""
+msgstr "Gestore Flotta"
 
 #. Label of the details_tab (Tab Break) field in DocType 'Plant Floor'
 #: erpnext/manufacturing/doctype/plant_floor/plant_floor.json
@@ -22947,7 +22947,7 @@ msgstr "H - F"
 #: erpnext/setup/doctype/holiday_list/holiday_list.json
 #: erpnext/setup/setup_wizard/data/designation.txt:18
 msgid "HR Manager"
-msgstr ""
+msgstr "Responsabile Risorse Umane"
 
 #. Name of a role
 #: erpnext/projects/doctype/timesheet/timesheet.json
@@ -22957,7 +22957,7 @@ msgstr ""
 #: erpnext/setup/doctype/driver/driver.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "HR User"
-msgstr ""
+msgstr "Utente Risorse Umane"
 
 #. Option for the 'Periodicity' (Select) field in DocType 'Maintenance Schedule
 #. Item'
@@ -23455,7 +23455,7 @@ msgstr "ID"
 #. Label of the ip_address (Data) field in DocType 'Contract'
 #: erpnext/crm/doctype/contract/contract.json
 msgid "IP Address"
-msgstr ""
+msgstr "Indirizzo IP"
 
 #. Name of a report
 #: erpnext/regional/report/irs_1099/irs_1099.json
@@ -29042,7 +29042,7 @@ msgstr ""
 #: erpnext/setup/doctype/vehicle/vehicle.json
 #: erpnext/stock/doctype/serial_no/serial_no.json
 msgid "Location"
-msgstr ""
+msgstr "Luogo"
 
 #. Label of the sb_location_details (Section Break) field in DocType 'Location'
 #: erpnext/assets/doctype/location/location.json
@@ -29386,7 +29386,7 @@ msgstr ""
 #: erpnext/selling/doctype/quotation/quotation.json
 #: erpnext/setup/doctype/quotation_lost_reason/quotation_lost_reason.json
 msgid "Maintenance Manager"
-msgstr ""
+msgstr "Responsabile Manutenzione"
 
 #. Label of the maintenance_manager_name (Read Only) field in DocType 'Asset
 #. Maintenance'
@@ -29527,7 +29527,7 @@ msgstr ""
 #: erpnext/stock/doctype/item/item.json
 #: erpnext/support/doctype/warranty_claim/warranty_claim.json
 msgid "Maintenance User"
-msgstr ""
+msgstr "Utente Manutenzione"
 
 #. Label of a Link in the CRM Workspace
 #. Name of a DocType
@@ -29941,7 +29941,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 #: erpnext/stock/doctype/stock_entry_type/stock_entry_type.json
 msgid "Manufacturing Manager"
-msgstr ""
+msgstr "Responsabile Produzione"
 
 #: erpnext/stock/doctype/stock_entry/stock_entry.py:2050
 msgid "Manufacturing Quantity is mandatory"
@@ -30115,7 +30115,7 @@ msgstr ""
 
 #: erpnext/setup/setup_wizard/data/designation.txt:22
 msgid "Marketing Manager"
-msgstr ""
+msgstr "Responsabile Marketing"
 
 #: erpnext/setup/setup_wizard/data/designation.txt:23
 msgid "Marketing Specialist"
@@ -31464,7 +31464,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 #: erpnext/support/doctype/warranty_claim/warranty_claim.json
 msgid "More Information"
-msgstr ""
+msgstr "Ulteriori Informazioni"
 
 #. Description of the 'Is Short/Long Year' (Check) field in DocType 'Fiscal
 #. Year'
@@ -31482,7 +31482,7 @@ msgstr ""
 #: erpnext/stock/doctype/batch/batch.js:138
 #: erpnext/stock/doctype/batch/batch_dashboard.py:10
 msgid "Move"
-msgstr ""
+msgstr "Muovi"
 
 #: erpnext/stock/dashboard/item_dashboard.js:216
 msgid "Move Item"
@@ -33732,7 +33732,7 @@ msgstr ""
 #: erpnext/manufacturing/workspace/manufacturing/manufacturing.json
 #: erpnext/public/js/bom_configurator/bom_configurator.bundle.js:328
 msgid "Operation"
-msgstr ""
+msgstr "Operazione"
 
 #. Label of the production_section (Section Break) field in DocType 'Job Card'
 #: erpnext/manufacturing/doctype/job_card/job_card.json
@@ -35648,7 +35648,7 @@ msgstr ""
 #: erpnext/setup/doctype/party_type/party_type.json
 #: erpnext/stock/report/serial_no_ledger/serial_no_ledger.py:79
 msgid "Party Type"
-msgstr ""
+msgstr "Tipo Partner"
 
 #: erpnext/accounts/party.py:827
 msgid "Party Type and Party can only be set for Receivable / Payable account<br><br>{0}"
@@ -36883,7 +36883,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_reservation_entry/stock_reservation_entry.json
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Pick List"
-msgstr ""
+msgstr "Lista di Prelievo"
 
 #: erpnext/stock/doctype/pick_list/pick_list.py:211
 msgid "Pick List Incomplete"
@@ -38126,7 +38126,7 @@ msgstr ""
 
 #: erpnext/stock/report/reserved_stock/reserved_stock.py:22
 msgid "Please set filters"
-msgstr ""
+msgstr "Si prega di impostare i filtri"
 
 #: erpnext/controllers/accounts_controller.py:2290
 msgid "Please set one of the following:"
@@ -40202,7 +40202,7 @@ msgstr ""
 #: erpnext/projects/doctype/project_type/project_type.json
 #: erpnext/projects/doctype/task_type/task_type.json
 msgid "Projects Manager"
-msgstr ""
+msgstr "Responsabile Progetti"
 
 #. Name of a DocType
 #. Label of a Link in the Projects Workspace
@@ -40224,7 +40224,7 @@ msgstr ""
 #: erpnext/projects/doctype/timesheet/timesheet.json
 #: erpnext/setup/doctype/company/company.json
 msgid "Projects User"
-msgstr ""
+msgstr "Utente Progetti"
 
 #. Option for the 'Coupon Type' (Select) field in DocType 'Coupon Code'
 #: erpnext/accounts/doctype/coupon_code/coupon_code.json
@@ -40408,7 +40408,7 @@ msgstr ""
 #: erpnext/stock/doctype/item_reorder/item_reorder.json
 #: erpnext/stock/doctype/material_request/material_request.json
 msgid "Purchase"
-msgstr ""
+msgstr "Acquisti"
 
 #. Label of the purchase_amount (Currency) field in DocType 'Loyalty Point
 #. Entry'
@@ -40555,7 +40555,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_reservation_entry/stock_reservation_entry.json
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 msgid "Purchase Manager"
-msgstr ""
+msgstr "Responsabile Acquisti"
 
 #. Name of a role
 #: erpnext/accounts/doctype/purchase_taxes_and_charges_template/purchase_taxes_and_charges_template.json
@@ -40564,7 +40564,7 @@ msgstr ""
 #: erpnext/stock/doctype/item_price/item_price.json
 #: erpnext/stock/doctype/price_list/price_list.json
 msgid "Purchase Master Manager"
-msgstr ""
+msgstr "Direttore Acquisti"
 
 #. Option for the 'Reference Type' (Select) field in DocType 'Journal Entry
 #. Account'
@@ -40615,7 +40615,7 @@ msgstr ""
 #: erpnext/stock/doctype/stock_entry/stock_entry.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
 msgid "Purchase Order"
-msgstr ""
+msgstr "Ordine d'Acquisto"
 
 #: erpnext/buying/report/procurement_tracker/procurement_tracker.py:103
 msgid "Purchase Order Amount"
@@ -40941,7 +40941,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Purchase User"
-msgstr ""
+msgstr "Utente Acquisti"
 
 #: erpnext/buying/report/purchase_order_trends/purchase_order_trends.py:57
 msgid "Purchase Value"
@@ -41523,7 +41523,7 @@ msgstr ""
 #: erpnext/stock/doctype/quality_inspection_parameter_group/quality_inspection_parameter_group.json
 #: erpnext/stock/doctype/quality_inspection_template/quality_inspection_template.json
 msgid "Quality Manager"
-msgstr ""
+msgstr "Responsabile Qualità"
 
 #. Name of a DocType
 #. Label of a Link in the Quality Workspace
@@ -46488,7 +46488,7 @@ msgstr ""
 #: erpnext/stock/doctype/delivery_note/delivery_note_list.js:65
 #: erpnext/stock/doctype/quality_inspection/quality_inspection.json
 msgid "Sales Invoice"
-msgstr ""
+msgstr "Fattura di Vendita"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/sales_invoice_advance/sales_invoice_advance.json
@@ -46632,7 +46632,7 @@ msgstr ""
 #: erpnext/stock/doctype/item_price/item_price.json
 #: erpnext/stock/doctype/price_list/price_list.json
 msgid "Sales Master Manager"
-msgstr ""
+msgstr "Direttore Vendite"
 
 #. Label of the sales_monthly_history (Small Text) field in DocType 'Company'
 #: erpnext/setup/doctype/company/company.json
@@ -48224,7 +48224,7 @@ msgstr ""
 #: erpnext/manufacturing/doctype/job_card/job_card.json
 #: erpnext/manufacturing/doctype/work_order/work_order.js:330
 msgid "Sequence Id"
-msgstr ""
+msgstr "Id Sequenza"
 
 #. Option for the 'Call Routing' (Select) field in DocType 'Incoming Call
 #. Settings'
@@ -49350,7 +49350,7 @@ msgstr ""
 #: erpnext/accounts/report/share_balance/share_balance.py:58
 #: erpnext/accounts/report/share_ledger/share_ledger.py:54
 msgid "Share Type"
-msgstr ""
+msgstr "Tipo Condivisione"
 
 #. Name of a DocType
 #. Label of a Link in the Accounting Workspace
@@ -51152,7 +51152,7 @@ msgstr ""
 #: erpnext/stock/doctype/warehouse_type/warehouse_type.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Stock Manager"
-msgstr ""
+msgstr "Responsabile Magazzino"
 
 #: erpnext/stock/doctype/item/item_dashboard.py:34
 msgid "Stock Movement"
@@ -51517,7 +51517,7 @@ msgstr ""
 #: erpnext/subcontracting/doctype/subcontracting_order/subcontracting_order.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.json
 msgid "Stock User"
-msgstr ""
+msgstr "Utente Magazzino"
 
 #. Label of the stock_validations_tab (Tab Break) field in DocType 'Stock
 #. Settings'
@@ -52178,7 +52178,7 @@ msgstr ""
 #: erpnext/accounts/doctype/bank_statement_import/bank_statement_import.json
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.json
 msgid "Success"
-msgstr ""
+msgstr "Completato"
 
 #. Label of the success_redirect_url (Data) field in DocType 'Appointment
 #. Booking Settings'
@@ -52885,7 +52885,7 @@ msgstr ""
 #: erpnext/support/doctype/issue/issue.json
 #: erpnext/support/doctype/issue_type/issue_type.json
 msgid "Support Team"
-msgstr ""
+msgstr "Team Supporto"
 
 #: erpnext/crm/report/lead_conversion_time/lead_conversion_time.py:68
 msgid "Support Tickets"
@@ -58237,7 +58237,7 @@ msgstr ""
 #: erpnext/accounts/doctype/pos_closing_entry/pos_closing_entry.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "User Details"
-msgstr ""
+msgstr "Dettagli Utente"
 
 #: erpnext/setup/install.py:153
 msgid "User Forum"
@@ -59852,7 +59852,7 @@ msgstr ""
 #: erpnext/accounts/doctype/coupon_code/coupon_code.json
 #: erpnext/accounts/doctype/pricing_rule/pricing_rule.json
 msgid "Website Manager"
-msgstr ""
+msgstr "Responsabile Sito Web"
 
 #. Label of a Link in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
@@ -60305,7 +60305,7 @@ msgstr ""
 #. Label of a Link in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Workflow"
-msgstr ""
+msgstr "Flusso di Lavoro"
 
 #. Label of a Link in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
