@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-09 16:53\n"
+"PO-Revision-Date: 2025-08-10 17:10\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -34534,7 +34534,7 @@ msgstr ""
 #: erpnext/crm/doctype/prospect/prospect.json
 #: erpnext/setup/doctype/employee/employee.json
 msgid "Overview"
-msgstr ""
+msgstr "Panoramica"
 
 #. Option for the 'Permanent Address Is' (Select) field in DocType 'Employee'
 #. Option for the 'Current Address Is' (Select) field in DocType 'Employee'
@@ -46390,7 +46390,7 @@ msgstr ""
 #: erpnext/setup/setup_wizard/operations/install_fixtures.py:280
 #: erpnext/stock/doctype/item/item.json
 msgid "Sales"
-msgstr ""
+msgstr "Vendite"
 
 #: erpnext/setup/doctype/company/company.py:523
 msgid "Sales Account"
@@ -58294,7 +58294,7 @@ msgstr ""
 
 #: erpnext/setup/doctype/employee/employee.py:241
 msgid "User {0}: Removed Employee role as there is no mapped employee."
-msgstr ""
+msgstr "Utente {0}: rimosso il ruolo Dipendente in quanto non è presente alcun dipendente collegato."
 
 #: erpnext/accounts/doctype/pos_opening_entry/pos_opening_entry.py:52
 msgid "User {} is disabled. Please select valid user/cashier"
@@ -60846,7 +60846,7 @@ msgstr ""
 #. Option for the 'Provider' (Select) field in DocType 'Video'
 #: erpnext/utilities/doctype/video/video.json
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #. Name of a report
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.json
