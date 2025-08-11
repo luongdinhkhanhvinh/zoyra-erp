@@ -10,9 +10,26 @@ def execute(filters: dict | None = None):
 	report = ReportData(filters)
 	report.validate_filters()
 	data = report.get_data()
-	columns = report.get_columns()
+	has_serial_no, has_batch_no = check_has_serial_no_in_data(data)
+	columns = report.get_columns(has_serial_no, has_batch_no)
 
 	return columns, data
+
+
+def check_has_serial_no_in_data(data):
+	has_serial_no = False
+	has_batch_no = False
+
+	for row in data:
+		if row.get("serial_no"):
+			has_serial_no = True
+		if row.get("batch_no"):
+			has_batch_no = True
+
+		if has_serial_no and has_batch_no:
+			break
+
+	return has_serial_no, has_batch_no
 
 
 class ReportData:
@@ -68,6 +85,9 @@ class ReportData:
 				"posting_date": sabb.posting_date,
 				"indent": indent,
 				"direction": direction,
+				"batch_expiry_date": sabb.get("batch_expiry_date"),
+				"warranty_expiry_date": sabb.get("warranty_expiry_date"),
+				"amc_expiry_date": sabb.get("amc_expiry_date"),
 			}
 
 			if data and indent == 0:
@@ -200,12 +220,15 @@ class ReportData:
 				doctype.item.as_("item_code"),
 				doctype.name.as_("batch_no"),
 				doctype.manufacturing_date.as_("posting_date"),
+				doctype.expiry_date.as_("batch_expiry_date"),
 			)
 		else:
 			query = query.select(
 				doctype.item_code,
 				doctype.name.as_("serial_no"),
 				doctype.posting_date,
+				doctype.warranty_expiry_date,
+				doctype.amc_expiry_date,
 			)
 
 		if name:
@@ -389,8 +412,8 @@ class ReportData:
 
 		return (sabb_details.serial_no, sabb_details.batch_no) if sabb_details else (None, None)
 
-	def get_columns(self):
-		return [
+	def get_columns(self, has_serial_no=None, has_batch_no=None):
+		columns = [
 			{
 				"fieldname": "item_code",
 				"label": _("Item Code"),
@@ -404,71 +427,112 @@ class ReportData:
 				"fieldtype": "Data",
 				"width": 120,
 			},
-			{
-				"fieldname": "serial_no",
-				"label": _("Serial No"),
-				"fieldtype": "Link",
-				"options": "Serial No",
-				"width": 150,
-			},
-			{
-				"fieldname": "batch_no",
-				"label": _("Batch No"),
-				"fieldtype": "Link",
-				"options": "Batch",
-				"width": 140,
-			},
-			{
-				"fieldname": "qty",
-				"label": _("Quantity"),
-				"fieldtype": "Float",
-				"width": 90,
-			},
-			{
-				"fieldname": "reference_doctype",
-				"label": _("Voucher Type"),
-				"fieldtype": "Data",
-				"width": 130,
-			},
-			{
-				"fieldname": "reference_name",
-				"label": _("Source Document No"),
-				"fieldtype": "Dynamic Link",
-				"options": "reference_doctype",
-				"width": 200,
-			},
-			{
-				"fieldname": "warehouse",
-				"label": _("Warehouse"),
-				"fieldtype": "Link",
-				"options": "Warehouse",
-				"width": 120,
-			},
-			{
-				"fieldname": "posting_date",
-				"label": _("Posting Date"),
-				"fieldtype": "Date",
-				"width": 120,
-			},
-			{
-				"fieldname": "work_order",
-				"label": _("Work Order"),
-				"fieldtype": "Link",
-				"options": "Work Order",
-				"width": 160,
-			},
-			{
-				"fieldname": "supplier",
-				"label": _("Supplier"),
-				"fieldtype": "Link",
-				"options": "Supplier",
-				"width": 150,
-			},
-			{
-				"fieldname": "customer",
-				"label": _("Customer"),
-				"fieldtype": "Link",
-				"options": "Customer",
-				"width": 150,
-			},
 		]
+
+		if has_serial_no:
+			columns.append(
+				{
+					"fieldname": "serial_no",
+					"label": _("Serial No"),
+					"fieldtype": "Link",
+					"options": "Serial No",
+					"width": 120,
+				}
+			)
+
+		if has_batch_no:
+			columns.extend(
+				[
+					{
+						"fieldname": "batch_no",
+						"label": _("Batch No"),
+						"fieldtype": "Link",
+						"options": "Batch",
+						"width": 120,
+					},
+					{
+						"fieldname": "batch_expiry_date",
+						"label": _("Batch Expiry Date"),
+						"fieldtype": "Date",
+						"width": 150,
+					},
+				]
+			)
+
+		columns.extend(
+			[
+				{
+					"fieldname": "qty",
+					"label": _("Quantity"),
+					"fieldtype": "Float",
+					"width": 90,
+				},
+				{
+					"fieldname": "reference_doctype",
+					"label": _("Voucher Type"),
+					"fieldtype": "Data",
+					"width": 130,
+				},
+				{
+					"fieldname": "reference_name",
+					"label": _("Source Document No"),
+					"fieldtype": "Dynamic Link",
+					"options": "reference_doctype",
+					"width": 200,
+				},
+				{
+					"fieldname": "warehouse",
+					"label": _("Warehouse"),
+					"fieldtype": "Link",
+					"options": "Warehouse",
+					"width": 120,
+				},
+				{
+					"fieldname": "posting_date",
+					"label": _("Posting Date"),
+					"fieldtype": "Date",
+					"width": 120,
+				},
+				{
+					"fieldname": "work_order",
+					"label": _("Work Order"),
+					"fieldtype": "Link",
+					"options": "Work Order",
+					"width": 160,
+				},
+				{
+					"fieldname": "supplier",
+					"label": _("Supplier"),
+					"fieldtype": "Link",
+					"options": "Supplier",
+					"width": 150,
+				},
+				{
+					"fieldname": "customer",
+					"label": _("Customer"),
+					"fieldtype": "Link",
+					"options": "Customer",
+					"width": 150,
+				},
+			]
+		)
+
+		if has_serial_no:
+			columns.extend(
+				[
+					{
+						"fieldname": "warranty_expiry_date",
+						"label": _("Warranty Expiry (Serial)"),
+						"fieldtype": "Date",
+						"width": 200,
+					},
+					{
+						"fieldname": "amc_expiry_date",
+						"label": _("AMC Expiry (Serial)"),
+						"fieldtype": "Date",
+						"width": 160,
+					},
+				]
+			)
+
+		return columns
