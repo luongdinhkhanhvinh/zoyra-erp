@@ -1425,7 +1425,7 @@ class StockReservation:
 			)
 			.where(
 				(sre.docstatus == 1)
-				& (sre.status.notin(["Delivered", "Cancelled", "Draft", "Closed"]))
+				& (sre.delivered_qty < sre.reserved_qty)
 				& (sre.voucher_type == doctype)
 				& (sre.voucher_no.isin(docnames))
 			)
