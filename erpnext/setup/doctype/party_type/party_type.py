@@ -31,7 +31,11 @@ def get_party_type(doctype, txt, searchfield, start, page_len, filters):
 	if filters and filters.get("account"):
 		account_type = frappe.db.get_value("Account", filters.get("account"), "account_type")
 		if account_type:
-			cond = "and account_type = %(account_type)s"
+			if account_type in ["Receivable", "Payable"]:
+				# Include Employee regardless of its configured account_type, but still respect the text filter
+				cond = "and (account_type = %(account_type)s or name = 'Employee')"
+			else:
+				cond = "and account_type = %(account_type)s"
 
 	# Build parameters dictionary
 	params = {"txt": "%" + txt + "%", "start": start, "page_len": page_len}
@@ -45,12 +49,4 @@ def get_party_type(doctype, txt, searchfield, start, page_len, filters):
 		params,
 	)
 
-	# Convert to list and append Employee if not already present
-	result = list(result) if result else []
-
-	# Only append Employee for Receivable or Payable account types
-	if account_type in ["Receivable", "Payable"]:
-		if not any(row[0] == "Employee" for row in result):
-			result.append(("Employee",))  # Using tuple format like SQL returns
-
-	return result
+	return result or []
