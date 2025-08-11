@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-03 15:10\n"
+"PO-Revision-Date: 2025-08-10 17:10\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -35884,7 +35884,7 @@ msgstr "Betala Till / Mottagen Från"
 #: erpnext/accounts/report/account_balance/account_balance.js:54
 #: erpnext/setup/doctype/party_type/party_type.json
 msgid "Payable"
-msgstr "Betalning Konto"
+msgstr "Skulder"
 
 #: erpnext/accounts/report/accounts_payable/accounts_payable.js:42
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.py:1150
@@ -42813,7 +42813,7 @@ msgstr "Kvitton"
 #: erpnext/accounts/report/account_balance/account_balance.js:55
 #: erpnext/setup/doctype/party_type/party_type.json
 msgid "Receivable"
-msgstr "Fordring Konto"
+msgstr "Fordringar"
 
 #. Label of the receivable_payable_account (Link) field in DocType 'Payment
 #. Reconciliation'
@@ -49168,7 +49168,7 @@ msgstr "Ange Projekt och alla Uppgifter till status {0}?"
 
 #: erpnext/manufacturing/doctype/bom/bom.js:905
 msgid "Set Quantity"
-msgstr "Ange Kvantitet"
+msgstr "Bekräfta"
 
 #. Label of the set_reserve_warehouse (Link) field in DocType 'Purchase Order'
 #. Label of the set_reserve_warehouse (Link) field in DocType 'Subcontracting

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-03 15:10\n"
+"PO-Revision-Date: 2025-08-09 16:53\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -628,10 +628,10 @@ msgid "<h3>Currency Exchange Settings Help</h3>\n"
 "<p>There are 3 variables that could be used within the endpoint, result key and in values of the parameter.</p>\n"
 "<p>Exchange rate between {from_currency} and {to_currency} on {transaction_date} is fetched by the API.</p>\n"
 "<p>Example: If your endpoint is exchange.com/2021-08-01, then, you will have to input exchange.com/{transaction_date}</p>"
-msgstr "<h3>Помоћ за подешавање курса валуте</h3>\n"
-"<p>Постоје 3 променљиве које се могу користити унутар ендпоинт-а, кључ резултата и у вредностима параметара.</p>\n"
+msgstr "<h3>Помоћ за подешавање конверзија валуте</h3>\n"
+"<p>Постоје 3 променљиве које се могу користити унутар endpoint-а, резултирајућег кључа и у вредностима параметара.</p>\n"
 "<p>Девизни курс између {from_currency} и {to_currency} на {transaction_date} се преузима путем API-ја.</p>\n"
-"<p>Пример: Уколико је ваша крајња тачка exchange.com/2021-08-01, онда ћете морати да унесете exchange.com/{transaction_date}</p>"
+"<p>Пример: Уколико је Ваш endpoint exchange.com/2021-08-01, онда је неопходно да унесете exchange.com/{transaction_date}</p>"
 
 #. Content of the 'Body and Closing Text Help' (HTML) field in DocType 'Dunning
 #. Letter Text'
@@ -3585,7 +3585,7 @@ msgstr "Аконтација пореза и такси"
 #: erpnext/accounts/doctype/journal_entry_account/journal_entry_account.json
 #: erpnext/accounts/doctype/payment_entry_reference/payment_entry_reference.json
 msgid "Advance Voucher No"
-msgstr ""
+msgstr "Број документа за аванс"
 
 #. Label of the advance_voucher_type (Link) field in DocType 'Journal Entry
 #. Account'
@@ -3594,7 +3594,7 @@ msgstr ""
 #: erpnext/accounts/doctype/journal_entry_account/journal_entry_account.json
 #: erpnext/accounts/doctype/payment_entry_reference/payment_entry_reference.json
 msgid "Advance Voucher Type"
-msgstr ""
+msgstr "Врста документа за аванс"
 
 #. Label of the advance_amount (Currency) field in DocType 'Sales Invoice
 #. Advance'
@@ -10516,7 +10516,7 @@ msgstr "Град"
 #. 'Purchase Invoice'
 #: erpnext/accounts/doctype/purchase_invoice/purchase_invoice.json
 msgid "Claimed Landed Cost Amount (Company Currency)"
-msgstr ""
+msgstr "Потраживани трошкови набавке (валута компаније)"
 
 #. Label of the class_per (Data) field in DocType 'Employee Education'
 #: erpnext/setup/doctype/employee_education/employee_education.json
@@ -14093,7 +14093,7 @@ msgstr "Валута"
 #: erpnext/accounts/workspace/accounting/accounting.json
 #: erpnext/setup/doctype/currency_exchange/currency_exchange.json
 msgid "Currency Exchange"
-msgstr "Курсна размена"
+msgstr "Конверзија валуте"
 
 #. Label of the currency_exchange_section (Section Break) field in DocType
 #. 'Accounts Settings'
@@ -14101,21 +14101,21 @@ msgstr "Курсна размена"
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 #: erpnext/accounts/doctype/currency_exchange_settings/currency_exchange_settings.json
 msgid "Currency Exchange Settings"
-msgstr "Подешавање курсне размене"
+msgstr "Подешавање конверзије валуте"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/currency_exchange_settings_details/currency_exchange_settings_details.json
 msgid "Currency Exchange Settings Details"
-msgstr "Детаљи подешавања курсне размене"
+msgstr "Детаљи подешавања конверзије валуте"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/currency_exchange_settings_result/currency_exchange_settings_result.json
 msgid "Currency Exchange Settings Result"
-msgstr "Резултат подешавања курсне размене"
+msgstr "Резултат подешавања конверзије валуте"
 
 #: erpnext/setup/doctype/currency_exchange/currency_exchange.py:55
 msgid "Currency Exchange must be applicable for Buying or for Selling."
-msgstr "Валута мора бити примењива за набавку или продају."
+msgstr "Конверзија валуте мора бити примењива за набавку или продају."
 
 #. Label of the currency_and_price_list (Section Break) field in DocType 'POS
 #. Invoice'
@@ -20534,7 +20534,7 @@ msgstr "Преузми евиденцију рада у излазној фак�
 #. DocType 'Accounts Settings'
 #: erpnext/accounts/doctype/accounts_settings/accounts_settings.json
 msgid "Fetch Valuation Rate for Internal Transaction"
-msgstr ""
+msgstr "Преузимање стопе вредновања за интерну трансакцију"
 
 #. Label of the fetch_from_parent (Select) field in DocType 'Inventory
 #. Dimension'
@@ -23719,7 +23719,7 @@ msgstr "Уколико је омогућено, систем неће приме
 #. Description of the 'Pick Manually' (Check) field in DocType 'Pick List'
 #: erpnext/stock/doctype/pick_list/pick_list.json
 msgid "If enabled then system won't override the picked qty / batches / serial numbers / warehouse."
-msgstr ""
+msgstr "Уколико је омогућено, систем неће поништити већ преузету количину / шарже / серијске бројеве / складиште."
 
 #. Description of the 'Send Document Print' (Check) field in DocType 'Request
 #. for Quotation'
@@ -24220,7 +24220,7 @@ msgstr "Слика"
 #: erpnext/subcontracting/doctype/subcontracting_order_item/subcontracting_order_item.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
 msgid "Image View"
-msgstr "Преглед слике"
+msgstr "Приказ слике"
 
 #: erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py:75
 msgid "Impairment"
@@ -25550,7 +25550,7 @@ msgstr "Неважећа количина"
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:435
 msgid "Invalid Query"
-msgstr ""
+msgstr "Неважећи упит"
 
 #: erpnext/selling/page/point_of_sale/pos_past_order_summary.js:198
 msgid "Invalid Return"
@@ -25612,7 +25612,7 @@ msgstr "Неважећи кључ резултата. Одговор:"
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:435
 msgid "Invalid search query"
-msgstr ""
+msgstr "Неважећи упит претраге"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:108
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:118
@@ -27913,7 +27913,7 @@ msgstr "Потребне ставке"
 #: erpnext/buying/workspace/buying/buying.json
 #: erpnext/stock/report/items_to_be_requested/items_to_be_requested.json
 msgid "Items To Be Requested"
-msgstr "Ставке које треба да се поруче"
+msgstr "Ставке за поручивање"
 
 #. Label of a Card Break in the Selling Workspace
 #: erpnext/selling/workspace/selling/selling.json
@@ -28397,7 +28397,7 @@ msgstr "Ознака"
 #. Label of the taxes (Table) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Landed Cost"
-msgstr ""
+msgstr "Трошкови набавке"
 
 #. Label of the landed_cost_help (HTML) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
@@ -28406,7 +28406,7 @@ msgstr "Помоћ за слетне трошкове"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:18
 msgid "Landed Cost Id"
-msgstr ""
+msgstr "ИД трошка набавке"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_item/landed_cost_item.json
@@ -28421,7 +28421,7 @@ msgstr "Пријемница набавке са укупним трошкови
 #. Name of a report
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.json
 msgid "Landed Cost Report"
-msgstr ""
+msgstr "Извештај о трошковима набавке"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_taxes_and_charges/landed_cost_taxes_and_charges.json
@@ -28431,7 +28431,7 @@ msgstr "Порези и таксе укупни трошкова испорук�
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_vendor_invoice/landed_cost_vendor_invoice.json
 msgid "Landed Cost Vendor Invoice"
-msgstr ""
+msgstr "Фактура добављача за трошкове набавке"
 
 #. Name of a DocType
 #. Label of a Link in the Stock Workspace
@@ -31639,7 +31639,7 @@ msgstr "Више валута"
 
 #: erpnext/manufacturing/doctype/bom_creator/bom_creator.js:41
 msgid "Multi-level BOM Creator"
-msgstr "Алата за креирање вишеслојне саставнице"
+msgstr "Алат за креирање вишеслојне саставнице"
 
 #: erpnext/selling/doctype/customer/customer.py:384
 msgid "Multiple Loyalty Programs found for Customer {}. Please select manually."
@@ -32900,7 +32900,7 @@ msgstr "Није започето"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.py:399
 msgid "Not able to find the earliest Fiscal Year for the given company."
-msgstr ""
+msgstr "Није могуће пронаћи најранију фискалну годину за дату компанију."
 
 #: erpnext/manufacturing/doctype/bom/bom_list.js:11
 msgid "Not active"
@@ -33668,7 +33668,7 @@ msgstr "Почетни износ"
 
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:158
 msgid "Opening Balance"
-msgstr "Почетни стање"
+msgstr "Почетно стање"
 
 #. Label of the balance_details (Table) field in DocType 'POS Opening Entry'
 #: erpnext/accounts/doctype/pos_opening_entry/pos_opening_entry.json
@@ -33710,7 +33710,7 @@ msgstr "Креирање почетне фактуре је у току"
 #: erpnext/accounts/workspace/accounting/accounting.json
 #: erpnext/setup/workspace/home/home.json
 msgid "Opening Invoice Creation Tool"
-msgstr "Алата за креирање почетне фактуре"
+msgstr "Алат за креирање почетне фактуре"
 
 #. Name of a DocType
 #: erpnext/accounts/doctype/opening_invoice_creation_tool_item/opening_invoice_creation_tool_item.json
@@ -37977,7 +37977,7 @@ msgstr "Молимо Вас да изаберете барем једну ста
 
 #: erpnext/manufacturing/doctype/work_order/work_order.js:355
 msgid "Please select atleast one operation to create Job Card"
-msgstr ""
+msgstr "Молимо Вас да изаберете барем једну операцију за креирање радне картице"
 
 #: erpnext/accounts/doctype/journal_entry/journal_entry.py:1749
 msgid "Please select correct account"
@@ -39264,7 +39264,7 @@ msgstr "Формат штампе"
 #. Label of a Link in the Settings Workspace
 #: erpnext/setup/workspace/settings/settings.json
 msgid "Print Format Builder"
-msgstr "Алата за креирање формата штампе"
+msgstr "Алат за креирање формата штампе"
 
 #. Label of the select_print_heading (Link) field in DocType 'Journal Entry'
 #. Label of the print_heading (Link) field in DocType 'Payment Entry'
@@ -39951,7 +39951,7 @@ msgstr "Биланс успеха"
 #: erpnext/accounts/report/profit_and_loss_statement/profit_and_loss_statement.json
 #: erpnext/accounts/workspace/financial_reports/financial_reports.json
 msgid "Profit and Loss Statement"
-msgstr "Извештај о билансу успеха"
+msgstr "Биланс успеха"
 
 #. Label of the heading_cppb (Heading) field in DocType 'Bisect Accounting
 #. Statements'
@@ -41065,11 +41065,11 @@ msgstr "Набавна вредност"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:35
 msgid "Purchase Voucher No"
-msgstr ""
+msgstr "Број документа за набавку"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:29
 msgid "Purchase Voucher Type"
-msgstr ""
+msgstr "Врста документа за набавку"
 
 #: erpnext/utilities/activation.py:105
 msgid "Purchase orders help you plan and follow up on your purchases"
@@ -42549,11 +42549,11 @@ msgstr "Вредност сировине"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.js:36
 msgid "Raw Material Voucher No"
-msgstr ""
+msgstr "Број документа за сировине"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.js:30
 msgid "Raw Material Voucher Type"
-msgstr ""
+msgstr "Врста документа за сировине"
 
 #: erpnext/manufacturing/report/production_planning_report/production_planning_report.js:65
 msgid "Raw Material Warehouse"
@@ -47060,7 +47060,7 @@ msgstr "Провизија продајних партнера"
 #: erpnext/accounts/report/sales_payment_summary/sales_payment_summary.json
 #: erpnext/accounts/workspace/financial_reports/financial_reports.json
 msgid "Sales Payment Summary"
-msgstr "Резиме уплате продаје"
+msgstr "Резиме уплата од продаје"
 
 #. Option for the 'Select Customers By' (Select) field in DocType 'Process
 #. Statement Of Accounts'
@@ -49894,7 +49894,7 @@ msgstr "Прикажи уносе почетног стања"
 
 #: erpnext/accounts/report/cash_flow/cash_flow.js:26
 msgid "Show Opening and Closing Balance"
-msgstr ""
+msgstr "Прикажи почетно и завршно стање"
 
 #. Label of the show_operations (Check) field in DocType 'BOM'
 #: erpnext/manufacturing/doctype/bom/bom.json
@@ -56356,7 +56356,7 @@ msgstr "Укупни приходи током ове године"
 #. Label of a number card in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Total Incoming Bills"
-msgstr "Укупно улазних рачуна"
+msgstr "Укупан износ улазних рачуна"
 
 #. Label of a number card in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
@@ -56388,13 +56388,13 @@ msgstr "Укупно ставки"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:24
 msgid "Total Landed Cost"
-msgstr ""
+msgstr "Укупни трошкови набавке"
 
 #. Label of the total_taxes_and_charges (Currency) field in DocType 'Landed
 #. Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Total Landed Cost (Company Currency)"
-msgstr ""
+msgstr "Укупни трошкови набавке (валута компаније)"
 
 #: erpnext/accounts/report/balance_sheet/balance_sheet.py:213
 msgid "Total Liability"
@@ -56481,7 +56481,7 @@ msgstr "Укупан износ за плаћање"
 #. Label of a number card in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
 msgid "Total Outgoing Bills"
-msgstr "Укупан износ за палћање"
+msgstr "Укупан износ излазних рачуна"
 
 #. Label of a number card in the Accounting Workspace
 #: erpnext/accounts/workspace/accounting/accounting.json
@@ -56754,7 +56754,7 @@ msgstr "Укупно одступање"
 #. Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Total Vendor Invoices Cost (Company Currency)"
-msgstr ""
+msgstr "Укупан износ фактуре добављача (валута компаније)"
 
 #: erpnext/utilities/report/youtube_interactions/youtube_interactions.py:70
 msgid "Total Views"
@@ -57609,7 +57609,7 @@ msgstr "Поништи расподелу"
 
 #: erpnext/setup/utils.py:182
 msgid "Unable to find exchange rate for {0} to {1} for key date {2}. Please create a Currency Exchange record manually"
-msgstr "Није могуће пронаћи девизни курс за {0} у {1} за кључни датум {2}. Молимо Вас да креирате евиденцију девизних курсева ручно"
+msgstr "Није могуће пронаћи девизни курс за {0} у {1} за кључни датум {2}. Молимо Вас да ручно креирате запис о конверзији валуте"
 
 #: erpnext/buying/doctype/supplier_scorecard/supplier_scorecard.py:78
 msgid "Unable to find score starting at {0}. You need to have standing scores covering 0 to 100"
@@ -58996,12 +58996,12 @@ msgstr "Вредност возила"
 #: erpnext/stock/doctype/landed_cost_vendor_invoice/landed_cost_vendor_invoice.json
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:42
 msgid "Vendor Invoice"
-msgstr ""
+msgstr "Фактура добављача"
 
 #. Label of the vendor_invoices (Table) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Vendor Invoices"
-msgstr ""
+msgstr "Фактуре добављача"
 
 #: erpnext/assets/report/fixed_asset_register/fixed_asset_register.py:475
 msgid "Vendor Name"
@@ -61445,7 +61445,7 @@ msgstr "{0} трансакција(е) усклађено"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:59
 msgid "{0} account is not of company {1}"
-msgstr ""
+msgstr "Рачун {0} не припада компанији {1}"
 
 #: erpnext/accounts/doctype/payment_ledger_entry/payment_ledger_entry.py:62
 msgid "{0} account is not of type {1}"
@@ -61593,11 +61593,11 @@ msgstr "{0} је обавезно за рачун {1}"
 
 #: erpnext/public/js/controllers/taxes_and_totals.js:122
 msgid "{0} is mandatory. Maybe Currency Exchange record is not created for {1} to {2}"
-msgstr "{0} је обавезно. Можда евиденција девизних курсева није креирана за {1} у {2}"
+msgstr "{0} је обавезно. Можда запис о конверзији валуте није креиран за {1} у {2}"
 
 #: erpnext/controllers/accounts_controller.py:2976
 msgid "{0} is mandatory. Maybe Currency Exchange record is not created for {1} to {2}."
-msgstr "{0} је обавезно. Можда евиденција девизних курсева није креирана за {1} у {2}"
+msgstr "{0} је обавезно. Можда запис о конверзији валуте није креиран за {1} у {2}."
 
 #: erpnext/selling/doctype/customer/customer.py:203
 msgid "{0} is not a company bank account"

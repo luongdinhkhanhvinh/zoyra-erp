@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
 "POT-Creation-Date: 2025-08-03 09:38+0000\n"
-"PO-Revision-Date: 2025-08-03 15:10\n"
+"PO-Revision-Date: 2025-08-05 16:06\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -273,7 +273,7 @@ msgstr "«بازرسی قبل از خرید لازم است» برای آیتم 
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:597
 #: erpnext/stock/report/stock_ledger/stock_ledger.py:630
 msgid "'Opening'"
-msgstr "'افتتاح'"
+msgstr "'افتتاحیه'"
 
 #: erpnext/stock/report/batch_item_expiry_status/batch_item_expiry_status.py:27
 #: erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py:129
@@ -28306,7 +28306,7 @@ msgstr ""
 #. Label of the landed_cost_help (HTML) field in DocType 'Landed Cost Voucher'
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.json
 msgid "Landed Cost Help"
-msgstr "راهنمای هزینه تمام شده تا درب انبار"
+msgstr "راهنمای بهای تمام‌شده در مقصد"
 
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.py:18
 msgid "Landed Cost Id"
@@ -28315,12 +28315,12 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_item/landed_cost_item.json
 msgid "Landed Cost Item"
-msgstr "آیتم هزینه تمام شده تا درب انبار"
+msgstr "آیتم بهای تمام‌شده در مقصد"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_purchase_receipt/landed_cost_purchase_receipt.json
 msgid "Landed Cost Purchase Receipt"
-msgstr "رسید خرید هزینه تمام شده تا درب انبار"
+msgstr "رسید خرید بهای تمام‌شده در مقصد"
 
 #. Name of a report
 #: erpnext/stock/report/landed_cost_report/landed_cost_report.json
@@ -28330,7 +28330,7 @@ msgstr ""
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_taxes_and_charges/landed_cost_taxes_and_charges.json
 msgid "Landed Cost Taxes and Charges"
-msgstr "مالیات و عوارض هزینه تمام شده تا درب انبار"
+msgstr "مالیات و عوارض بهای تمام‌شده در مقصد"
 
 #. Name of a DocType
 #: erpnext/stock/doctype/landed_cost_vendor_invoice/landed_cost_vendor_invoice.json
@@ -28344,7 +28344,7 @@ msgstr ""
 #: erpnext/stock/doctype/purchase_receipt/purchase_receipt.js:104
 #: erpnext/stock/workspace/stock/stock.json
 msgid "Landed Cost Voucher"
-msgstr "سند مالی هزینه تمام شده تا درب انبار"
+msgstr "سند مالی بهای تمام‌شده در مقصد"
 
 #. Label of the landed_cost_voucher_amount (Currency) field in DocType
 #. 'Purchase Invoice Item'
@@ -28359,7 +28359,7 @@ msgstr "سند مالی هزینه تمام شده تا درب انبار"
 #: erpnext/stock/doctype/stock_entry_detail/stock_entry_detail.json
 #: erpnext/subcontracting/doctype/subcontracting_receipt_item/subcontracting_receipt_item.json
 msgid "Landed Cost Voucher Amount"
-msgstr "مبلغ سند مالی هزینه تمام شده تا درب انبار"
+msgstr "مبلغ سند مالی بهای تمام‌شده در مقصد"
 
 #. Option for the 'Orientation' (Select) field in DocType 'Process Statement Of
 #. Accounts'
@@ -37356,7 +37356,7 @@ msgstr "لطفاً مشتری از سرنخ {0} ایجاد کنید."
 
 #: erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py:132
 msgid "Please create Landed Cost Vouchers against Invoices that have 'Update Stock' enabled."
-msgstr "لطفاً در برابر فاکتورهایی که «به‌روزرسانی موجودی» را فعال کرده‌اند، اسناد مالی هزینه تمام شده تا درب انبار ایجاد کنید."
+msgstr "لطفاً در برابر فاکتورهایی که «به‌روزرسانی موجودی» را فعال کرده‌اند، اسناد مالی بهای تمام‌شده در مقصد ایجاد کنید."
 
 #: erpnext/accounts/doctype/accounting_dimension/accounting_dimension.py:74
 msgid "Please create a new Accounting Dimension if required."
@@ -49015,7 +49015,7 @@ msgstr "بودجه های گروهی مورد را در این منطقه تنظ
 #. DocType 'Buying Settings'
 #: erpnext/buying/doctype/buying_settings/buying_settings.json
 msgid "Set Landed Cost Based on Purchase Invoice Rate"
-msgstr "تنظیم هزینه تمام شده تا درب انبار بر اساس نرخ فاکتور خرید"
+msgstr "تنظیم بهای تمام‌شده در مقصد بر اساس نرخ فاکتور خرید"
 
 #: erpnext/accounts/doctype/sales_invoice/sales_invoice.js:1130
 msgid "Set Loyalty Program"
@@ -58938,7 +58938,7 @@ msgstr "از طریق پورتال مشتری"
 #. Valuation'
 #: erpnext/stock/doctype/repost_item_valuation/repost_item_valuation.json
 msgid "Via Landed Cost Voucher"
-msgstr "از طریق سند مالی هزینه تمام شده تا درب انبار"
+msgstr "از طریق سند مالی بهای تمام‌شده در مقصد"
 
 #: erpnext/setup/setup_wizard/data/designation.txt:31
 msgid "Vice President"
