@@ -1223,6 +1223,7 @@ erpnext.selling.SalesOrderController = class SalesOrderController extends erpnex
 							read_only: 1,
 							fieldname: "uom",
 							label: __("UOM"),
+							options: "UOM",
 							in_list_view: 1,
 						},
 						{
@@ -1296,7 +1297,6 @@ erpnext.selling.SalesOrderController = class SalesOrderController extends erpnex
 					let pending_qty = (flt(d.stock_qty) - ordered_qty) / flt(d.conversion_factor);
 					if (pending_qty > 0) {
 						po_items.push({
-							doctype: "Sales Order Item",
 							name: d.name,
 							item_name: d.item_name,
 							item_code: d.item_code,
