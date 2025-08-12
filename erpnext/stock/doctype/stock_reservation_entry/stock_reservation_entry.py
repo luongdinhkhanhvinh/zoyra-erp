@@ -255,6 +255,8 @@ class StockReservationEntry(Document):
 			not self.from_voucher_type
 			and (self.get("_action") == "submit")
 			and (self.has_serial_no or self.has_batch_no)
+			and frappe.get_single_value("Stock Settings", "auto_reserve_serial_and_batch")
+			and not self.get("bypass_auto_reserve_serial_and_batch")
 		):
 			from erpnext.stock.doctype.batch.batch import get_available_batches
 			from erpnext.stock.doctype.serial_no.serial_no import get_serial_nos_for_outward
