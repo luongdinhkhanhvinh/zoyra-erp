@@ -793,6 +793,9 @@ erpnext.selling.SalesOrderController = class SalesOrderController extends erpnex
 							docstatus: 1,
 							status: ["!=", "Lost"],
 						},
+						allow_child_item_selection: true,
+						child_fieldname: "items",
+						child_columns: ["item_code", "item_name", "qty", "rate", "amount"],
 					});
 				},
 				__("Get Items From")
